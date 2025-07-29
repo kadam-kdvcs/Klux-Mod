@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "item": "minecraft:glass_bottle" },
+    { "item": "klux:botanical_resin_bead" }
+  ],
+  "output": {
+    "item": "klux:adhesive_paste",
+    "count": 1
+  },
+  "maxProgress": 160
+}

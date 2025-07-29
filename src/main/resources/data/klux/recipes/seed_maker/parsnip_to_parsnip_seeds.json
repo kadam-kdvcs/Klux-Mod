@@ -1,0 +1,11 @@
+{
+  "type": "klux:seed_maker",
+  "ingredients": [
+    { "item": "klux:parsnip" }
+  ],
+  "output": {
+    "item": "klux:parsnip_seeds",
+    "count": 4
+  },
+  "maxProgress": 60
+}

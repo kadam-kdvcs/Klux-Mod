@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:furnace_core"
+    },
+    "A": {
+      "item": "klux:redstone_resonator"
+    },
+    "B": {
+      "item": "klux:earth_crystal_frame"
+    },
+    "T": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "TAT",
+    "#B#",
+    "TAT"
+  ],
+  "result": {
+    "item": "klux:compressor"
+  },
+  "show_notification": true
+}

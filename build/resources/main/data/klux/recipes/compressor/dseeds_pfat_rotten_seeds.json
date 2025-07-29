@@ -1,0 +1,15 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:dehydrated_seeds",
+      "count": 2
+    },
+    { "item": "klux:putrid_fat" }
+  ],
+  "output": {
+    "item": "klux:rotten_fruit_seeds",
+    "count": 2
+  },
+  "maxProgress": 190
+}

@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "item": "minecraft:cobweb" },
+    { "item": "minecraft:bone_meal" }
+  ],
+  "output": {
+    "item": "klux:spider_silk_fiber",
+    "count": 4
+  },
+  "maxProgress": 160
+}

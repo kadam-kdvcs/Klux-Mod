@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "tag": "forge:seeds"
+  },
+  "ingredientCount": 32,
+  "output": {
+    "item": "klux:dehydrated_seeds",
+    "count": 4
+  },
+  "maxProgress": 180
+}

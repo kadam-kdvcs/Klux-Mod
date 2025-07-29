@@ -1,0 +1,6 @@
+// 1.20.1	2025-07-28T14:41:38.184535	Global Loot Modifiers : klux
+8219c3d85b726462fed30bdd7877737558643a0e data/forge/loot_modifiers/global_loot_modifiers.json
+4f6f4222840267f81686075443d2fe722c23a942 data/klux/loot_modifiers/enriched_coal_from_desert_pyramids.json
+81478f64039bfb094c86ae4053e5fc58ba24b9bc data/klux/loot_modifiers/enriched_coal_from_suspicious_sand.json
+879fb5c4b2ee1e6d01853e8fd2ed212bb11f7397 data/klux/loot_modifiers/parsnip_seeds_from_grass.json
+8e114f272af146bd32a476cb592a16da3057ab8b data/klux/loot_modifiers/spring_onion_seeds_from_grass.json

@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "tag": "forge:rawmeats" },
+    { "item": "klux:rotten_fruit" }
+  ],
+  "output": {
+    "item": "minecraft:rotten_flesh",
+    "count": 6
+  },
+  "maxProgress": 160
+}

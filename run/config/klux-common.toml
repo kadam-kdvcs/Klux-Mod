@@ -1,0 +1,6 @@
+
+["Return Scepter Settings"]
+	#Cooldown time in ticks for Return Scepter (20 ticks = 1 second)
+	#Range: 1 ~ 72000
+	returnScepterCooldownTicks = 1200
+

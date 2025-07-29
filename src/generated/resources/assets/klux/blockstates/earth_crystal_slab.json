@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "klux:block/earth_crystal_slab"
+    },
+    "type=double": {
+      "model": "klux:block/earth_crystal_block"
+    },
+    "type=top": {
+      "model": "klux:block/earth_crystal_slab_top"
+    }
+  }
+}

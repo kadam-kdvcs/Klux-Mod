@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:rotten_fruit"
+    },
+    "L": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "L",
+    "#",
+    "L"
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:slime_ball"
+  },
+  "show_notification": true
+}

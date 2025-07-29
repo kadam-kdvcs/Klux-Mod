@@ -1,0 +1,11 @@
+{
+  "type": "klux:seed_maker",
+  "ingredients": [
+    { "item": "klux:spring_onion" }
+  ],
+  "output": {
+    "item": "klux:spring_onion_seeds",
+    "count": 3
+  },
+  "maxProgress": 50
+}

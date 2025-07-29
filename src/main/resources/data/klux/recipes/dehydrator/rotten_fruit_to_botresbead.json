@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "klux:rotten_fruit"
+  },
+  "ingredientCount": 4,
+  "output": {
+    "item": "klux:botanical_resin_bead",
+    "count": 1
+  },
+  "maxProgress": 100
+}

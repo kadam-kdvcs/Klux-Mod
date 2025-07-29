@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "item": "minecraft:clay" },
+    { "item": "minecraft:gravel" }
+  ],
+  "output": {
+    "item": "minecraft:stone",
+    "count": 2
+  },
+  "maxProgress": 160
+}

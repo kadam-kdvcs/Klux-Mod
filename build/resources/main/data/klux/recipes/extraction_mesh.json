@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "A": {
+      "item": "klux:spider_silk_fiber"
+    }
+  },
+  "pattern": [
+    "###",
+    "AAA",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "klux:extraction_mesh"
+  },
+  "show_notification": true
+}

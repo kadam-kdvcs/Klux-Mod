@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:earth_crystal_frame"
+    },
+    "B": {
+      "item": "klux:extraction_mesh"
+    },
+    "E": {
+      "item": "minecraft:diamond"
+    },
+    "K": {
+      "item": "klux:pressing_rod_assembly"
+    },
+    "S": {
+      "item": "klux:redstone_resonator"
+    }
+  },
+  "pattern": [
+    "ESE",
+    "KAK",
+    "EBE"
+  ],
+  "result": {
+    "item": "klux:extractor"
+  },
+  "show_notification": true
+}

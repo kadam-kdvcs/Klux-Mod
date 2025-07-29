@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "minecraft:rotten_flesh"
+  },
+  "ingredientCount": 32,
+  "output": {
+    "item": "klux:putrid_fat",
+    "count": 2
+  },
+  "maxProgress": 180
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 130,
+  "experience": 0.1,
+  "group": "earthcrystal",
+  "ingredient": {
+    "item": "klux:earth_crystal_ore"
+  },
+  "result": "klux:earth_crystal"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "klux:block/earth_crystal_block",
+    "side": "klux:block/earth_crystal_block",
+    "top": "klux:block/earth_crystal_block"
+  }
+}

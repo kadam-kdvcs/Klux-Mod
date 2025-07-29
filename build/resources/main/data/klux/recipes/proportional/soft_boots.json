@@ -1,0 +1,14 @@
+{
+  "type": "klux:proportional_armor",
+  "pattern": [
+    "CIC",
+    " C "
+  ],
+  "key": {
+    "C": { "item": "klux:soft_armor_cloth" },
+    "I": { "item": "minecraft:iron_boots" }
+  },
+  "result": {
+    "item": "klux:soft_boots"
+  }
+}

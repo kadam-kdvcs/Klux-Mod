@@ -1,0 +1,15 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:spider_silk_fiber",
+      "count": 2
+    },
+    { "item": "klux:leather_paste" }
+  ],
+  "output": {
+    "item": "klux:soft_armor_cloth",
+    "count": 1
+  },
+  "maxProgress": 160
+}

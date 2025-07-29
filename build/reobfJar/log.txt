@@ -1,0 +1,828 @@
+Java Launcher: C:\Program Files\Java\jdk-17\bin\java.exe
+Arguments: '--input, D:\Mod Development\klux\build\libs\klux-1.0.0.jar, --output, D:\Mod Development\klux\build\reobfJar\output.jar, --names, D:\Mod Development\klux\build\reobfJar\mappings.tsrg, --lib, C:\Users\34115\.gradle\caches\forge_gradle\deobf_dependencies\mezz\jei\jei-1.20.1-common-api\15.8.2.26_mapped_official_1.20.1\jei-1.20.1-common-api-15.8.2.26_mapped_official_1.20.1.jar, --lib, C:\Users\34115\.gradle\caches\forge_gradle\deobf_dependencies\mezz\jei\jei-1.20.1-forge-api\15.8.2.26_mapped_official_1.20.1\jei-1.20.1-forge-api-15.8.2.26_mapped_official_1.20.1.jar, --lib, C:\Users\34115\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.3_mapped_official_1.20.1\forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar, --lib, C:\Users\34115\.gradle\caches\forge_gradle\minecraft_repo\versions\1.20.1\client-extra.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlloader\1.20.1-47.4.3\83a07112dda32736e6db00c117775a473c7dd519\fmlloader-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarSelector\0.3.19\376cc9c8ea60720cf027c01fc033de915699801c\JarJarSelector-0.3.19.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarMetadata\0.3.19\83feaa9b770e6ac0e96ee4fc23fa89325c5fe2\JarJarMetadata-0.3.19.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.1-jre\60458f877d055d0c9114d9e1a2efb737b4bc282c\guava-31.1-jre.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\forgespi\7.0.1\3b4972a0cdb135853dba219be61a79b22cff1309\forgespi-7.0.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mergetool\1.1.5\f3da18e12c696d35a47c82cbb2cc8b5aa15e1154\mergetool-1.1.5-api.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.1\13c5c75c4206580aa4d683bffee658caae6c9f43\annotations-24.0.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\2.1.10\51e6a22c6c716beb11e244bf5b8be480f51dd6b5\securejarhandler-2.1.10.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\coremods\5.2.4\e30bab269d896613e38396274711410b3a0e4b87\coremods-5.2.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\modlauncher\10.0.9\6d9443f56f50bb85cea383686ff9c867391458b\modlauncher-10.0.9.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.openjdk.nashorn\nashorn-core\15.4\f67f5ffaa5f5130cf6fb9b133da00c7df3b532a5\nashorn-core-15.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-commons\9.7.1\406c6a2225cfe1819f102a161e54cc16a5c24f75\asm-commons-9.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\9.7.1\9e23359b598ec6b74b23e53110dd5c577adf2243\asm-util-9.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.7.1\f97a3b319f0ed6a8cd944dc79060d3912a28985f\asm-analysis-9.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.7.1\3a53139787663b139de76b627fca0084ab60d32c\asm-tree-9.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7.1\f0ed132a49244b042cd0e15702ab9f2ce3cc8436\asm-9.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\accesstransformers\8.0.4\272d240aa73f42195b2a68e2ebd8b701ecf41f63\accesstransformers-8.0.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4\4.9.1\e92af8ab33e428461927b484e90bb155a4f3a052\antlr4-4.9.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.9.1\428664f05d2b7f7b7610204b5aa7c1763f62011a\antlr4-runtime-4.9.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.3\4f943542f1f182a4e269b4f920030b50738f6b81\fmlcore-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\eventbus\6.0.5\699143dd438431d06b57416944f7cedbe52e1475\eventbus-6.0.5.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\unsafe\0.2.0\54d7a0a5e8fdb71b973025caa46f341ae5904f39\unsafe-0.2.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\toml\3.6.4\51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4\toml-3.6.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\core\3.6.4\510f174abbf1c947494db50ef2445683bd52c230\core-3.6.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.8.5\4433f50c07debefaed0553bd0068f4f48d449313\maven-artifact-3.8.5.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.6.3\a01aaa6ddaea9ec07ec4f209487b7a46a526283a\typetools-0.6.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecrell\terminalconsoleappender\1.2.0\96d02cd3b384ff015a8fef4223bcb4ccf1717c95\terminalconsoleappender-1.2.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jline\jline-reader\3.12.1\4382ab1382c7b6f379377ed5f665dc2f6e1218bc\jline-reader-3.12.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jline\jline-terminal\3.12.1\c777448314e050d980a6b697c140f3bfe9eb7416\jline-terminal-3.12.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.8.5\9d1c0c3a304ae6697ecd477218fa61b850bf57fc\mixin-0.8.5.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\bootstraplauncher\1.1.2\c546e00443d8432cda6baa1c860346980742628\bootstraplauncher-1.1.2.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarFileSystems\0.3.19\2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020\JarJarFileSystems-0.3.19.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlearlydisplay\1.20.1-47.4.3\cbc64139c2eb61277682e78beb55c26dd960357f\fmlearlydisplay-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.3\4080695cecae86c354232f04a2627dd7e4f1149e\javafmllanguage-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.3\29a0368be8b1a5ebc5c52ff7b50cddb265c31c36\lowcodelanguage-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.3\aa997425f691156656d4ba3aa78a50b43d677d91\mclanguage-1.20.1-47.4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.github.oshi\oshi-core\6.2.2\54f5efc19bca95d709d9a37d19ffcbba3d21c1a6\oshi-core-6.2.2.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.10\dd9b193aef96e973d5a11ab13cd17430c2e4306b\gson-2.10.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j\71.1\9e7d3304c23f9ba5cb71915f7cce23231a57a445\icu4j-71.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\4.0.43\2ff9d747a77570a07a60d32ac77eb6162ad2a2d9\authlib-4.0.43.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\blocklist\1.0.10\5c685c5ffa94c4cd39496c7184c1d122e515ecef\blocklist-1.0.10.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\brigadier\1.1.8\5244ce82c3337bba4a196a3ce858bfaecc74404a\brigadier-1.1.8.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\6.0.8\3ba4a30557a9b057760af4011f909ba619fc5125\datafixerupper-6.0.8.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\logging\1.1.1\832b8e6674a9b325a5175a3a6267dfaf34c85139\logging-1.1.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.17.9\3cad216e3a7f0c19b4b394388bc9ffc446f13b14\text2speech-1.17.9.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a2503f302b11ebde7ebc3df41daebe0e4eea3689\commons-io-2.11.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.82.Final\644041d1fa96a5d3130a29e8978630d716d76e38\netty-handler-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.82.Final\b77200379acb345a9ffdece1c605e591ac3e4e0a\netty-codec-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-epoll\4.1.82.Final\e7c7dd18deac93105797f30057c912651ea76521\netty-transport-classes-epoll-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.82.Final\3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce\netty-transport-native-unix-common-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.82.Final\e431a218d91acb6476ccad5f5aafde50aa3945ca\netty-transport-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.82.Final\a544270cf1ae8b8077082f5036436a9a9971ea71\netty-buffer-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.82.Final\38f665ae8dcd29032eea31245ba7806bed2e0fa8\netty-resolver-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.82.Final\22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3\netty-common-4.1.82.Final.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\8.5.9\bb7ea75ecdb216654237830b3a96d87ad91f8cc5\fastutil-8.5.9.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.12.1\97406a297c852f4a41e688a176ec675f72e8329\jna-platform-5.12.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.12.1\b1e93a735caea94f503e95e6fe79bf9cdc1e985d\jna-5.12.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.4\4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c\jopt-simple-5.0.4.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.15\7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d\httpcore-4.4.15.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.19.0\3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb\log4j-core-2.19.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-slf4j2-impl\2.19.0\5c04bfdd63ce9dceb2e284b81e96b6a70010ee10\log4j-slf4j2-impl-2.19.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.19.0\ea1b37f38c327596b216542bc636cfdc0b8036fa\log4j-api-2.19.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.joml\joml\1.10.5\22566d58af70ad3d72308bab63b8339906deb649\joml-1.10.5.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\cbac1b8d30cb4795149c1ef540f912671a8616d0\lwjgl-glfw-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\ed892f945cf7e79c8756796f32d00fa4ceaf573b\lwjgl-glfw-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\beda65ee503443e60aa196d58ed31f8d001dc22a\lwjgl-glfw-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\b997e3391d6ce8f05487e7335d95c606043884a1\lwjgl-glfw-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\a817bcf213db49f710603677457567c37d53e103\lwjgl-jemalloc-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\948a89b76a16aa324b046ae9308891216ffce5f9\lwjgl-jemalloc-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\cae85c4edb219c88b6a0c26a87955ad98dc9519d\lwjgl-jemalloc-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\fb476c8ec110e1c137ad3ce8a7f7bfe6b11c6324\lwjgl-jemalloc-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\2623a6b8ae1dfcd880738656a9f0243d2e6840bd\lwjgl-openal-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\30a474d0e57193d7bc128849a3ab66bc9316fdb1\lwjgl-openal-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\40d65f1a7368a2aa47336f9cb69f5a190cf9975a\lwjgl-openal-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\888349f7b1be6fbae58bf8edfb9ef12def04c4e3\lwjgl-openal-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\831a5533a21a5f4f81bbc51bb13e9899319b5411\lwjgl-opengl-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\c1807e9bd571402787d7e37e3029776ae2513bb8\lwjgl-opengl-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\527d78f1e9056aff3ed02ce93019c73c5e8f1721\lwjgl-opengl-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\deef3eb9b178ff2ff3ce893cc72ae741c3a17974\lwjgl-opengl-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\b119297cf8ed01f247abe8685857f8e7fcf5980f\lwjgl-stb-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\86315914ac119efdb02dc9e8e978ade84f1702af\lwjgl-stb-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\fde63cdd2605c00636721a6c8b961e41d1f6b247\lwjgl-stb-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\a8d41f419eecb430b7c91ea2ce2c5c451cae2091\lwjgl-stb-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\ff1914111ef2e3e0110ef2dabc8d8cdaad82347\lwjgl-tinyfd-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\a5d830475ec0958d9fdba1559efa99aef211e6ff\lwjgl-tinyfd-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\83a5e780df610829ff3a737822b4f931cffecd91\lwjgl-tinyfd-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\842eedd876fae354abc308c98a263f6bbc9e8a4d\lwjgl-tinyfd-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\ae58664f88e18a9bb2c77b063833ca7aaec484cb\lwjgl-3.3.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\36c37f16ab611b3aa11f3bcf80b1d509b4ce6b\lwjgl-3.3.1-natives-windows.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\f46cadcf95675908fd3a550d63d9d709cb68998\lwjgl-3.3.1-natives-windows-arm64.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\3b14f4beae9dd39791ec9e12190a9380cd8a3ce6\lwjgl-3.3.1-natives-windows-x86.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.machinezoo.noexception\noexception\1.7.1\b65330c98e38a1f915fa54a6e5eca496505e3f0a\noexception-1.7.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.1\f48d81adce2abf5ad3cfe463df517952749e03bc\slf4j-api-2.0.1.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.3.0\cf43b5391de623b36fe066a21127baef82c64022\plexus-utils-3.3.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.12.0\d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5\checker-qual-3.12.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\ST4\4.3\92f2c1ad8d84abcbeead6cf7f2c53a04166293c2\ST4-4.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr-runtime\3.5.2\cd9cd41361c155f3af0f653009dcecb08d8b4afd\antlr-runtime-3.5.2.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.abego.treelayout\org.abego.treelayout.core\1.0.3\457216e8e6578099ae63667bb1e4439235892028\org.abego.treelayout.core-1.0.3.jar, --lib, C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.glassfish\javax.json\1.0.4\3178f73569fd7a1e5ffc464e680f7a8cc784b85a\javax.json-1.0.4.jar, --disable-abstract-param'
+Classpath:
+ - C:\Users\34115\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\ForgeAutoRenamingTool\1.0.6\ForgeAutoRenamingTool-1.0.6-all.jar
+Working directory: D:\Mod Development\klux\build\reobfJar
+Main class: net.minecraftforge.fart.Main
+====================================
+Forge Auto Renaming Tool v1.0.6
+lib: C:\Users\34115\.gradle\caches\forge_gradle\deobf_dependencies\mezz\jei\jei-1.20.1-common-api\15.8.2.26_mapped_official_1.20.1\jei-1.20.1-common-api-15.8.2.26_mapped_official_1.20.1.jar
+lib: C:\Users\34115\.gradle\caches\forge_gradle\deobf_dependencies\mezz\jei\jei-1.20.1-forge-api\15.8.2.26_mapped_official_1.20.1\jei-1.20.1-forge-api-15.8.2.26_mapped_official_1.20.1.jar
+lib: C:\Users\34115\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.3_mapped_official_1.20.1\forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar
+lib: C:\Users\34115\.gradle\caches\forge_gradle\minecraft_repo\versions\1.20.1\client-extra.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlloader\1.20.1-47.4.3\83a07112dda32736e6db00c117775a473c7dd519\fmlloader-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarSelector\0.3.19\376cc9c8ea60720cf027c01fc033de915699801c\JarJarSelector-0.3.19.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarMetadata\0.3.19\83feaa9b770e6ac0e96ee4fc23fa89325c5fe2\JarJarMetadata-0.3.19.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.1-jre\60458f877d055d0c9114d9e1a2efb737b4bc282c\guava-31.1-jre.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\forgespi\7.0.1\3b4972a0cdb135853dba219be61a79b22cff1309\forgespi-7.0.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mergetool\1.1.5\f3da18e12c696d35a47c82cbb2cc8b5aa15e1154\mergetool-1.1.5-api.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.1\13c5c75c4206580aa4d683bffee658caae6c9f43\annotations-24.0.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\2.1.10\51e6a22c6c716beb11e244bf5b8be480f51dd6b5\securejarhandler-2.1.10.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\coremods\5.2.4\e30bab269d896613e38396274711410b3a0e4b87\coremods-5.2.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\modlauncher\10.0.9\6d9443f56f50bb85cea383686ff9c867391458b\modlauncher-10.0.9.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.openjdk.nashorn\nashorn-core\15.4\f67f5ffaa5f5130cf6fb9b133da00c7df3b532a5\nashorn-core-15.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-commons\9.7.1\406c6a2225cfe1819f102a161e54cc16a5c24f75\asm-commons-9.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-util\9.7.1\9e23359b598ec6b74b23e53110dd5c577adf2243\asm-util-9.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.7.1\f97a3b319f0ed6a8cd944dc79060d3912a28985f\asm-analysis-9.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.7.1\3a53139787663b139de76b627fca0084ab60d32c\asm-tree-9.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7.1\f0ed132a49244b042cd0e15702ab9f2ce3cc8436\asm-9.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\accesstransformers\8.0.4\272d240aa73f42195b2a68e2ebd8b701ecf41f63\accesstransformers-8.0.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4\4.9.1\e92af8ab33e428461927b484e90bb155a4f3a052\antlr4-4.9.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.9.1\428664f05d2b7f7b7610204b5aa7c1763f62011a\antlr4-runtime-4.9.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.3\4f943542f1f182a4e269b4f920030b50738f6b81\fmlcore-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\eventbus\6.0.5\699143dd438431d06b57416944f7cedbe52e1475\eventbus-6.0.5.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\unsafe\0.2.0\54d7a0a5e8fdb71b973025caa46f341ae5904f39\unsafe-0.2.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\toml\3.6.4\51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4\toml-3.6.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.electronwill.night-config\core\3.6.4\510f174abbf1c947494db50ef2445683bd52c230\core-3.6.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.8.5\4433f50c07debefaed0553bd0068f4f48d449313\maven-artifact-3.8.5.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.jodah\typetools\0.6.3\a01aaa6ddaea9ec07ec4f209487b7a46a526283a\typetools-0.6.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecrell\terminalconsoleappender\1.2.0\96d02cd3b384ff015a8fef4223bcb4ccf1717c95\terminalconsoleappender-1.2.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jline\jline-reader\3.12.1\4382ab1382c7b6f379377ed5f665dc2f6e1218bc\jline-reader-3.12.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.jline\jline-terminal\3.12.1\c777448314e050d980a6b697c140f3bfe9eb7416\jline-terminal-3.12.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.8.5\9d1c0c3a304ae6697ecd477218fa61b850bf57fc\mixin-0.8.5.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\cpw.mods\bootstraplauncher\1.1.2\c546e00443d8432cda6baa1c860346980742628\bootstraplauncher-1.1.2.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarFileSystems\0.3.19\2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020\JarJarFileSystems-0.3.19.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlearlydisplay\1.20.1-47.4.3\cbc64139c2eb61277682e78beb55c26dd960357f\fmlearlydisplay-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.3\4080695cecae86c354232f04a2627dd7e4f1149e\javafmllanguage-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.3\29a0368be8b1a5ebc5c52ff7b50cddb265c31c36\lowcodelanguage-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.3\aa997425f691156656d4ba3aa78a50b43d677d91\mclanguage-1.20.1-47.4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.github.oshi\oshi-core\6.2.2\54f5efc19bca95d709d9a37d19ffcbba3d21c1a6\oshi-core-6.2.2.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.10\dd9b193aef96e973d5a11ab13cd17430c2e4306b\gson-2.10.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j\71.1\9e7d3304c23f9ba5cb71915f7cce23231a57a445\icu4j-71.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\4.0.43\2ff9d747a77570a07a60d32ac77eb6162ad2a2d9\authlib-4.0.43.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\blocklist\1.0.10\5c685c5ffa94c4cd39496c7184c1d122e515ecef\blocklist-1.0.10.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\brigadier\1.1.8\5244ce82c3337bba4a196a3ce858bfaecc74404a\brigadier-1.1.8.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\6.0.8\3ba4a30557a9b057760af4011f909ba619fc5125\datafixerupper-6.0.8.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\logging\1.1.1\832b8e6674a9b325a5175a3a6267dfaf34c85139\logging-1.1.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.17.9\3cad216e3a7f0c19b4b394388bc9ffc446f13b14\text2speech-1.17.9.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a2503f302b11ebde7ebc3df41daebe0e4eea3689\commons-io-2.11.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.82.Final\644041d1fa96a5d3130a29e8978630d716d76e38\netty-handler-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.82.Final\b77200379acb345a9ffdece1c605e591ac3e4e0a\netty-codec-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-epoll\4.1.82.Final\e7c7dd18deac93105797f30057c912651ea76521\netty-transport-classes-epoll-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.82.Final\3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce\netty-transport-native-unix-common-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.82.Final\e431a218d91acb6476ccad5f5aafde50aa3945ca\netty-transport-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.82.Final\a544270cf1ae8b8077082f5036436a9a9971ea71\netty-buffer-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.82.Final\38f665ae8dcd29032eea31245ba7806bed2e0fa8\netty-resolver-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.82.Final\22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3\netty-common-4.1.82.Final.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\8.5.9\bb7ea75ecdb216654237830b3a96d87ad91f8cc5\fastutil-8.5.9.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.12.1\97406a297c852f4a41e688a176ec675f72e8329\jna-platform-5.12.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.12.1\b1e93a735caea94f503e95e6fe79bf9cdc1e985d\jna-5.12.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.4\4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c\jopt-simple-5.0.4.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.15\7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d\httpcore-4.4.15.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.19.0\3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb\log4j-core-2.19.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-slf4j2-impl\2.19.0\5c04bfdd63ce9dceb2e284b81e96b6a70010ee10\log4j-slf4j2-impl-2.19.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.19.0\ea1b37f38c327596b216542bc636cfdc0b8036fa\log4j-api-2.19.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.joml\joml\1.10.5\22566d58af70ad3d72308bab63b8339906deb649\joml-1.10.5.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\cbac1b8d30cb4795149c1ef540f912671a8616d0\lwjgl-glfw-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\ed892f945cf7e79c8756796f32d00fa4ceaf573b\lwjgl-glfw-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\beda65ee503443e60aa196d58ed31f8d001dc22a\lwjgl-glfw-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-glfw\3.3.1\b997e3391d6ce8f05487e7335d95c606043884a1\lwjgl-glfw-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\a817bcf213db49f710603677457567c37d53e103\lwjgl-jemalloc-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\948a89b76a16aa324b046ae9308891216ffce5f9\lwjgl-jemalloc-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\cae85c4edb219c88b6a0c26a87955ad98dc9519d\lwjgl-jemalloc-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-jemalloc\3.3.1\fb476c8ec110e1c137ad3ce8a7f7bfe6b11c6324\lwjgl-jemalloc-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\2623a6b8ae1dfcd880738656a9f0243d2e6840bd\lwjgl-openal-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\30a474d0e57193d7bc128849a3ab66bc9316fdb1\lwjgl-openal-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\40d65f1a7368a2aa47336f9cb69f5a190cf9975a\lwjgl-openal-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-openal\3.3.1\888349f7b1be6fbae58bf8edfb9ef12def04c4e3\lwjgl-openal-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\831a5533a21a5f4f81bbc51bb13e9899319b5411\lwjgl-opengl-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\c1807e9bd571402787d7e37e3029776ae2513bb8\lwjgl-opengl-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\527d78f1e9056aff3ed02ce93019c73c5e8f1721\lwjgl-opengl-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-opengl\3.3.1\deef3eb9b178ff2ff3ce893cc72ae741c3a17974\lwjgl-opengl-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\b119297cf8ed01f247abe8685857f8e7fcf5980f\lwjgl-stb-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\86315914ac119efdb02dc9e8e978ade84f1702af\lwjgl-stb-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\fde63cdd2605c00636721a6c8b961e41d1f6b247\lwjgl-stb-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-stb\3.3.1\a8d41f419eecb430b7c91ea2ce2c5c451cae2091\lwjgl-stb-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\ff1914111ef2e3e0110ef2dabc8d8cdaad82347\lwjgl-tinyfd-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\a5d830475ec0958d9fdba1559efa99aef211e6ff\lwjgl-tinyfd-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\83a5e780df610829ff3a737822b4f931cffecd91\lwjgl-tinyfd-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl-tinyfd\3.3.1\842eedd876fae354abc308c98a263f6bbc9e8a4d\lwjgl-tinyfd-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\ae58664f88e18a9bb2c77b063833ca7aaec484cb\lwjgl-3.3.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\36c37f16ab611b3aa11f3bcf80b1d509b4ce6b\lwjgl-3.3.1-natives-windows.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\f46cadcf95675908fd3a550d63d9d709cb68998\lwjgl-3.3.1-natives-windows-arm64.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\3b14f4beae9dd39791ec9e12190a9380cd8a3ce6\lwjgl-3.3.1-natives-windows-x86.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.machinezoo.noexception\noexception\1.7.1\b65330c98e38a1f915fa54a6e5eca496505e3f0a\noexception-1.7.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.1\f48d81adce2abf5ad3cfe463df517952749e03bc\slf4j-api-2.0.1.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.3.0\cf43b5391de623b36fe066a21127baef82c64022\plexus-utils-3.3.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.12.0\d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5\checker-qual-3.12.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\ST4\4.3\92f2c1ad8d84abcbeead6cf7f2c53a04166293c2\ST4-4.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.antlr\antlr-runtime\3.5.2\cd9cd41361c155f3af0f653009dcecb08d8b4afd\antlr-runtime-3.5.2.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.abego.treelayout\org.abego.treelayout.core\1.0.3\457216e8e6578099ae63667bb1e4439235892028\org.abego.treelayout.core-1.0.3.jar
+lib: C:\Users\34115\.gradle\caches\modules-2\files-2.1\org.glassfish\javax.json\1.0.4\3178f73569fd7a1e5ffc464e680f7a8cc784b85a\javax.json-1.0.4.jar
+log: null
+input: D:\Mod Development\klux\build\libs\klux-1.0.0.jar
+output: D:\Mod Development\klux\build\reobfJar\output.jar
+threads: 28
+Names: D:\Mod Development\klux\build\reobfJar\mappings.tsrg(reversed: false)
+Fix Annotations: false
+Fix Records: false
+Fix Identifiers: false
+Fix SourceFile: false
+Fix Line Numbers: false
+Strip codesigning signatures: false
+Adding Libraries to Inheritance
+Reading Input: D:\Mod Development\klux\build\libs\klux-1.0.0.jar
+Adding input to inheritance map
+Processing entries
+Conflicting propagated mapping for net/minecraftforge/common/data/GlobalLootModifierProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture; from net/minecraft/data/DataProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture;: run -> m_213708_
+Conflicting propagated mapping for net/minecraftforge/common/data/GlobalLootModifierProvider/getName()Ljava/lang/String; from net/minecraft/data/DataProvider/getName()Ljava/lang/String;: getName -> m_6055_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity$1/getCount()I from net/minecraft/world/inventory/ContainerData/getCount()I: getCount -> m_6499_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity$1/get(I)I from net/minecraft/world/inventory/ContainerData/get(I)I: get -> m_6413_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity$1/set(II)V from net/minecraft/world/inventory/ContainerData/set(II)V: set -> m_8050_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/loot/ModBlockLootTables/generate()V from net/minecraft/data/loot/BlockLootSubProvider/generate()V: generate -> m_245660_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity$1/getCount()I from net/minecraft/world/inventory/ContainerData/getCount()I: getCount -> m_6499_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity$1/get(I)I from net/minecraft/world/inventory/ContainerData/get(I)I: get -> m_6413_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity$1/getCount()I from net/minecraft/world/inventory/ContainerData/getCount()I: getCount -> m_6499_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity$1/set(II)V from net/minecraft/world/inventory/ContainerData/set(II)V: set -> m_8050_
+Conflicting propagated mapping for net/minecraftforge/client/model/generators/BlockStateProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture; from net/minecraft/data/DataProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture;: run -> m_213708_
+Conflicting propagated mapping for net/minecraftforge/client/model/generators/BlockStateProvider/getName()Ljava/lang/String; from net/minecraft/data/DataProvider/getName()Ljava/lang/String;: getName -> m_6055_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModBlockTagGenerator/addTags(Lnet/minecraft/core/HolderLookup$Provider;)V from net/minecraft/data/tags/TagsProvider/addTags(Lnet/minecraft/core/HolderLookup$Provider;)V: addTags -> m_6577_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity$1/get(I)I from net/minecraft/world/inventory/ContainerData/get(I)I: get -> m_6413_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity$1/set(II)V from net/minecraft/world/inventory/ContainerData/set(II)V: set -> m_8050_
+Conflicting propagated mapping for net/minecraftforge/common/loot/LootTableIdCondition$Builder/build()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition; from net/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder/build()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;: build -> m_6409_
+Conflicting propagated mapping for net/minecraftforge/client/model/generators/ModelProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture; from net/minecraft/data/DataProvider/run(Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture;: run -> m_213708_
+Conflicting propagated mapping for net/minecraftforge/client/model/generators/ItemModelProvider/getName()Ljava/lang/String; from net/minecraft/data/DataProvider/getName()Ljava/lang/String;: getName -> m_6055_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu; from net/minecraft/world/inventory/MenuConstructor/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu;: createMenu -> m_7208_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/SeedMakerBlockEntity/getDisplayName()Lnet/minecraft/network/chat/Component; from net/minecraft/world/MenuProvider/getDisplayName()Lnet/minecraft/network/chat/Component;: getDisplayName -> m_5446_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu; from net/minecraft/world/inventory/MenuConstructor/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu;: createMenu -> m_7208_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/CompressorBlockEntity/getDisplayName()Lnet/minecraft/network/chat/Component; from net/minecraft/world/MenuProvider/getDisplayName()Lnet/minecraft/network/chat/Component;: getDisplayName -> m_5446_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu; from net/minecraft/world/inventory/MenuConstructor/createMenu(ILnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/inventory/AbstractContainerMenu;: createMenu -> m_7208_
+Conflicting propagated mapping for net/minecraftforge/common/loot/LootTableIdCondition/getType()Lnet/minecraft/world/level/storage/loot/predicates/LootItemConditionType; from net/minecraft/world/level/storage/loot/predicates/LootItemCondition/getType()Lnet/minecraft/world/level/storage/loot/predicates/LootItemConditionType;: getType -> m_7940_
+Conflicting propagated mapping for org/kdvcs/klux/block/entity/DehydratorBlockEntity/getDisplayName()Lnet/minecraft/network/chat/Component; from net/minecraft/world/MenuProvider/getDisplayName()Lnet/minecraft/network/chat/Component;: getDisplayName -> m_5446_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/canCraftInDimensions(II)Z from net/minecraft/world/item/crafting/Recipe/canCraftInDimensions(II)Z: canCraftInDimensions -> m_8004_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: getResultItem -> m_8043_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/getIngredients()Lnet/minecraft/core/NonNullList; from net/minecraft/world/item/crafting/Recipe/getIngredients()Lnet/minecraft/core/NonNullList;: getIngredients -> m_7527_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z from net/minecraft/world/item/crafting/Recipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z: matches -> m_5818_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/getId()Lnet/minecraft/resources/ResourceLocation; from net/minecraft/world/item/crafting/Recipe/getId()Lnet/minecraft/resources/ResourceLocation;: getId -> m_6423_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: assemble -> m_5874_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/getType()Lnet/minecraft/world/item/crafting/RecipeType; from net/minecraft/world/item/crafting/Recipe/getType()Lnet/minecraft/world/item/crafting/RecipeType;: getType -> m_6671_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer; from net/minecraft/world/item/crafting/Recipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer;: getSerializer -> m_7707_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/canCraftInDimensions(II)Z from net/minecraft/world/item/crafting/Recipe/canCraftInDimensions(II)Z: canCraftInDimensions -> m_8004_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: getResultItem -> m_8043_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/getIngredients()Lnet/minecraft/core/NonNullList; from net/minecraft/world/item/crafting/Recipe/getIngredients()Lnet/minecraft/core/NonNullList;: getIngredients -> m_7527_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z from net/minecraft/world/item/crafting/Recipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z: matches -> m_5818_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/getId()Lnet/minecraft/resources/ResourceLocation; from net/minecraft/world/item/crafting/Recipe/getId()Lnet/minecraft/resources/ResourceLocation;: getId -> m_6423_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: assemble -> m_5874_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/getType()Lnet/minecraft/world/item/crafting/RecipeType; from net/minecraft/world/item/crafting/Recipe/getType()Lnet/minecraft/world/item/crafting/RecipeType;: getType -> m_6671_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer; from net/minecraft/world/item/crafting/Recipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer;: getSerializer -> m_7707_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SoundBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/canCraftInDimensions(II)Z from net/minecraft/world/item/crafting/Recipe/canCraftInDimensions(II)Z: canCraftInDimensions -> m_8004_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SoundBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/getResultItem(Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: getResultItem -> m_8043_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/getIngredients()Lnet/minecraft/core/NonNullList; from net/minecraft/world/item/crafting/Recipe/getIngredients()Lnet/minecraft/core/NonNullList;: getIngredients -> m_7527_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z from net/minecraft/world/item/crafting/Recipe/matches(Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z: matches -> m_5818_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/getId()Lnet/minecraft/resources/ResourceLocation; from net/minecraft/world/item/crafting/Recipe/getId()Lnet/minecraft/resources/ResourceLocation;: getId -> m_6423_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Recipe/assemble(Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;: assemble -> m_5874_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/getType()Lnet/minecraft/world/item/crafting/RecipeType; from net/minecraft/world/item/crafting/Recipe/getType()Lnet/minecraft/world/item/crafting/RecipeType;: getType -> m_6671_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer; from net/minecraft/world/item/crafting/Recipe/getSerializer()Lnet/minecraft/world/item/crafting/RecipeSerializer;: getSerializer -> m_7707_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V from net/minecraft/world/level/block/state/BlockBehaviour/onRemove(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V: onRemove -> m_6810_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker; from net/minecraft/world/level/block/EntityBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker;: getTicker -> m_142354_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker; from net/minecraft/world/level/block/EntityBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker;: getTicker -> m_142354_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity; from net/minecraft/world/level/block/EntityBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;: newBlockEntity -> m_142194_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker; from net/minecraft/world/level/block/EntityBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker;: getTicker -> m_142354_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity; from net/minecraft/world/level/block/EntityBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;: newBlockEntity -> m_142194_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape; from net/minecraft/world/level/block/BaseEntityBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;: getRenderShape -> m_7514_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity; from net/minecraft/world/level/block/EntityBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;: newBlockEntity -> m_142194_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape; from net/minecraft/world/level/block/BaseEntityBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;: getRenderShape -> m_7514_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape; from net/minecraft/world/level/block/BaseEntityBlock/getRenderShape(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;: getRenderShape -> m_7514_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SeedMakerBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/DehydratorBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/CompressorBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/getMaxAge()I from net/minecraft/world/level/block/CropBlock/getMaxAge()I: getMaxAge -> m_7419_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/ParsnipCropBlock/getMaxAge()I from net/minecraft/world/level/block/CropBlock/getMaxAge()I: getMaxAge -> m_7419_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/RottenFruitCropBlock/getMaxAge()I from net/minecraft/world/level/block/CropBlock/getMaxAge()I: getMaxAge -> m_7419_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/ParsnipCropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty; from net/minecraft/world/level/block/CropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty;: getAgeProperty -> m_7959_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty; from net/minecraft/world/level/block/CropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty;: getAgeProperty -> m_7959_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/canSurvive(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z from net/minecraft/world/level/block/CropBlock/canSurvive(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z: canSurvive -> m_7898_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/RottenFruitCropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty; from net/minecraft/world/level/block/CropBlock/getAgeProperty()Lnet/minecraft/world/level/block/state/properties/IntegerProperty;: getAgeProperty -> m_7959_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike; from net/minecraft/world/level/block/CropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike;: getBaseSeedId -> m_6404_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/RottenFruitCropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike; from net/minecraft/world/level/block/CropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike;: getBaseSeedId -> m_6404_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/ParsnipCropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike; from net/minecraft/world/level/block/CropBlock/getBaseSeedId()Lnet/minecraft/world/level/ItemLike;: getBaseSeedId -> m_6404_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/RottenFruitCropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/CropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/growCrops(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V from net/minecraft/world/level/block/CropBlock/growCrops(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V: growCrops -> m_52263_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/ParsnipCropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/CropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/CropBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/randomTick(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V from net/minecraft/world/level/block/CropBlock/randomTick(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V: randomTick -> m_213898_
+Conflicting propagated mapping for org/kdvcs/klux/block/custom/SpringOnionCropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/CropBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/Detector/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/Detector/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/Item/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;: useOn -> m_6225_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/Humics/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/Item/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;: useOn -> m_6225_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModItemTagGenerator/addTags(Lnet/minecraft/core/HolderLookup$Provider;)V from net/minecraft/data/tags/TagsProvider/addTags(Lnet/minecraft/core/HolderLookup$Provider;)V: addTags -> m_6577_
+Conflicting propagated mapping for net/minecraftforge/common/util/ForgeSoundType/getPlaceSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/level/block/SoundType/getPlaceSound()Lnet/minecraft/sounds/SoundEvent;: getPlaceSound -> m_56777_
+Conflicting propagated mapping for net/minecraftforge/common/util/ForgeSoundType/getFallSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/level/block/SoundType/getFallSound()Lnet/minecraft/sounds/SoundEvent;: getFallSound -> m_56779_
+Conflicting propagated mapping for net/minecraftforge/common/util/ForgeSoundType/getStepSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/level/block/SoundType/getStepSound()Lnet/minecraft/sounds/SoundEvent;: getStepSound -> m_56776_
+Conflicting propagated mapping for net/minecraftforge/common/util/ForgeSoundType/getHitSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/level/block/SoundType/getHitSound()Lnet/minecraft/sounds/SoundEvent;: getHitSound -> m_56778_
+Conflicting propagated mapping for net/minecraftforge/common/util/ForgeSoundType/getBreakSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/level/block/SoundType/getBreakSound()Lnet/minecraft/sounds/SoundEvent;: getBreakSound -> m_56775_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/ReturnScepter/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/ReturnScepter/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder; from net/minecraft/world/item/Item/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;: use -> m_7203_
+Conflicting propagated mapping for org/kdvcs/klux/item/custom/ReturnScepter/canBeHurtBy(Lnet/minecraft/world/damagesource/DamageSource;)Z from net/minecraft/world/item/Item/canBeHurtBy(Lnet/minecraft/world/damagesource/DamageSource;)Z: canBeHurtBy -> m_41386_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getRepairIngredient()Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/ArmorMaterial/getRepairIngredient()Lnet/minecraft/world/item/crafting/Ingredient;: getRepairIngredient -> m_6230_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getEnchantmentValue()I from net/minecraft/world/item/ArmorMaterial/getEnchantmentValue()I: getEnchantmentValue -> m_6646_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getKnockbackResistance()F from net/minecraft/world/item/ArmorMaterial/getKnockbackResistance()F: getKnockbackResistance -> m_6649_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getToughness()F from net/minecraft/world/item/ArmorMaterial/getToughness()F: getToughness -> m_6651_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getName()Ljava/lang/String; from net/minecraft/world/item/ArmorMaterial/getName()Ljava/lang/String;: getName -> m_6082_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getDefenseForType(Lnet/minecraft/world/item/ArmorItem$Type;)I from net/minecraft/world/item/ArmorMaterial/getDefenseForType(Lnet/minecraft/world/item/ArmorItem$Type;)I: getDefenseForType -> m_7366_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getEquipSound()Lnet/minecraft/sounds/SoundEvent; from net/minecraft/world/item/ArmorMaterial/getEquipSound()Lnet/minecraft/sounds/SoundEvent;: getEquipSound -> m_7344_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModArmorMaterials/getDurabilityForType(Lnet/minecraft/world/item/ArmorItem$Type;)I from net/minecraft/world/item/ArmorMaterial/getDurabilityForType(Lnet/minecraft/world/item/ArmorItem$Type;)I: getDurabilityForType -> m_266425_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModRecipeProvider/oreSmelting(Ljava/util/function/Consumer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;)V from net/minecraft/data/recipes/RecipeProvider/oreSmelting(Ljava/util/function/Consumer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;)V: oreSmelting -> m_246272_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModRecipeProvider/oreBlasting(Ljava/util/function/Consumer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;)V from net/minecraft/data/recipes/RecipeProvider/oreBlasting(Ljava/util/function/Consumer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;)V: oreBlasting -> m_245412_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModRecipeProvider/buildRecipes(Ljava/util/function/Consumer;)V from net/minecraft/data/recipes/RecipeProvider/buildRecipes(Ljava/util/function/Consumer;)V: buildRecipes -> m_245200_
+Conflicting propagated mapping for org/kdvcs/klux/datagen/ModRecipeProvider/oreCooking(Ljava/util/function/Consumer;Lnet/minecraft/world/item/crafting/RecipeSerializer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;Ljava/lang/String;)V from net/minecraft/data/recipes/RecipeProvider/oreCooking(Ljava/util/function/Consumer;Lnet/minecraft/world/item/crafting/RecipeSerializer;Ljava/util/List;Lnet/minecraft/data/recipes/RecipeCategory;Lnet/minecraft/world/level/ItemLike;FILjava/lang/String;Ljava/lang/String;)V: oreCooking -> m_245809_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModItems$1/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModItems$2/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModItems$3/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/minecraftforge/client/model/generators/BlockModelProvider/getName()Ljava/lang/String; from net/minecraft/data/DataProvider/getName()Ljava/lang/String;: getName -> m_6055_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModItems$4/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for org/kdvcs/klux/item/ModItems$5/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getUses()I from net/minecraft/world/item/Tier/getUses()I: getUses -> m_6609_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getSpeed()F from net/minecraft/world/item/Tier/getSpeed()F: getSpeed -> m_6624_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getRepairIngredient()Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/Tier/getRepairIngredient()Lnet/minecraft/world/item/crafting/Ingredient;: getRepairIngredient -> m_6282_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getEnchantmentValue()I from net/minecraft/world/item/Tier/getEnchantmentValue()I: getEnchantmentValue -> m_6601_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getLevel()I from net/minecraft/world/item/Tier/getLevel()I: getLevel -> m_6604_
+Conflicting propagated mapping for net/minecraftforge/common/ForgeTier/getAttackDamageBonus()F from net/minecraft/world/item/Tier/getAttackDamageBonus()F: getAttackDamageBonus -> m_6631_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe$Serializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe;: fromJson -> m_6729_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe$Serializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe;: fromJson -> m_6729_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe$Serializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe;: fromNetwork -> m_8005_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe$Serializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe;: fromNetwork -> m_8005_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/CompressorRecipe$Serializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V from net/minecraft/world/item/crafting/RecipeSerializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V: toNetwork -> m_6178_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/DehydratorRecipe$Serializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V from net/minecraft/world/item/crafting/RecipeSerializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V: toNetwork -> m_6178_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe$Serializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/Recipe;: fromJson -> m_6729_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe$Serializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe; from net/minecraft/world/item/crafting/RecipeSerializer/fromNetwork(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Recipe;: fromNetwork -> m_8005_
+Conflicting propagated mapping for org/kdvcs/klux/recipe/SeedMakerRecipe$Serializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V from net/minecraft/world/item/crafting/RecipeSerializer/toNetwork(Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/Recipe;)V: toNetwork -> m_6178_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/set(Lnet/minecraft/world/item/ItemStack;)V from net/minecraft/world/inventory/Slot/set(Lnet/minecraft/world/item/ItemStack;)V: set -> m_5852_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/mayPlace(Lnet/minecraft/world/item/ItemStack;)Z from net/minecraft/world/inventory/Slot/mayPlace(Lnet/minecraft/world/item/ItemStack;)Z: mayPlace -> m_5857_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/remove(I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/Slot/remove(I)Lnet/minecraft/world/item/ItemStack;: remove -> m_6201_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/onQuickCraft(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V from net/minecraft/world/inventory/Slot/onQuickCraft(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V: onQuickCraft -> m_40234_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/getItem()Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/Slot/getItem()Lnet/minecraft/world/item/ItemStack;: getItem -> m_7993_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/getMaxStackSize(Lnet/minecraft/world/item/ItemStack;)I from net/minecraft/world/inventory/Slot/getMaxStackSize(Lnet/minecraft/world/item/ItemStack;)I: getMaxStackSize -> m_5866_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/mayPickup(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/Slot/mayPickup(Lnet/minecraft/world/entity/player/Player;)Z: mayPickup -> m_8010_
+Conflicting propagated mapping for net/minecraftforge/items/SlotItemHandler/getMaxStackSize()I from net/minecraft/world/inventory/Slot/getMaxStackSize()I: getMaxStackSize -> m_6641_
+Conflicting propagated mapping for org/kdvcs/klux/screen/CompressorMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/AbstractContainerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
+Conflicting propagated mapping for org/kdvcs/klux/screen/DehydratorMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/AbstractContainerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
+Conflicting propagated mapping for org/kdvcs/klux/screen/SeedMakerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/AbstractContainerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
+Conflicting propagated mapping for org/kdvcs/klux/screen/CompressorMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/AbstractContainerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
+Conflicting propagated mapping for org/kdvcs/klux/screen/DehydratorMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/AbstractContainerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
+Conflicting propagated mapping for org/kdvcs/klux/screen/SeedMakerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/AbstractContainerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
+Conflicting propagated mapping for net/minecraftforge/network/IContainerFactory/create(ILnet/minecraft/world/entity/player/Inventory;)Lnet/minecraft/world/inventory/AbstractContainerMenu; from net/minecraft/world/inventory/MenuType$MenuSupplier/create(ILnet/minecraft/world/entity/player/Inventory;)Lnet/minecraft/world/inventory/AbstractContainerMenu;: create -> m_39994_
+Conflicting propagated mapping for org/kdvcs/klux/screen/CompressorScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for org/kdvcs/klux/screen/CompressorScreen/init()V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/init()V: init -> m_7856_
+Conflicting propagated mapping for org/kdvcs/klux/screen/DehydratorScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for org/kdvcs/klux/screen/SeedMakerScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for org/kdvcs/klux/screen/DehydratorScreen/init()V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/init()V: init -> m_7856_
+Conflicting propagated mapping for org/kdvcs/klux/screen/SeedMakerScreen/init()V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/init()V: init -> m_7856_
+Conflicting propagated mapping for org/kdvcs/klux/screen/CompressorScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V: renderBg -> m_7286_
+Conflicting propagated mapping for org/kdvcs/klux/screen/DehydratorScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V: renderBg -> m_7286_
+Conflicting propagated mapping for org/kdvcs/klux/screen/SeedMakerScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V: renderBg -> m_7286_
+Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
+Adding extras
+Sorting
+Writing Output: D:\Mod Development\klux\build\reobfJar\output.jar
+  META-INF/
+  META-INF/MANIFEST.MF
+  .cache/
+  .cache/103d9f3f36b01595f1aa5172191e60eff02e6924
+  .cache/3166df7f2b0d0a8129dd922b59f885258b625fe2
+  .cache/4aaccaad6909de8bb94c84a9f4e524553f5b3cf1
+  .cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d
+  .cache/6c0e362c989119180874d7cb8ea4f29a1f51543e
+  .cache/8f6efad11d2b7572f68bec6ac09d0dc9b89ce7f7
+  .cache/9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e
+  .cache/b71420681916a6e756040f9cdace3c03bb36b417
+  META-INF/mods.toml
+  assets/
+  assets/klux/
+  assets/klux/blockstates/
+  assets/klux/blockstates/cactus_fruit.json
+  assets/klux/blockstates/compressor.json
+  assets/klux/blockstates/deepslate_earth_crystal_ore.json
+  assets/klux/blockstates/dehydrator.json
+  assets/klux/blockstates/earth_crystal_block.json
+  assets/klux/blockstates/earth_crystal_button.json
+  assets/klux/blockstates/earth_crystal_door.json
+  assets/klux/blockstates/earth_crystal_fence.json
+  assets/klux/blockstates/earth_crystal_fence_gate.json
+  assets/klux/blockstates/earth_crystal_frame.json
+  assets/klux/blockstates/earth_crystal_ore.json
+  assets/klux/blockstates/earth_crystal_pressure_plate.json
+  assets/klux/blockstates/earth_crystal_slab.json
+  assets/klux/blockstates/earth_crystal_stairs.json
+  assets/klux/blockstates/earth_crystal_trapdoor.json
+  assets/klux/blockstates/earth_crystal_wall.json
+  assets/klux/blockstates/endergon_crystal_ore.json
+  assets/klux/blockstates/fire_quartz_ore.json
+  assets/klux/blockstates/parsnip_crop.json
+  assets/klux/blockstates/potted_cactus_fruit.json
+  assets/klux/blockstates/rotten_fruit_crop.json
+  assets/klux/blockstates/seed_maker.json
+  assets/klux/blockstates/sound_block.json
+  assets/klux/blockstates/spring_onion_crop.json
+  assets/klux/lang/
+  assets/klux/lang/en_us.json
+  assets/klux/lang/zh_cn.json
+  assets/klux/models/
+  assets/klux/models/block/
+  assets/klux/models/block/cactus_fruit.json
+  assets/klux/models/block/compressor_idle.json
+  assets/klux/models/block/compressor_working.json
+  assets/klux/models/block/deepslate_earth_crystal_ore.json
+  assets/klux/models/block/dehydrator_idle.json
+  assets/klux/models/block/dehydrator_working.json
+  assets/klux/models/block/earth_crystal_block.json
+  assets/klux/models/block/earth_crystal_button.json
+  assets/klux/models/block/earth_crystal_button_pressed.json
+  assets/klux/models/block/earth_crystal_door_bottom_left.json
+  assets/klux/models/block/earth_crystal_door_bottom_left_open.json
+  assets/klux/models/block/earth_crystal_door_bottom_right.json
+  assets/klux/models/block/earth_crystal_door_bottom_right_open.json
+  assets/klux/models/block/earth_crystal_door_top_left.json
+  assets/klux/models/block/earth_crystal_door_top_left_open.json
+  assets/klux/models/block/earth_crystal_door_top_right.json
+  assets/klux/models/block/earth_crystal_door_top_right_open.json
+  assets/klux/models/block/earth_crystal_fence_gate.json
+  assets/klux/models/block/earth_crystal_fence_gate_open.json
+  assets/klux/models/block/earth_crystal_fence_gate_wall.json
+  assets/klux/models/block/earth_crystal_fence_gate_wall_open.json
+  assets/klux/models/block/earth_crystal_fence_post.json
+  assets/klux/models/block/earth_crystal_fence_side.json
+  assets/klux/models/block/earth_crystal_frame.json
+  assets/klux/models/block/earth_crystal_ore.json
+  assets/klux/models/block/earth_crystal_pressure_plate.json
+  assets/klux/models/block/earth_crystal_pressure_plate_down.json
+  assets/klux/models/block/earth_crystal_slab.json
+  assets/klux/models/block/earth_crystal_slab_top.json
+  assets/klux/models/block/earth_crystal_stairs.json
+  assets/klux/models/block/earth_crystal_stairs_inner.json
+  assets/klux/models/block/earth_crystal_stairs_outer.json
+  assets/klux/models/block/earth_crystal_trapdoor_bottom.json
+  assets/klux/models/block/earth_crystal_trapdoor_open.json
+  assets/klux/models/block/earth_crystal_trapdoor_top.json
+  assets/klux/models/block/earth_crystal_wall_post.json
+  assets/klux/models/block/earth_crystal_wall_side.json
+  assets/klux/models/block/earth_crystal_wall_side_tall.json
+  assets/klux/models/block/endergon_crystal_ore.json
+  assets/klux/models/block/fire_quartz_ore.json
+  assets/klux/models/block/parsnip_stage0.json
+  assets/klux/models/block/parsnip_stage1.json
+  assets/klux/models/block/parsnip_stage2.json
+  assets/klux/models/block/parsnip_stage3.json
+  assets/klux/models/block/potted_cactus_fruit.json
+  assets/klux/models/block/rotten_fruit_stage0.json
+  assets/klux/models/block/rotten_fruit_stage1.json
+  assets/klux/models/block/rotten_fruit_stage2.json
+  assets/klux/models/block/rotten_fruit_stage3.json
+  assets/klux/models/block/seed_maker_idle.json
+  assets/klux/models/block/seed_maker_working.json
+  assets/klux/models/block/sound_block.json
+  assets/klux/models/block/spring_onion_stage_0.json
+  assets/klux/models/block/spring_onion_stage_1.json
+  assets/klux/models/block/spring_onion_stage_2.json
+  assets/klux/models/block/spring_onion_stage_3.json
+  assets/klux/models/block/spring_onion_stage_4.json
+  assets/klux/models/block/spring_onion_stage_5.json
+  assets/klux/models/block/spring_onion_stage_6.json
+  assets/klux/models/block/spring_onion_stage_7.json
+  assets/klux/models/block/spring_onion_stage_8.json
+  assets/klux/models/item/
+  assets/klux/models/item/air_duct.json
+  assets/klux/models/item/cactus_fruit.json
+  assets/klux/models/item/compressor.json
+  assets/klux/models/item/deepslate_earth_crystal_ore.json
+  assets/klux/models/item/dehydrated_seeds.json
+  assets/klux/models/item/dehydrator.json
+  assets/klux/models/item/detector.json
+  assets/klux/models/item/earth_crystal.json
+  assets/klux/models/item/earth_crystal_axe.json
+  assets/klux/models/item/earth_crystal_block.json
+  assets/klux/models/item/earth_crystal_boots.json
+  assets/klux/models/item/earth_crystal_boots_amethyst_trim.json
+  assets/klux/models/item/earth_crystal_boots_copper_trim.json
+  assets/klux/models/item/earth_crystal_boots_diamond_trim.json
+  assets/klux/models/item/earth_crystal_boots_emerald_trim.json
+  assets/klux/models/item/earth_crystal_boots_gold_trim.json
+  assets/klux/models/item/earth_crystal_boots_iron_trim.json
+  assets/klux/models/item/earth_crystal_boots_lapis_trim.json
+  assets/klux/models/item/earth_crystal_boots_netherite_trim.json
+  assets/klux/models/item/earth_crystal_boots_quartz_trim.json
+  assets/klux/models/item/earth_crystal_boots_redstone_trim.json
+  assets/klux/models/item/earth_crystal_button.json
+  assets/klux/models/item/earth_crystal_chestplate.json
+  assets/klux/models/item/earth_crystal_chestplate_amethyst_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_copper_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_diamond_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_emerald_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_gold_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_iron_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_lapis_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_netherite_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_quartz_trim.json
+  assets/klux/models/item/earth_crystal_chestplate_redstone_trim.json
+  assets/klux/models/item/earth_crystal_door.json
+  assets/klux/models/item/earth_crystal_fence.json
+  assets/klux/models/item/earth_crystal_fence_gate.json
+  assets/klux/models/item/earth_crystal_frame.json
+  assets/klux/models/item/earth_crystal_helmet.json
+  assets/klux/models/item/earth_crystal_helmet_amethyst_trim.json
+  assets/klux/models/item/earth_crystal_helmet_copper_trim.json
+  assets/klux/models/item/earth_crystal_helmet_diamond_trim.json
+  assets/klux/models/item/earth_crystal_helmet_emerald_trim.json
+  assets/klux/models/item/earth_crystal_helmet_gold_trim.json
+  assets/klux/models/item/earth_crystal_helmet_iron_trim.json
+  assets/klux/models/item/earth_crystal_helmet_lapis_trim.json
+  assets/klux/models/item/earth_crystal_helmet_netherite_trim.json
+  assets/klux/models/item/earth_crystal_helmet_quartz_trim.json
+  assets/klux/models/item/earth_crystal_helmet_redstone_trim.json
+  assets/klux/models/item/earth_crystal_hoe.json
+  assets/klux/models/item/earth_crystal_leggings.json
+  assets/klux/models/item/earth_crystal_leggings_amethyst_trim.json
+  assets/klux/models/item/earth_crystal_leggings_copper_trim.json
+  assets/klux/models/item/earth_crystal_leggings_diamond_trim.json
+  assets/klux/models/item/earth_crystal_leggings_emerald_trim.json
+  assets/klux/models/item/earth_crystal_leggings_gold_trim.json
+  assets/klux/models/item/earth_crystal_leggings_iron_trim.json
+  assets/klux/models/item/earth_crystal_leggings_lapis_trim.json
+  assets/klux/models/item/earth_crystal_leggings_netherite_trim.json
+  assets/klux/models/item/earth_crystal_leggings_quartz_trim.json
+  assets/klux/models/item/earth_crystal_leggings_redstone_trim.json
+  assets/klux/models/item/earth_crystal_ore.json
+  assets/klux/models/item/earth_crystal_pickaxe.json
+  assets/klux/models/item/earth_crystal_pressure_plate.json
+  assets/klux/models/item/earth_crystal_shovel.json
+  assets/klux/models/item/earth_crystal_slab.json
+  assets/klux/models/item/earth_crystal_stairs.json
+  assets/klux/models/item/earth_crystal_sword.json
+  assets/klux/models/item/earth_crystal_trapdoor.json
+  assets/klux/models/item/earth_crystal_wall.json
+  assets/klux/models/item/endergon_crystal.json
+  assets/klux/models/item/endergon_crystal_ore.json
+  assets/klux/models/item/enriched_coal.json
+  assets/klux/models/item/fire_quartz.json
+  assets/klux/models/item/fire_quartz_ore.json
+  assets/klux/models/item/furnace_core.json
+  assets/klux/models/item/humics.json
+  assets/klux/models/item/parsnip.json
+  assets/klux/models/item/parsnip_seeds.json
+  assets/klux/models/item/potted_cactus_fruit.json
+  assets/klux/models/item/putrid_fat.json
+  assets/klux/models/item/redstone_resonator.json
+  assets/klux/models/item/return_scepter.json
+  assets/klux/models/item/rotten_fruit.json
+  assets/klux/models/item/rotten_fruit_seeds.json
+  assets/klux/models/item/rumble_music_disc.json
+  assets/klux/models/item/salad.json
+  assets/klux/models/item/seed_maker.json
+  assets/klux/models/item/sound_block.json
+  assets/klux/models/item/spring_onion.json
+  assets/klux/models/item/spring_onion_seeds.json
+  assets/klux/sounds.json
+  assets/klux/sounds/
+  assets/klux/sounds/compressor_working.ogg
+  assets/klux/sounds/dehydrator_working.ogg
+  assets/klux/sounds/detector_found_ore.ogg
+  assets/klux/sounds/rumble.ogg
+  assets/klux/sounds/seed_maker_working.ogg
+  assets/klux/sounds/sound_block_break.ogg
+  assets/klux/sounds/sound_block_place.ogg
+  assets/klux/sounds/sound_block_touch.ogg
+  assets/klux/textures/
+  assets/klux/textures/block/
+  assets/klux/textures/block/blockstate.png
+  assets/klux/textures/block/cactus_fruit.png
+  assets/klux/textures/block/compressor_idle.png
+  assets/klux/textures/block/compressor_working.png
+  assets/klux/textures/block/deepslate_earth_crystal_ore.png
+  assets/klux/textures/block/dehydrator1.png
+  assets/klux/textures/block/dehydrator2.png
+  assets/klux/textures/block/dehydrator_idle.png
+  assets/klux/textures/block/dehydrator_working.png
+  assets/klux/textures/block/earth_crystal_block.png
+  assets/klux/textures/block/earth_crystal_door_bottom.png
+  assets/klux/textures/block/earth_crystal_door_top.png
+  assets/klux/textures/block/earth_crystal_frame.png
+  assets/klux/textures/block/earth_crystal_ore.png
+  assets/klux/textures/block/earth_crystal_trapdoor.png
+  assets/klux/textures/block/endergon_crystal_ore.png
+  assets/klux/textures/block/fire_quartz_ore.png
+  assets/klux/textures/block/icon_earth_crystal_ore.png
+  assets/klux/textures/block/icon_endergon_crystal_ore.png
+  assets/klux/textures/block/icon_fire_quartz.png
+  assets/klux/textures/block/machine_windows.png
+  assets/klux/textures/block/machine_working.png
+  assets/klux/textures/block/parsnip_stage0.png
+  assets/klux/textures/block/parsnip_stage1.png
+  assets/klux/textures/block/parsnip_stage2.png
+  assets/klux/textures/block/parsnip_stage3.png
+  assets/klux/textures/block/potted_cactus_fruit.png
+  assets/klux/textures/block/rotten_fruit_stage0.png
+  assets/klux/textures/block/rotten_fruit_stage1.png
+  assets/klux/textures/block/rotten_fruit_stage2.png
+  assets/klux/textures/block/rotten_fruit_stage3.png
+  assets/klux/textures/block/seed_maker_idle.png
+  assets/klux/textures/block/seed_maker_working.png
+  assets/klux/textures/block/sound_block.png
+  assets/klux/textures/block/spring_onion_stage_0.png
+  assets/klux/textures/block/spring_onion_stage_1.png
+  assets/klux/textures/block/spring_onion_stage_2.png
+  assets/klux/textures/block/spring_onion_stage_3.png
+  assets/klux/textures/block/spring_onion_stage_4.png
+  assets/klux/textures/block/spring_onion_stage_5.png
+  assets/klux/textures/block/spring_onion_stage_6.png
+  assets/klux/textures/block/spring_onion_stage_7.png
+  assets/klux/textures/block/spring_onion_stage_8.png
+  assets/klux/textures/block/window.png
+  assets/klux/textures/block/working.png
+  assets/klux/textures/gui/
+  assets/klux/textures/gui/gui_compressor.png
+  assets/klux/textures/gui/gui_dehydrator.png
+  assets/klux/textures/gui/gui_seed_maker.png
+  assets/klux/textures/item/
+  assets/klux/textures/item/air_duct.png
+  assets/klux/textures/item/dehydrated_seeds.png
+  assets/klux/textures/item/detector.png
+  assets/klux/textures/item/earth_crystal.png
+  assets/klux/textures/item/earth_crystal_axe.png
+  assets/klux/textures/item/earth_crystal_boots.png
+  assets/klux/textures/item/earth_crystal_chestplate.png
+  assets/klux/textures/item/earth_crystal_door.png
+  assets/klux/textures/item/earth_crystal_helmet.png
+  assets/klux/textures/item/earth_crystal_hoe.png
+  assets/klux/textures/item/earth_crystal_leggings.png
+  assets/klux/textures/item/earth_crystal_pickaxe.png
+  assets/klux/textures/item/earth_crystal_shovel.png
+  assets/klux/textures/item/earth_crystal_sword.png
+  assets/klux/textures/item/endergon_crystal.png
+  assets/klux/textures/item/enriched_coal.png
+  assets/klux/textures/item/fire_quartz.png
+  assets/klux/textures/item/furnace_core.png
+  assets/klux/textures/item/humics.png
+  assets/klux/textures/item/parsnip.png
+  assets/klux/textures/item/parsnip_seeds.png
+  assets/klux/textures/item/putrid_fat.png
+  assets/klux/textures/item/redstone_resonator.png
+  assets/klux/textures/item/return_scepter.png
+  assets/klux/textures/item/rotten_fruit.png
+  assets/klux/textures/item/rotten_fruit_seeds.png
+  assets/klux/textures/item/rumble_music_disc.png
+  assets/klux/textures/item/salad.png
+  assets/klux/textures/item/spring_onion.png
+  assets/klux/textures/item/spring_onion_seeds.png
+  assets/klux/textures/jei/
+  assets/klux/textures/jei/gui_compressor.png
+  assets/klux/textures/jei/gui_dehydrator.png
+  assets/klux/textures/jei/gui_seed_maker.png
+  assets/klux/textures/models/
+  assets/klux/textures/models/armor/
+  assets/klux/textures/models/armor/earth_crystal_layer_1.png
+  assets/klux/textures/models/armor/earth_crystal_layer_2.png
+  data/
+  data/forge/
+  data/forge/loot_modifiers/
+  data/forge/loot_modifiers/global_loot_modifiers.json
+  data/forge/tags/
+  data/forge/tags/blocks/
+  data/forge/tags/blocks/needs_netherite_tool.json
+  data/forge/tags/blocks/ores.json
+  data/forge/tags/blocks/ores/
+  data/forge/tags/blocks/ores/earthcrystal.json
+  data/forge/tags/blocks/ores/endergoncrystal.json
+  data/forge/tags/blocks/ores/firequartz.json
+  data/forge/tags/items/
+  data/forge/tags/items/gems.json
+  data/forge/tags/items/rawmeats.json
+  data/forge/tags/items/seeds.json
+  data/klux/
+  data/klux/advancements/
+  data/klux/advancements/recipes/
+  data/klux/advancements/recipes/misc/
+  data/klux/advancements/recipes/misc/air_duct.json
+  data/klux/advancements/recipes/misc/compressor.json
+  data/klux/advancements/recipes/misc/dehydrator.json
+  data/klux/advancements/recipes/misc/earth_crystal.json
+  data/klux/advancements/recipes/misc/earth_crystal_block.json
+  data/klux/advancements/recipes/misc/earth_crystal_frame.json
+  data/klux/advancements/recipes/misc/earth_crystal_from_blasting_deepslate_earth_crystal_ore.json
+  data/klux/advancements/recipes/misc/earth_crystal_from_blasting_earth_crystal_ore.json
+  data/klux/advancements/recipes/misc/earth_crystal_from_smelting_deepslate_earth_crystal_ore.json
+  data/klux/advancements/recipes/misc/earth_crystal_from_smelting_earth_crystal_ore.json
+  data/klux/advancements/recipes/misc/furnacecore.json
+  data/klux/advancements/recipes/misc/humics.json
+  data/klux/advancements/recipes/misc/redstone_resonator.json
+  data/klux/forge/
+  data/klux/forge/biome_modifier/
+  data/klux/forge/biome_modifier/add_earth_crystal_ore.json
+  data/klux/forge/biome_modifier/add_endergon_crystal_ore.json
+  data/klux/forge/biome_modifier/add_fire_quartz_ore.json
+  data/klux/loot_modifiers/
+  data/klux/loot_modifiers/enriched_coal_from_desert_pyramids.json
+  data/klux/loot_modifiers/enriched_coal_from_suspicious_sand.json
+  data/klux/loot_modifiers/parsnip_seeds_from_grass.json
+  data/klux/loot_modifiers/spring_onion_seeds_from_grass.json
+  data/klux/loot_tables/
+  data/klux/loot_tables/blocks/
+  data/klux/loot_tables/blocks/cactus_fruit.json
+  data/klux/loot_tables/blocks/compressor.json
+  data/klux/loot_tables/blocks/deepslate_earth_crystal_ore.json
+  data/klux/loot_tables/blocks/dehydrator.json
+  data/klux/loot_tables/blocks/earth_crystal_block.json
+  data/klux/loot_tables/blocks/earth_crystal_button.json
+  data/klux/loot_tables/blocks/earth_crystal_door.json
+  data/klux/loot_tables/blocks/earth_crystal_fence.json
+  data/klux/loot_tables/blocks/earth_crystal_fence_gate.json
+  data/klux/loot_tables/blocks/earth_crystal_frame.json
+  data/klux/loot_tables/blocks/earth_crystal_ore.json
+  data/klux/loot_tables/blocks/earth_crystal_pressure_plate.json
+  data/klux/loot_tables/blocks/earth_crystal_slab.json
+  data/klux/loot_tables/blocks/earth_crystal_stairs.json
+  data/klux/loot_tables/blocks/earth_crystal_trapdoor.json
+  data/klux/loot_tables/blocks/earth_crystal_wall.json
+  data/klux/loot_tables/blocks/endergon_crystal_ore.json
+  data/klux/loot_tables/blocks/fire_quartz_ore.json
+  data/klux/loot_tables/blocks/parsnip_crop.json
+  data/klux/loot_tables/blocks/potted_cactus_fruit.json
+  data/klux/loot_tables/blocks/rotten_fruit_crop.json
+  data/klux/loot_tables/blocks/seed_maker.json
+  data/klux/loot_tables/blocks/sound_block.json
+  data/klux/loot_tables/blocks/spring_onion_crop.json
+  data/klux/recipes/
+  data/klux/recipes/air_duct.json
+  data/klux/recipes/beetroot_to_beetroot_seeds.json
+  data/klux/recipes/clay_block_gravel_cobblestone.json
+  data/klux/recipes/coal_to_enriched_coal.json
+  data/klux/recipes/compressor.json
+  data/klux/recipes/dehydrator.json
+  data/klux/recipes/dseeds_pfat_rotten_seeds.json
+  data/klux/recipes/earth_crystal.json
+  data/klux/recipes/earth_crystal_block.json
+  data/klux/recipes/earth_crystal_frame.json
+  data/klux/recipes/earth_crystal_from_blasting_deepslate_earth_crystal_ore.json
+  data/klux/recipes/earth_crystal_from_blasting_earth_crystal_ore.json
+  data/klux/recipes/earth_crystal_from_smelting_deepslate_earth_crystal_ore.json
+  data/klux/recipes/earth_crystal_from_smelting_earth_crystal_ore.json
+  data/klux/recipes/furnacecore.json
+  data/klux/recipes/humics.json
+  data/klux/recipes/melon_to_melon_seeds.json
+  data/klux/recipes/parsnip_to_parsnip_seeds.json
+  data/klux/recipes/pumpkin_to_pumkin_seeds.json
+  data/klux/recipes/rawmeats_to_rotten_flesh.json
+  data/klux/recipes/redstone_resonator.json
+  data/klux/recipes/rotten_flesh_to_putrid_fat.json
+  data/klux/recipes/sand_dirt_clay_block.json
+  data/klux/recipes/seeds_to_dehydrated_seeds.json
+  data/klux/recipes/spring_onion_to_spring_onion_seeds.json
+  data/klux/recipes/test1.json
+  data/klux/recipes/test2.json
+  data/klux/recipes/test3.json
+  data/klux/recipes/wheat_to_wheat_seeds.json
+  data/klux/worldgen/
+  data/klux/worldgen/configured_feature/
+  data/klux/worldgen/configured_feature/earth_crystal_ore.json
+  data/klux/worldgen/configured_feature/endergon_crystal_ore.json
+  data/klux/worldgen/configured_feature/fire_quartz_ore.json
+  data/klux/worldgen/placed_feature/
+  data/klux/worldgen/placed_feature/earth_crystal_ore_placed.json
+  data/klux/worldgen/placed_feature/endergon_crystal_ore_placed.json
+  data/klux/worldgen/placed_feature/fire_quartz_ore_placed.json
+  data/minecraft/
+  data/minecraft/advancements/
+  data/minecraft/advancements/recipes/
+  data/minecraft/advancements/recipes/misc/
+  data/minecraft/advancements/recipes/misc/slime_ball.json
+  data/minecraft/recipes/
+  data/minecraft/recipes/slime_ball.json
+  data/minecraft/tags/
+  data/minecraft/tags/blocks/
+  data/minecraft/tags/blocks/fence_gates.json
+  data/minecraft/tags/blocks/fences.json
+  data/minecraft/tags/blocks/mineable/
+  data/minecraft/tags/blocks/mineable/pickaxe.json
+  data/minecraft/tags/blocks/needs_diamond_tool.json
+  data/minecraft/tags/blocks/needs_iron_tool.json
+  data/minecraft/tags/blocks/walls.json
+  data/minecraft/tags/items/
+  data/minecraft/tags/items/music_discs.json
+  data/minecraft/tags/items/trimmable_armor.json
+  org/
+  org/kdvcs/
+  org/kdvcs/klux/
+  org/kdvcs/klux/Klux$ClientModEvents.class
+  org/kdvcs/klux/Klux.class
+  org/kdvcs/klux/block/
+  org/kdvcs/klux/block/ModBlocks.class
+  org/kdvcs/klux/block/custom/
+  org/kdvcs/klux/block/custom/CompressorBlock.class
+  org/kdvcs/klux/block/custom/DehydratorBlock.class
+  org/kdvcs/klux/block/custom/ParsnipCropBlock.class
+  org/kdvcs/klux/block/custom/RottenFruitCropBlock.class
+  org/kdvcs/klux/block/custom/SeedMakerBlock.class
+  org/kdvcs/klux/block/custom/SoundBlock.class
+  org/kdvcs/klux/block/custom/SpringOnionCropBlock.class
+  org/kdvcs/klux/block/entity/
+  org/kdvcs/klux/block/entity/CompressorBlockEntity$1.class
+  org/kdvcs/klux/block/entity/CompressorBlockEntity.class
+  org/kdvcs/klux/block/entity/DehydratorBlockEntity$1.class
+  org/kdvcs/klux/block/entity/DehydratorBlockEntity.class
+  org/kdvcs/klux/block/entity/ModBlockEntities.class
+  org/kdvcs/klux/block/entity/SeedMakerBlockEntity$1.class
+  org/kdvcs/klux/block/entity/SeedMakerBlockEntity.class
+  org/kdvcs/klux/compat/
+  org/kdvcs/klux/compat/CompressorCategory.class
+  org/kdvcs/klux/compat/DehydratorCategory.class
+  org/kdvcs/klux/compat/DehydratorFuelCategory.class
+  org/kdvcs/klux/compat/FuelRecipe.class
+  org/kdvcs/klux/compat/JEIKluxPlugin.class
+  org/kdvcs/klux/compat/SeedMakerCategory.class
+  org/kdvcs/klux/config/
+  org/kdvcs/klux/config/KluxCommonConfigs.class
+  org/kdvcs/klux/datagen/
+  org/kdvcs/klux/datagen/DataGenerators.class
+  org/kdvcs/klux/datagen/ModBlockStateProvider.class
+  org/kdvcs/klux/datagen/ModBlockTagGenerator.class
+  org/kdvcs/klux/datagen/ModGlobalLootModifiersProvider.class
+  org/kdvcs/klux/datagen/ModItemModelProvider$1.class
+  org/kdvcs/klux/datagen/ModItemModelProvider.class
+  org/kdvcs/klux/datagen/ModItemTagGenerator.class
+  org/kdvcs/klux/datagen/ModLootTableProvider.class
+  org/kdvcs/klux/datagen/ModRecipeEventHandler.class
+  org/kdvcs/klux/datagen/ModRecipeProvider.class
+  org/kdvcs/klux/datagen/ModWorldGenProvider.class
+  org/kdvcs/klux/datagen/loot/
+  org/kdvcs/klux/datagen/loot/ModBlockLootTables.class
+  org/kdvcs/klux/item/
+  org/kdvcs/klux/item/ModArmorMaterials.class
+  org/kdvcs/klux/item/ModCreativeModeTabs.class
+  org/kdvcs/klux/item/ModFoods.class
+  org/kdvcs/klux/item/ModItems$1.class
+  org/kdvcs/klux/item/ModItems$2.class
+  org/kdvcs/klux/item/ModItems$3.class
+  org/kdvcs/klux/item/ModItems$4.class
+  org/kdvcs/klux/item/ModItems$5.class
+  org/kdvcs/klux/item/ModItems.class
+  org/kdvcs/klux/item/ModToolTiers.class
+  org/kdvcs/klux/item/custom/
+  org/kdvcs/klux/item/custom/Detector.class
+  org/kdvcs/klux/item/custom/FuelItem.class
+  org/kdvcs/klux/item/custom/Humics.class
+  org/kdvcs/klux/item/custom/ModArmorItem.class
+  org/kdvcs/klux/item/custom/ReturnScepter.class
+  org/kdvcs/klux/loot/
+  org/kdvcs/klux/loot/AddItemModifier.class
+  org/kdvcs/klux/loot/AddSusSandItemModifier.class
+  org/kdvcs/klux/loot/ModLootModifiers.class
+  org/kdvcs/klux/recipe/
+  org/kdvcs/klux/recipe/CompressorRecipe$Serializer.class
+  org/kdvcs/klux/recipe/CompressorRecipe$Type.class
+  org/kdvcs/klux/recipe/CompressorRecipe.class
+  org/kdvcs/klux/recipe/DehydratorRecipe$Serializer.class
+  org/kdvcs/klux/recipe/DehydratorRecipe$Type.class
+  org/kdvcs/klux/recipe/DehydratorRecipe.class
+  org/kdvcs/klux/recipe/ModRecipes.class
+  org/kdvcs/klux/recipe/SeedMakerRecipe$Serializer.class
+  org/kdvcs/klux/recipe/SeedMakerRecipe$Type.class
+  org/kdvcs/klux/recipe/SeedMakerRecipe.class
+  org/kdvcs/klux/screen/
+  org/kdvcs/klux/screen/CompressorMenu.class
+  org/kdvcs/klux/screen/CompressorScreen.class
+  org/kdvcs/klux/screen/DehydratorMenu$FuelSlot.class
+  org/kdvcs/klux/screen/DehydratorMenu.class
+  org/kdvcs/klux/screen/DehydratorScreen.class
+  org/kdvcs/klux/screen/ModMenuTypes.class
+  org/kdvcs/klux/screen/SeedMakerMenu.class
+  org/kdvcs/klux/screen/SeedMakerScreen.class
+  org/kdvcs/klux/sound/
+  org/kdvcs/klux/sound/ModSounds.class
+  org/kdvcs/klux/util/
+  org/kdvcs/klux/util/ModTags$Blocks.class
+  org/kdvcs/klux/util/ModTags$Items.class
+  org/kdvcs/klux/util/ModTags.class
+  org/kdvcs/klux/worldgen/
+  org/kdvcs/klux/worldgen/ModBiomeModifiers.class
+  org/kdvcs/klux/worldgen/ModConfiguredFeatures.class
+  org/kdvcs/klux/worldgen/ModOrePlacement.class
+  org/kdvcs/klux/worldgen/ModPlacedFeatures.class
+  pack.mcmeta

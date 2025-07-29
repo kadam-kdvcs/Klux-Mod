@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:stone"
+    },
+    "B": {
+      "item": "klux:adhesive_paste"
+    }
+  },
+  "pattern": [
+    "# #",
+    "ABA",
+    "# #"
+  ],
+  "result": {
+    "item": "klux:pressing_rod_assembly"
+  },
+  "show_notification": true
+}

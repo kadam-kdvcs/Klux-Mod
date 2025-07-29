@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:aromatic_ingot",
+      "count": 1
+    },
+    {
+      "tag": "minecraft:flowers",
+      "count": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:honeycomb",
+    "count": 4
+  },
+  "maxProgress": 78
+}

@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "item": "minecraft:coal" },
+    { "item": "klux:humics" }
+  ],
+  "output": {
+    "item": "klux:enriched_coal",
+    "count": 1
+  },
+  "maxProgress": 160
+}

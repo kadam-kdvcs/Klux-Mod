@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball",
+      "count": 1
+    },
+    {
+      "item": "minecraft:bone_meal",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:mineral_powder",
+    "count": 16
+  },
+  "maxProgress": 150
+}

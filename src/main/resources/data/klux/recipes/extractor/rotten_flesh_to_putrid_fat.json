@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh",
+      "count": 16
+    }
+  ],
+  "output": {
+    "item": "klux:putrid_fat",
+    "count": 4
+  },
+  "maxProgress": 110
+}

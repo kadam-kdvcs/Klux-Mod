@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "tag": "forge:rawmeats",
+      "count": 1
+    },
+    {
+      "item": "minecraft:egg",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:protein_concentrate",
+    "count": 6
+  },
+  "maxProgress": 120
+}

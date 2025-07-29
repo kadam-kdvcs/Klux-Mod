@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 65,
+  "experience": 0.1,
+  "group": "earthcrystal",
+  "ingredient": {
+    "item": "klux:earth_crystal_ore"
+  },
+  "result": "klux:earth_crystal"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "tag": "minecraft:flowers",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:aromatic_powder",
+    "count": 4
+  },
+  "maxProgress": 60
+}

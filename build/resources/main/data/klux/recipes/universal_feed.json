@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "klux:carbohydrate_powder"
+    },
+    {
+      "item": "klux:vitamin_dust"
+    },
+    {
+      "item": "klux:mineral_powder"
+    },
+    {
+      "item": "klux:protein_concentrate"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "klux:universal_feed"
+  }
+}

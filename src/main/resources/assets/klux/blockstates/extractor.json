@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,working=false": { "model": "klux:block/extractor_idle", "y": 90 },
+    "facing=south,working=false": { "model": "klux:block/extractor_idle", "y": 270 },
+    "facing=west,working=false":  { "model": "klux:block/extractor_idle", "y": 0 },
+    "facing=east,working=false":  { "model": "klux:block/extractor_idle", "y": 180 },
+
+    "facing=north,working=true":  { "model": "klux:block/extractor_working", "y": 90 },
+    "facing=south,working=true":  { "model": "klux:block/extractor_working", "y": 270 },
+    "facing=west,working=true":   { "model": "klux:block/extractor_working", "y": 0 },
+    "facing=east,working=true":   { "model": "klux:block/extractor_working", "y": 180 }
+  }
+}

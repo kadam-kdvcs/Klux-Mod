@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "minecraft:sweet_berries"
+  },
+  "ingredientCount": 4,
+  "output": {
+    "item": "klux:vitamin_dust",
+    "count": 24
+  },
+  "maxProgress": 140
+}

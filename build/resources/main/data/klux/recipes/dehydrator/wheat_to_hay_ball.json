@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "minecraft:wheat"
+  },
+  "ingredientCount": 16,
+  "output": {
+    "item": "klux:hay_ball",
+    "count": 4
+  },
+  "maxProgress": 100
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "klux:vitamin_dust"
+    },
+    {
+      "item": "klux:aromatic_powder"
+    },
+    {
+      "item": "klux:rotten_fruit"
+    },
+    {
+      "item": "klux:adhesive_paste"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "klux:fermented_aromatic_slurry"
+  }
+}

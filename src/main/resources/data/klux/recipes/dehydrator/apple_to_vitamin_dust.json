@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "minecraft:apple"
+  },
+  "ingredientCount": 4,
+  "output": {
+    "item": "klux:vitamin_dust",
+    "count": 16
+  },
+  "maxProgress": 130
+}

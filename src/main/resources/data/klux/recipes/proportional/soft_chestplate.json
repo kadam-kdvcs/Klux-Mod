@@ -1,0 +1,14 @@
+{
+  "type": "klux:proportional_armor",
+  "pattern": [
+    "CIC",
+    "CCC"
+  ],
+  "key": {
+    "C": { "item": "klux:soft_armor_cloth" },
+    "I": { "item": "minecraft:iron_chestplate" }
+  },
+  "result": {
+    "item": "klux:soft_chestplate"
+  }
+}

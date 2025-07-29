@@ -1,0 +1,76 @@
+{
+  "detector_found_ore": {
+    "subtitles": "sounds.klux.detector_found_ore",
+    "sounds": [
+      "klux:detector_found_ore"
+    ]
+  },
+  "sound_block_break": {
+    "subtitles": "sounds.klux.sound_block_break",
+    "sounds": [
+      "klux:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitles": "sounds.klux.sound_block_step",
+    "sounds": [
+      "klux:sound_block_step"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitles": "sounds.klux.sound_block_fall",
+    "sounds": [
+      "klux:sound_block_fall"
+    ]
+  },
+  "sound_block_place": {
+    "subtitles": "sounds.klux.sound_block_place",
+    "sounds": [
+      "klux:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitles": "sounds.klux.sound_block_hit",
+    "sounds": [
+      "klux:sound_block_hit"
+    ]
+  },
+  "sound_block_touch": {
+    "subtitles": "sound.klux.sound_block_touch",
+    "sounds": [
+      "klux:sound_block_touch"
+    ]
+  },
+  "rumble": {
+    "sounds": [
+      {
+        "name": "klux:rumble",
+        "stream": true
+      }
+    ]
+  },
+  "compressor_working": {
+    "subtitles": "sounds.klux.compressor_working",
+    "sounds": [
+      "klux:compressor_working"
+    ]
+  },
+  "seed_maker_working": {
+    "subtitles": "sounds.klux.seed_maker_working",
+    "sounds": [
+      "klux:seed_maker_working"
+    ]
+  },
+  "dehydrator_working": {
+    "subtitles": "sounds.klux.dehydrator_working",
+    "sounds": [
+      "klux:dehydrator_working"
+    ]
+  },
+  "extractor_working": {
+    "subtitles": "sounds.klux.extractor_working",
+    "sounds": [
+      "klux:extractor_working"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    { "item": "klux:hay_ball" },
+    { "item": "minecraft:clay_ball" }
+  ],
+  "output": {
+    "item": "klux:leather_paste",
+    "count": 1
+  },
+  "maxProgress": 130
+}

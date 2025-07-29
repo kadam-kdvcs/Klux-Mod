@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 240,
+  "experience": 1.2,
+  "ingredient": {
+    "item": "klux:aromatic_dust"
+  },
+  "result": "klux:aromatic_ingot"
+}

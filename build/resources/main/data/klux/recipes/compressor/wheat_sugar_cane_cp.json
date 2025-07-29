@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat",
+      "count": 8
+    },
+    {
+      "item": "minecraft:sugar_cane",
+      "count": 4
+    }
+  ],
+  "output": {
+    "item": "klux:carbohydrate_powder",
+    "count": 24
+  },
+  "maxProgress": 195
+}

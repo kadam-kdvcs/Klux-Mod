@@ -1,0 +1,81 @@
+{
+  "item.klux.earth_crystal": "Earth Crystal",
+  "block.klux.earth_crystal_block": "Block of Earth Crystal",
+  "block.klux.earth_crystal_ore": "Earth Crystal Ore",
+  "block.klux.deepslate_earth_crystal_ore": "Deepslate Earth Crystal Ore",
+  "item.klux.detector": "Detector",
+  "block.klux.sound_block": "Sound Block",
+  "item.klux.salad": "Salad",
+  "item.klux.enriched_coal": "Enriched Coal",
+  "tooltip.klux.detector.tooltip": "Finds valuables underground!",
+  "tooltip.klux.sound_block.tooltip": "It must be music from the heaven!",
+  "tooltip.klux.salad.tooltip": "Healthy delicious salad!",
+  "tooltip.klux.return_scepter.tooltip": "Teleport to the respawn point",
+  "return_scepter.use": "Right-Click to use",
+  "returnscepter.teleported": "Successfully teleported to the respawn point!",
+  "returnscepter.no_respawn": "Can't teleport to the respawn point,please check if the respawn point is valid!",
+  "item.klux.return_scepter": "Return Scepter",
+  "returnscepter.fallback_spawn": "No valid respawn point,teleported to the world spawn point.",
+  "returnscepter.cooldown.seconds": "Scepter: I need to take a break for %s seconds!",
+
+  "block.klux.earth_crystal_stairs": "Earth Crystal Stairs",
+  "block.klux.earth_crystal_slab": "Earth Crystal Slab",
+  "block.klux.earth_crystal_button": "Earth Crystal Button",
+  "block.klux.earth_crystal_pressure_plate": "Earth Crystal Pressure Plate",
+  "block.klux.earth_crystal_fence": "Earth Crystal Fence",
+  "block.klux.earth_crystal_fence_gate": "Earth Crystal Fence Gate",
+  "block.klux.earth_crystal_wall": "Earth Crystal Wall",
+  "block.klux.earth_crystal_door": "Earth Crystal Door",
+  "block.klux.earth_crystal_trapdoor": "Earth Crystal Trapdoor",
+
+  "item.klux.earth_crystal_sword": "Earth Crystal Sword",
+  "item.klux.earth_crystal_pickaxe": "Earth Crystal Pickaxe",
+  "item.klux.earth_crystal_axe": "Earth Crystal Axe",
+  "item.klux.earth_crystal_shovel": "Earth Crystal Shovel",
+  "item.klux.earth_crystal_hoe": "Earth Crystal Hoe",
+
+  "item.klux.earth_crystal_helmet": "Earth Crystal Helmet",
+  "item.klux.earth_crystal_chestplate": "Earth Crystal Chestplate",
+  "item.klux.earth_crystal_leggings": "Earth Crystal Leggings",
+  "item.klux.earth_crystal_boots": "Earth Crystal Boots",
+
+  "tooltip.klux.earth_crystal_helmet.tooltip": "Source of the power",
+
+  "item.klux.parsnip": "Parsnip",
+  "item.klux.parsnip_seeds": "Parsnip Seeds",
+  "item.klux.spring_onion": "Spring Onion",
+  "item.klux.spring_onion_seeds": "Spring Onion Seeds",
+  "block.klux.cactus_fruit": "Cactus Fruit",
+  "item.klux.furnace_core": "Furnace Core",
+
+  "item.klux.rumble_music_disc": "Rumble Music Disc",
+  "item.klux.rumble_music_disc.desc": "KDVCS - Rumble (Radio Extended Edit)",
+  "block.klux.compressor": "Compressor",
+  "jei.klux.compressor": "Compression & Mix",
+
+  "item.klux.fire_quartz": "Fire Quartz",
+  "item.klux.endergon_crystal": "Endergon Crystal",
+
+  "block.klux.fire_quartz_ore": "Fire Quartz Ore",
+  "block.klux.endergon_crystal_ore": "Endergon Crystal Ore",
+
+  "block.klux.earth_crystal_frame": "Earth Crystal Frame",
+  "item.klux.redstone_resonator": "Redstone Resonator",
+
+  "itemGroup.klux_basic": "Klux-Basic",
+  "itemGroup.klux_machines": "Klux-Machines",
+
+  "item.klux.humics": "Humics",
+  "tooltip.klux.humics.tooltip": "Let your crops grow faster!",
+  "block.klux.seed_maker": "Seed Maker",
+
+  "jei.klux.compressor.time": "%ss",
+  "jei.klux.seed_maker.time": "%ss",
+
+  "tooltip.klux.redstone_resonator.tooltip": "The core of all kinds of machines.",
+  "jei.klux.seed_maker": "Seeds Generation",
+
+  "block.klux.dehydrator": "Dehydrator",
+
+  "tooltip.compressor.tooltip": "Compress or mix the materials"
+}

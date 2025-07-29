@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "klux:aromatic_coagulate"
+    },
+    {
+      "item": "klux:mineral_powder"
+    },
+    {
+      "item": "klux:vitamin_dust"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "klux:aromatic_dust"
+  }
+}

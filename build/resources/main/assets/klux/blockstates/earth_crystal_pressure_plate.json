@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "klux:block/earth_crystal_pressure_plate"
+    },
+    "powered=true": {
+      "model": "klux:block/earth_crystal_pressure_plate_down"
+    }
+  }
+}

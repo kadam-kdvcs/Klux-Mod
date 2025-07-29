@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "tag": "minecraft:flowers"
+  },
+  "ingredientCount": 1,
+  "output": {
+    "item": "klux:vitamin_dust",
+    "count": 4
+  },
+  "maxProgress": 30
+}

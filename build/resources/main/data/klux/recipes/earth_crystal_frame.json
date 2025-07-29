@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:earth_crystal"
+    },
+    "A": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "#A#",
+    "A A",
+    "#A#"
+  ],
+  "result": {
+    "item": "klux:earth_crystal_frame"
+  },
+  "show_notification": true
+}

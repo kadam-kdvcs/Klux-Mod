@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "klux:fermented_aromatic_slurry"
+  },
+  "ingredientCount": 2,
+  "output": {
+    "item": "klux:aromatic_coagulate",
+    "count": 1
+  },
+  "maxProgress": 95
+}

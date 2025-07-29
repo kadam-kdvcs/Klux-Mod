@@ -1,0 +1,11 @@
+{
+  "type": "klux:seed_maker",
+  "ingredients": [
+    { "item": "minecraft:wheat" }
+  ],
+  "output": {
+    "item": "minecraft:wheat_seeds",
+    "count": 4
+  },
+  "maxProgress": 60
+}

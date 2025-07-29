@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aromatic_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klux:aromatic_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "klux:aromaticingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_aromatic_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "klux:aromaticingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

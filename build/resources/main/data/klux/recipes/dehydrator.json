@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:terracotta"
+    },
+    "A": {
+      "item": "klux:redstone_resonator"
+    },
+    "B": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "klux:air_duct"
+    },
+    "D": {
+      "item": "klux:earth_crystal_frame"
+    }
+  },
+  "pattern": [
+    "#A#",
+    "CDC",
+    "#B#"
+  ],
+  "result": {
+    "item": "klux:dehydrator"
+  },
+  "show_notification": true
+}

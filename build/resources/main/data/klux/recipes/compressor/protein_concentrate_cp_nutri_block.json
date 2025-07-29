@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:protein_concentrate",
+      "count": 4
+    },
+    {
+      "item": "klux:carbohydrate_powder",
+      "count": 12
+    }
+  ],
+  "output": {
+    "item": "klux:nutri_block",
+    "count": 4
+  },
+  "maxProgress": 60
+}

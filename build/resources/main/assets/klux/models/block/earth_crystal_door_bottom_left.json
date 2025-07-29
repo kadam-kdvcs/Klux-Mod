@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "klux:block/earth_crystal_door_bottom",
+    "top": "klux:block/earth_crystal_door_top"
+  }
+}

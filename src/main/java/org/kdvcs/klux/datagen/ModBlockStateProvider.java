@@ -38,10 +38,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //STAIRS
         stairsBlock(((StairBlock) ModBlocks.EARTH_CRYSTAL_STAIRS.get()), blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()));
+        stairsBlock(((StairBlock) ModBlocks.HAY_STAIRS.get()), blockTexture(ModBlocks.HAY_BRICK.get()));
 
         //SLABS
         slabBlock(((SlabBlock) ModBlocks.EARTH_CRYSTAL_SLAB.get()), blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()),
                 blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()));
+        slabBlock(((SlabBlock) ModBlocks.HAY_SLAB.get()), blockTexture(ModBlocks.HAY_BRICK.get()),
+                blockTexture(ModBlocks.HAY_BRICK.get()));
 
         //BUTTON
         buttonBlock(((ButtonBlock) ModBlocks.EARTH_CRYSTAL_BUTTON.get()), blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()));
@@ -55,6 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //WALL
         wallBlock(((WallBlock) ModBlocks.EARTH_CRYSTAL_WALL.get()), blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()));
+        wallBlock(((WallBlock) ModBlocks.HAY_WALL.get()), blockTexture(ModBlocks.HAY_BRICK.get()));
 
         //DOOR
         doorBlockWithRenderType(((DoorBlock) ModBlocks.EARTH_CRYSTAL_DOOR.get()), modLoc("block/earth_crystal_door_bottom"),

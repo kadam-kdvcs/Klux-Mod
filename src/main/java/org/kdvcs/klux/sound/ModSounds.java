@@ -29,7 +29,7 @@ public class ModSounds {
 
     //COMPRESSOR
     public static final RegistryObject<SoundEvent> COMPRESSOR_WORKING = registerSoundEvents("compressor_working");
-    public static final RegistryObject<SoundEvent> SEED_MAKER_WORKING = registerSoundEvents("seed_maker_working");
+    public static final RegistryObject<SoundEvent> FLUID_ASSEMBLER_WORKING = registerSoundEvents("fluid_assembler_working");
     public static final RegistryObject<SoundEvent> DEHYDRATOR_WORKING = registerSoundEvents("dehydrator_working");
     public static final RegistryObject<SoundEvent> EXTRACTOR_WORKING = registerSoundEvents("extractor_working");
 

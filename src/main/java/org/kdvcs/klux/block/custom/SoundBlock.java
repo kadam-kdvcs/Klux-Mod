@@ -29,7 +29,6 @@ public class SoundBlock extends Block {
 
     //  public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-
     @Override
     public InteractionResult use(BlockState p_60503_, Level p_60504_, BlockPos p_60505_,
                                  Player p_60506_, InteractionHand p_60507_, BlockHitResult p_60508_) {

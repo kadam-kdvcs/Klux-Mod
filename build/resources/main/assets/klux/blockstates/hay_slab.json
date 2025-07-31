@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "klux:block/hay_slab"
+    },
+    "type=double": {
+      "model": "klux:block/hay_brick"
+    },
+    "type=top": {
+      "model": "klux:block/hay_slab_top"
+    }
+  }
+}

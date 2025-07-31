@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:multiphase_fluid_container"
+    },
+    "A": {
+      "item": "klux:redstone_resonator"
+    },
+    "B": {
+      "item": "klux:earth_crystal_frame"
+    },
+    "C": {
+      "item": "klux:flux_core"
+    },
+    "K": {
+      "item": "klux:polymer_membrane_plate"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "#B#",
+    "KCK"
+  ],
+  "result": {
+    "item": "klux:fluid_assembler"
+  },
+  "show_notification": true
+}

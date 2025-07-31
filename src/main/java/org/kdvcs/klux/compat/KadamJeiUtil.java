@@ -22,7 +22,6 @@ public class KadamJeiUtil {
      *
      */
 
-
     public static List<ItemStack> expandWithCount(Ingredient ingredient, int count) {
         return Arrays.stream(ingredient.getItems())
                 .map(stack -> {

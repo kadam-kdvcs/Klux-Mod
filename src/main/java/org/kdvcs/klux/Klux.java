@@ -1,8 +1,9 @@
 package org.kdvcs.klux;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -16,13 +17,15 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.block.entity.ModBlockEntities;
 import org.kdvcs.klux.config.KluxCommonConfigs;
+import org.kdvcs.klux.fluid.ModFluidTypes;
+import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModCreativeModeTabs;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.loot.ModLootModifiers;
+import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.recipe.ModRecipes;
 import org.kdvcs.klux.screen.*;
 import org.kdvcs.klux.sound.ModSounds;
@@ -41,7 +44,10 @@ public class Klux {
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
+        ModMessages.register();
         ModSounds.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
@@ -74,9 +80,13 @@ public class Klux {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.COMPRESSOR_MENU.get(), CompressorScreen::new);
-            MenuScreens.register(ModMenuTypes.SEED_MAKER_MENU.get(), SeedMakerScreen::new);
             MenuScreens.register(ModMenuTypes.DEHYDRATOR_MENU.get(), DehydratorScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRACTOR_MENU.get(), ExtractorScreen::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), FluidAssemblerScreen::new);
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_AROMATIC.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_AROMATIC.get(), RenderType.translucent());
         }
     }
 }

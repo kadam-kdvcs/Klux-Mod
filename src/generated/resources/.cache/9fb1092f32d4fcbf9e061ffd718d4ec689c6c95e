@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-29T21:05:53.5351352	Recipes
+// 1.20.1	2025-07-31T23:31:04.4138738	Recipes
 1a05b07294c7dcfd506539633f79ba63974a1950 data/klux/advancements/recipes/misc/air_duct.json
 d78d2cd0577b75cd1cad60ca3a2138fcf702ab66 data/klux/advancements/recipes/misc/aromaticingot.json
 430ffeb66b20fa06a95ddc110b8e35ddfd79378c data/klux/advancements/recipes/misc/aromatic_dust.json
@@ -14,10 +14,18 @@ d8be81e753874f421a5b96377c7eb80ae79eb8c3 data/klux/advancements/recipes/misc/ear
 3fec79a9f07bba27c2237f1e181ba0bfdf36d07f data/klux/advancements/recipes/misc/extraction_mesh.json
 da3f0626a88f378d7acbf8671214efcd61945777 data/klux/advancements/recipes/misc/extractor.json
 59130ab7d70d8190b9ac7600229ed78ee89c9b3b data/klux/advancements/recipes/misc/fermented_aromatic_slurry.json
+63ec1a96c236689e86510d9c686f3e56b3173241 data/klux/advancements/recipes/misc/fluid_assembler.json
+e6627f4d048ee52c6f72f431fa9b072357bf0c03 data/klux/advancements/recipes/misc/flux_core.json
 097bfa9752154758868d2359001d750fe6bf267e data/klux/advancements/recipes/misc/furnacecore.json
+0b14bd598bfa3a6e932e651bc2b48b29499ab3ce data/klux/advancements/recipes/misc/hay_ball.json
 a8814c12ff48ca9f04a55e3e221dcc3f38791cb0 data/klux/advancements/recipes/misc/hay_brick.json
+4563e8883ad7ca6ff6e32fac5c2c8a601959f63a data/klux/advancements/recipes/misc/hay_slab.json
+4e16a4b10dea1c1d68045a2ee4eb8b098322ac1a data/klux/advancements/recipes/misc/hay_stairs.json
+6988664a0ff8a577ac60e93cca1b02219f4d19d5 data/klux/advancements/recipes/misc/hay_wall.json
 6a8199323df57f6abfb0d064db1efc0c0ad18548 data/klux/advancements/recipes/misc/humics.json
 49efa758976c0963a290788c1e8ed61eb6fe7a48 data/klux/advancements/recipes/misc/leatherpaste.json
+e94216b5ceb232cbda8cc627c1e3cb0b7be355e0 data/klux/advancements/recipes/misc/multiphase_fluid_container.json
+a71d8f1208cf5ba3265639af2be948644c8c69dd data/klux/advancements/recipes/misc/polymer_membrane_plate.json
 be075c10ae7578ad6bb024ff9a583bb52e8f44cb data/klux/advancements/recipes/misc/pressing_rod_assembly.json
 c7fe9509082ec94773231c5e103c1f8137803751 data/klux/advancements/recipes/misc/redstone_resonator.json
 a02c9cb2692418a0e2793fea554c9e9294a5e685 data/klux/advancements/recipes/misc/universal_feed.json
@@ -35,11 +43,19 @@ e3ced5cf787e999c71ac51824e4e0203cfb241a6 data/klux/recipes/earth_crystal_from_sm
 92484d2ee1456418002d46bc0992a34e9e7d8cc4 data/klux/recipes/earth_crystal_from_smelting_earth_crystal_ore.json
 6df515524c7d6a21902c82dc8941123b6da6c0be data/klux/recipes/extraction_mesh.json
 c9a690cb5fec72305e3a3f8c557eaa7b97a97ea6 data/klux/recipes/extractor.json
-604c182e3c97e7f6588c10c820ac82ff5fb1c7b0 data/klux/recipes/fermented_aromatic_slurry.json
+e4b721ee3e15928f001635a6574dd0d0934037d8 data/klux/recipes/fermented_aromatic_slurry.json
+2e7668f33ad71ecf2b9a5c7fb502cc51721e767b data/klux/recipes/fluid_assembler.json
+ee631db065fb7cb40867b7af2bf0ed1839c52d10 data/klux/recipes/flux_core.json
 be2f054d2be8b176927634bb3ada2bda16a09786 data/klux/recipes/furnacecore.json
+165c46188cb554603c471d8d50e653783b50f69f data/klux/recipes/hay_ball.json
 28122cd9d781cc831666f569e6808b6f62038f58 data/klux/recipes/hay_brick.json
+27364f437d27b82c344d52309821fc2148071153 data/klux/recipes/hay_slab.json
+b41462fd467b066e570cd5efac9e58df78417805 data/klux/recipes/hay_stairs.json
+808097f4df3ef9cac9862b44d43acf8fcd100934 data/klux/recipes/hay_wall.json
 1458733f77bcac07975f5c6aaf0ee98e27b0ecd2 data/klux/recipes/humics.json
 0e8dff2ca1c2b064db21bf60322f5ddb04d7b08a data/klux/recipes/leatherpaste.json
+f4a5b84e1520d02a80148982160e5bc99cae9f8c data/klux/recipes/multiphase_fluid_container.json
+23f55b2bfabdd12b5eef41450b804b31aac87f08 data/klux/recipes/polymer_membrane_plate.json
 542a0ca9c49e3157d6314b0894b35142f8fc5be1 data/klux/recipes/pressing_rod_assembly.json
 8ee3187c6211a65b65b54cb6583862c1d866a729 data/klux/recipes/redstone_resonator.json
 b96f195b28730ea5f02f16f9bcfc337b4d0b210a data/klux/recipes/universal_feed.json

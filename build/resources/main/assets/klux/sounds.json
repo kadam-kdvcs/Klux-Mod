@@ -55,10 +55,10 @@
       "klux:compressor_working"
     ]
   },
-  "seed_maker_working": {
-    "subtitles": "sounds.klux.seed_maker_working",
+  "fluid_assembler_working": {
+    "subtitles": "sounds.klux.fluid_assembler_working",
     "sounds": [
-      "klux:seed_maker_working"
+      "klux:fluid_assembler_working"
     ]
   },
   "dehydrator_working": {

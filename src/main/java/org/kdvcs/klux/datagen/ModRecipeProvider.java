@@ -121,6 +121,78 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.HAY_BALL.get()), has(ModItems.HAY_BALL.get()))
                 .save(p_251297_);
 
+        //HAY STAIRS
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HAY_STAIRS.get(),4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModBlocks.HAY_BRICK.get())
+                .unlockedBy(getHasName(ModBlocks.HAY_STAIRS.get()), has(ModBlocks.HAY_STAIRS.get()))
+                .save(p_251297_);
+
+        //HAY SLAB
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HAY_SLAB.get(),6)
+                .pattern("###")
+                .define('#', ModBlocks.HAY_BRICK.get())
+                .unlockedBy(getHasName(ModBlocks.HAY_SLAB.get()), has(ModBlocks.HAY_SLAB.get()))
+                .save(p_251297_);
+
+        //HAY STAIRS
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HAY_WALL.get(),6)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModBlocks.HAY_BRICK.get())
+                .unlockedBy(getHasName(ModBlocks.HAY_WALL.get()), has(ModBlocks.HAY_WALL.get()))
+                .save(p_251297_);
+
+        //MULTIPHASE FLUID CONTAINER
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MULTIPHASE_FLUID_CONTAINER.get())
+                .pattern("ACA")
+                .pattern("#B#")
+                .pattern("ACA")
+                .define('A', ModItems.EARTH_CRYSTAL.get())
+                .define('C', Items.GLASS_PANE)
+                .define('#', ModItems.AROMATIC_INGOT.get())
+                .define('B', Items.BUCKET)
+                .unlockedBy(getHasName(ModItems.MULTIPHASE_FLUID_CONTAINER.get()), has(ModItems.MULTIPHASE_FLUID_CONTAINER.get()))
+                .save(p_251297_);
+
+        //POLYMER MEMBRANE PLATE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLYMER_MEMBRANE_PLATE.get(),2)
+                .pattern("AAA")
+                .pattern("#B#")
+                .pattern("AAA")
+                .define('A', ModItems.SPIDER_SILK_FIBER.get())
+                .define('#', ModItems.VITAMIN_DUST.get())
+                .define('B', Items.GLASS_PANE)
+                .unlockedBy(getHasName(ModItems.POLYMER_MEMBRANE_PLATE.get()), has(ModItems.POLYMER_MEMBRANE_PLATE.get()))
+                .save(p_251297_);
+
+        //FLUX CORE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLUX_CORE.get())
+                .pattern(" A ")
+                .pattern("#B#")
+                .pattern(" A ")
+                .define('A', ModItems.AROMATIC_POWDER.get())
+                .define('#', ModItems.FURNACE_CORE.get())
+                .define('B', ModItems.REDSTONE_RESONATOR.get())
+                .unlockedBy(getHasName(ModItems.FLUX_CORE.get()), has(ModItems.FLUX_CORE.get()))
+                .save(p_251297_);
+
+        //FLUID ASSEMBLER
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FLUID_ASSEMBLER.get())
+                .pattern("KAK")
+                .pattern("#B#")
+                .pattern("KCK")
+                .define('A', ModItems.REDSTONE_RESONATOR.get())
+                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
+                .define('C', ModItems.FLUX_CORE.get())
+                .define('K', ModItems.POLYMER_MEMBRANE_PLATE.get())
+                .define('#', ModItems.MULTIPHASE_FLUID_CONTAINER.get())
+                .unlockedBy(getHasName(ModBlocks.FLUID_ASSEMBLER.get()), has(ModBlocks.FLUID_ASSEMBLER.get()))
+                .save(p_251297_);
+
         //COBWEB
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.COBWEB)
                 .pattern("###")
@@ -143,7 +215,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(p_251297_);
 
         //FERMENTED AROMATIC SLURRY
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FERMENTED_AROMATIC_SLURRY.get(),4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FERMENTED_AROMATIC_SLURRY.get(),2)
                 .requires(ModItems.VITAMIN_DUST.get())
                 .requires(ModItems.AROMATIC_POWDER.get())
                 .requires(ModItems.ROTTEN_FRUIT.get())

@@ -17,11 +17,6 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(CompressorBlockEntity::new,
                             ModBlocks.COMPRESSOR.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<SeedMakerBlockEntity>> SEED_MAKER_BE =
-            BLOCK_ENTITIES.register("seed_maker_be", () ->
-                    BlockEntityType.Builder.of(SeedMakerBlockEntity::new,
-                            ModBlocks.SEED_MAKER.get()).build(null));
-
     public static final RegistryObject<BlockEntityType<DehydratorBlockEntity>> DEHYDRATOR_BE =
             BLOCK_ENTITIES.register("dehydrator_be", () ->
                     BlockEntityType.Builder.of(DehydratorBlockEntity::new,
@@ -32,6 +27,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ExtractorBlockEntity::new,
                             ModBlocks.EXTRACTOR.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FluidAssemblerBlockEntity>> FLUID_ASSEMBLER_BE =
+            BLOCK_ENTITIES.register("fluid_assembler_be", () ->
+                    BlockEntityType.Builder.of(FluidAssemblerBlockEntity::new,
+                            ModBlocks.FLUID_ASSEMBLER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

@@ -34,10 +34,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
         this.dropSelf(ModBlocks.EARTH_CRYSTAL_BLOCK.get());
         this.dropSelf(ModBlocks.EARTH_CRYSTAL_FRAME.get());
-        this.dropSelf(ModBlocks.SEED_MAKER.get());
         this.dropSelf(ModBlocks.DEHYDRATOR.get());
         this.dropSelf(ModBlocks.HAY_BRICK.get());
         this.dropSelf(ModBlocks.EXTRACTOR.get());
+        this.dropSelf(ModBlocks.FLUID_ASSEMBLER.get());
+
+        this.dropSelf(ModBlocks.HAY_SLAB.get());
+        this.dropSelf(ModBlocks.HAY_STAIRS.get());
+        this.dropSelf(ModBlocks.HAY_WALL.get());
 
         //ORES
         this.add(ModBlocks.EARTH_CRYSTAL_ORE.get(),

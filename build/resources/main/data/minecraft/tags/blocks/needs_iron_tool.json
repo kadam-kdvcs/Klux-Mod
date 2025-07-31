@@ -3,8 +3,8 @@
     "klux:earth_crystal_ore",
     "klux:deepslate_earth_crystal_ore",
     "klux:compressor",
-    "klux:seed_maker",
     "klux:dehydrator",
-    "klux:extractor"
+    "klux:extractor",
+    "klux:fluid_assembler"
   ]
 }

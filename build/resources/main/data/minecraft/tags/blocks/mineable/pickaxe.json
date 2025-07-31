@@ -7,8 +7,8 @@
     "klux:fire_quartz_ore",
     "klux:endergon_crystal_ore",
     "klux:compressor",
-    "klux:seed_maker",
     "klux:dehydrator",
-    "klux:extractor"
+    "klux:extractor",
+    "klux:fluid_assembler"
   ]
 }

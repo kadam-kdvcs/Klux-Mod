@@ -11,6 +11,7 @@ import org.kdvcs.klux.Klux;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.kdvcs.klux.block.ModBlocks;
+import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.custom.*;
 import org.kdvcs.klux.sound.ModSounds;
 
@@ -76,7 +77,13 @@ public class ModItems {
 
     //PRESSING ROD ASSEMBLY
     public static final RegistryObject<Item> PRESSING_ROD_ASSEMBLY = ITEMS.register("pressing_rod_assembly",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
+                    p_41423_.add(Component.translatable("tooltip.klux.pressing_rod_assembly.tooltip").withStyle(ChatFormatting.GRAY));
+                    super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
+                }
+            });
 
     //FERMENTED_AROMATIC_SLURRY
     public static final RegistryObject<Item> FERMENTED_AROMATIC_SLURRY = ITEMS.register("fermented_aromatic_slurry",
@@ -102,6 +109,18 @@ public class ModItems {
 
     //EXTRACTION MESH
     public static final RegistryObject<Item> EXTRACTION_MESH = ITEMS.register("extraction_mesh",
+            () -> new Item(new Item.Properties()));
+
+    //MULTIPHASE FLUID CONTAINER
+    public static final RegistryObject<Item> MULTIPHASE_FLUID_CONTAINER = ITEMS.register("multiphase_fluid_container",
+            () -> new Item(new Item.Properties()));
+
+    //POLYMER MEMBRANE PLATE
+    public static final RegistryObject<Item> POLYMER_MEMBRANE_PLATE = ITEMS.register("polymer_membrane_plate",
+            () -> new Item(new Item.Properties()));
+
+    //FLUX CORE
+    public static final RegistryObject<Item> FLUX_CORE = ITEMS.register("flux_core",
             () -> new Item(new Item.Properties()));
 
     //LEATHER PASTE
@@ -285,9 +304,15 @@ public class ModItems {
     public static final RegistryObject<Item> SOFT_BOOTS = ITEMS.register("soft_boots",
             () -> new ArmorItem(ModArmorMaterials.SOFT_CLOTH, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    //AROMATIC BUCKET
+    public static final RegistryObject<Item> AROMATIC_BUCKET = ITEMS.register("aromatic_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_AROMATIC,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
 
     //HERE TO REGISTER ALL ITEMS
-    public static void register(IEventBus eventBus){
+    public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
 }

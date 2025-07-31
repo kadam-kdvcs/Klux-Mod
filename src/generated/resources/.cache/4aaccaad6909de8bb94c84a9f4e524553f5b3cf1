@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-29T13:36:20.7907956	Block States: klux
+// 1.20.1	2025-07-31T21:41:06.3985681	Block States: klux
 130a0f83adaa89bd527afed27f915a429636fa89 assets/klux/blockstates/cactus_fruit.json
 61da4df63a990349b6270b9a473737a8b548907d assets/klux/blockstates/deepslate_earth_crystal_ore.json
 33e247fae84f71fbaa48aca613d95f00463007b9 assets/klux/blockstates/earth_crystal_block.json
@@ -16,6 +16,9 @@ c2ccb80f4b02e5e9e78bf211cdc89f4655a42761 assets/klux/blockstates/earth_crystal_w
 697f11261f9670aecf6b9183b722e92d0c0d823d assets/klux/blockstates/endergon_crystal_ore.json
 ba2c8ca97d223373a0759c4ecd1ac187f80fb8a3 assets/klux/blockstates/fire_quartz_ore.json
 81705fd89ed7f0db07810328a9c3a22f91595a18 assets/klux/blockstates/hay_brick.json
+05438d6b1701e7518c0286776860d79f3b3a5e7a assets/klux/blockstates/hay_slab.json
+8a9388c1e49bd0a3bf9a53fe45475652826cdea4 assets/klux/blockstates/hay_stairs.json
+a9684f2d29eb7bbb25859ffdf208eaf5e5a2f622 assets/klux/blockstates/hay_wall.json
 a3acda6855f4c4a2a2cc84685c4e2318d687fe88 assets/klux/blockstates/parsnip_crop.json
 99f5b293ad6da1bed6b32c1333554fbe767f10df assets/klux/blockstates/potted_cactus_fruit.json
 0e3aa7187fbe3bdb4c9a81d05dd3d3196d35ca4f assets/klux/blockstates/rotten_fruit_crop.json
@@ -58,6 +61,14 @@ cc5d3d830c9d6bf622ef152504b4445fcd0a6ff8 assets/klux/models/block/earth_crystal_
 0d587871a37bf3d7c4889d42ecfe70b527e9a19d assets/klux/models/block/endergon_crystal_ore.json
 0b2f744dbf60d2417e93ffc270d9b7110c67a151 assets/klux/models/block/fire_quartz_ore.json
 f460b4f2ce92c611bbb35b7f7b52f9c53a5b30dc assets/klux/models/block/hay_brick.json
+d52e09b238f33dcafa9f02101f7dfd339908c3f1 assets/klux/models/block/hay_slab.json
+bdea4a49fd26fc489d09aede8b1282b41e902bfe assets/klux/models/block/hay_slab_top.json
+84c9d899f2bb4f1458f92016d246f879f849d1a6 assets/klux/models/block/hay_stairs.json
+f36a03369f8a07a219d8d1c3bed4a198b8ece58c assets/klux/models/block/hay_stairs_inner.json
+ca12848a1f8e095d841120e0fd306999c959d371 assets/klux/models/block/hay_stairs_outer.json
+20556b93dc2d886d55399721980d1e87a570a5cb assets/klux/models/block/hay_wall_post.json
+32b41b9ba320ba0358e005bcbe547f072f579a55 assets/klux/models/block/hay_wall_side.json
+36ac01bf375a4ffab7548a23536c6d65e0eb42c1 assets/klux/models/block/hay_wall_side_tall.json
 372d3fa5e11bc27fc9348d81625231293427d647 assets/klux/models/block/parsnip_stage0.json
 7f8a5dbc92c9bf3ff9adfffdd86d709d95422fca assets/klux/models/block/parsnip_stage1.json
 ad83bc69593d97fe34650df6a49d5f29515531ef assets/klux/models/block/parsnip_stage2.json

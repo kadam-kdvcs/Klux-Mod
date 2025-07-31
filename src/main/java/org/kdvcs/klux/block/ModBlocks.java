@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.custom.*;
+import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.sound.ModSounds;
 
@@ -37,9 +38,16 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.EARTH_CRYSTAL_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
+    public static final RegistryObject<Block> HAY_STAIRS = registerBlock("hay_stairs",
+            () -> new StairBlock(() -> ModBlocks.HAY_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.GRASS)));
+
     //SLABS
     public static final RegistryObject<Block> EARTH_CRYSTAL_SLAB = registerBlock("earth_crystal_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> HAY_SLAB = registerBlock("hay_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.GRASS)));
 
     //BUTTONS
     public static final RegistryObject<Block> EARTH_CRYSTAL_BUTTON = registerBlock("earth_crystal_button",
@@ -64,6 +72,9 @@ public class ModBlocks {
     //WALLS
     public static final RegistryObject<Block> EARTH_CRYSTAL_WALL = registerBlock("earth_crystal_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> HAY_WALL = registerBlock("hay_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.GRASS)));
 
     //DOOR
     public static final RegistryObject<Block> EARTH_CRYSTAL_DOOR = registerBlock("earth_crystal_door",
@@ -123,14 +134,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> COMPRESSOR = registerBlock("compressor",
             CompressorBlock::new);
 
-    public static final RegistryObject<Block> SEED_MAKER = registerBlock("seed_maker",
-            SeedMakerBlock::new);
-
     public static final RegistryObject<Block> DEHYDRATOR = registerBlock("dehydrator",
             DehydratorBlock::new);
 
     public static final RegistryObject<Block> EXTRACTOR = registerBlock("extractor",
             ExtractorBlock::new);
+
+    public static final RegistryObject<Block> FLUID_ASSEMBLER = registerBlock("fluid_assembler",
+            FluidAssemblerBlock::new);
+
+    //AROMATIC BLOCK
+    public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_AROMATIC, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

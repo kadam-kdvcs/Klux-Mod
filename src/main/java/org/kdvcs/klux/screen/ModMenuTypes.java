@@ -17,14 +17,15 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<CompressorMenu>> COMPRESSOR_MENU =
             registerMenuType("compressor_menu", CompressorMenu::new);
 
-    public static final RegistryObject<MenuType<SeedMakerMenu>> SEED_MAKER_MENU =
-            registerMenuType("seed_maker_menu", SeedMakerMenu::new);
-
     public static final RegistryObject<MenuType<DehydratorMenu>> DEHYDRATOR_MENU =
             registerMenuType("dehydrator_menu", DehydratorMenu::new);
 
     public static final RegistryObject<MenuType<ExtractorMenu>> EXTRACTOR_MENU =
             registerMenuType("extractor_menu", ExtractorMenu::new);
+
+    public static final RegistryObject<MenuType<FluidAssemblerMenu>> GEM_INFUSING_STATION_MENU =
+            registerMenuType("gem_infusing_station_menu", FluidAssemblerMenu::new);
+
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

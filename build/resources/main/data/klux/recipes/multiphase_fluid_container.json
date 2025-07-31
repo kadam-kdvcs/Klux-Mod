@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:aromatic_ingot"
+    },
+    "A": {
+      "item": "klux:earth_crystal"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "C": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "#B#",
+    "ACA"
+  ],
+  "result": {
+    "item": "klux:multiphase_fluid_container"
+  },
+  "show_notification": true
+}

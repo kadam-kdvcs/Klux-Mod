@@ -49,9 +49,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.FIRE_QUARTZ_ORE.get(),
                         ModBlocks.ENDERGON_CRYSTAL_ORE.get(),
                         ModBlocks.COMPRESSOR.get(),
-                        ModBlocks.SEED_MAKER.get(),
                         ModBlocks.DEHYDRATOR.get(),
-                        ModBlocks.EXTRACTOR.get());
+                        ModBlocks.EXTRACTOR.get(),
+                        ModBlocks.FLUID_ASSEMBLER.get());
 
         /*
         this.tag(BlockTags.NEEDS_STONE_TOOL)
@@ -63,9 +63,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.EARTH_CRYSTAL_ORE.get(),
                         ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get(),
                         ModBlocks.COMPRESSOR.get(),
-                        ModBlocks.SEED_MAKER.get(),
                         ModBlocks.DEHYDRATOR.get(),
-                        ModBlocks.EXTRACTOR.get());
+                        ModBlocks.EXTRACTOR.get(),
+                        ModBlocks.FLUID_ASSEMBLER.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FIRE_QUARTZ_ORE.get());
@@ -78,7 +78,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.EARTH_CRYSTAL_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.EARTH_CRYSTAL_WALL.get());
+                .add(ModBlocks.EARTH_CRYSTAL_WALL.get(),
+                        ModBlocks.HAY_WALL.get());
 
     }
 

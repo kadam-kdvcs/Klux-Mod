@@ -36,7 +36,6 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ENDERGON_CRYSTAL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

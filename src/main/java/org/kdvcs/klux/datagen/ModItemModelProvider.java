@@ -90,17 +90,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HUMICS);
         simpleItem(ModItems.REDSTONE_RESONATOR);
         simpleItem(ModItems.FURNACE_CORE);
+        simpleItem(ModItems.AROMATIC_BUCKET);
+        simpleItem(ModItems.MULTIPHASE_FLUID_CONTAINER);
+        simpleItem(ModItems.POLYMER_MEMBRANE_PLATE);
+        simpleItem(ModItems.FLUX_CORE);
 
         simpleBlockItem(ModBlocks.EARTH_CRYSTAL_DOOR);
 
         fenceItem(ModBlocks.EARTH_CRYSTAL_FENCE, ModBlocks.EARTH_CRYSTAL_BLOCK);
         buttonItem(ModBlocks.EARTH_CRYSTAL_BUTTON, ModBlocks.EARTH_CRYSTAL_BLOCK);
         wallItem(ModBlocks.EARTH_CRYSTAL_WALL, ModBlocks.EARTH_CRYSTAL_BLOCK);
+        wallItem(ModBlocks.HAY_WALL, ModBlocks.HAY_BRICK);
 
         evenSimplerBlockItem(ModBlocks.EARTH_CRYSTAL_STAIRS);
         evenSimplerBlockItem(ModBlocks.EARTH_CRYSTAL_SLAB);
         evenSimplerBlockItem(ModBlocks.EARTH_CRYSTAL_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.EARTH_CRYSTAL_FENCE_GATE);
+
+        evenSimplerBlockItem(ModBlocks.HAY_STAIRS);
+        evenSimplerBlockItem(ModBlocks.HAY_SLAB);
 
         trapdoorItem(ModBlocks.EARTH_CRYSTAL_TRAPDOOR);
 

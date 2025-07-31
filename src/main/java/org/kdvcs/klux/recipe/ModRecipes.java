@@ -1,6 +1,5 @@
 package org.kdvcs.klux.recipe;
 
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,14 +17,14 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<CompressorRecipe>> COMPRESSOR_SERIALIZER =
             SERIALIZERS.register("compressor", () -> CompressorRecipe.Serializer.INSTANCE);
 
-    public static final RegistryObject<RecipeSerializer<SeedMakerRecipe>> SEED_MAKER_SERIALIZER =
-            SERIALIZERS.register("seed_maker", () -> SeedMakerRecipe.Serializer.INSTANCE);
-
     public static final RegistryObject<RecipeSerializer<DehydratorRecipe>> DEHYDRATOR_SERIALIZER =
             SERIALIZERS.register("dehydrator", () -> DehydratorRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<ExtractorRecipe>> EXTRACTOR_SERIALIZER =
             SERIALIZERS.register("extractor", () -> ExtractorRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<FluidAssemblerRecipe>> FLUID_ASSEMBLER_SERIALIZER =
+            SERIALIZERS.register("fluid_assembler", () -> FluidAssemblerRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<ProportionalArmorRecipe>> PROPORTIONAL_ARMOR_SERIALIZER =
             SERIALIZERS.register("proportional_armor", () -> ProportionalArmorRecipe.Serializer.INSTANCE);

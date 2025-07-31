@@ -19,17 +19,22 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.klux_basic"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.EARTH_CRYSTAL.get());
-                        output.accept(ModItems.FIRE_QUARTZ.get());
-                        output.accept(ModItems.ENDERGON_CRYSTAL.get());
-
                         output.accept(ModBlocks.EARTH_CRYSTAL_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get());
                         output.accept(ModBlocks.FIRE_QUARTZ_ORE.get());
                         output.accept(ModBlocks.ENDERGON_CRYSTAL_ORE.get());
+
+                        output.accept(ModItems.EARTH_CRYSTAL.get());
+                        output.accept(ModItems.FIRE_QUARTZ.get());
+                        output.accept(ModItems.ENDERGON_CRYSTAL.get());
+
                         output.accept(ModBlocks.EARTH_CRYSTAL_BLOCK.get());
 
                         output.accept(ModBlocks.HAY_BRICK.get());
+                        output.accept(ModBlocks.HAY_STAIRS.get());
+                        output.accept(ModBlocks.HAY_SLAB.get());
+                        output.accept(ModBlocks.HAY_WALL.get());
+
                         output.accept(ModItems.SALAD.get());
                         output.accept(ModItems.NUTRI_BLOCK.get());
                         output.accept(ModItems.PARSNIP.get());
@@ -39,12 +44,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CACTUS_FRUIT.get());
 
                         output.accept(ModItems.ENRICHED_COAL.get());
-
                         output.accept(ModItems.HUMICS.get());
                         output.accept(ModItems.DEHYDRATED_SEEDS.get());
                         output.accept(ModItems.PUTRID_FAT.get());
                         output.accept(ModItems.ROTTEN_FRUIT.get());
                         output.accept(ModItems.ROTTEN_FRUIT_SEEDS.get());
+
                         output.accept(ModItems.HAY_BALL.get());
                         output.accept(ModItems.LEATHER_PASTE.get());
                         output.accept(ModItems.SPIDER_SILK_FIBER.get());
@@ -63,6 +68,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AROMATIC_COAGULATE.get());
                         output.accept(ModItems.AROMATIC_DUST.get());
                         output.accept(ModItems.AROMATIC_INGOT.get());
+                        output.accept(ModItems.AROMATIC_BUCKET.get());
+                        output.accept(ModItems.REDSTONE_RESONATOR.get());
+                        output.accept(ModItems.FURNACE_CORE.get());
+                        output.accept(ModItems.AIR_DUCT.get());
+                        output.accept(ModItems.MULTIPHASE_FLUID_CONTAINER.get());
+                        output.accept(ModItems.POLYMER_MEMBRANE_PLATE.get());
+                        output.accept(ModItems.FLUX_CORE.get());
 
                             })
                     .build());
@@ -73,13 +85,11 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModBlocks.COMPRESSOR.get());
-                        output.accept(ModBlocks.SEED_MAKER.get());
                         output.accept(ModBlocks.DEHYDRATOR.get());
                         output.accept(ModBlocks.EXTRACTOR.get());
+                        output.accept(ModBlocks.FLUID_ASSEMBLER.get());
                         output.accept(ModBlocks.EARTH_CRYSTAL_FRAME.get());
-                        output.accept(ModItems.REDSTONE_RESONATOR.get());
-                        output.accept(ModItems.FURNACE_CORE.get());
-                        output.accept(ModItems.AIR_DUCT.get());
+
 
                             })
                     .build());

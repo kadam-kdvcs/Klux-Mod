@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "klux:block/hay_brick",
+    "side": "klux:block/hay_brick",
+    "top": "klux:block/hay_brick"
+  }
+}

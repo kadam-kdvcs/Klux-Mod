@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:vitamin_dust"
+    },
+    "A": {
+      "item": "klux:spider_silk_fiber"
+    },
+    "B": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "#B#",
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "item": "klux:polymer_membrane_plate"
+  },
+  "show_notification": true
+}

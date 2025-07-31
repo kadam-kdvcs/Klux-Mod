@@ -60,13 +60,12 @@ public class ExtractorCategory implements IRecipeCategory<ExtractorRecipe> {
     public void setRecipe(IRecipeLayoutBuilder builder, ExtractorRecipe recipe, IFocusGroup focuses) {
         this.currentRecipe = recipe;
 
-        // 显示带数量和标签的输入
         builder.addSlot(RecipeIngredientRole.INPUT, 47, 36)
                 .addItemStacks(KadamJeiUtil.expandWithCount(recipe.getInput().ingredient, recipe.getInput().count));
 
-        // 输出
         builder.addSlot(RecipeIngredientRole.OUTPUT, 109, 36)
                 .addItemStack(recipe.getResultItem(null));
+
     }
 
     @Override

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:furnace_core"
+    },
+    "A": {
+      "item": "klux:aromatic_powder"
+    },
+    "B": {
+      "item": "klux:redstone_resonator"
+    }
+  },
+  "pattern": [
+    " A ",
+    "#B#",
+    " A "
+  ],
+  "result": {
+    "item": "klux:flux_core"
+  },
+  "show_notification": true
+}

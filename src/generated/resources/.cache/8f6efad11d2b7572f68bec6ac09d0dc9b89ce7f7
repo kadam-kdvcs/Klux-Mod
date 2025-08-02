@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T21:41:06.3905521	Tags for minecraft:item mod id klux
+// 1.20.1	2025-08-02T20:05:34.2626402	Tags for minecraft:item mod id klux
 f5d0d6db6433c8e3574694ca2ba47b34fd9ca586 data/forge/tags/items/dusts.json
 9d6a24dcf699e85e9e70c97b1404b8ee5714b3fd data/forge/tags/items/gems.json
 a6b34f75633239db69f3b37fa830a140a42bd2ca data/forge/tags/items/ingots.json
@@ -6,6 +6,7 @@ a6b34f75633239db69f3b37fa830a140a42bd2ca data/forge/tags/items/ingots.json
 d7f28735f83dbeea93c5ce6b2527d95c1c92a7d2 data/forge/tags/items/ores/earth_crystal.json
 b01cc1e74db759fd6f3a427005e1717e8bd5560e data/forge/tags/items/ores/endergon_crystal.json
 754313fc7d3764b3a0c619b95851ecc12e21bf15 data/forge/tags/items/ores/fire_quartz.json
+16abeceba62097ff1c3d75670cefea18ae754b52 data/forge/tags/items/putrescent.json
 6c19077afad236738d297261cd80e60c3737f86a data/forge/tags/items/rawmeats.json
 ccd2d9c6caa654dc7b7d844b80f39c55284499be data/forge/tags/items/seeds.json
 69214ccb0fe3e45ff4cc69e660e6a8a8438211aa data/minecraft/tags/items/music_discs.json

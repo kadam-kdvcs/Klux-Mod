@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T21:41:06.3985681	Loot Tables
+// 1.20.1	2025-08-02T21:21:40.6727558	Loot Tables
 e03b83849e672de4eaf9e62b33d799edca59afa1 data/klux/loot_tables/blocks/cactus_fruit.json
 51ebf61fe24d89e7ac5b5e7713b346c1ea8d65cd data/klux/loot_tables/blocks/compressor.json
 97099e3d81b8febe04545bb19d2d2e2c0cdd0497 data/klux/loot_tables/blocks/deepslate_earth_crystal_ore.json
@@ -19,10 +19,12 @@ cb9fc2c268805da1f14a63ede3238d26a3c4c351 data/klux/loot_tables/blocks/earth_crys
 fd1f17468cf567e986ab01daf9674b70664557b2 data/klux/loot_tables/blocks/extractor.json
 d24f2d4c708f01f4d6502964fb8b192a1bbdfc92 data/klux/loot_tables/blocks/fire_quartz_ore.json
 190700e680d159b300172c61a02df2af9fad2513 data/klux/loot_tables/blocks/fluid_assembler.json
+e1f63e18b92c41fcb9be3d60e3fb9cfec8d003b2 data/klux/loot_tables/blocks/fluid_extractor.json
 0098c24dfcf245d10c9d21fb36855e3e6b7e8560 data/klux/loot_tables/blocks/hay_brick.json
 02cec9c7f21a49519e869fa1e660fdc11a31239a data/klux/loot_tables/blocks/hay_slab.json
 acc83f7af7db6d3314f7518b6d03020f5256abb3 data/klux/loot_tables/blocks/hay_stairs.json
 81e4177b3f005ab43472e3657f53fc4835a256da data/klux/loot_tables/blocks/hay_wall.json
+ead69553a0e6ba972603edd11085fae1ebc591f6 data/klux/loot_tables/blocks/multiphase_fluid_tank.json
 83c8caf2a2189c16106f9b45a8aaf798481c2cd9 data/klux/loot_tables/blocks/parsnip_crop.json
 d53c8b78d0da5cee183c39bf6ba8d03b32b910a3 data/klux/loot_tables/blocks/potted_cactus_fruit.json
 1cce8b44189fc4dab5c09321dffee7880ee06916 data/klux/loot_tables/blocks/rotten_fruit_crop.json

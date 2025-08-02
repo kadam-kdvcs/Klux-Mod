@@ -192,6 +192,7 @@ public class FluidTankRenderer {
                 MutableComponent amountString = Component.translatable("klux.tooltip.liquid.amount", nf.format(milliBuckets));
                 tooltip.add(amountString.withStyle(ChatFormatting.GRAY));
             }
+
         } catch (RuntimeException e) {
             LOGGER.error("Failed to get tooltip for fluid: " + e);
         }

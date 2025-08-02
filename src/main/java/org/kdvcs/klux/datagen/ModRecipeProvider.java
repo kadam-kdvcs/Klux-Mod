@@ -152,10 +152,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#B#")
                 .pattern("ACA")
                 .define('A', ModItems.EARTH_CRYSTAL.get())
-                .define('C', Items.GLASS_PANE)
+                .define('C', ModItems.POLYMER_MEMBRANE_PLATE.get())
                 .define('#', ModItems.AROMATIC_INGOT.get())
-                .define('B', Items.BUCKET)
+                .define('B', ModItems.SEALED_TANK.get())
                 .unlockedBy(getHasName(ModItems.MULTIPHASE_FLUID_CONTAINER.get()), has(ModItems.MULTIPHASE_FLUID_CONTAINER.get()))
+                .save(p_251297_);
+
+        //SEALED TANK
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SEALED_TANK.get())
+                .pattern("ACA")
+                .pattern("CBC")
+                .pattern("ACA")
+                .define('A', Items.IRON_BLOCK)
+                .define('C', ModItems.POLYMER_MEMBRANE_PLATE.get())
+                .define('B', Items.BUCKET)
+                .unlockedBy(getHasName(ModItems.SEALED_TANK.get()), has(ModItems.SEALED_TANK.get()))
+                .save(p_251297_);
+
+        //MULTIPHASE FLUID TANK
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MULTIPHASE_FLUID_TANK.get())
+                .pattern("ACA")
+                .pattern("CBC")
+                .pattern("ADA")
+                .define('A', Items.DIAMOND)
+                .define('C', ModItems.SEALED_TANK.get())
+                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
+                .define('D', ModItems.PRESSING_ROD_ASSEMBLY.get())
+                .unlockedBy(getHasName(ModBlocks.MULTIPHASE_FLUID_TANK.get()), has(ModBlocks.MULTIPHASE_FLUID_TANK.get()))
                 .save(p_251297_);
 
         //POLYMER MEMBRANE PLATE

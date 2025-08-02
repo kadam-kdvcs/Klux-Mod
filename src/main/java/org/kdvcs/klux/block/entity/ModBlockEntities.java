@@ -32,6 +32,16 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(FluidAssemblerBlockEntity::new,
                             ModBlocks.FLUID_ASSEMBLER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FluidExtractorBlockEntity>> FLUID_EXTRACTOR_BE =
+            BLOCK_ENTITIES.register("fluid_extractor_be", () ->
+                    BlockEntityType.Builder.of(FluidExtractorBlockEntity::new,
+                            ModBlocks.FLUID_EXTRACTOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<MultiphaseFluidTankBlockEntity>> MULTIPHASE_FLUID_TANK_BE =
+            BLOCK_ENTITIES.register("multiphase_fluid_tank_be", () ->
+                    BlockEntityType.Builder.of(MultiphaseFluidTankBlockEntity::new,
+                            ModBlocks.MULTIPHASE_FLUID_TANK.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

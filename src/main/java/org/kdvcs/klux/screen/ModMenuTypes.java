@@ -23,8 +23,14 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<ExtractorMenu>> EXTRACTOR_MENU =
             registerMenuType("extractor_menu", ExtractorMenu::new);
 
-    public static final RegistryObject<MenuType<FluidAssemblerMenu>> GEM_INFUSING_STATION_MENU =
-            registerMenuType("gem_infusing_station_menu", FluidAssemblerMenu::new);
+    public static final RegistryObject<MenuType<FluidAssemblerMenu>> FLUID_ASSEMBLER_MENU =
+            registerMenuType("fluid_assembler_menu", FluidAssemblerMenu::new);
+
+    public static final RegistryObject<MenuType<FluidExtractorMenu>> FLUID_EXTRACTOR_MENU =
+            registerMenuType("fluid_extractor_menu", FluidExtractorMenu::new);
+
+    public static final RegistryObject<MenuType<MultiphaseFluidTankMenu>> MULTIPHASE_FLUID_TANK_MENU =
+            registerMenuType("multiphase_fluid_tank_menu", MultiphaseFluidTankMenu::new);
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

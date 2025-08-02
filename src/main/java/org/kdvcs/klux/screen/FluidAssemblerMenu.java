@@ -24,7 +24,7 @@ public class FluidAssemblerMenu extends AbstractContainerMenu {
     }
 
     public FluidAssemblerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), id);
+        super(ModMenuTypes.FLUID_ASSEMBLER_MENU.get(), id);
         checkContainerSize(inv, 3);
         blockEntity = (FluidAssemblerBlockEntity) entity;
         this.level = inv.player.level();

@@ -20,12 +20,21 @@ public class ModFluids {
     public static final RegistryObject<FlowingFluid> FLOWING_AROMATIC = FLUIDS.register("flowing_aromatic",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.AROMATIC_FLUID_PROPERTIES));
 
+    public static final RegistryObject<FlowingFluid> SOURCE_PUTRESCENT_SOLUTION = FLUIDS.register("putrescent_solution_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.PUTRESCENT_SOLUTION_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_PUTRESCENT_SOLUTION = FLUIDS.register("flowing_putrescent_solution",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.PUTRESCENT_SOLUTION_FLUID_PROPERTIES));
+
 
     public static final ForgeFlowingFluid.Properties AROMATIC_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.AROMATIC_FLUID_TYPE, SOURCE_AROMATIC, FLOWING_AROMATIC)
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.AROMATIC_BLOCK)
             .bucket(ModItems.AROMATIC_BUCKET);
 
+    public static final ForgeFlowingFluid.Properties PUTRESCENT_SOLUTION_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.PUTRESCENT_SOLUTION_FLUID_TYPE, SOURCE_PUTRESCENT_SOLUTION, FLOWING_PUTRESCENT_SOLUTION)
+            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.PUTRESCENT_SOLUTION_BLOCK)
+            .bucket(ModItems.PUTRESCENT_SOLUTION_BUCKET);
 
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);

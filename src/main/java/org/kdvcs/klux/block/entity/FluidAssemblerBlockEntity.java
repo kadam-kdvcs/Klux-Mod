@@ -32,8 +32,9 @@ import org.jetbrains.annotations.Nullable;
 import org.kdvcs.klux.block.custom.ExtractorBlock;
 import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.fluid.ModFluids;
+import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.networking.ModMessages;
-import org.kdvcs.klux.networking.packet.FluidSyncS2CPacket;
+import org.kdvcs.klux.networking.packet.FluidAssemblerSyncS2CPacket;
 import org.kdvcs.klux.recipe.FluidAssemblerRecipe;
 import org.kdvcs.klux.screen.FluidAssemblerMenu;
 import org.kdvcs.klux.sound.ModSounds;
@@ -64,7 +65,7 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         protected void onContentsChanged() {
             setChanged();
             if(!level.isClientSide()) {
-                ModMessages.sendToClients(new FluidSyncS2CPacket(this.fluid, worldPosition));
+                ModMessages.sendToClients(new FluidAssemblerSyncS2CPacket(this.fluid, worldPosition));
             }
         }
 
@@ -74,7 +75,8 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
 
             FluidStack current = getFluid();
             if (current.isEmpty()) {
-                return stack.getFluid() == Fluids.WATER || stack.getFluid() == ModFluids.SOURCE_AROMATIC.get();
+                return stack.getFluid() == Fluids.WATER || stack.getFluid() == ModFluids.SOURCE_AROMATIC.get() || stack.getFluid() == Fluids.LAVA
+                        || stack.getFluid() == ModFluids.SOURCE_PUTRESCENT_SOLUTION.get();
             } else {
                 //DON'T MIX DIFFERENT LIQUID!
                 return current.getFluid() == stack.getFluid();
@@ -146,7 +148,7 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        ModMessages.sendToClients(new FluidSyncS2CPacket(this.getFluidStack(), worldPosition));
+        ModMessages.sendToClients(new FluidAssemblerSyncS2CPacket(this.getFluidStack(), worldPosition));
         return new FluidAssemblerMenu(id, inventory, this, this.data);
     }
 
@@ -283,22 +285,35 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
     private static void fillTankWithFluid(FluidAssemblerBlockEntity pEntity, FluidStack stack, ItemStack container) {
         int filled = pEntity.FLUID_TANK.fill(stack, IFluidHandler.FluidAction.EXECUTE);
 
-        //PLAY SOUND IF SUCCESSFUL
-        if (filled > 0 && pEntity.level instanceof ServerLevel serverLevel) {
-            serverLevel.playSound(
-                    null,
-                    pEntity.worldPosition,
-                    SoundEvents.BUCKET_FILL,
-                    SoundSource.BLOCKS,
-                    0.8f,
-                    1.0f
-            );
+        ItemStack inputStack = pEntity.itemHandler.getStackInSlot(0);
+        boolean isMultiphaseContainer = !inputStack.isEmpty() &&
+                inputStack.is(ModItems.MULTIPHASE_FLUID_CONTAINER.get());
+
+        if (filled > 0 && pEntity.level instanceof ServerLevel serverLevel && !isMultiphaseContainer) {
+            if (stack.getFluid() == Fluids.LAVA) {
+                serverLevel.playSound(
+                        null,
+                        pEntity.worldPosition,
+                        SoundEvents.BUCKET_FILL_LAVA,
+                        SoundSource.BLOCKS,
+                        0.8f,
+                        1.0f
+                );
+            } else {
+                serverLevel.playSound(
+                        null,
+                        pEntity.worldPosition,
+                        SoundEvents.BUCKET_FILL,
+                        SoundSource.BLOCKS,
+                        0.8f,
+                        1.0f
+                );
+            }
         }
 
         pEntity.itemHandler.extractItem(0, 1, false);
         pEntity.itemHandler.insertItem(0, container, false);
     }
-
 
     private static boolean hasFluidItemInSourceSlot(FluidAssemblerBlockEntity pEntity) {
         return pEntity.itemHandler.getStackInSlot(0).getCount() > 0;
@@ -315,14 +330,25 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
             inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<FluidAssemblerRecipe> recipe = level.getRecipeManager()
+        Optional<FluidAssemblerRecipe> recipeOpt = level.getRecipeManager()
                 .getRecipeFor(FluidAssemblerRecipe.Type.INSTANCE, inventory, level);
 
-        if(recipe.isPresent()) {
-            pEntity.FLUID_TANK.drain(recipe.get().getFluid().getAmount(), IFluidHandler.FluidAction.EXECUTE);
-            pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(null).getItem(),
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+        if (recipeOpt.isPresent()) {
+            FluidAssemblerRecipe recipe = recipeOpt.get();
+
+            pEntity.FLUID_TANK.drain(recipe.getFluid().getAmount(), IFluidHandler.FluidAction.EXECUTE);
+
+            pEntity.itemHandler.extractItem(1, recipe.ingredient.count, false);
+
+            ItemStack output = recipe.getResultItem(null);
+            ItemStack currentOutput = pEntity.itemHandler.getStackInSlot(2);
+
+            if (currentOutput.isEmpty()) {
+                pEntity.itemHandler.setStackInSlot(2, output.copy());
+            } else if (currentOutput.getItem() == output.getItem()) {
+                currentOutput.grow(output.getCount());
+                pEntity.itemHandler.setStackInSlot(2, currentOutput);
+            }
 
             pEntity.resetProgress();
         }

@@ -51,7 +51,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.COMPRESSOR.get(),
                         ModBlocks.DEHYDRATOR.get(),
                         ModBlocks.EXTRACTOR.get(),
-                        ModBlocks.FLUID_ASSEMBLER.get());
+                        ModBlocks.FLUID_ASSEMBLER.get(),
+                        ModBlocks.FLUID_EXTRACTOR.get(),
+                        ModBlocks.MULTIPHASE_FLUID_TANK.get());
 
         /*
         this.tag(BlockTags.NEEDS_STONE_TOOL)
@@ -65,7 +67,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.COMPRESSOR.get(),
                         ModBlocks.DEHYDRATOR.get(),
                         ModBlocks.EXTRACTOR.get(),
-                        ModBlocks.FLUID_ASSEMBLER.get());
+                        ModBlocks.FLUID_ASSEMBLER.get(),
+                        ModBlocks.FLUID_EXTRACTOR.get(),
+                        ModBlocks.MULTIPHASE_FLUID_TANK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FIRE_QUARTZ_ORE.get());

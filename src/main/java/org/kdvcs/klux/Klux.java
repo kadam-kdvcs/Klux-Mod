@@ -1,6 +1,7 @@
 package org.kdvcs.klux;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -24,6 +25,7 @@ import org.kdvcs.klux.fluid.ModFluidTypes;
 import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModCreativeModeTabs;
 import org.kdvcs.klux.item.ModItems;
+import org.kdvcs.klux.item.renderer.MultiphaseFluidContainerRenderer;
 import org.kdvcs.klux.loot.ModLootModifiers;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.recipe.ModRecipes;
@@ -79,14 +81,19 @@ public class Klux {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
             MenuScreens.register(ModMenuTypes.COMPRESSOR_MENU.get(), CompressorScreen::new);
             MenuScreens.register(ModMenuTypes.DEHYDRATOR_MENU.get(), DehydratorScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRACTOR_MENU.get(), ExtractorScreen::new);
 
-            MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), FluidAssemblerScreen::new);
+            MenuScreens.register(ModMenuTypes.FLUID_ASSEMBLER_MENU.get(), FluidAssemblerScreen::new);
+            MenuScreens.register(ModMenuTypes.FLUID_EXTRACTOR_MENU.get(), FluidExtractorScreen::new);
+
+            MenuScreens.register(ModMenuTypes.MULTIPHASE_FLUID_TANK_MENU.get(), MultiphaseFluidTankScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_AROMATIC.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_AROMATIC.get(), RenderType.translucent());
+
         }
     }
 }

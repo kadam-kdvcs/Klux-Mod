@@ -143,9 +143,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> FLUID_ASSEMBLER = registerBlock("fluid_assembler",
             FluidAssemblerBlock::new);
 
+    public static final RegistryObject<Block> FLUID_EXTRACTOR = registerBlock("fluid_extractor",
+            FluidExtractorBlock::new);
+
+    public static final RegistryObject<Block> MULTIPHASE_FLUID_TANK = registerBlock("multiphase_fluid_tank",
+            MultiphaseFluidTankBlock::new);
+
     //AROMATIC BLOCK
     public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",
             () -> new LiquidBlock(ModFluids.SOURCE_AROMATIC, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //PUTRESCENT SOLUTION BLOCK
+    public static final RegistryObject<LiquidBlock> PUTRESCENT_SOLUTION_BLOCK = BLOCKS.register("putrescent_solution_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_PUTRESCENT_SOLUTION, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

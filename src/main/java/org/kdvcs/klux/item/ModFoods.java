@@ -16,4 +16,8 @@ public class ModFoods {
 
     public static final FoodProperties NUTRI_BLOCK = new FoodProperties.Builder().nutrition(7).saturationMod(0.7f).build();
 
+    public static final FoodProperties ROUGH_CAKE_BASE = new FoodProperties.Builder().nutrition(1).saturationMod(0.15f).build();
+
+    public static final FoodProperties VITAMIN_CAKE = new FoodProperties.Builder().nutrition(3).saturationMod(0.65f).build();
+
 }

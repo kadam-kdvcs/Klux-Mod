@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "tag": "forge:putrescent",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:putrescent_solution_fluid",
+    "Amount": 250
+  },
+  "maxProgress": 75
+}

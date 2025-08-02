@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_block"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "C": {
+      "item": "klux:polymer_membrane_plate"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "CBC",
+    "ACA"
+  ],
+  "result": {
+    "item": "klux:sealed_tank"
+  },
+  "show_notification": true
+}

@@ -1,6 +1,5 @@
 package org.kdvcs.klux.recipe;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
@@ -19,15 +18,15 @@ import org.kdvcs.klux.util.FluidJSONUtil;
 public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final ItemStack output;
-    private final NonNullList<Ingredient> recipeItems;
+    public CountedIngredient ingredient;
     private final FluidStack fluidStack;
     private final int maxProgress;
 
     public FluidAssemblerRecipe(ResourceLocation id, ItemStack output,
-                                NonNullList<Ingredient> recipeItems, FluidStack fluidStack, int maxProgress) {
+                                CountedIngredient ingredient, FluidStack fluidStack, int maxProgress) {
         this.id = id;
         this.output = output;
-        this.recipeItems = recipeItems;
+        this.ingredient = ingredient;
         this.fluidStack = fluidStack;
         this.maxProgress = maxProgress;
     }
@@ -38,7 +37,8 @@ public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        return recipeItems.get(0).test(pContainer.getItem(1));
+        ItemStack item = pContainer.getItem(1);
+        return ingredient.ingredient.test(item) && item.getCount() >= ingredient.count;
     }
 
     public FluidStack getFluid() {
@@ -47,7 +47,9 @@ public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        return recipeItems;
+        NonNullList<Ingredient> list = NonNullList.create();
+        list.add(ingredient.ingredient);
+        return list;
     }
 
     @Override
@@ -97,43 +99,31 @@ public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
                 new ResourceLocation(Klux.MODID, "fluid_assembler");
 
         @Override
-        public FluidAssemblerRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
+        public FluidAssemblerRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
 
-            JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
-            FluidStack fluid = FluidJSONUtil.readFluid(pSerializedRecipe.get("fluid").getAsJsonObject());
-            int maxProgress = GsonHelper.getAsInt(pSerializedRecipe, "maxProgress", 78);
+            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
+            CountedIngredient ingredient = CountedIngredient.fromJson(GsonHelper.getAsJsonObject(json, "ingredient"));
+            FluidStack fluid = FluidJSONUtil.readFluid(json.getAsJsonObject("fluid"));
+            int maxProgress = GsonHelper.getAsInt(json, "maxProgress", 78);
 
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
-
-            return new FluidAssemblerRecipe(pRecipeId, output, inputs, fluid, maxProgress);
+            return new FluidAssemblerRecipe(recipeId, output, ingredient, fluid, maxProgress);
         }
 
         @Override
         public @Nullable FluidAssemblerRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
+
+            CountedIngredient ingredient = CountedIngredient.fromNetwork(buf);
             FluidStack fluid = buf.readFluidStack();
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(buf));
-            }
-
             ItemStack output = buf.readItem();
             int maxProgress = buf.readInt();
-            return new FluidAssemblerRecipe(id, output, inputs, fluid, maxProgress);
+
+            return new FluidAssemblerRecipe(id, output, ingredient, fluid, maxProgress);
         }
 
         @Override
         public void toNetwork(FriendlyByteBuf buf, FluidAssemblerRecipe recipe) {
-            buf.writeInt(recipe.getIngredients().size());
+            recipe.ingredient.toNetwork(buf);
             buf.writeFluidStack(recipe.fluidStack);
-
-            for (Ingredient ing : recipe.getIngredients()) {
-                ing.toNetwork(buf);
-            }
             buf.writeItemStack(recipe.getResultItem(null), false);
             buf.writeInt(recipe.getMaxProgress());
         }

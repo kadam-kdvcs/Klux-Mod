@@ -1,0 +1,152 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2025-08-01 21:12:56
+Description: Ticking block entity
+
+java.lang.RuntimeException: Slot 1 not in valid range - [0,1)
+	at net.minecraftforge.items.ItemStackHandler.validateSlotIndex(ItemStackHandler.java:206) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at net.minecraftforge.items.ItemStackHandler.getStackInSlot(ItemStackHandler.java:58) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at org.kdvcs.klux.block.entity.FluidExtractorBlockEntity.extractFluidWithBucket(FluidExtractorBlockEntity.java:265) ~[%23196!/:?] {re:classloading}
+	at org.kdvcs.klux.block.entity.FluidExtractorBlockEntity.tick(FluidExtractorBlockEntity.java:211) ~[%23196!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:842) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: 
+	klux (klux), Version: 1.0.0
+		at TRANSFORMER/klux@1.0.0/org.kdvcs.klux.block.entity.FluidExtractorBlockEntity.extractFluidWithBucket(FluidExtractorBlockEntity.java:265)
+Stacktrace:
+	at net.minecraftforge.items.ItemStackHandler.validateSlotIndex(ItemStackHandler.java:206) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at net.minecraftforge.items.ItemStackHandler.getStackInSlot(ItemStackHandler.java:58) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at org.kdvcs.klux.block.entity.FluidExtractorBlockEntity.extractFluidWithBucket(FluidExtractorBlockEntity.java:265) ~[%23196!/:?] {re:classloading}
+	at org.kdvcs.klux.block.entity.FluidExtractorBlockEntity.tick(FluidExtractorBlockEntity.java:211) ~[%23196!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+-- Block entity being ticked --
+Details:
+	Name: klux:fluid_extractor_be // org.kdvcs.klux.block.entity.FluidExtractorBlockEntity
+	Block: Block{klux:fluid_extractor}[facing=west,working=true]
+	Block location: World: (449,63,689), Section: (at 1,15,1 in 28,3,43; chunk contains blocks 448,-64,688 to 463,319,703), Region: (0,1; contains chunks 0,32 to 31,63, blocks 0,-64,512 to 511,319,1023)
+	Block: Block{klux:fluid_extractor}[facing=west,working=true]
+	Block location: World: (449,63,689), Section: (at 1,15,1 in 28,3,43; chunk contains blocks 448,-64,688 to 463,319,703), Region: (0,1; contains chunks 0,32 to 31,63, blocks 0,-64,512 to 511,319,1023)
+Stacktrace:
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:842) ~[?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['Dev'/176, l='ServerLevel[新的世界]', x=451.25, y=64.00, z=690.69]]
+	Chunk stats: 4180
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,70,0), Section: (at 0,6,0 in 0,4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 506827 game time, 1000 day time
+	Level name: 新的世界
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:842) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.12, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 755041952 bytes (720 MiB) / 2097152000 bytes (2000 MiB) up to 4219469824 bytes (4024 MiB)
+	CPUs: 28
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-14700HX
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 2.30
+	Number of physical packages: 1
+	Number of physical CPUs: 20
+	Number of logical CPUs: 28
+	Graphics card #0 name: NVIDIA GeForce RTX 4060 Laptop GPU
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x28e0
+	Graphics card #0 versionInfo: DriverVersion=32.0.15.6624
+	Graphics card #1 name: Intel(R) UHD Graphics
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 2048.00
+	Graphics card #1 deviceId: 0xa788
+	Graphics card #1 versionInfo: DriverVersion=32.0.101.6790
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: Unknown
+	Virtual memory max (MB): 23003.87
+	Virtual memory used (MB): 22208.32
+	Swap memory total (MB): 6912.00
+	Swap memory used (MB): 1479.45
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/176, l='ServerLevel[新的世界]', x=451.25, y=64.00, z=690.69]]
+	Data Packs: vanilla, mod:forge, mod:klux, mod:jei
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.|Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |47.4.3              |DONE      |Manifest: NOSIGNATURE
+		main                                              |klux                          |klux                          |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		jei-1.20.1-forge-15.8.2.26_mapped_official_1.20.1.|Just Enough Items             |jei                           |15.8.2.26           |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 15c55c7f-379a-4783-9529-7376c1365b82
+	FML: 47.4
+	Forge: net.minecraftforge:47.4.3

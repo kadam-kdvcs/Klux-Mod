@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:carbohydrate_powder",
+      "count": 4
+    },
+    {
+      "item": "klux:vitamin_dust",
+      "count": 3
+    }
+  ],
+  "output": {
+    "item": "klux:rough_cake_base",
+    "count": 2
+  },
+  "maxProgress": 70
+}

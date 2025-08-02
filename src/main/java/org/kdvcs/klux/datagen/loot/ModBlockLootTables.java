@@ -38,6 +38,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HAY_BRICK.get());
         this.dropSelf(ModBlocks.EXTRACTOR.get());
         this.dropSelf(ModBlocks.FLUID_ASSEMBLER.get());
+        this.dropSelf(ModBlocks.FLUID_EXTRACTOR.get());
+        this.dropSelf(ModBlocks.MULTIPHASE_FLUID_TANK.get());
 
         this.dropSelf(ModBlocks.HAY_SLAB.get());
         this.dropSelf(ModBlocks.HAY_STAIRS.get());

@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "klux:aromatic_ingot",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:aromatic_fluid",
+    "Amount": 720
+  },
+  "maxProgress": 116
+}

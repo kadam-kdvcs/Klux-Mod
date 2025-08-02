@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sealed_tank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klux:sealed_tank"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "klux:sealed_tank"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sealed_tank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "klux:sealed_tank"
+    ]
+  },
+  "sends_telemetry_event": false
+}

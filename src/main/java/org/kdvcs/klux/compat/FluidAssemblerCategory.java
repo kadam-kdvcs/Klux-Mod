@@ -67,7 +67,7 @@ public class FluidAssemblerCategory implements IRecipeCategory<FluidAssemblerRec
         this.currentRecipe = recipe;
 
         builder.addSlot(RecipeIngredientRole.INPUT, 64, 37)
-                .addIngredients(recipe.getIngredients().get(0));
+                .addItemStacks(KadamJeiUtil.expandWithCount(recipe.getIngredients().get(0), recipe.ingredient.count));
 
         //FLUID TANK
         builder.addSlot(RecipeIngredientRole.INPUT, 33, 16)

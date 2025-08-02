@@ -9,10 +9,10 @@
       "item": "klux:earth_crystal"
     },
     "B": {
-      "item": "minecraft:bucket"
+      "item": "klux:sealed_tank"
     },
     "C": {
-      "item": "minecraft:glass_pane"
+      "item": "klux:polymer_membrane_plate"
     }
   },
   "pattern": [

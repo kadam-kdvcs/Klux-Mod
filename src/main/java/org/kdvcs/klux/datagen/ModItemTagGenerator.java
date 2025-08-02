@@ -42,6 +42,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     public static final TagKey<Item> FORGE_DUSTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","dusts"));
 
+    public static final TagKey<Item> FORGE_PUTRESCENT = TagKey.create(Registries.ITEM, new ResourceLocation("forge","putrescent"));
+
     @Override
     protected void addTags(HolderLookup.Provider p_256380_) {
 
@@ -82,6 +84,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.EARTH_CRYSTAL.get())
                 .add(ModItems.FIRE_QUARTZ.get())
                 .add(ModItems.ENDERGON_CRYSTAL.get());
+
+        this.tag(FORGE_PUTRESCENT)
+                .replace(false)
+                .add(Items.SPIDER_EYE)
+                .add(Items.FERMENTED_SPIDER_EYE)
+                .add(Items.ROTTEN_FLESH);
 
         this.tag(FORGE_INGOTS)
                 .replace(false)

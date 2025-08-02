@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T23:31:04.4138738	Item Models: klux
+// 1.20.1	2025-08-02T20:00:44.092336	Item Models: klux
 8a6e104cdf5518e1ab0ab942f46acd99eac5f9c4 assets/klux/models/item/adhesive_paste.json
 d33228380dd94808c840cefc33bbd37582f14c6a assets/klux/models/item/air_duct.json
 004ddbd8b2a8f007a680aad8b3ea43b7267d2dd2 assets/klux/models/item/aromatic_bucket.json
@@ -91,13 +91,16 @@ b8f337fc35e05ec32ba801374a0f565d15fce2e6 assets/klux/models/item/parsnip.json
 4b103d3cfe1e39fb4032212b53d61c3c5343c08a assets/klux/models/item/polymer_membrane_plate.json
 4a3a6652965403c1a63cdf530f65b69e44458ace assets/klux/models/item/pressing_rod_assembly.json
 6d1afaf5ef0bad17609da42b88b0a8ac1dd84904 assets/klux/models/item/protein_concentrate.json
+f173e2a26e7ed6025844e6d5230f060cb352d514 assets/klux/models/item/putrescent_solution_bucket.json
 b20e1ee436b5bb1c2c5c33a4732afb2e274999e7 assets/klux/models/item/putrid_fat.json
 549f0ec494064e0cce89d89495ac4d89ad20b5ad assets/klux/models/item/redstone_resonator.json
 f98944f0335e00fd73160693142d1875151161a1 assets/klux/models/item/return_scepter.json
 7afa734fd78d121edcaa3dd5d1b11dd857dadf8f assets/klux/models/item/rotten_fruit.json
 11626779cdfb9ac57006b5508555f15bc5a0add7 assets/klux/models/item/rotten_fruit_seeds.json
+559399f03ac523d95b4097e683f02d8598bf0a48 assets/klux/models/item/rough_cake_base.json
 985b9847b2fc7d0bc98d58b3dfeb39b951de6082 assets/klux/models/item/rumble_music_disc.json
 8b94c749050faa3d189968d713228ae6a3bc2736 assets/klux/models/item/salad.json
+19cb219d16204709cab07b19a1aed21a0a2b5687 assets/klux/models/item/sealed_tank.json
 a8e98988d002d6c1900c117804f9d157da937f05 assets/klux/models/item/soft_armor_cloth.json
 b3f112a138cf5fa0e2aafe8b198dd49287af2788 assets/klux/models/item/soft_boots.json
 88d76ad303abd2cee3cf5a36374d5014d566667e assets/klux/models/item/soft_boots_amethyst_trim.json
@@ -147,4 +150,5 @@ d3fc0ea8b68f20a7639fc758e3ffe384aa016cea assets/klux/models/item/spider_silk_fib
 c172f3586a500aad54a11b9f0bc952aa660d526c assets/klux/models/item/spring_onion.json
 202cc12d765059b8981eb7ed99814f4e2b07ea8a assets/klux/models/item/spring_onion_seeds.json
 7cff22aa7e6f7e920e7a27a014c7f9184f7064bd assets/klux/models/item/universal_feed.json
+72ab3fe8f0cd34e1cf1354ae6da9e24172beebeb assets/klux/models/item/vitamin_cake.json
 e4e862e5f9ab8746550befb1a77b31248075e581 assets/klux/models/item/vitamin_dust.json

@@ -72,5 +72,11 @@
     "sounds": [
       "klux:extractor_working"
     ]
+  },
+  "fluid_extractor_working": {
+    "subtitles": "sounds.klux.fluid_extractor_working",
+    "sounds": [
+      "klux:fluid_extractor_working"
+    ]
   }
 }

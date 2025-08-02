@@ -32,6 +32,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> FLUID_ASSEMBLER_WORKING = registerSoundEvents("fluid_assembler_working");
     public static final RegistryObject<SoundEvent> DEHYDRATOR_WORKING = registerSoundEvents("dehydrator_working");
     public static final RegistryObject<SoundEvent> EXTRACTOR_WORKING = registerSoundEvents("extractor_working");
+    public static final RegistryObject<SoundEvent> FLUID_EXTRACTOR_WORKING = registerSoundEvents("fluid_extractor_working");
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,

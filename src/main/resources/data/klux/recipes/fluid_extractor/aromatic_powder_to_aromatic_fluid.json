@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "klux:aromatic_powder",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:aromatic_fluid",
+    "Amount": 144
+  },
+  "maxProgress": 100
+}

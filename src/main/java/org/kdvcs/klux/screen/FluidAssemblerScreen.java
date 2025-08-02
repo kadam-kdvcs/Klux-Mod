@@ -20,7 +20,7 @@ import java.util.Optional;
 
 public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssemblerMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Klux.MODID,"textures/gui/gui_seed_maker.png");
+            new ResourceLocation(Klux.MODID,"textures/gui/gui_fluid_assembler.png");
 
     private FluidTankRenderer renderer;
 
@@ -65,6 +65,7 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
                         Minecraft.getInstance().options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL);
                 guiGraphics.renderTooltip(font, tooltip, Optional.empty(), mouseX - x, mouseY - y);
             }
+
         }
     }
 
@@ -84,7 +85,7 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 115, y + 36, 176, 0, menu.getScaledProgress(), 17);
+            guiGraphics.blit(TEXTURE, x + 114, y + 36, 176, 0, menu.getScaledProgress(), 17);
         }
     }
 

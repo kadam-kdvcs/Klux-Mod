@@ -37,6 +37,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SALAD.get());
                         output.accept(ModItems.NUTRI_BLOCK.get());
+                        output.accept(ModItems.ROUGH_CAKE_BASE.get());
+                        output.accept(ModItems.VITAMIN_CAKE.get());
                         output.accept(ModItems.PARSNIP.get());
                         output.accept(ModItems.PARSNIP_SEEDS.get());
                         output.accept(ModItems.SPRING_ONION.get());
@@ -69,12 +71,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AROMATIC_DUST.get());
                         output.accept(ModItems.AROMATIC_INGOT.get());
                         output.accept(ModItems.AROMATIC_BUCKET.get());
+                        output.accept(ModItems.PUTRESCENT_SOLUTION_BUCKET.get());
                         output.accept(ModItems.REDSTONE_RESONATOR.get());
+                        output.accept(ModItems.AROMATIC_RESONATOR.get());
+
                         output.accept(ModItems.FURNACE_CORE.get());
                         output.accept(ModItems.AIR_DUCT.get());
                         output.accept(ModItems.MULTIPHASE_FLUID_CONTAINER.get());
                         output.accept(ModItems.POLYMER_MEMBRANE_PLATE.get());
                         output.accept(ModItems.FLUX_CORE.get());
+
+                        output.accept(ModItems.SEALED_TANK.get());
 
                             })
                     .build());
@@ -88,8 +95,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEHYDRATOR.get());
                         output.accept(ModBlocks.EXTRACTOR.get());
                         output.accept(ModBlocks.FLUID_ASSEMBLER.get());
+                        output.accept(ModBlocks.FLUID_EXTRACTOR.get());
+                        output.accept(ModBlocks.MULTIPHASE_FLUID_TANK.get());
                         output.accept(ModBlocks.EARTH_CRYSTAL_FRAME.get());
-
 
                             })
                     .build());

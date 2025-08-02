@@ -77,6 +77,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.AROMATIC_COAGULATE);
         simpleItem(ModItems.AROMATIC_DUST);
         simpleItem(ModItems.AROMATIC_INGOT);
+        simpleItem(ModItems.SEALED_TANK);
 
         simpleItem(ModItems.RETURN_SCEPTER);
         simpleItem(ModItems.SALAD);
@@ -91,9 +92,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.REDSTONE_RESONATOR);
         simpleItem(ModItems.FURNACE_CORE);
         simpleItem(ModItems.AROMATIC_BUCKET);
+        simpleItem(ModItems.PUTRESCENT_SOLUTION_BUCKET);
         simpleItem(ModItems.MULTIPHASE_FLUID_CONTAINER);
         simpleItem(ModItems.POLYMER_MEMBRANE_PLATE);
         simpleItem(ModItems.FLUX_CORE);
+
+        simpleItem(ModItems.ROUGH_CAKE_BASE);
+        simpleItem(ModItems.VITAMIN_CAKE);
 
         simpleBlockItem(ModBlocks.EARTH_CRYSTAL_DOOR);
 

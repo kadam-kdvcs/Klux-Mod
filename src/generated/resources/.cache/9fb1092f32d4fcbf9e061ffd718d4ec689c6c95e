@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-31T23:31:04.4138738	Recipes
+// 1.20.1	2025-08-02T19:17:12.0910941	Recipes
 1a05b07294c7dcfd506539633f79ba63974a1950 data/klux/advancements/recipes/misc/air_duct.json
 d78d2cd0577b75cd1cad60ca3a2138fcf702ab66 data/klux/advancements/recipes/misc/aromaticingot.json
 430ffeb66b20fa06a95ddc110b8e35ddfd79378c data/klux/advancements/recipes/misc/aromatic_dust.json
@@ -28,6 +28,7 @@ e94216b5ceb232cbda8cc627c1e3cb0b7be355e0 data/klux/advancements/recipes/misc/mul
 a71d8f1208cf5ba3265639af2be948644c8c69dd data/klux/advancements/recipes/misc/polymer_membrane_plate.json
 be075c10ae7578ad6bb024ff9a583bb52e8f44cb data/klux/advancements/recipes/misc/pressing_rod_assembly.json
 c7fe9509082ec94773231c5e103c1f8137803751 data/klux/advancements/recipes/misc/redstone_resonator.json
+264d6419000cdeff110a04ec779f4e993c6c6b09 data/klux/advancements/recipes/misc/sealed_tank.json
 a02c9cb2692418a0e2793fea554c9e9294a5e685 data/klux/advancements/recipes/misc/universal_feed.json
 52928082ba4e756bf3dc03b6e1775d033fe9c60b data/klux/recipes/air_duct.json
 90e9d2c86fc2e20117988a5fb7e606b52731e2c3 data/klux/recipes/aromaticingot.json
@@ -54,10 +55,11 @@ b41462fd467b066e570cd5efac9e58df78417805 data/klux/recipes/hay_stairs.json
 808097f4df3ef9cac9862b44d43acf8fcd100934 data/klux/recipes/hay_wall.json
 1458733f77bcac07975f5c6aaf0ee98e27b0ecd2 data/klux/recipes/humics.json
 0e8dff2ca1c2b064db21bf60322f5ddb04d7b08a data/klux/recipes/leatherpaste.json
-f4a5b84e1520d02a80148982160e5bc99cae9f8c data/klux/recipes/multiphase_fluid_container.json
+a13bb3d06e5bd6389ad95a7df8f68897c9554745 data/klux/recipes/multiphase_fluid_container.json
 23f55b2bfabdd12b5eef41450b804b31aac87f08 data/klux/recipes/polymer_membrane_plate.json
 542a0ca9c49e3157d6314b0894b35142f8fc5be1 data/klux/recipes/pressing_rod_assembly.json
 8ee3187c6211a65b65b54cb6583862c1d866a729 data/klux/recipes/redstone_resonator.json
+3967050dcfde95d10a8cea8e696d62ddf5003a0e data/klux/recipes/sealed_tank.json
 b96f195b28730ea5f02f16f9bcfc337b4d0b210a data/klux/recipes/universal_feed.json
 49680ab5cffde37ff9bdc21c3835325a41d41622 data/minecraft/advancements/recipes/misc/cobweb.json
 136939b8ee00adccdfc1679ee8153fcc77de1a23 data/minecraft/advancements/recipes/misc/slime_ball.json

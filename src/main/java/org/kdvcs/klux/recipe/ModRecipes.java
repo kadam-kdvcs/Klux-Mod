@@ -26,6 +26,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<FluidAssemblerRecipe>> FLUID_ASSEMBLER_SERIALIZER =
             SERIALIZERS.register("fluid_assembler", () -> FluidAssemblerRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<FluidExtractorRecipe>> FLUID_EXTRACTOR_SERIALIZER =
+            SERIALIZERS.register("fluid_extractor", () -> FluidExtractorRecipe.Serializer.INSTANCE);
+
     public static final RegistryObject<RecipeSerializer<ProportionalArmorRecipe>> PROPORTIONAL_ARMOR_SERIALIZER =
             SERIALIZERS.register("proportional_armor", () -> ProportionalArmorRecipe.Serializer.INSTANCE);
 

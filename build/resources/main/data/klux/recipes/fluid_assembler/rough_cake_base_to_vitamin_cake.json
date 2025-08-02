@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:rough_cake_base",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:vitamin_cake",
+    "count": 1
+  },
+  "maxProgress": 85
+}

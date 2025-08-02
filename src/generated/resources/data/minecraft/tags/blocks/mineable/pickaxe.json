@@ -9,6 +9,8 @@
     "klux:compressor",
     "klux:dehydrator",
     "klux:extractor",
-    "klux:fluid_assembler"
+    "klux:fluid_assembler",
+    "klux:fluid_extractor",
+    "klux:multiphase_fluid_tank"
   ]
 }

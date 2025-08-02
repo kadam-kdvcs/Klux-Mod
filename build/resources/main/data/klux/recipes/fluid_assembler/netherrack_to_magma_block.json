@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "minecraft:netherrack",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 250
+  },
+  "output": {
+    "item": "minecraft:magma_block",
+    "count": 1
+  },
+  "maxProgress": 45
+}

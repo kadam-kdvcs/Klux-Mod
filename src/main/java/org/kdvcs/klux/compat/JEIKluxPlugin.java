@@ -11,14 +11,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeManager;
 import org.kdvcs.klux.Klux;
-import org.kdvcs.klux.recipe.CompressorRecipe;
-import org.kdvcs.klux.recipe.DehydratorRecipe;
-import org.kdvcs.klux.recipe.ExtractorRecipe;
-import org.kdvcs.klux.recipe.FluidAssemblerRecipe;
-import org.kdvcs.klux.screen.CompressorScreen;
-import org.kdvcs.klux.screen.DehydratorScreen;
-import org.kdvcs.klux.screen.ExtractorScreen;
-import org.kdvcs.klux.screen.FluidAssemblerScreen;
+import org.kdvcs.klux.recipe.*;
+import org.kdvcs.klux.screen.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +35,7 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipeCategories(new ExtractorCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new FluidAssemblerCategory(registration.getJeiHelpers().getGuiHelper()));
 
+        registration.addRecipeCategories(new FluidExtractorCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -54,6 +49,8 @@ public class JEIKluxPlugin implements IModPlugin {
 
         List<FluidAssemblerRecipe> fluidAssemblerRecipes = recipeManager.getAllRecipesFor(FluidAssemblerRecipe.Type.INSTANCE);
 
+        List<FluidExtractorRecipe> fluidExtractorRecipes = recipeManager.getAllRecipesFor(FluidExtractorRecipe.Type.INSTANCE);
+
         //  HERE'S LIST OF ADDED FUELS
         List<FuelRecipe> fuelRecipes = new ArrayList<>();
         fuelRecipes.add(new FuelRecipe(new ItemStack(Items.COAL), 400));
@@ -64,6 +61,8 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipes(DehydratorFuelCategory.TYPE, fuelRecipes);
         registration.addRecipes(ExtractorCategory.EXTRACTOR_TYPE, extractorRecipes);
         registration.addRecipes(FluidAssemblerCategory.FLUID_ASSEMBLER_TYPE, fluidAssemblerRecipes);
+
+        registration.addRecipes(FluidExtractorCategory.FLUID_EXTRACTOR_TYPE, fluidExtractorRecipes);
     }
 
     @Override
@@ -82,5 +81,8 @@ public class JEIKluxPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(FluidAssemblerScreen.class, 115,37,22,20,
                 FluidAssemblerCategory.FLUID_ASSEMBLER_TYPE);
+
+        registration.addRecipeClickArea(FluidExtractorScreen.class, 52,35,22,20,
+                FluidExtractorCategory.FLUID_EXTRACTOR_TYPE);
     }
 }

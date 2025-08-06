@@ -78,5 +78,23 @@
     "sounds": [
       "klux:fluid_extractor_working"
     ]
+  },
+  "flux_synthesizer_working": {
+    "subtitles": "sounds.klux.flux_synthesizer_working",
+    "sounds": [
+      "klux:flux_synthesizer_working"
+    ]
+  },
+  "liquid_reactor_working": {
+    "subtitles": "sounds.klux.liquid_reactor_working",
+    "sounds": [
+      "klux:liquid_reactor_working"
+    ]
+  },
+  "liquid_filter_working": {
+    "subtitles": "sounds.klux.liquid_filter_working",
+    "sounds": [
+      "klux:liquid_filter_working"
+    ]
   }
 }

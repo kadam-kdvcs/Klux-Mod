@@ -1,12 +1,16 @@
 package org.kdvcs.klux.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,9 +18,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.custom.*;
+import org.kdvcs.klux.block.entity.FluxSynthesizerBlockEntity;
 import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.sound.ModSounds;
+import org.kdvcs.klux.worldgen.tree.PineTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -32,6 +38,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EARTH_CRYSTAL_FRAME = registerBlock("earth_crystal_frame",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> FIRE_QUARTZ_FRAME = registerBlock("fire_quartz_frame",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.METAL)));
+
+    //IRON SAND
+    public static final RegistryObject<Block> IRON_SAND = registerBlock("iron_sand",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SAND).strength(0.6f)));
 
     //STAIRS
     public static final RegistryObject<Block> EARTH_CRYSTAL_STAIRS = registerBlock("earth_crystal_stairs",
@@ -149,6 +162,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> MULTIPHASE_FLUID_TANK = registerBlock("multiphase_fluid_tank",
             MultiphaseFluidTankBlock::new);
 
+    public static final RegistryObject<Block> FLUX_SYNTHESIZER = registerBlock("flux_synthesizer",
+            FluxSynthesizerBlock::new);
+
+    public static final RegistryObject<Block> LIQUID_REACTOR = registerBlock("liquid_reactor",
+            LiquidReactorBlock::new);
+
+    public static final RegistryObject<Block> LIQUID_FILTER = registerBlock("liquid_filter",
+            LiquidFilterBlock::new);
+
     //AROMATIC BLOCK
     public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",
             () -> new LiquidBlock(ModFluids.SOURCE_AROMATIC, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
@@ -156,6 +178,90 @@ public class ModBlocks {
     //PUTRESCENT SOLUTION BLOCK
     public static final RegistryObject<LiquidBlock> PUTRESCENT_SOLUTION_BLOCK = BLOCKS.register("putrescent_solution_block",
             () -> new LiquidBlock(ModFluids.SOURCE_PUTRESCENT_SOLUTION, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //PECTIN SLURRY BLOCK
+    public static final RegistryObject<LiquidBlock> PECTIN_SLURRY_BLOCK = BLOCKS.register("pectin_slurry_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_PECTIN_SLURRY, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //PRIMAL ESSENCE BLOCK
+    public static final RegistryObject<LiquidBlock> PRIMAL_ESSENCE_BLOCK = BLOCKS.register("primal_essence_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_PRIMAL_ESSENCE, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //ENZYME SOLUTION BLOCK
+    public static final RegistryObject<LiquidBlock> ENZYME_SOLUTION_BLOCK = BLOCKS.register("enzyme_solution_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_ENZYME_SOLUTION, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //BOTANIC ESSENTIAL OIL BLOCK
+    public static final RegistryObject<LiquidBlock> BOTANIC_ESSENTIAL_OIL_BLOCK = BLOCKS.register("botanic_essential_oil_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_BOTANIC_ESSENTIAL_OIL, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //PINE LOG
+    public static final RegistryObject<Block> PINE_LOG = registerBlock("pine_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> PINE_WOOD = registerBlock("pine_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> PINE_LEAVES = registerBlock("pine_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> PINE_SAPLING = registerBlock("pine_sapling",
+            () -> new SaplingBlock(new PineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> ICE_BRICK = registerBlock("ice_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLUE_ICE).sound(SoundType.GLASS).strength(0.6f)));
+
+    public static final RegistryObject<Block> SNOW_BRICK = registerBlock("snow_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).sound(SoundType.SNOW).strength(0.4f)));
+
+    public static final RegistryObject<Block> WET_BRICK = registerBlock("wet_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.ROOTED_DIRT).strength(0.5f)));
+
+    public static final RegistryObject<Block> SANDSTONE_CLEAN = registerBlock("sandstone_clean",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).sound(SoundType.STONE).strength(1.2f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SANDSTONE_CARVED = registerBlock("sandstone_carved",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).sound(SoundType.STONE).strength(1.2f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DRIED_BRICK = registerBlock("dried_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.STONE).strength(1.4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DRIED_BRICK_SMOOTH = registerBlock("dried_brick_smooth",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.STONE).strength(1.4f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

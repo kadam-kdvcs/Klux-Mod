@@ -31,18 +31,25 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     }
 
     public static final TagKey<Item> FORGE_ORES = TagKey.create(Registries.ITEM, new ResourceLocation("forge","ores"));
-
     public static final TagKey<Item> FORGE_SEEDS = TagKey.create(Registries.ITEM, new ResourceLocation("forge", "seeds"));
-
     public static final TagKey<Item> FORGE_RAWMEATS = TagKey.create(Registries.ITEM, new ResourceLocation("forge", "rawmeats"));
-
     public static final TagKey<Item> FORGE_GEMS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","gems"));
-
     public static final TagKey<Item> FORGE_INGOTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","ingots"));
-
     public static final TagKey<Item> FORGE_DUSTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","dusts"));
-
     public static final TagKey<Item> FORGE_PUTRESCENT = TagKey.create(Registries.ITEM, new ResourceLocation("forge","putrescent"));
+    public static final TagKey<Item> FORGE_FRUITS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","fruits"));
+
+    public static final TagKey<Item> FORGE_EXTRACTION_MESHES =
+            TagKey.create(Registries.ITEM, new ResourceLocation("forge","extraction_meshes"));
+
+    public static final TagKey<Item> FORGE_EXTRACTION_MESH_BASIC =
+            TagKey.create(Registries.ITEM, new ResourceLocation("forge","extraction_mesh_basic"));
+
+    public static final TagKey<Item> FORGE_EXTRACTION_MESH_ADVANCED =
+            TagKey.create(Registries.ITEM, new ResourceLocation("forge","extraction_mesh_advanced"));
+
+    public static final TagKey<Item> FORGE_EXTRACTION_MESH_ULTIMATE =
+            TagKey.create(Registries.ITEM, new ResourceLocation("forge","extraction_mesh_ultimate"));
 
     @Override
     protected void addTags(HolderLookup.Provider p_256380_) {
@@ -58,9 +65,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get().asItem());
 
         this.tag(FORGE_ORES)
+                .replace(false)
                 .addTag(ModTags.Items.EARTH_CRYSTAL_ORES)
                 .addTag(ModTags.Items.FIRE_QUARTZ_ORES)
                 .addTag(ModTags.Items.ENDERGON_CRYSTAL_ORES);
+
+        this.tag(FORGE_FRUITS)
+                .replace(false)
+                .add(Items.APPLE);
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(
@@ -103,6 +115,28 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .replace(false)
                 .add(ModItems.RUMBLE_MUSIC_DISC.get());
 
+        //VANILLA TOOLS
+        this.tag(ItemTags.PICKAXES)
+                .replace(false)
+                .add(ModItems.EARTH_CRYSTAL_PICKAXE.get());
+
+        this.tag(ItemTags.AXES)
+                .replace(false)
+                .add(ModItems.EARTH_CRYSTAL_AXE.get());
+
+        this.tag(ItemTags.SWORDS)
+                .replace(false)
+                .add(ModItems.EARTH_CRYSTAL_SWORD.get());
+
+        this.tag(ItemTags.SHOVELS)
+                .replace(false)
+                .add(ModItems.EARTH_CRYSTAL_SHOVEL.get());
+
+        this.tag(ItemTags.HOES)
+                .replace(false)
+                .add(ModItems.EARTH_CRYSTAL_HOE.get());
+
+        //
         this.tag(FORGE_SEEDS)
                 .replace(false)
                 .add(ModItems.SPRING_ONION_SEEDS.get(),
@@ -119,6 +153,25 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(Items.COD)
                 .add(Items.TROPICAL_FISH)
                 .add(Items.PUFFERFISH);
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PINE_LOG.get().asItem())
+                .add(ModBlocks.PINE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.PINE_PLANKS.get().asItem());
+
+        this.tag(FORGE_EXTRACTION_MESH_BASIC)
+                .add(ModItems.EXTRACTION_MESH.get());
+
+        this.tag(FORGE_EXTRACTION_MESH_ADVANCED)
+                .add(ModItems.ADVANCED_EXTRACTION_MESH.get());
+
+        this.tag(FORGE_EXTRACTION_MESH_ULTIMATE)
+                .add(ModItems.ULTIMATE_EXTRACTION_MESH.get());
+
     }
 
 }

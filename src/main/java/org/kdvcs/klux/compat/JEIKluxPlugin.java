@@ -3,6 +3,7 @@ package org.kdvcs.klux.compat;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
+import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeManager;
 import org.kdvcs.klux.Klux;
+import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.recipe.*;
 import org.kdvcs.klux.screen.*;
 
@@ -36,6 +38,11 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipeCategories(new FluidAssemblerCategory(registration.getJeiHelpers().getGuiHelper()));
 
         registration.addRecipeCategories(new FluidExtractorCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new FluxSynthesizerCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new LiquidReactorCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new LiquidFilterCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -50,6 +57,10 @@ public class JEIKluxPlugin implements IModPlugin {
         List<FluidAssemblerRecipe> fluidAssemblerRecipes = recipeManager.getAllRecipesFor(FluidAssemblerRecipe.Type.INSTANCE);
 
         List<FluidExtractorRecipe> fluidExtractorRecipes = recipeManager.getAllRecipesFor(FluidExtractorRecipe.Type.INSTANCE);
+        List<FluxSynthesizerRecipe> fluxSynthesizerRecipes = recipeManager.getAllRecipesFor(FluxSynthesizerRecipe.Type.INSTANCE);
+
+        List<LiquidReactorRecipe> liquidReactorRecipes = recipeManager.getAllRecipesFor(LiquidReactorRecipe.Type.INSTANCE);
+        List<LiquidFilterRecipe> liquidFilterRecipes = recipeManager.getAllRecipesFor(LiquidFilterRecipe.Type.INSTANCE);
 
         //  HERE'S LIST OF ADDED FUELS
         List<FuelRecipe> fuelRecipes = new ArrayList<>();
@@ -63,6 +74,10 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipes(FluidAssemblerCategory.FLUID_ASSEMBLER_TYPE, fluidAssemblerRecipes);
 
         registration.addRecipes(FluidExtractorCategory.FLUID_EXTRACTOR_TYPE, fluidExtractorRecipes);
+        registration.addRecipes(FluxSynthesizerCategory.FLUX_SYNTHESIZER_TYPE, fluxSynthesizerRecipes);
+
+        registration.addRecipes(LiquidReactorCategory.LIQUID_REACTOR_TYPE, liquidReactorRecipes);
+        registration.addRecipes(LiquidFilterCategory.LIQUID_FILTER_TYPE, liquidFilterRecipes);
     }
 
     @Override
@@ -84,5 +99,30 @@ public class JEIKluxPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(FluidExtractorScreen.class, 52,35,22,20,
                 FluidExtractorCategory.FLUID_EXTRACTOR_TYPE);
+
+        registration.addRecipeClickArea(FluxSynthesizerScreen.class, 58,38,34,14,
+                FluxSynthesizerCategory.FLUX_SYNTHESIZER_TYPE);
+
+        registration.addRecipeClickArea(LiquidReactorScreen.class, 41,54,9,17,
+                LiquidReactorCategory.LIQUID_REACTOR_TYPE);
+        registration.addRecipeClickArea(LiquidReactorScreen.class, 126,54,9,17,
+                LiquidReactorCategory.LIQUID_REACTOR_TYPE);
+
+        registration.addRecipeClickArea(LiquidFilterScreen.class, 99,38,27,17,
+                LiquidFilterCategory.LIQUID_FILTER_TYPE);
     }
+
+    @Override
+    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.COMPRESSOR.get()), CompressorCategory.COMPRESSOR_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.DEHYDRATOR.get()), DehydratorCategory.DEHYDRATOR_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.EXTRACTOR.get()), ExtractorCategory.EXTRACTOR_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.FLUID_ASSEMBLER.get()), FluidAssemblerCategory.FLUID_ASSEMBLER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.FLUID_EXTRACTOR.get()), FluidExtractorCategory.FLUID_EXTRACTOR_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.FLUX_SYNTHESIZER.get()), FluxSynthesizerCategory.FLUX_SYNTHESIZER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.LIQUID_REACTOR.get()), LiquidReactorCategory.LIQUID_REACTOR_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.DEHYDRATOR.get()), DehydratorFuelCategory.TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.LIQUID_FILTER.get()), LiquidFilterCategory.LIQUID_FILTER_TYPE);
+    }
+
 }

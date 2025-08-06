@@ -7,9 +7,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 import org.kdvcs.klux.Klux;
-import org.kdvcs.klux.networking.packet.FluidExtractorSyncS2CPacket;
-import org.kdvcs.klux.networking.packet.FluidAssemblerSyncS2CPacket;
-import org.kdvcs.klux.networking.packet.MultiphaseFluidTankSyncS2CPacket;
+import org.kdvcs.klux.networking.packet.*;
 
 public class ModMessages {
     private static SimpleChannel INSTANCE;
@@ -45,6 +43,24 @@ public class ModMessages {
                 .decoder(MultiphaseFluidTankSyncS2CPacket::new)
                 .encoder(MultiphaseFluidTankSyncS2CPacket::toBytes)
                 .consumerMainThread(MultiphaseFluidTankSyncS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(FluxSynthesizerSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(FluxSynthesizerSyncS2CPacket::new)
+                .encoder(FluxSynthesizerSyncS2CPacket::toBytes)
+                .consumerMainThread(FluxSynthesizerSyncS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(LiquidReactorSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(LiquidReactorSyncS2CPacket::new)
+                .encoder(LiquidReactorSyncS2CPacket::toBytes)
+                .consumerMainThread(LiquidReactorSyncS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(LiquidFilterSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(LiquidFilterSyncS2CPacket::new)
+                .encoder(LiquidFilterSyncS2CPacket::toBytes)
+                .consumerMainThread(LiquidFilterSyncS2CPacket::handle)
                 .add();
     }
 

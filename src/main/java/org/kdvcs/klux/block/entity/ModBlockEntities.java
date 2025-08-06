@@ -42,6 +42,21 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(MultiphaseFluidTankBlockEntity::new,
                             ModBlocks.MULTIPHASE_FLUID_TANK.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FluxSynthesizerBlockEntity>> FLUX_SYNTHESIZER_BE =
+            BLOCK_ENTITIES.register("flux_synthesizer_be", () ->
+                    BlockEntityType.Builder.of(FluxSynthesizerBlockEntity::new,
+                            ModBlocks.FLUX_SYNTHESIZER.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LiquidReactorBlockEntity>> LIQUID_REACTOR_BE =
+            BLOCK_ENTITIES.register("liquid_reactor_be", () ->
+                    BlockEntityType.Builder.of(LiquidReactorBlockEntity::new,
+                            ModBlocks.LIQUID_REACTOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LiquidFilterBlockEntity>> LIQUID_FILTER_BE =
+            BLOCK_ENTITIES.register("liquid_filter_be", () ->
+                    BlockEntityType.Builder.of(LiquidFilterBlockEntity::new,
+                            ModBlocks.LIQUID_FILTER.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

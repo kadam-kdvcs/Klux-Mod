@@ -1,5 +1,9 @@
 {
   "values": [
-    "klux:fire_quartz_ore"
+    "klux:fire_quartz_ore",
+    "klux:flux_synthesizer",
+    "klux:fire_quartz_frame",
+    "klux:liquid_reactor",
+    "klux:liquid_filter"
   ]
 }

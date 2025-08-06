@@ -5,21 +5,21 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.network.NetworkEvent;
-import org.kdvcs.klux.block.entity.FluidAssemblerBlockEntity;
-import org.kdvcs.klux.screen.FluidAssemblerMenu;
+import org.kdvcs.klux.block.entity.LiquidFilterBlockEntity;
+import org.kdvcs.klux.screen.LiquidFilterMenu;
 
 import java.util.function.Supplier;
 
-public class FluidAssemblerSyncS2CPacket {
+public class LiquidFilterSyncS2CPacket {
     private final FluidStack fluidStack;
     private final BlockPos pos;
 
-    public FluidAssemblerSyncS2CPacket(FluidStack fluidStack, BlockPos pos) {
+    public LiquidFilterSyncS2CPacket(FluidStack fluidStack, BlockPos pos) {
         this.fluidStack = fluidStack;
         this.pos = pos;
     }
 
-    public FluidAssemblerSyncS2CPacket(FriendlyByteBuf buf) {
+    public LiquidFilterSyncS2CPacket(FriendlyByteBuf buf) {
         this.fluidStack = buf.readFluidStack();
         this.pos = buf.readBlockPos();
     }
@@ -32,10 +32,10 @@ public class FluidAssemblerSyncS2CPacket {
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
         context.enqueueWork(() -> {
-            if(Minecraft.getInstance().level.getBlockEntity(pos) instanceof FluidAssemblerBlockEntity blockEntity) {
+            if(Minecraft.getInstance().level.getBlockEntity(pos) instanceof LiquidFilterBlockEntity blockEntity) {
                 blockEntity.setFluid(this.fluidStack);
 
-                if(Minecraft.getInstance().player.containerMenu instanceof FluidAssemblerMenu menu &&
+                if(Minecraft.getInstance().player.containerMenu instanceof LiquidFilterMenu menu &&
                         menu.getBlockEntity().getBlockPos().equals(pos)) {
                     menu.setFluid(this.fluidStack);
                 }

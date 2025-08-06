@@ -72,7 +72,7 @@ public class FluidExtractorCategory implements IRecipeCategory<FluidExtractorRec
         //FLUID TANK
         builder.addSlot(RecipeIngredientRole.OUTPUT, 118, 15)
                 .addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getFluid()))
-                .setFluidRenderer(64000, false, 16, 61);
+                .setFluidRenderer(2000, false, 16, 61);
 
     }
 

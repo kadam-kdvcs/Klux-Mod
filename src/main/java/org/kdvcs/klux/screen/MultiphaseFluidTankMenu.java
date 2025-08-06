@@ -33,8 +33,8 @@ public class MultiphaseFluidTankMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 12, 36));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 148, 36));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 12, 38));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 148, 38));
         });
     }
 
@@ -99,14 +99,14 @@ public class MultiphaseFluidTankMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int row = 0; row < 3; ++row) {
             for (int col = 0; col < 9; ++col) {
-                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 86 + row * 18));
+                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 88 + row * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 146));
         }
     }
 

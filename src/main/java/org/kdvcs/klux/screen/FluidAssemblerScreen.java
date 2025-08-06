@@ -28,7 +28,7 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
         super(menu, inventory, component);
 
         this.imageWidth = 176;
-        this.imageHeight = 168;
+        this.imageHeight = 170;
 
     }
 
@@ -38,10 +38,9 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
 
         assignFluidRenderer();
 
-        this.titleLabelX = 78;
-        this.titleLabelY = 6;
+        this.titleLabelX = 66;
+        this.titleLabelY = 5;
     }
-
 
     private void assignFluidRenderer() {
         renderer = new FluidTankRenderer(64000, true, 16, 61);
@@ -50,6 +49,8 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
 
     @Override
     protected void renderLabels(GuiGraphics p_281635_, int p_282681_, int p_283686_) {
+        p_281635_.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0x2A241E, false);
+
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
@@ -57,7 +58,7 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
     }
 
     private void renderFluidAreaTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
-        if (isMouseAboveArea(mouseX, mouseY, x, y, 55, 15)) {
+        if (isMouseAboveArea(mouseX, mouseY, x, y, 55, 17)) {
             FluidStack fluidStack = menu.getFluidStack();
 
             if (!fluidStack.isEmpty()) {
@@ -80,12 +81,12 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(guiGraphics, x, y);
-        renderer.render(guiGraphics.pose(), x + 55, y + 15, menu.getFluidStack());
+        renderer.render(guiGraphics.pose(), x + 55, y + 17, menu.getFluidStack());
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 114, y + 36, 176, 0, menu.getScaledProgress(), 17);
+            guiGraphics.blit(TEXTURE, x + 114, y + 38, 176, 0, menu.getScaledProgress(), 17);
         }
     }
 

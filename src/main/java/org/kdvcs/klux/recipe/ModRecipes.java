@@ -29,6 +29,15 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<FluidExtractorRecipe>> FLUID_EXTRACTOR_SERIALIZER =
             SERIALIZERS.register("fluid_extractor", () -> FluidExtractorRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<FluxSynthesizerRecipe>> FLUX_SYNTHESIZER_SERIALIZER =
+            SERIALIZERS.register("flux_synthesizer", () -> FluxSynthesizerRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<LiquidReactorRecipe>> LIQUID_REACTOR_SERIALIZER =
+            SERIALIZERS.register("liquid_reactor", () -> LiquidReactorRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<LiquidFilterRecipe>> LIQUID_FILTER_SERIALIZER =
+            SERIALIZERS.register("liquid_filter", () -> LiquidFilterRecipe.Serializer.INSTANCE);
+
     public static final RegistryObject<RecipeSerializer<ProportionalArmorRecipe>> PROPORTIONAL_ARMOR_SERIALIZER =
             SERIALIZERS.register("proportional_armor", () -> ProportionalArmorRecipe.Serializer.INSTANCE);
 

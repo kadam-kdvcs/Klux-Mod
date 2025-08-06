@@ -72,12 +72,38 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BOTANICAL_RESIN_BEAD);
         simpleItem(ModItems.ADHESIVE_PASTE);
         simpleItem(ModItems.PRESSING_ROD_ASSEMBLY);
+        simpleItem(ModItems.SOLV_SHELL);
+        simpleItem(ModItems.DISSOLVENT_BEARING);
+        simpleItem(ModItems.FILTER_CORE);
+
+        simpleItem(ModItems.PRECISION_SUBSTRATE);
+        simpleItem(ModItems.PECTI_BOND);
+
+        //EXTRACTION MESHES
         simpleItem(ModItems.EXTRACTION_MESH);
+        simpleItem(ModItems.ADVANCED_EXTRACTION_MESH);
+        simpleItem(ModItems.ULTIMATE_EXTRACTION_MESH);
+
         simpleItem(ModItems.FERMENTED_AROMATIC_SLURRY);
         simpleItem(ModItems.AROMATIC_COAGULATE);
         simpleItem(ModItems.AROMATIC_DUST);
         simpleItem(ModItems.AROMATIC_INGOT);
         simpleItem(ModItems.SEALED_TANK);
+        simpleItem(ModItems.PECTIN_SLURRY_BUCKET);
+        simpleItem(ModItems.BRAN);
+        simpleItem(ModItems.PRIMAL_ESSENCE_BUCKET);
+        simpleItem(ModItems.ENZYME_SOLUTION_BUCKET);
+        simpleItem(ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE);
+        simpleItem(ModItems.TRIPLE_SEALED_TANK);
+        simpleItem(ModItems.WITHERED_LEAF);
+        simpleItem(ModItems.WOVEN_SUBSTRATE);
+
+        simpleItem(ModItems.APPLE_COPPER);
+        simpleItem(ModItems.APPLE_IRON);
+        simpleItem(ModItems.APPLE_LAPIS);
+        simpleItem(ModItems.APPLE_DIAMOND);
+        simpleItem(ModItems.APPLE_EMERALD);
+        simpleItem(ModItems.APPLE_AMETHYST);
 
         simpleItem(ModItems.RETURN_SCEPTER);
         simpleItem(ModItems.SALAD);
@@ -96,6 +122,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MULTIPHASE_FLUID_CONTAINER);
         simpleItem(ModItems.POLYMER_MEMBRANE_PLATE);
         simpleItem(ModItems.FLUX_CORE);
+
+        simpleItem(ModItems.BOTANIC_ESSENTIAL_OIL_BUCKET);
+        simpleItem(ModItems.REINFORCED_AROMATIC_CRYSTAL_GEAR);
 
         simpleItem(ModItems.ROUGH_CAKE_BASE);
         simpleItem(ModItems.VITAMIN_CAKE);
@@ -137,6 +166,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         simpleBlockItemBlockTexture(ModBlocks.CACTUS_FRUIT);
+
+        saplingItem(ModBlocks.PINE_SAPLING);
+
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
@@ -183,7 +215,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         }
     }
 
-
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Klux.MODID,"block/" + item.getId().getPath()));
+    }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

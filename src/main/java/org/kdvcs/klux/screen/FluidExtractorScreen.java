@@ -28,7 +28,7 @@ public class FluidExtractorScreen extends AbstractContainerScreen<FluidExtractor
         super(menu, inventory, component);
 
         this.imageWidth = 176;
-        this.imageHeight = 168;
+        this.imageHeight = 170;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class FluidExtractorScreen extends AbstractContainerScreen<FluidExtractor
         assignFluidRenderer();
 
         this.titleLabelX = 78;
-        this.titleLabelY = 6;
+        this.titleLabelY = 5;
     }
 
     private void assignFluidRenderer() {
@@ -47,6 +47,9 @@ public class FluidExtractorScreen extends AbstractContainerScreen<FluidExtractor
 
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+
+        guiGraphics.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0x2A241E, false);
+
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
@@ -54,7 +57,7 @@ public class FluidExtractorScreen extends AbstractContainerScreen<FluidExtractor
     }
 
     private void renderFluidAreaTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
-        if (isMouseAboveArea(mouseX, mouseY, x, y, 89, 15)) {
+        if (isMouseAboveArea(mouseX, mouseY, x, y, 89, 17)) {
             FluidStack fluidStack = menu.getFluidStack();
 
             if (!fluidStack.isEmpty()) {
@@ -77,12 +80,12 @@ public class FluidExtractorScreen extends AbstractContainerScreen<FluidExtractor
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(guiGraphics, x, y);
-        renderer.render(guiGraphics.pose(), x + 89, y + 15, menu.getFluidStack());
+        renderer.render(guiGraphics.pose(), x + 89, y + 17, menu.getFluidStack());
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if (menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 51, y + 35, 176, 0, menu.getScaledProgress(), 17);
+            guiGraphics.blit(TEXTURE, x + 51, y + 37, 176, 0, menu.getScaledProgress(), 17);
         }
     }
 

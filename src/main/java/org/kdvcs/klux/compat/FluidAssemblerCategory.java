@@ -72,7 +72,7 @@ public class FluidAssemblerCategory implements IRecipeCategory<FluidAssemblerRec
         //FLUID TANK
         builder.addSlot(RecipeIngredientRole.INPUT, 33, 16)
                 .addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getFluid()))
-                .setFluidRenderer(64000, false, 16, 61);
+                .setFluidRenderer(2000, false, 16, 61);
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 126, 37)
                 .addItemStack(recipe.getResultItem(null));

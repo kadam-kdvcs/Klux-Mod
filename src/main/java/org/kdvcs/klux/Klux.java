@@ -5,6 +5,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.cauldron.CauldronInteraction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,12 +31,19 @@ import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModCreativeModeTabs;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.item.renderer.MultiphaseFluidContainerRenderer;
+import org.kdvcs.klux.loot.ModLootConditions;
 import org.kdvcs.klux.loot.ModLootModifiers;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.recipe.ModRecipes;
 import org.kdvcs.klux.screen.*;
 import org.kdvcs.klux.sound.ModSounds;
+import org.kdvcs.klux.worldgen.biome.ModOverworldRegion;
+import org.kdvcs.klux.worldgen.biome.ModTerrablender;
+import org.kdvcs.klux.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
+import terrablender.core.TerraBlender;
+import terrablender.core.TerraBlenderForge;
 
 @Mod(Klux.MODID)
 public class Klux {
@@ -57,6 +69,9 @@ public class Klux {
         ModRecipes.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModLootConditions.register(modEventBus);
+
+        ModTerrablender.registerBiomes();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, KluxCommonConfigs.SPEC);
 
@@ -68,6 +83,9 @@ public class Klux {
         // LOGGER.info("Return Scepter Cooldown (ticks): {}", KluxCommonConfigs.RETURNSCEPTER_COOLDOWN.get());
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACTUS_FRUIT.getId(), ModBlocks.POTTED_CACTUS_FRUIT);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, Klux.MODID, ModSurfaceRules.makeRules());
+
         });
     }
 
@@ -90,6 +108,10 @@ public class Klux {
             MenuScreens.register(ModMenuTypes.FLUID_EXTRACTOR_MENU.get(), FluidExtractorScreen::new);
 
             MenuScreens.register(ModMenuTypes.MULTIPHASE_FLUID_TANK_MENU.get(), MultiphaseFluidTankScreen::new);
+
+            MenuScreens.register(ModMenuTypes.FLUX_SYNTHESIZER_MENU.get(), FluxSynthesizerScreen::new);
+            MenuScreens.register(ModMenuTypes.LIQUID_REACTOR_MENU.get(), LiquidReactorScreen::new);
+            MenuScreens.register(ModMenuTypes.LIQUID_FILTER_MENU.get(), LiquidFilterScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_AROMATIC.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_AROMATIC.get(), RenderType.translucent());

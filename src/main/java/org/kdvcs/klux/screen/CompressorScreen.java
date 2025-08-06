@@ -27,6 +27,11 @@ public class CompressorScreen extends AbstractContainerScreen<CompressorMenu> {
     }
 
     @Override
+    protected void renderLabels(GuiGraphics p_281635_, int p_282681_, int p_283686_) {
+        p_281635_.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0x2A241E, false);
+    }
+
+    @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

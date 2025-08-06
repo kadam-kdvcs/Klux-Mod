@@ -16,6 +16,10 @@ public class ModFluidTypes {
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation AROMATIC_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_aromatic");
     public static final ResourceLocation PUTRESCENT_SOLUTION_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_putrescent_solution");
+    public static final ResourceLocation PECTIN_SLURRY_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_pectin_slurry");
+    public static final ResourceLocation PRIMAL_ESSENCE_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_primal_essence");
+    public static final ResourceLocation ENZYME_SOLUTION_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_enzyme_solution");
+    public static final ResourceLocation BOTANIC_ESSENTIAL_OIL_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_botanic_essential_oil");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Klux.MODID);
@@ -36,6 +40,31 @@ public class ModFluidTypes {
     public static final RegistryObject<FluidType> PUTRESCENT_SOLUTION_FLUID_TYPE = register("putrescent_solution_fluid", PUTRESCENT_SOLUTION_OVERLAY_RL,
             0xA1FF0000, new Vector3f(1.0f, 0f, 0f),
             FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
+                    SoundEvents.HONEY_DRINK));
+
+    //PECTIN SLURRY
+    public static final RegistryObject<FluidType> PECTIN_SLURRY_FLUID_TYPE = register("pectin_slurry_fluid", PECTIN_SLURRY_OVERLAY_RL,
+            0xA1AAFFAA, new Vector3f(0.667f, 1.0f, 0.667f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
+                    SoundEvents.HONEY_DRINK));
+
+    //PRIMAL ESSENCE
+    public static final RegistryObject<FluidType> PRIMAL_ESSENCE_FLUID_TYPE = register("primal_essence_fluid", PRIMAL_ESSENCE_OVERLAY_RL,
+            0xA1FFA500, new Vector3f(1.0f, 0.647f, 0.0f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
+                    SoundEvents.HONEY_DRINK));
+
+    //ENZYME SOLUTION
+    public static final RegistryObject<FluidType> ENZYME_SOLUTION_FLUID_TYPE = register("enzyme_solution_fluid", ENZYME_SOLUTION_OVERLAY_RL,
+            0xA1C8A2C8, new Vector3f(0.78f, 0.635f, 0.78f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
+                            SoundEvents.HONEY_DRINK));
+
+    //BOTANIC ESSENTIAL OIL
+    public static final RegistryObject<FluidType> BOTANIC_ESSENTIAL_OIL_FLUID_TYPE = register("botanic_essential_oil_fluid",
+            BOTANIC_ESSENTIAL_OIL_OVERLAY_RL,
+            0xA19D8D67, new Vector3f(0.616f, 0.553f, 0.404f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK));
 
     public static void register(IEventBus eventBus) {

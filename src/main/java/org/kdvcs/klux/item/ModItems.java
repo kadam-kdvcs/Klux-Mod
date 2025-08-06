@@ -31,7 +31,8 @@ public class ModItems {
                     if (Screen.hasShiftDown()) {
                         p_41423_.add(Component.translatable("tooltip.klux.humics.tooltip").withStyle(ChatFormatting.GRAY));
                     } else {
-                        p_41423_.add(Component.translatable("tooltip.press").append(Component.keybind("key.shift")
+                        p_41423_.add(Component.translatable("tooltip.press").withStyle(ChatFormatting.GRAY).
+                                append(Component.keybind("key.shift").withStyle(ChatFormatting.GRAY)
                                 .append(Component.translatable("tooltip.look").withStyle(ChatFormatting.GRAY))));
                     }
                     super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
@@ -41,11 +42,57 @@ public class ModItems {
 
     //AROMATIC RESONATOR
     public static final RegistryObject<Item> AROMATIC_RESONATOR = ITEMS.register("aromatic_resonator",
+            () -> new ShiftTooltipItemBase(new Item.Properties(),
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.aromatic_resonator.tooltip", ChatFormatting.DARK_PURPLE)));
+
+    //WITHERED LEAF
+    public static final RegistryObject<Item> WITHERED_LEAF = ITEMS.register("withered_leaf",
+            () -> new ShiftTooltipItemBase(new Item.Properties(),
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.withered_leaf.tooltip")));
+
+    //REINFORCED AROMATIC CRYSTAL PLATE
+    public static final RegistryObject<Item> REINFORCED_AROMATIC_CRYSTAL_PLATE = ITEMS.register("reinforced_aromatic_crystal_plate",
+            () -> new Item(new Item.Properties()));
+
+    //REINFORCED AROMATIC CRYSTAL GEAR
+    public static final RegistryObject<Item> REINFORCED_AROMATIC_CRYSTAL_GEAR = ITEMS.register("reinforced_aromatic_crystal_gear",
+            () -> new Item(new Item.Properties()));
+
+    //TRIPLE SEALED TANK
+    public static final RegistryObject<Item> TRIPLE_SEALED_TANK = ITEMS.register("triple_sealed_tank",
+            () -> new Item(new Item.Properties()));
+
+    //PRECISION SUBSTRATE
+    public static final RegistryObject<Item> PRECISION_SUBSTRATE = ITEMS.register("precision_substrate",
+            () -> new Item(new Item.Properties()));
+
+    //PECTI BOND
+    public static final RegistryObject<Item> PECTI_BOND = ITEMS.register("pecti_bond",
+            () -> new Item(new Item.Properties()));
+
+    //SOLV SHELL
+    public static final RegistryObject<Item> SOLV_SHELL = ITEMS.register("solv_shell",
+            () -> new Item(new Item.Properties()));
+
+    //DISSOLVENT BEARING
+    public static final RegistryObject<Item> DISSOLVENT_BEARING = ITEMS.register("dissolvent_bearing",
+            () -> new Item(new Item.Properties()));
+
+    //FILTER CORE
+    public static final RegistryObject<Item> FILTER_CORE = ITEMS.register("filter_core",
             () -> new Item(new Item.Properties()));
 
     //HAY BALL
     public static final RegistryObject<Item> HAY_BALL = ITEMS.register("hay_ball",
             () -> new FuelItem(new Item.Properties(),400));
+
+    //BRAN
+    public static final RegistryObject<Item> BRAN = ITEMS.register("bran",
+            () -> new FuelItem(new Item.Properties(),200));
+
+    //WOVEN SUBSTRATE
+    public static final RegistryObject<Item> WOVEN_SUBSTRATE = ITEMS.register("woven_substrate",
+            () -> new Item(new Item.Properties()));
 
     //CARBOHYDRATE POWDER
     public static final RegistryObject<Item> CARBOHYDRATE_POWDER = ITEMS.register("carbohydrate_powder",
@@ -66,7 +113,7 @@ public class ModItems {
     //UNIVERSAL FEED
     public static final RegistryObject<Item> UNIVERSAL_FEED = ITEMS.register("universal_feed",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
-                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.universal_feed.tooltip",ChatFormatting.GREEN)));
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.universal_feed.tooltip", ChatFormatting.GREEN)));
 
     //AROMATIC POWDER
     public static final RegistryObject<Item> AROMATIC_POWDER = ITEMS.register("aromatic_powder",
@@ -83,7 +130,7 @@ public class ModItems {
     //PRESSING ROD ASSEMBLY
     public static final RegistryObject<Item> PRESSING_ROD_ASSEMBLY = ITEMS.register("pressing_rod_assembly",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
-                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.pressing_rod_assembly")));
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.pressing_rod_assembly.tooltip")));
 
     //FERMENTED_AROMATIC_SLURRY
     public static final RegistryObject<Item> FERMENTED_AROMATIC_SLURRY = ITEMS.register("fermented_aromatic_slurry",
@@ -100,7 +147,7 @@ public class ModItems {
     //AROMATIC INGOT
     public static final RegistryObject<Item> AROMATIC_INGOT = ITEMS.register("aromatic_ingot",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
-                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.aromatic_ingot.tooltip",ChatFormatting.DARK_PURPLE),
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.aromatic_ingot.tooltip", ChatFormatting.DARK_PURPLE),
                     new ShiftTooltipItemBase.TooltipLine("tooltip.klux.aromatic_ingot.tooltip2")));
 
     //CAKE BASE
@@ -112,8 +159,26 @@ public class ModItems {
             () -> new ShiftTooltipItemBase(new Item.Properties().food(ModFoods.VITAMIN_CAKE),
                     new ShiftTooltipItemBase.TooltipLine("tooltip.klux.vitamin_cake.tooltip")));
 
-    //EXTRACTION MESH
+    //APPLES
+    public static final RegistryObject<Item> APPLE_COPPER = ITEMS.register("apple_copper",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_COPPER)));
+    public static final RegistryObject<Item> APPLE_IRON = ITEMS.register("apple_iron",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_IRON)));
+    public static final RegistryObject<Item> APPLE_LAPIS = ITEMS.register("apple_lapis",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_LAPIS)));
+    public static final RegistryObject<Item> APPLE_DIAMOND = ITEMS.register("apple_diamond",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_DIAMOND)));
+    public static final RegistryObject<Item> APPLE_EMERALD = ITEMS.register("apple_emerald",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_EMERALD)));
+    public static final RegistryObject<Item> APPLE_AMETHYST = ITEMS.register("apple_amethyst",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_AMETHYST)));
+
+    //EXTRACTION MESHES
     public static final RegistryObject<Item> EXTRACTION_MESH = ITEMS.register("extraction_mesh",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ADVANCED_EXTRACTION_MESH = ITEMS.register("advanced_extraction_mesh",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ULTIMATE_EXTRACTION_MESH = ITEMS.register("ultimate_extraction_mesh",
             () -> new Item(new Item.Properties()));
 
     //MULTIPHASE FLUID CONTAINER
@@ -165,14 +230,14 @@ public class ModItems {
     //MACHINE PARTS
     public static final RegistryObject<Item> REDSTONE_RESONATOR = ITEMS.register("redstone_resonator",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
-                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.redstone_resonator.tooltip",ChatFormatting.DARK_GREEN)));
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.redstone_resonator.tooltip", ChatFormatting.DARK_GREEN)));
 
     public static final RegistryObject<Item> AIR_DUCT = ITEMS.register("air_duct",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> FURNACE_CORE = ITEMS.register("furnace_core",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
-                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.furnace_core.tooltip",ChatFormatting.DARK_RED)));
+                    new ShiftTooltipItemBase.TooltipLine("tooltip.klux.furnace_core.tooltip", ChatFormatting.DARK_RED)));
 
     public static final RegistryObject<Item> DEHYDRATED_SEEDS = ITEMS.register("dehydrated_seeds",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
@@ -185,7 +250,6 @@ public class ModItems {
             () -> new ShiftTooltipItemBase(new Item.Properties(),
                     new ShiftTooltipItemBase.TooltipLine("tooltip.klux.rotten_fruit.tooltip1"),
                     new ShiftTooltipItemBase.TooltipLine("tooltip.klux.rotten_fruit.tooltip2")));
-
 
     //FOOD
     public static final RegistryObject<Item> SALAD = ITEMS.register("salad",
@@ -285,6 +349,26 @@ public class ModItems {
     //PUTRESCENT
     public static final RegistryObject<Item> PUTRESCENT_SOLUTION_BUCKET = ITEMS.register("putrescent_solution_bucket",
             () -> new BucketItem(ModFluids.SOURCE_PUTRESCENT_SOLUTION,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //PECTIN SLURRY
+    public static final RegistryObject<Item> PECTIN_SLURRY_BUCKET = ITEMS.register("pectin_slurry_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_PECTIN_SLURRY,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //PRIMAL ESSENCE BUCKET
+    public static final RegistryObject<Item> PRIMAL_ESSENCE_BUCKET = ITEMS.register("primal_essence_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_PRIMAL_ESSENCE,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //ENZYME SOLUTION BUCKET
+    public static final RegistryObject<Item> ENZYME_SOLUTION_BUCKET = ITEMS.register("enzyme_solution_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_ENZYME_SOLUTION,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //BOTANIC ESSENTIAL OIL BUCKET
+    public static final RegistryObject<Item> BOTANIC_ESSENTIAL_OIL_BUCKET = ITEMS.register("botanic_essential_oil_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_BOTANIC_ESSENTIAL_OIL,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     //HERE TO REGISTER ALL ITEMS

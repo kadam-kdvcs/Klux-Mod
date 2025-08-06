@@ -49,6 +49,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(Blocks.BLAST_FURNACE), has(Blocks.BLAST_FURNACE))
                     .save(p_251297_, new ResourceLocation(Klux.MODID, "furnacecore"));
 
+        //IRON SAND
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModBlocks.IRON_SAND.get()),
+                        RecipeCategory.MISC,
+                        Items.IRON_INGOT,
+                        0.4f,
+                        100)
+                .unlockedBy(getHasName(ModBlocks.IRON_SAND.get()), has(ModBlocks.IRON_SAND.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "ironsand"));
+
         //AROMATIC INGOT
         SimpleCookingRecipeBuilder.blasting(
                         Ingredient.of(ModItems.AROMATIC_DUST.get()),
@@ -69,7 +79,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.LEATHER_PASTE.get()), has(ModItems.LEATHER_PASTE.get()))
                 .save(p_251297_, new ResourceLocation(Klux.MODID, "leatherpaste"));
 
-
         //GENERATE A SHAPED RECIPE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EARTH_CRYSTAL_BLOCK.get())
                 .pattern("###")
@@ -77,6 +86,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .define('#', ModItems.EARTH_CRYSTAL.get())
                 .unlockedBy(getHasName(ModItems.EARTH_CRYSTAL.get()), has(ModItems.EARTH_CRYSTAL.get()))
+                .save(p_251297_);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ICE_BRICK.get(),4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', Items.ICE)
+                .unlockedBy(getHasName(ModBlocks.ICE_BRICK.get()), has(ModBlocks.ICE_BRICK.get()))
                 .save(p_251297_);
 
         //PRESSING ROD ASSEMBLY
@@ -169,18 +185,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SEALED_TANK.get()), has(ModItems.SEALED_TANK.get()))
                 .save(p_251297_);
 
-        //MULTIPHASE FLUID TANK
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MULTIPHASE_FLUID_TANK.get())
-                .pattern("ACA")
-                .pattern("CBC")
-                .pattern("ADA")
-                .define('A', Items.DIAMOND)
-                .define('C', ModItems.SEALED_TANK.get())
-                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
-                .define('D', ModItems.PRESSING_ROD_ASSEMBLY.get())
-                .unlockedBy(getHasName(ModBlocks.MULTIPHASE_FLUID_TANK.get()), has(ModBlocks.MULTIPHASE_FLUID_TANK.get()))
-                .save(p_251297_);
-
         //POLYMER MEMBRANE PLATE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLYMER_MEMBRANE_PLATE.get(),2)
                 .pattern("AAA")
@@ -216,6 +220,136 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.FLUID_ASSEMBLER.get()), has(ModBlocks.FLUID_ASSEMBLER.get()))
                 .save(p_251297_);
 
+        //FLUID EXTRACTOR
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FLUID_EXTRACTOR.get())
+                .pattern("KAK")
+                .pattern("#B#")
+                .pattern("KCK")
+                .define('A', ModItems.REDSTONE_RESONATOR.get())
+                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
+                .define('C', ModItems.EXTRACTION_MESH.get())
+                .define('K', ModItems.PRESSING_ROD_ASSEMBLY.get())
+                .define('#', ModItems.MULTIPHASE_FLUID_CONTAINER.get())
+                .unlockedBy(getHasName(ModBlocks.FLUID_EXTRACTOR.get()), has(ModBlocks.FLUID_EXTRACTOR.get()))
+                .save(p_251297_);
+
+        //MULTIPHASE FLUID TANK
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MULTIPHASE_FLUID_TANK.get())
+                .pattern("KAK")
+                .pattern("ABA")
+                .pattern("KAK")
+                .define('A', ModItems.SEALED_TANK.get())
+                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
+                .define('K', ModItems.POLYMER_MEMBRANE_PLATE.get())
+                .unlockedBy(getHasName(ModBlocks.MULTIPHASE_FLUID_TANK.get()), has(ModBlocks.MULTIPHASE_FLUID_TANK.get()))
+                .save(p_251297_);
+
+        //FLUX SYNTHESIZER
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FLUX_SYNTHESIZER.get())
+                .pattern("KAK")
+                .pattern("CBC")
+                .pattern("KQK")
+                .define('A', ModItems.AROMATIC_RESONATOR.get())
+                .define('B', ModBlocks.FIRE_QUARTZ_FRAME.get())
+                .define('K', ModItems.POLYMER_MEMBRANE_PLATE.get())
+                .define('Q', ModItems.FLUX_CORE.get())
+                .define('C', ModItems.MULTIPHASE_FLUID_CONTAINER.get())
+                .unlockedBy(getHasName(ModBlocks.FLUX_SYNTHESIZER.get()), has(ModBlocks.FLUX_SYNTHESIZER.get()))
+                .save(p_251297_);
+
+        //DISSOLVENT BEARING
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DISSOLVENT_BEARING.get())
+                .pattern("KAK")
+                .pattern("BTB")
+                .pattern("KAK")
+                .define('A', ModItems.REINFORCED_AROMATIC_CRYSTAL_GEAR.get())
+                .define('B', ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get())
+                .define('T', ModItems.ADHESIVE_PASTE.get())
+                .define('K', ModItems.PRESSING_ROD_ASSEMBLY.get())
+                .unlockedBy(getHasName(ModItems.DISSOLVENT_BEARING.get()), has(ModItems.DISSOLVENT_BEARING.get()))
+                .save(p_251297_);
+
+        //LIQUID FILTER
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIQUID_FILTER.get())
+                .pattern("KAK")
+                .pattern("BTB")
+                .pattern("KCK")
+                .define('A', ModItems.AROMATIC_RESONATOR.get())
+                .define('B', ModItems.DISSOLVENT_BEARING.get())
+                .define('T', ModBlocks.FIRE_QUARTZ_FRAME.get())
+                .define('C', ModItems.FILTER_CORE.get())
+                .define('K', ModItems.SOLV_SHELL.get())
+                .unlockedBy(getHasName(ModBlocks.LIQUID_FILTER.get()), has(ModBlocks.LIQUID_FILTER.get()))
+                .save(p_251297_);
+
+        //FIRE QUARTZ FRAME
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRE_QUARTZ_FRAME.get())
+                .pattern("KAK")
+                .pattern("ABA")
+                .pattern("KAK")
+                .define('A', ModItems.FIRE_QUARTZ.get())
+                .define('B', ModBlocks.EARTH_CRYSTAL_FRAME.get())
+                .define('K', ModItems.POLYMER_MEMBRANE_PLATE.get())
+                .unlockedBy(getHasName(ModBlocks.FIRE_QUARTZ_FRAME.get()), has(ModBlocks.FIRE_QUARTZ_FRAME.get()))
+                .save(p_251297_);
+
+        //TRIPLE SEALED TANK
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TRIPLE_SEALED_TANK.get())
+                .pattern("KKK")
+                .pattern("AAA")
+                .pattern("KKK")
+                .define('K', ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get())
+                .define('A', ModItems.SEALED_TANK.get())
+                .unlockedBy(getHasName(ModItems.TRIPLE_SEALED_TANK.get()), has(ModItems.TRIPLE_SEALED_TANK.get()))
+                .save(p_251297_);
+
+        //LIQUID REACTOR
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIQUID_REACTOR.get())
+                .pattern("KAK")
+                .pattern("QBQ")
+                .pattern("KCK")
+                .define('K', ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get())
+                .define('A', ModItems.AROMATIC_RESONATOR.get())
+                .define('Q', ModItems.TRIPLE_SEALED_TANK.get())
+                .define('C', ModItems.FLUX_CORE.get())
+                .define('B', ModBlocks.FIRE_QUARTZ_FRAME.get())
+                .unlockedBy(getHasName(ModBlocks.LIQUID_REACTOR.get()), has(ModBlocks.LIQUID_REACTOR.get()))
+                .save(p_251297_);
+
+        //APPLES
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.APPLE_COPPER.get())
+                .pattern("KKK")
+                .pattern("KBK")
+                .pattern("KKK")
+                .define('K', Items.COPPER_INGOT)
+                .define('B', Items.APPLE)
+                .unlockedBy(getHasName(ModItems.APPLE_COPPER.get()), has(ModItems.APPLE_COPPER.get()))
+                .save(p_251297_);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.APPLE_IRON.get())
+                .pattern("KKK")
+                .pattern("KBK")
+                .pattern("KKK")
+                .define('K', Items.IRON_INGOT)
+                .define('B', Items.APPLE)
+                .unlockedBy(getHasName(ModItems.APPLE_IRON.get()), has(ModItems.APPLE_IRON.get()))
+                .save(p_251297_);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.APPLE_LAPIS.get())
+                .pattern("KKK")
+                .pattern("KBK")
+                .pattern("KKK")
+                .define('K', Items.LAPIS_LAZULI)
+                .define('B', Items.APPLE)
+                .unlockedBy(getHasName(ModItems.APPLE_LAPIS.get()), has(ModItems.APPLE_LAPIS.get()))
+                .save(p_251297_);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.APPLE_DIAMOND.get())
+                .pattern("KKK")
+                .pattern("KBK")
+                .pattern("KKK")
+                .define('K', Items.DIAMOND)
+                .define('B', Items.APPLE)
+                .unlockedBy(getHasName(ModItems.APPLE_DIAMOND.get()), has(ModItems.APPLE_DIAMOND.get()))
+                .save(p_251297_);
+
         //COBWEB
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.COBWEB)
                 .pattern("###")
@@ -235,6 +369,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HAY_BALL.get(),4)
                 .requires(ModBlocks.HAY_BRICK.get())
                 .unlockedBy(getHasName(ModBlocks.HAY_BRICK.get()), has(ModBlocks.HAY_BRICK.get()))
+                .save(p_251297_);
+
+        //PINE PLANKS
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PINE_PLANKS.get(),4)
+                .requires(ModBlocks.PINE_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.PINE_PLANKS.get()), has(ModBlocks.PINE_PLANKS.get()))
                 .save(p_251297_);
 
         //FERMENTED AROMATIC SLURRY
@@ -262,40 +402,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.PROTEIN_CONCENTRATE.get())
                 .unlockedBy(getHasName(ModItems.UNIVERSAL_FEED.get()), has(ModItems.UNIVERSAL_FEED.get()))
                 .save(p_251297_);
-
-        /*
-        //SOFT ARMOR
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOFT_HELMET.get())
-                .pattern("###")
-                .pattern("# #")
-                .define('#', ModItems.SOFT_ARMOR_CLOTH.get())
-                .unlockedBy(getHasName(ModItems.SOFT_ARMOR_CLOTH.get()), has(ModItems.SOFT_ARMOR_CLOTH.get()))
-                .save(p_251297_);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOFT_CHESTPLATE.get())
-                .pattern("# #")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.SOFT_ARMOR_CLOTH.get())
-                .unlockedBy(getHasName(ModItems.SOFT_ARMOR_CLOTH.get()), has(ModItems.SOFT_ARMOR_CLOTH.get()))
-                .save(p_251297_);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOFT_LEGGINGS.get())
-                .pattern("###")
-                .pattern("# #")
-                .pattern("# #")
-                .define('#', ModItems.SOFT_ARMOR_CLOTH.get())
-                .unlockedBy(getHasName(ModItems.SOFT_ARMOR_CLOTH.get()), has(ModItems.SOFT_ARMOR_CLOTH.get()))
-                .save(p_251297_);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOFT_BOOTS.get())
-                .pattern("# #")
-                .pattern("# #")
-                .define('#', ModItems.SOFT_ARMOR_CLOTH.get())
-                .unlockedBy(getHasName(ModItems.SOFT_ARMOR_CLOTH.get()), has(ModItems.SOFT_ARMOR_CLOTH.get()))
-                .save(p_251297_);
-
-         */
 
         //SLIME BALL
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SLIME_BALL,4)

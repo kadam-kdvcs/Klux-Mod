@@ -32,6 +32,14 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<MultiphaseFluidTankMenu>> MULTIPHASE_FLUID_TANK_MENU =
             registerMenuType("multiphase_fluid_tank_menu", MultiphaseFluidTankMenu::new);
 
+    public static final RegistryObject<MenuType<FluxSynthesizerMenu>> FLUX_SYNTHESIZER_MENU =
+            registerMenuType("flux_synthesizer_menu", FluxSynthesizerMenu::new);
+
+    public static final RegistryObject<MenuType<LiquidReactorMenu>> LIQUID_REACTOR_MENU =
+            registerMenuType("liquid_reactor_menu", LiquidReactorMenu::new);
+
+    public static final RegistryObject<MenuType<LiquidFilterMenu>> LIQUID_FILTER_MENU =
+            registerMenuType("liquid_filter_menu", LiquidFilterMenu::new);
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

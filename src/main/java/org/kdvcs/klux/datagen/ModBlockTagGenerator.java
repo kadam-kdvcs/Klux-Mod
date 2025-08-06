@@ -53,13 +53,26 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.EXTRACTOR.get(),
                         ModBlocks.FLUID_ASSEMBLER.get(),
                         ModBlocks.FLUID_EXTRACTOR.get(),
-                        ModBlocks.MULTIPHASE_FLUID_TANK.get());
+                        ModBlocks.MULTIPHASE_FLUID_TANK.get(),
+                        ModBlocks.FLUX_SYNTHESIZER.get(),
+                        ModBlocks.FIRE_QUARTZ_FRAME.get(),
+                        ModBlocks.LIQUID_REACTOR.get(),
+                        ModBlocks.ICE_BRICK.get(),
+                        ModBlocks.SANDSTONE_CLEAN.get(),
+                        ModBlocks.SANDSTONE_CARVED.get(),
+                        ModBlocks.DRIED_BRICK_SMOOTH.get(),
+                        ModBlocks.DRIED_BRICK.get(),
+                        ModBlocks.LIQUID_FILTER.get());
 
-        /*
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.IRON_SAND.get())
+                .add(ModBlocks.SNOW_BRICK.get())
+                .add(ModBlocks.WET_BRICK.get());
+
+
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.EARTH_CRYSTAL_ORE.get(),
-                        ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get());
-         */
+                .add(ModBlocks.DRIED_BRICK_SMOOTH.get(),
+                        ModBlocks.DRIED_BRICK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.EARTH_CRYSTAL_ORE.get(),
@@ -72,7 +85,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.MULTIPHASE_FLUID_TANK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.FIRE_QUARTZ_ORE.get());
+                .add(ModBlocks.FIRE_QUARTZ_ORE.get(),
+
+                        ModBlocks.FLUX_SYNTHESIZER.get(),
+                        ModBlocks.FIRE_QUARTZ_FRAME.get(),
+                        ModBlocks.LIQUID_REACTOR.get(),
+                        ModBlocks.LIQUID_FILTER.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get());
@@ -85,6 +103,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.EARTH_CRYSTAL_WALL.get(),
                         ModBlocks.HAY_WALL.get());
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PINE_LOG.get())
+                .add(ModBlocks.PINE_WOOD.get())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.PINE_PLANKS.get());
     }
 
 }

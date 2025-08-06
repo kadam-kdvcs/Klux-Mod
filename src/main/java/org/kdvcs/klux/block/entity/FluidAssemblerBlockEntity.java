@@ -31,7 +31,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.kdvcs.klux.block.custom.ExtractorBlock;
 import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
-import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.networking.packet.FluidAssemblerSyncS2CPacket;
@@ -75,8 +74,7 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
 
             FluidStack current = getFluid();
             if (current.isEmpty()) {
-                return stack.getFluid() == Fluids.WATER || stack.getFluid() == ModFluids.SOURCE_AROMATIC.get() || stack.getFluid() == Fluids.LAVA
-                        || stack.getFluid() == ModFluids.SOURCE_PUTRESCENT_SOLUTION.get();
+                return true;
             } else {
                 //DON'T MIX DIFFERENT LIQUID!
                 return current.getFluid() == stack.getFluid();
@@ -224,7 +222,9 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         }
 
         Optional<FluidAssemblerRecipe> recipeOpt = level.getRecipeManager()
-                .getRecipeFor(FluidAssemblerRecipe.Type.INSTANCE, inventory, level);
+                .getAllRecipesFor(FluidAssemblerRecipe.Type.INSTANCE).stream()
+                .filter(r -> r.matches(inventory, pEntity.getFluidStack(), level))
+                .findFirst();
 
         if(recipeOpt.isPresent() && hasRecipe(pEntity)) {
 
@@ -331,13 +331,14 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         }
 
         Optional<FluidAssemblerRecipe> recipeOpt = level.getRecipeManager()
-                .getRecipeFor(FluidAssemblerRecipe.Type.INSTANCE, inventory, level);
+                .getAllRecipesFor(FluidAssemblerRecipe.Type.INSTANCE).stream()
+                .filter(r -> r.matches(inventory, pEntity.getFluidStack(), level))
+                .findFirst();
 
         if (recipeOpt.isPresent()) {
             FluidAssemblerRecipe recipe = recipeOpt.get();
 
             pEntity.FLUID_TANK.drain(recipe.getFluid().getAmount(), IFluidHandler.FluidAction.EXECUTE);
-
             pEntity.itemHandler.extractItem(1, recipe.ingredient.count, false);
 
             ItemStack output = recipe.getResultItem(null);
@@ -354,6 +355,7 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         }
     }
 
+
     private static boolean hasRecipe(FluidAssemblerBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
@@ -362,12 +364,15 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         }
 
         Optional<FluidAssemblerRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(FluidAssemblerRecipe.Type.INSTANCE, inventory, level);
+                .getAllRecipesFor(FluidAssemblerRecipe.Type.INSTANCE).stream()
+                .filter(r -> r.matches(inventory, entity.getFluidStack(), level))
+                .findFirst();
 
-        return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(null))
-                && hasCorrectFluidInTank(entity, recipe) && hasCorrectFluidAmountInTank(entity, recipe);
+        return recipe.isPresent()
+                && canInsertAmountIntoOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(null));
     }
+
 
     private static boolean hasCorrectFluidAmountInTank(FluidAssemblerBlockEntity entity, Optional<FluidAssemblerRecipe> recipe) {
         return entity.FLUID_TANK.getFluidAmount() >= recipe.get().getFluid().getAmount();

@@ -19,6 +19,16 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.klux_basic"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModBlocks.PINE_LOG.get());
+                        output.accept(ModBlocks.PINE_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+
+                        output.accept(ModBlocks.PINE_PLANKS.get());
+                        output.accept(ModBlocks.PINE_LEAVES.get());
+
+                        output.accept(ModBlocks.PINE_SAPLING.get());
+
                         output.accept(ModBlocks.EARTH_CRYSTAL_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get());
                         output.accept(ModBlocks.FIRE_QUARTZ_ORE.get());
@@ -34,14 +44,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAY_STAIRS.get());
                         output.accept(ModBlocks.HAY_SLAB.get());
                         output.accept(ModBlocks.HAY_WALL.get());
+                        output.accept(ModBlocks.IRON_SAND.get());
 
-                        output.accept(ModItems.SALAD.get());
-                        output.accept(ModItems.NUTRI_BLOCK.get());
-                        output.accept(ModItems.ROUGH_CAKE_BASE.get());
-                        output.accept(ModItems.VITAMIN_CAKE.get());
-                        output.accept(ModItems.PARSNIP.get());
+                        output.accept(ModBlocks.ICE_BRICK.get());
+                        output.accept(ModBlocks.SANDSTONE_CLEAN.get());
+                        output.accept(ModBlocks.SANDSTONE_CARVED.get());
+
+                        output.accept(ModBlocks.DRIED_BRICK.get());
+                        output.accept(ModBlocks.DRIED_BRICK_SMOOTH.get());
+                        output.accept(ModBlocks.SNOW_BRICK.get());
+                        output.accept(ModBlocks.WET_BRICK.get());
+
                         output.accept(ModItems.PARSNIP_SEEDS.get());
-                        output.accept(ModItems.SPRING_ONION.get());
+
                         output.accept(ModItems.SPRING_ONION_SEEDS.get());
                         output.accept(ModBlocks.CACTUS_FRUIT.get());
 
@@ -65,23 +80,51 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BOTANICAL_RESIN_BEAD.get());
                         output.accept(ModItems.ADHESIVE_PASTE.get());
                         output.accept(ModItems.PRESSING_ROD_ASSEMBLY.get());
+
+                        //EXTRACTION MESHES
                         output.accept(ModItems.EXTRACTION_MESH.get());
+                        output.accept(ModItems.ADVANCED_EXTRACTION_MESH.get());
+                        output.accept(ModItems.ULTIMATE_EXTRACTION_MESH.get());
+
                         output.accept(ModItems.FERMENTED_AROMATIC_SLURRY.get());
                         output.accept(ModItems.AROMATIC_COAGULATE.get());
                         output.accept(ModItems.AROMATIC_DUST.get());
+                        output.accept(ModItems.PECTI_BOND.get());
                         output.accept(ModItems.AROMATIC_INGOT.get());
+
+                        //LIQUID BUCKETS
                         output.accept(ModItems.AROMATIC_BUCKET.get());
                         output.accept(ModItems.PUTRESCENT_SOLUTION_BUCKET.get());
+                        output.accept(ModItems.PECTIN_SLURRY_BUCKET.get());
+                        output.accept(ModItems.PRIMAL_ESSENCE_BUCKET.get());
+                        output.accept(ModItems.ENZYME_SOLUTION_BUCKET.get());
+                        output.accept(ModItems.BOTANIC_ESSENTIAL_OIL_BUCKET.get());
+
                         output.accept(ModItems.REDSTONE_RESONATOR.get());
                         output.accept(ModItems.AROMATIC_RESONATOR.get());
 
                         output.accept(ModItems.FURNACE_CORE.get());
                         output.accept(ModItems.AIR_DUCT.get());
                         output.accept(ModItems.MULTIPHASE_FLUID_CONTAINER.get());
+
                         output.accept(ModItems.POLYMER_MEMBRANE_PLATE.get());
+                        output.accept(ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get());
+                        output.accept(ModItems.PRECISION_SUBSTRATE.get());
+                        output.accept(ModItems.SOLV_SHELL.get());
+                        output.accept(ModItems.DISSOLVENT_BEARING.get());
+                        output.accept(ModItems.FILTER_CORE.get());
+
+                        output.accept(ModItems.REINFORCED_AROMATIC_CRYSTAL_GEAR.get());
+
                         output.accept(ModItems.FLUX_CORE.get());
 
                         output.accept(ModItems.SEALED_TANK.get());
+                        output.accept(ModItems.TRIPLE_SEALED_TANK.get());
+
+                        output.accept(ModItems.WITHERED_LEAF.get());
+                        output.accept(ModItems.BRAN.get());
+
+                        output.accept(ModItems.WOVEN_SUBSTRATE.get());
 
                             })
                     .build());
@@ -99,7 +142,35 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MULTIPHASE_FLUID_TANK.get());
                         output.accept(ModBlocks.EARTH_CRYSTAL_FRAME.get());
 
+                        output.accept(ModBlocks.FLUX_SYNTHESIZER.get());
+                        output.accept(ModBlocks.LIQUID_REACTOR.get());
+                        output.accept(ModBlocks.LIQUID_FILTER.get());
+                        output.accept(ModBlocks.FIRE_QUARTZ_FRAME.get());
+
                             })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> KLUX_FOODS = CREATIVE_MODE_TABS.register("klux_foods",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.VITAMIN_CAKE.get()))
+                    .title(Component.translatable("itemGroup.klux_foods"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModItems.PARSNIP.get());
+                        output.accept(ModItems.SPRING_ONION.get());
+                        output.accept(ModItems.SALAD.get());
+                        output.accept(ModItems.NUTRI_BLOCK.get());
+                        output.accept(ModItems.ROUGH_CAKE_BASE.get());
+                        output.accept(ModItems.VITAMIN_CAKE.get());
+
+                        //APPLES
+                        output.accept(ModItems.APPLE_COPPER.get());
+                        output.accept(ModItems.APPLE_IRON.get());
+                        output.accept(ModItems.APPLE_LAPIS.get());
+                        output.accept(ModItems.APPLE_DIAMOND.get());
+                        output.accept(ModItems.APPLE_EMERALD.get());
+                        output.accept(ModItems.APPLE_AMETHYST.get());
+
+                    })
                     .build());
 
     public static final RegistryObject<CreativeModeTab> KLUX_ARMORS_TOOLS = CREATIVE_MODE_TABS.register("klux_armors_tools",

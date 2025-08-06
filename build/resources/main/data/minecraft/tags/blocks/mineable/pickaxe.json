@@ -11,6 +11,15 @@
     "klux:extractor",
     "klux:fluid_assembler",
     "klux:fluid_extractor",
-    "klux:multiphase_fluid_tank"
+    "klux:multiphase_fluid_tank",
+    "klux:flux_synthesizer",
+    "klux:fire_quartz_frame",
+    "klux:liquid_reactor",
+    "klux:ice_brick",
+    "klux:sandstone_clean",
+    "klux:sandstone_carved",
+    "klux:dried_brick_smooth",
+    "klux:dried_brick",
+    "klux:liquid_filter"
   ]
 }

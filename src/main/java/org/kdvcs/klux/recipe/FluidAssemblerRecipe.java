@@ -31,15 +31,19 @@ public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
         this.maxProgress = maxProgress;
     }
 
-    @Override
-    public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        if(pLevel.isClientSide()) {
-            return false;
-        }
+    public boolean matches(SimpleContainer pContainer, FluidStack machineFluid, Level pLevel) {
+        if (pLevel.isClientSide()) return false;
 
         ItemStack item = pContainer.getItem(1);
-        return ingredient.ingredient.test(item) && item.getCount() >= ingredient.count;
+        boolean testResult = ingredient.ingredient.test(item);
+        boolean countSufficient = item.getCount() >= ingredient.count;
+        boolean fluidMatch = fluidStack.isFluidEqual(machineFluid) &&
+                machineFluid.getAmount() >= fluidStack.getAmount();
+
+        return testResult && countSufficient && fluidMatch;
     }
+
+
 
     public FluidStack getFluid() {
         return fluidStack;
@@ -50,6 +54,12 @@ public class FluidAssemblerRecipe implements Recipe<SimpleContainer> {
         NonNullList<Ingredient> list = NonNullList.create();
         list.add(ingredient.ingredient);
         return list;
+    }
+
+    //I NO LONGER USE THIS
+    @Override
+    public boolean matches(SimpleContainer p_44002_, Level p_44003_) {
+        return false;
     }
 
     @Override

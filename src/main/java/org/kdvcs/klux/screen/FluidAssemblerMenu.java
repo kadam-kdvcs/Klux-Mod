@@ -35,9 +35,9 @@ public class FluidAssemblerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 12, 15));
-            this.addSlot(new SlotItemHandler(handler, 1, 86, 36));
-            this.addSlot(new SlotItemHandler(handler, 2, 148, 36));
+            this.addSlot(new SlotItemHandler(handler, 0, 12, 17));
+            this.addSlot(new SlotItemHandler(handler, 1, 86, 38));
+            this.addSlot(new SlotItemHandler(handler, 2, 148, 38));
         });
 
         addDataSlots(data);
@@ -128,14 +128,14 @@ public class FluidAssemblerMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 88 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 146));
         }
     }
 }

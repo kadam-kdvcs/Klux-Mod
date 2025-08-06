@@ -27,19 +27,22 @@ public class MultiphaseFluidTankScreen extends AbstractContainerScreen<Multiphas
     public MultiphaseFluidTankScreen(MultiphaseFluidTankMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
         this.imageWidth = 176;
-        this.imageHeight = 168;
+        this.imageHeight = 170;
     }
 
     @Override
     protected void init() {
         super.init();
-        fluidRenderer = new FluidTankRenderer(256000, true, 34, 61);
-        this.titleLabelX = 78;
-        this.titleLabelY = 6;
+        fluidRenderer = new FluidTankRenderer(256000, true, 72, 61);
+        this.titleLabelX = 52;
+        this.titleLabelY = 5;
     }
 
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+
+        guiGraphics.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0x2A241E, false);
+
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
@@ -47,7 +50,7 @@ public class MultiphaseFluidTankScreen extends AbstractContainerScreen<Multiphas
     }
 
     private void renderFluidTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
-        if (isMouseOverArea(mouseX, mouseY, x, y, 71, 15)) {
+        if (isMouseOverArea(mouseX, mouseY, x, y, 52, 17)) {
             FluidStack fluidStack = menu.blockEntity.getFluidStack();
 
             if (!fluidStack.isEmpty()) {
@@ -70,7 +73,7 @@ public class MultiphaseFluidTankScreen extends AbstractContainerScreen<Multiphas
 
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
-        fluidRenderer.render(guiGraphics.pose(), x + 71, y + 15, menu.blockEntity.getFluidStack());
+        fluidRenderer.render(guiGraphics.pose(), x + 52, y + 17, menu.blockEntity.getFluidStack());
     }
 
     @Override

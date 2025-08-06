@@ -40,10 +40,36 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.FLUID_ASSEMBLER.get());
         this.dropSelf(ModBlocks.FLUID_EXTRACTOR.get());
         this.dropSelf(ModBlocks.MULTIPHASE_FLUID_TANK.get());
+        this.dropSelf(ModBlocks.FLUX_SYNTHESIZER.get());
+        this.dropSelf(ModBlocks.FIRE_QUARTZ_FRAME.get());
+        this.dropSelf(ModBlocks.LIQUID_REACTOR.get());
+        this.dropSelf(ModBlocks.LIQUID_FILTER.get());
+
+        this.dropSelf(ModBlocks.IRON_SAND.get());
+
+        this.dropSelf(ModBlocks.DRIED_BRICK_SMOOTH.get());
+        this.dropSelf(ModBlocks.DRIED_BRICK.get());
+        this.dropSelf(ModBlocks.SNOW_BRICK.get());
+        this.dropSelf(ModBlocks.WET_BRICK.get());
+
+        this.dropSelf(ModBlocks.PINE_LOG.get());
+        this.dropSelf(ModBlocks.PINE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_WOOD.get());
+        this.dropSelf(ModBlocks.PINE_PLANKS.get());
+        this.dropSelf(ModBlocks.PINE_SAPLING.get());
+
+        this.add(ModBlocks.PINE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
 
         this.dropSelf(ModBlocks.HAY_SLAB.get());
         this.dropSelf(ModBlocks.HAY_STAIRS.get());
         this.dropSelf(ModBlocks.HAY_WALL.get());
+
+        this.dropSelf(ModBlocks.ICE_BRICK.get());
+        this.dropSelf(ModBlocks.SANDSTONE_CLEAN.get());
+        this.dropSelf(ModBlocks.SANDSTONE_CARVED.get());
 
         //ORES
         this.add(ModBlocks.EARTH_CRYSTAL_ORE.get(),

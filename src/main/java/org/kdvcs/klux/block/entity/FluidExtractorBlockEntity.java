@@ -40,8 +40,6 @@ import org.kdvcs.klux.sound.ModSounds;
 import java.util.Map;
 import java.util.Optional;
 
-import org.kdvcs.klux.item.ModItems;
-
 public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvider {
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(2) {
@@ -53,7 +51,7 @@ public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvid
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             if (slot == 0) return true;
-            if (slot == 1) return stack.getItem() == Items.BUCKET || stack.getItem() == ModItems.MULTIPHASE_FLUID_CONTAINER.get();
+            if (slot == 1) return stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
             return false;
         }
 
@@ -221,7 +219,7 @@ public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvid
         }
 
         extractFluidWithBucket(entity);
-        extractFluidWithMultiphaseContainer(entity);
+        extractFluidWithAnyContainer(entity);
 
         boolean isWorkingNow = hasRecipe(entity);
         if (wasWorking != isWorkingNow) {
@@ -298,36 +296,36 @@ public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvid
         }
     }
 
-    private static void extractFluidWithMultiphaseContainer(FluidExtractorBlockEntity entity) {
+    private static void extractFluidWithAnyContainer(FluidExtractorBlockEntity entity) {
         ItemStack containerStack = entity.itemHandler.getStackInSlot(1);
         FluidStack fluidInTank = entity.FLUID_TANK.getFluid();
 
-        if (containerStack.getItem() == ModItems.MULTIPHASE_FLUID_CONTAINER.get() && !fluidInTank.isEmpty()) {
+        if (containerStack.isEmpty() || fluidInTank.isEmpty()) return;
 
-            containerStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(containerFluidHandler -> {
-                int containerSpace = containerFluidHandler.getTankCapacity(0) - containerFluidHandler.getFluidInTank(0).getAmount();
+        containerStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(containerFluidHandler -> {
+            int tanks = containerFluidHandler.getTanks();
 
-                if (containerSpace > 0) {
+            for (int i = 0; i < tanks; i++) {
+                int space = containerFluidHandler.getTankCapacity(i) - containerFluidHandler.getFluidInTank(i).getAmount();
 
-                    int fillAmount = Math.min(containerSpace, fluidInTank.getAmount());
+                if (space > 0) {
+                    int fillAmount = Math.min(space, fluidInTank.getAmount());
+                    FluidStack toFill = new FluidStack(fluidInTank, fillAmount);
 
-                    FluidStack fluidToFill = new FluidStack(fluidInTank, fillAmount);
-
-                    int filled = containerFluidHandler.fill(fluidToFill, IFluidHandler.FluidAction.EXECUTE);
+                    int filled = containerFluidHandler.fill(toFill, IFluidHandler.FluidAction.EXECUTE);
 
                     if (filled > 0) {
-
                         entity.FLUID_TANK.drain(filled, IFluidHandler.FluidAction.EXECUTE);
-
                         entity.setChanged();
 
                         if (entity.level instanceof ServerLevel serverLevel) {
                             serverLevel.playSound(null, entity.worldPosition, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0f, 1.0f);
                         }
+                        break;
                     }
                 }
-            });
-        }
+            }
+        });
     }
 
 }

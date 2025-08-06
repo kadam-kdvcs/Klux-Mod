@@ -43,5 +43,10 @@ public class ModTags {
         public static final TagKey<Item> FIRE_QUARTZ_ORES = forgeTag("ores/fire_quartz");
         public static final TagKey<Item> ENDERGON_CRYSTAL_ORES = forgeTag("ores/endergon_crystal");
 
+        public static final TagKey<Item> EXTRACTION_MESHES = forgeTag("extraction_meshes");
+        public static final TagKey<Item> EXTRACTION_MESH_BASIC = forgeTag("extraction_mesh_basic");
+        public static final TagKey<Item> EXTRACTION_MESH_ADVANCED = forgeTag("extraction_mesh_advanced");
+        public static final TagKey<Item> EXTRACTION_MESH_ULTIMATE = forgeTag("extraction_mesh_ultimate");
+
     }
 }

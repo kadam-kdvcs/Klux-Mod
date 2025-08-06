@@ -6,7 +6,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
@@ -33,6 +35,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FIRE_QUARTZ_ORE);
         blockWithItem(ModBlocks.ENDERGON_CRYSTAL_ORE);
         blockWithItem(ModBlocks.EARTH_CRYSTAL_FRAME);
+        blockWithItem(ModBlocks.FIRE_QUARTZ_FRAME);
+        blockWithItem(ModBlocks.IRON_SAND);
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
@@ -77,7 +81,49 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_CACTUS_FRUIT.get(), models().singleTexture("potted_cactus_fruit", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.POTTED_CACTUS_FRUIT.get())).renderType("cutout"));
 
+        logBlock(((RotatedPillarBlock) ModBlocks.PINE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.PINE_WOOD.get()), blockTexture(ModBlocks.PINE_LOG.get()),
+                blockTexture(ModBlocks.PINE_LOG.get()));
 
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PINE_LOG.get()), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()),
+                new ResourceLocation(Klux.MODID, "block/stripped_pine_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PINE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()));
+
+        blockItem(ModBlocks.PINE_LOG);
+        blockItem(ModBlocks.PINE_WOOD);
+        blockItem(ModBlocks.STRIPPED_PINE_LOG);
+        blockItem(ModBlocks.STRIPPED_PINE_WOOD);
+
+        blockWithItem(ModBlocks.PINE_PLANKS);
+
+        leavesBlock(ModBlocks.PINE_LEAVES);
+
+        saplingBlock(ModBlocks.PINE_SAPLING);
+
+        blockWithItem(ModBlocks.ICE_BRICK);
+        blockWithItem(ModBlocks.SANDSTONE_CARVED);
+        blockWithItem(ModBlocks.SANDSTONE_CLEAN);
+        blockWithItem(ModBlocks.DRIED_BRICK);
+        blockWithItem(ModBlocks.SNOW_BRICK);
+        blockWithItem(ModBlocks.DRIED_BRICK_SMOOTH);
+        blockWithItem(ModBlocks.WET_BRICK);
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Klux.MODID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     public void makeParsnipCrop(CropBlock block, String modelName, String textureName) {

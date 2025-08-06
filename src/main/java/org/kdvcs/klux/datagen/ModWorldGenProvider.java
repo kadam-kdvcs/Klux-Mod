@@ -10,15 +10,20 @@ import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.worldgen.ModBiomeModifiers;
 import org.kdvcs.klux.worldgen.ModConfiguredFeatures;
 import org.kdvcs.klux.worldgen.ModPlacedFeatures;
+import org.kdvcs.klux.worldgen.biome.ModBiomes;
+import org.kdvcs.klux.worldgen.dimension.ModDimensions;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, ModBiomes::boostrap)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(Klux.MODID));

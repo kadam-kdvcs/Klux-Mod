@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "klux:celeste",
+  "features": "klux:pine_placed",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "klux:liquid_reactor",
+  "fluid_input1": {
+    "fluid": "klux:putrescent_solution_fluid",
+    "amount": 250
+  },
+  "fluid_input2": {
+    "fluid": "klux:primal_essence_fluid",
+    "amount": 250
+  },
+  "output_fluid": {
+    "fluid": "klux:enzyme_solution_fluid",
+    "amount": 500
+  },
+  "max_progress": 115
+}

@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:polymer_membrane_plate",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "klux:aromatic_fluid",
+    "Amount": 144
+  },
+  "output": {
+    "item": "klux:reinforced_aromatic_crystal_plate",
+    "count": 1
+  },
+  "maxProgress": 95
+}

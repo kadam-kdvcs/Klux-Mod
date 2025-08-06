@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "klux:orchard",
+      "weight": 1
+    }
+  ],
+
+  "placement": {
+
+    "salt": 1548372910,
+
+    "spacing": 45,
+
+    "separation": 22,
+
+    "type": "minecraft:random_spread"
+  }
+}

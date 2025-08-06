@@ -1,0 +1,28 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+      "item": "minecraft:iron_ore",
+      "count": 1
+  },
+  "mesh": {
+    "tag": "forge:extraction_mesh_advanced"
+  },
+  "meshLevel": 2,
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
+  "maxProgress": 80,
+  "outputs": [
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 2,
+      "chance": 0.5
+    },
+    {
+      "item": "minecraft:gold_nugget",
+      "count": 1,
+      "chance": 0.1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "tag": "forge:putrescent",
+      "count": 4
+    },
+  "fluid": {
+    "FluidName": "klux:enzyme_solution_fluid",
+    "Amount": 100
+  },
+  "output": {
+    "item": "klux:protein_concentrate",
+    "count": 1
+  },
+  "maxProgress": 85
+}

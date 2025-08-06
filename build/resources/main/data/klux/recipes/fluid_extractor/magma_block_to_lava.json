@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "minecraft:magma_block",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 1000
+  },
+  "maxProgress": 10
+}

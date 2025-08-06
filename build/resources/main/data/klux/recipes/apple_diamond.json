@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:apple"
+    },
+    "K": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KBK",
+    "KKK"
+  ],
+  "result": {
+    "item": "klux:apple_diamond"
+  },
+  "show_notification": true
+}

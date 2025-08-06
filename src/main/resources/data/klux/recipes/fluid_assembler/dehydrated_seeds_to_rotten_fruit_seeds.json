@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:dehydrated_seeds",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "klux:enzyme_solution_fluid",
+    "Amount": 150
+  },
+  "output": {
+    "item": "klux:rotten_fruit_seeds",
+    "count": 1
+  },
+  "maxProgress": 85
+}

@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "klux:botanical_resin_bead",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:primal_essence_fluid",
+    "Amount": 72
+  },
+  "maxProgress": 36
+}

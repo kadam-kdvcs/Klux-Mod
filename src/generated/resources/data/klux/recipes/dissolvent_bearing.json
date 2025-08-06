@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:reinforced_aromatic_crystal_gear"
+    },
+    "B": {
+      "item": "klux:reinforced_aromatic_crystal_plate"
+    },
+    "K": {
+      "item": "klux:pressing_rod_assembly"
+    },
+    "T": {
+      "item": "klux:adhesive_paste"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "BTB",
+    "KAK"
+  ],
+  "result": {
+    "item": "klux:dissolvent_bearing"
+  },
+  "show_notification": true
+}

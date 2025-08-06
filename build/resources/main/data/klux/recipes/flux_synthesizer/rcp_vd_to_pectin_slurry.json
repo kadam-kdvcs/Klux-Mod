@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "klux:rough_cake_base",
+    "count": 1
+  },
+  "ingredient2": {
+    "item": "klux:vitamin_dust",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "minecraft:water",
+    "Amount": 100
+  },
+  "fluid_output": {
+    "FluidName": "klux:primal_essence_fluid",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:vitamin_cake",
+    "count": 1
+  },
+  "maxProgress": 95
+}

@@ -1,0 +1,12 @@
+{
+  "type": "klux:add_item",
+  "chance": 0.7,
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/underwater_ruin_big"
+    }
+  ],
+  "item": "klux:apple_amethyst",
+  "maxCount": 3
+}

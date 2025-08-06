@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "klux:shattered_keep",
+      "weight": 1
+    }
+  ],
+
+  "placement": {
+
+    "salt": 1742136474,
+
+    "spacing": 70,
+
+    "separation": 24,
+
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:aromatic_powder",
+      "count": 4
+    },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 1000
+  },
+  "output": {
+    "item": "klux:pecti_bond",
+    "count": 1
+  },
+  "maxProgress": 180
+}

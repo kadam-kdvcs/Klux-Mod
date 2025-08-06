@@ -1,0 +1,12 @@
+{
+  "type": "klux:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/buried_treasure"
+    }
+  ],
+  "item": "klux:apple_amethyst",
+  "maxCount": 4,
+  "minCount": 2
+}

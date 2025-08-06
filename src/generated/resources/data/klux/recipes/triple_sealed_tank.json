@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:sealed_tank"
+    },
+    "K": {
+      "item": "klux:reinforced_aromatic_crystal_plate"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "AAA",
+    "KKK"
+  ],
+  "result": {
+    "item": "klux:triple_sealed_tank"
+  },
+  "show_notification": true
+}

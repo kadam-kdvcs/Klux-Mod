@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:sealed_tank"
+    },
+    "B": {
+      "item": "klux:earth_crystal_frame"
+    },
+    "K": {
+      "item": "klux:polymer_membrane_plate"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "ABA",
+    "KAK"
+  ],
+  "result": {
+    "item": "klux:multiphase_fluid_tank"
+  },
+  "show_notification": true
+}

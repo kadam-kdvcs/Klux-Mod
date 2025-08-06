@@ -1,0 +1,24 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+    "item": "minecraft:gold_ore",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 500
+  },
+  "maxProgress": 80,
+  "outputs": [
+    {
+      "item": "minecraft:magma_cream",
+      "count": 48,
+      "chance": 0.9
+    },
+    {
+      "item": "minecraft:gold_nugget",
+      "count": 1,
+      "chance": 0.1
+    }
+  ]
+}

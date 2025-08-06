@@ -1,0 +1,20 @@
+{
+  "name": "klux:shattered_keep/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "klux:shattered_keep",
+
+        "processors": "minecraft:empty",
+
+        "projection": "terrain_matching",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

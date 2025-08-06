@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "klux:rotten_fruit",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:putrescent_solution_fluid",
+    "Amount": 750
+  },
+  "maxProgress": 96
+}

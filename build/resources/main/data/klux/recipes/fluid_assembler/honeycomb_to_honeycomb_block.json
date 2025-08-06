@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "minecraft:honeycomb",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 250
+  },
+  "output": {
+    "item": "minecraft:honeycomb_block",
+    "count": 1
+  },
+  "maxProgress": 85
+}

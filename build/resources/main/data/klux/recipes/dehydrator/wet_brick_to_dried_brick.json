@@ -1,0 +1,13 @@
+{
+  "type": "klux:dehydrator",
+  "ingredient":
+    {
+    "item": "klux:wet_brick"
+  },
+  "ingredientCount": 1,
+  "output": {
+    "item": "klux:dried_brick",
+    "count": 1
+  },
+  "maxProgress": 100
+}

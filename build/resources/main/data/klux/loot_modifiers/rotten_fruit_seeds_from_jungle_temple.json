@@ -1,0 +1,13 @@
+{
+  "type": "klux:add_item",
+  "chance": 0.26,
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/jungle_temple"
+    }
+  ],
+  "item": "klux:rotten_fruit_seeds",
+  "maxCount": 4,
+  "minCount": 2
+}

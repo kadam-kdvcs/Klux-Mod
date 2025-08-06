@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:reinforced_aromatic_crystal_plate",
+      "count": 1
+    },
+    {
+      "item": "klux:woven_substrate",
+      "count": 2
+    }
+  ],
+  "output": {
+    "item": "klux:precision_substrate",
+    "count": 1
+  },
+  "maxProgress": 110
+}

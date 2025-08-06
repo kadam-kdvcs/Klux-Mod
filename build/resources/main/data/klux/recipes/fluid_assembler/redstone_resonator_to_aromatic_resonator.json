@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:redstone_resonator",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "klux:aromatic_fluid",
+    "Amount": 720
+  },
+  "output": {
+    "item": "klux:aromatic_resonator",
+    "count": 1
+  },
+  "maxProgress": 124
+}

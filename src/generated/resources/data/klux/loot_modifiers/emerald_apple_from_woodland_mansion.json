@@ -1,0 +1,12 @@
+{
+  "type": "klux:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/woodland_mansion"
+    }
+  ],
+  "item": "klux:apple_emerald",
+  "maxCount": 6,
+  "minCount": 3
+}

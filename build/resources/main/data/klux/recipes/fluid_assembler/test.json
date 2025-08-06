@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:filter_core",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:salad",
+    "count": 1
+  },
+  "maxProgress": 85
+}

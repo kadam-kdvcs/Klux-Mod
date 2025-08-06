@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:reinforced_aromatic_crystal_plate",
+      "count": 4
+    },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 144
+  },
+  "output": {
+    "item": "klux:reinforced_aromatic_crystal_gear",
+    "count": 1
+  },
+  "maxProgress": 150
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:aromatic_resonator"
+    },
+    "B": {
+      "item": "klux:fire_quartz_frame"
+    },
+    "C": {
+      "item": "klux:flux_core"
+    },
+    "K": {
+      "item": "klux:reinforced_aromatic_crystal_plate"
+    },
+    "Q": {
+      "item": "klux:triple_sealed_tank"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "QBQ",
+    "KCK"
+  ],
+  "result": {
+    "item": "klux:liquid_reactor"
+  },
+  "show_notification": true
+}

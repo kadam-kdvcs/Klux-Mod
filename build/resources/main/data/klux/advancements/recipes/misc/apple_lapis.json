@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_apple_lapis": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klux:apple_lapis"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "klux:apple_lapis"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_apple_lapis",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "klux:apple_lapis"
+    ]
+  },
+  "sends_telemetry_event": false
+}

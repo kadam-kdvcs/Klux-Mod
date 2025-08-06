@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 9
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 2, "max": 6 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 13, "max": 24 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "klux:apple_diamond",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 1, "max": 2 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "klux:apple_emerald",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 6, "max": 12 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "klux:apple_amethyst",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 4, "max": 8 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:constant", "value": 34 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_block",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:constant", "value": 6 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "klux:pine_sapling",
+          "weight": 18,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 2, "max": 3 }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "klux:aromatic_ingot",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": { "type": "minecraft:uniform", "min": 2, "max": 4 }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "klux:chests/celestial_hall"
+}

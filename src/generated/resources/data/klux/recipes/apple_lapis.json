@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:apple"
+    },
+    "K": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KBK",
+    "KKK"
+  ],
+  "result": {
+    "item": "klux:apple_lapis"
+  },
+  "show_notification": true
+}

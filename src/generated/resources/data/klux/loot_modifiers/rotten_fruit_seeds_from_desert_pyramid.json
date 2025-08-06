@@ -1,0 +1,12 @@
+{
+  "type": "klux:add_item",
+  "chance": 0.11,
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/desert_pyramid"
+    }
+  ],
+  "item": "klux:rotten_fruit_seeds",
+  "maxCount": 3
+}

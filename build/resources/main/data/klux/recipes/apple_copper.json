@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:apple"
+    },
+    "K": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KBK",
+    "KKK"
+  ],
+  "result": {
+    "item": "klux:apple_copper"
+  },
+  "show_notification": true
+}

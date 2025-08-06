@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:bran",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:universal_feed",
+    "count": 1
+  },
+  "maxProgress": 105
+}

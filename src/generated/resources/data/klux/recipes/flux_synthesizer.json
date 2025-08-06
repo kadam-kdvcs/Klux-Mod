@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:aromatic_resonator"
+    },
+    "B": {
+      "item": "klux:fire_quartz_frame"
+    },
+    "C": {
+      "item": "klux:multiphase_fluid_container"
+    },
+    "K": {
+      "item": "klux:polymer_membrane_plate"
+    },
+    "Q": {
+      "item": "klux:flux_core"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "CBC",
+    "KQK"
+  ],
+  "result": {
+    "item": "klux:flux_synthesizer"
+  },
+  "show_notification": true
+}

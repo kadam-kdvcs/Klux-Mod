@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "minecraft:glass_pane",
+    "count": 1
+  },
+  "ingredient2": {
+    "item": "klux:leather_paste",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 250
+  },
+  "fluid_output": {
+    "FluidName": "minecraft:water",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:polymer_membrane_plate",
+    "count": 4
+  },
+  "maxProgress": 155
+}

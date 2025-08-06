@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "klux:multiphase_fluid_container"
+    },
+    "A": {
+      "item": "klux:redstone_resonator"
+    },
+    "B": {
+      "item": "klux:earth_crystal_frame"
+    },
+    "C": {
+      "item": "klux:extraction_mesh"
+    },
+    "K": {
+      "item": "klux:pressing_rod_assembly"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "#B#",
+    "KCK"
+  ],
+  "result": {
+    "item": "klux:fluid_extractor"
+  },
+  "show_notification": true
+}

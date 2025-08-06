@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:withered_leaf",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "klux:putrescent_solution_fluid",
+    "Amount": 250
+  },
+  "output": {
+    "item": "klux:rotten_fruit_seeds",
+    "count": 1
+  },
+  "maxProgress": 110
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:aromatic_resonator"
+    },
+    "B": {
+      "item": "klux:dissolvent_bearing"
+    },
+    "C": {
+      "item": "klux:filter_core"
+    },
+    "K": {
+      "item": "klux:solv_shell"
+    },
+    "T": {
+      "item": "klux:fire_quartz_frame"
+    }
+  },
+  "pattern": [
+    "KAK",
+    "BTB",
+    "KCK"
+  ],
+  "result": {
+    "item": "klux:liquid_filter"
+  },
+  "show_notification": true
+}

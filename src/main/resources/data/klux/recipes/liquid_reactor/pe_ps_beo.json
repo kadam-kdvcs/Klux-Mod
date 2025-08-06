@@ -1,0 +1,16 @@
+{
+  "type": "klux:liquid_reactor",
+  "fluid_input1": {
+    "fluid": "klux:primal_essence_fluid",
+    "amount": 500
+  },
+  "fluid_input2": {
+    "fluid": "klux:pectin_slurry_fluid",
+    "amount": 500
+  },
+  "output_fluid": {
+    "fluid": "klux:botanic_essential_oil_fluid",
+    "amount": 1000
+  },
+  "max_progress": 120
+}

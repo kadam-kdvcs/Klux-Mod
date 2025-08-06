@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "klux:withered_leaf",
+    "count": 2
+  },
+  "ingredient2": {
+    "item": "klux:vitamin_dust",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 250
+  },
+  "fluid_output": {
+    "FluidName": "klux:primal_essence_fluid",
+    "Amount": 320
+  },
+  "output": {
+    "item": "klux:bran",
+    "count": 4
+  },
+  "maxProgress": 100
+}

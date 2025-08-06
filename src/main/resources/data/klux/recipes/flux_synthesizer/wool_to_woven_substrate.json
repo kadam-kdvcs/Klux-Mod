@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "tag": "minecraft:wool",
+    "count": 1
+  },
+  "ingredient2": {
+    "item": "klux:aromatic_ingot",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "klux:botanic_essential_oil_fluid",
+    "Amount": 250
+  },
+  "fluid_output": {
+    "FluidName": "klux:enzyme_solution_fluid",
+    "Amount": 300
+  },
+  "output": {
+    "item": "klux:woven_substrate",
+    "count": 4
+  },
+  "maxProgress": 100
+}

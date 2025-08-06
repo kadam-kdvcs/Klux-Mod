@@ -1,0 +1,11 @@
+{
+  "type": "klux:add_item",
+  "chance": 0.05,
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village_armorer"
+    }
+  ],
+  "item": "klux:apple_emerald"
+}

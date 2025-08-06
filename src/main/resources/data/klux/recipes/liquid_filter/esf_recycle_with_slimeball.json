@@ -1,0 +1,28 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+    "item": "minecraft:slime_ball",
+    "count": 1
+  },
+  "mesh": {
+    "tag": "forge:extraction_mesh_basic"
+  },
+  "meshLevel": 1,
+  "fluid": {
+    "FluidName": "klux:enzyme_solution_fluid",
+    "Amount": 50
+  },
+  "maxProgress": 120,
+  "outputs": [
+    {
+      "item": "klux:putrid_fat",
+      "count": 2,
+      "chance": 0.45
+    },
+    {
+      "item": "klux:protein_concentrate",
+      "count": 1,
+      "chance": 0.07
+    }
+  ]
+}

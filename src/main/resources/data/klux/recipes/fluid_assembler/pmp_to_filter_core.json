@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:polymer_membrane_plate",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "klux:botanic_essential_oil_fluid",
+    "Amount": 500
+  },
+  "output": {
+    "item": "klux:filter_core",
+    "count": 1
+  },
+  "maxProgress": 95
+}

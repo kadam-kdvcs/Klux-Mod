@@ -1,0 +1,33 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+    "item": "minecraft:sugar_cane",
+    "count": 1
+  },
+  "mesh": {
+    "tag": "forge:extraction_mesh_basic"
+  },
+  "meshLevel": 1,
+  "fluid": {
+    "FluidName": "klux:botanic_essential_oil_fluid",
+    "Amount": 50
+  },
+  "maxProgress": 50,
+  "outputs": [
+    {
+      "item": "klux:vitamin_dust",
+      "count": 2,
+      "chance": 0.75
+    },
+    {
+      "item": "klux:mineral_powder",
+      "count": 1,
+      "chance": 0.54
+    },
+    {
+      "item": "klux:carbohydrate_powder",
+      "count": 3,
+      "chance": 0.25
+    }
+  ]
+}

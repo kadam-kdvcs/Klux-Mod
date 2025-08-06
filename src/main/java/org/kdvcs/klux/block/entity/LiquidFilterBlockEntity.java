@@ -29,7 +29,6 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.kdvcs.klux.block.custom.ExtractorBlock;
 import org.kdvcs.klux.block.custom.LiquidFilterBlock;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.networking.ModMessages;
@@ -212,17 +211,15 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, LiquidFilterBlockEntity pEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, LiquidFilterBlockEntity pEntity) {             //TODO
+        if (level.isClientSide()) return;
 
-        boolean wasWorking = state.getValue(ExtractorBlock.WORKING);
-
-        if(level.isClientSide()) {
-            return;
-        }
+        boolean wasWorking = state.getValue(LiquidFilterBlock.WORKING);
+        boolean isWorkingNow = false;
 
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i).copy());
         }
 
         Optional<LiquidFilterRecipe> recipeOpt = level.getRecipeManager()
@@ -230,21 +227,23 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
                 .filter(recipe -> recipe.matches(inventory, level, pEntity.getFluidStack()))
                 .findFirst();
 
-        if(recipeOpt.isPresent()) {
+        if (recipeOpt.isPresent()) {
             LiquidFilterRecipe recipe = recipeOpt.get();
+            List<ItemStack> outputs = LiquidFilterHandler.getFilteredOutputs(recipe, inventory.getItem(2));
 
-            if(recipe.matches(inventory, level, pEntity.getFluidStack())) {
+            boolean canWork = canInsertAllOutputs(pEntity.itemHandler, outputs);
 
-                ItemStack result = recipe.getResultItem(level.registryAccess());
-                boolean canInsert = canInsertResultItemIntoOutputSlots(inventory, result);
+            boolean outputFull = isOutputSlotsFull(pEntity);
 
-                if (!canInsert) {
-                    pEntity.resetProgress();
-                    setChanged(level, pos, state);
-                    return;
+            if (canWork && !outputFull) {
+                isWorkingNow = true;
+
+                if (pEntity.progress == 0) {
+                    pEntity.maxProgress = recipe.getMaxProgress();
                 }
 
-                //  PLAY SOUNDS
+                pEntity.progress++;
+
                 if (level instanceof ServerLevel serverLevel) {
                     long gameTime = level.getGameTime();
                     if (pEntity.lastSoundTime == -1 || gameTime - pEntity.lastSoundTime >= 22) {
@@ -260,32 +259,42 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
                     }
                 }
 
-                pEntity.maxProgress = recipe.getMaxProgress();
-                pEntity.progress++;
-
-                setChanged(level, pos, state);
-
-                if(pEntity.progress >= pEntity.maxProgress) {
+                if (pEntity.progress >= pEntity.maxProgress) {
                     craftItem(pEntity);
+                    pEntity.resetProgress();
                 }
             } else {
                 pEntity.resetProgress();
-                setChanged(level, pos, state);
+                isWorkingNow = false;
             }
         } else {
             pEntity.resetProgress();
-            setChanged(level, pos, state);
+            isWorkingNow = false;
         }
 
-        if(hasFluidItemInSourceSlot(pEntity)) {
+        if (hasFluidItemInSourceSlot(pEntity)) {
             transferItemFluidToFluidTank(pEntity);
         }
 
-        boolean isWorkingNow = hasRecipe(pEntity);
         if (wasWorking != isWorkingNow) {
             level.setBlock(pos, state.setValue(LiquidFilterBlock.WORKING, isWorkingNow), 3);
+            setChanged(level, pos, state);
+        } else {
+
+            setChanged(level, pos, state);
         }
     }
+
+    private static boolean isOutputSlotsFull(LiquidFilterBlockEntity pEntity) {
+        for (int slot = 3; slot <= 6; slot++) {
+            ItemStack stack = pEntity.itemHandler.getStackInSlot(slot);
+            if (stack.isEmpty() || stack.getCount() < stack.getMaxStackSize()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     private static void transferItemFluidToFluidTank(LiquidFilterBlockEntity pEntity) {
         pEntity.itemHandler.getStackInSlot(0).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(handler -> {
@@ -345,7 +354,7 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
         Level level = pEntity.level;
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i).copy());
         }
 
         Optional<LiquidFilterRecipe> recipeOpt = level.getRecipeManager()
@@ -366,22 +375,32 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
             pEntity.itemHandler.extractItem(1, recipe.ingredient.count, false);
 
             for (ItemStack output : outputs) {
-                for (int slot = 3; slot <= 6; slot++) {
+                int remaining = output.getCount();
+
+                for (int slot = 3; slot <= 6 && remaining > 0; slot++) {
                     ItemStack current = pEntity.itemHandler.getStackInSlot(slot);
+
                     if (current.isEmpty()) {
-                        pEntity.itemHandler.setStackInSlot(slot, output.copy());
-                        break;
-                    } else if (ItemStack.isSameItemSameTags(current, output) &&
-                            current.getCount() + output.getCount() <= current.getMaxStackSize()) {
-                        current.grow(output.getCount());
-                        pEntity.itemHandler.setStackInSlot(slot, current);
-                        break;
+                        int toInsert = Math.min(remaining, output.getMaxStackSize());
+                        ItemStack insertStack = output.copy();
+                        insertStack.setCount(toInsert);
+                        pEntity.itemHandler.setStackInSlot(slot, insertStack);
+                        remaining -= toInsert;
+                    } else if (ItemStack.isSameItemSameTags(current, output)) {
+                        int freeSpace = current.getMaxStackSize() - current.getCount();
+                        if (freeSpace > 0) {
+                            int toInsert = Math.min(remaining, freeSpace);
+                            current.grow(toInsert);
+                            pEntity.itemHandler.setStackInSlot(slot, current);
+                            remaining -= toInsert;
+                        }
                     }
                 }
 
+                if (remaining > 0) {
+                    System.err.println("craftItem: 空间不足，放不下全部产物！");
+                }
             }
-
-            pEntity.resetProgress();
         }
     }
 
@@ -440,17 +459,26 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
         return recipe.get().getFluid().equals(entity.FLUID_TANK.getFluid());
     }
 
-    private static boolean canInsertResultItemIntoOutputSlots(SimpleContainer inventory, ItemStack result) {
-        for (int i = 3; i <= 6; i++) {
-            ItemStack current = inventory.getItem(i);
-            if (current.isEmpty()) {
-                return true;
-            } else if (ItemStack.isSameItemSameTags(current, result)
-                    && current.getCount() + result.getCount() <= current.getMaxStackSize()) {
-                return true;
+    private static boolean canInsertAllOutputs(ItemStackHandler itemHandler, List<ItemStack> outputs) {
+        for (ItemStack output : outputs) {
+            int remaining = output.getCount();
+
+            for (int slot = 3; slot <= 6 && remaining > 0; slot++) {
+                ItemStack current = itemHandler.getStackInSlot(slot);
+
+                if (current.isEmpty()) {
+                    int maxInsert = output.getMaxStackSize();
+                    remaining -= maxInsert;
+                } else if (ItemStack.isSameItemSameTags(current, output)) {
+                    int freeSpace = current.getMaxStackSize() - current.getCount();
+                    remaining -= freeSpace;
+                }
             }
+
+            if (remaining > 0) return false;
         }
-        return false;
+        return true;
     }
+
 
 }

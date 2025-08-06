@@ -1,0 +1,38 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+    "item": "minecraft:crying_obsidian",
+    "count": 1
+  },
+  "mesh": {
+    "tag": "forge:extraction_mesh_advanced"
+  },
+  "meshLevel": 2,
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 100
+  },
+  "maxProgress": 110,
+  "outputs": [
+    {
+      "item": "minecraft:amethyst_shard",
+      "count": 2,
+      "chance": 0.32
+    },
+    {
+      "item": "klux:earth_crystal",
+      "count": 3,
+      "chance": 0.3
+    },
+    {
+      "item": "klux:fire_quartz",
+      "count": 2,
+      "chance": 0.16
+    },
+    {
+      "item": "klux:endergon_crystal",
+      "count": 1,
+      "chance": 0.01
+    }
+  ]
+}

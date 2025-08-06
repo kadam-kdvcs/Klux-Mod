@@ -20,6 +20,11 @@ import java.util.Optional;
 public class LiquidFilterScreen extends AbstractContainerScreen<LiquidFilterMenu> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Klux.MODID,"textures/gui/gui_liquid_filter.png");
+    private static final ResourceLocation ERROR_ICON =
+            new ResourceLocation(Klux.MODID, "textures/gui/error.png");
+    private static final ResourceLocation WARNING_ICON =
+            new ResourceLocation(Klux.MODID, "textures/gui/warning.png");
+
 
     private FluidTankRenderer renderer;
 
@@ -45,7 +50,6 @@ public class LiquidFilterScreen extends AbstractContainerScreen<LiquidFilterMenu
         renderer = new FluidTankRenderer(64000, true, 43, 61);
     }
 
-
     @Override
     protected void renderLabels(GuiGraphics p_281635_, int p_282681_, int p_283686_) {
         p_281635_.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0x2A241E, false);
@@ -54,6 +58,7 @@ public class LiquidFilterScreen extends AbstractContainerScreen<LiquidFilterMenu
         int y = (height - imageHeight) / 2;
 
         renderFluidAreaTooltips(p_281635_, p_282681_, p_283686_, x, y);
+
     }
 
     private void renderFluidAreaTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
@@ -81,6 +86,7 @@ public class LiquidFilterScreen extends AbstractContainerScreen<LiquidFilterMenu
 
         renderProgressArrow(guiGraphics, x, y);
         renderer.render(guiGraphics.pose(), x + 52, y + 17, menu.getFluidStack());
+
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {

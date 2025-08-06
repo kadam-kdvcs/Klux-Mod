@@ -12,6 +12,7 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.items.SlotItemHandler;
 import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.block.entity.LiquidFilterBlockEntity;
+import org.kdvcs.klux.util.ModTags;
 
 public class LiquidFilterMenu extends AbstractContainerMenu {
     public final LiquidFilterBlockEntity blockEntity;
@@ -41,7 +42,20 @@ public class LiquidFilterMenu extends AbstractContainerMenu {
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 12, 38));
             this.addSlot(new SlotItemHandler(handler, 1, 12, 56));  //INPUT
-            this.addSlot(new SlotItemHandler(handler, 2, 12, 20));
+
+            this.addSlot(new SlotItemHandler(handler, 2, 12, 20) {
+                @Override
+                public int getMaxStackSize(ItemStack stack) {
+                    return 1;
+                }
+
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return stack.is(ModTags.Items.EXTRACTION_MESH_BASIC) || stack.is(ModTags.Items.EXTRACTION_MESH_ADVANCED)
+                            || stack.is(ModTags.Items.EXTRACTION_MESH_ULTIMATE);
+                }
+            });
+
 
             addSlot(new SlotItemHandler(handler, 3, 130, 29));
             addSlot(new SlotItemHandler(handler, 4, 148, 29));
@@ -50,6 +64,7 @@ public class LiquidFilterMenu extends AbstractContainerMenu {
         });
 
         addDataSlots(data);
+
     }
 
     public boolean isCrafting() {
@@ -134,4 +149,5 @@ public class LiquidFilterMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 146));
         }
     }
+
 }

@@ -1,0 +1,33 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+      "item": "minecraft:bone",
+      "count": 1
+  },
+  "mesh": {
+    "tag": "forge:extraction_mesh_basic"
+  },
+  "meshLevel": 1,
+  "fluid": {
+    "FluidName": "klux:primal_essence_fluid",
+    "Amount": 25
+  },
+  "maxProgress": 80,
+  "outputs": [
+    {
+      "item": "minecraft:bone_meal",
+      "count": 6,
+      "chance": 0.4
+    },
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 2,
+      "chance": 0.3
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 1,
+      "chance": 0.15
+    }
+  ]
+}

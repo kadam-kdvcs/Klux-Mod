@@ -200,5 +200,6 @@
   "item.klux.precision_substrate": "精密基材",
   "item.klux.solv_shell": "强化离聚壳板",
   "item.klux.dissolvent_bearing": "溶析轴承",
-  "item.klux.filter_core": "滤芯"
+  "item.klux.filter_core": "滤芯",
+  "tooltip.klux.output_full_warning": "问题：输出的空间不足！"
 }

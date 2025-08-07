@@ -389,6 +389,17 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
     }
 
     private static void craftItem(FluxSynthesizerBlockEntity pEntity, FluxSynthesizerRecipe recipe) {
+        FluidStack resultFluid = recipe.getResultFluid();
+        FluidStack currentFluid = pEntity.OUTPUT_FLUID_TANK.getFluid();
+
+        boolean canFill = currentFluid.isEmpty()
+                || (currentFluid.getFluid() == resultFluid.getFluid()
+                && currentFluid.getAmount() + resultFluid.getAmount() <= pEntity.OUTPUT_FLUID_TANK.getCapacity());
+
+        if (!canFill) {
+            pEntity.resetProgress();
+            return;
+        }
 
         ItemStack output = recipe.getResultItem(null);
         ItemStack currentOutput = pEntity.itemHandler.getStackInSlot(3);
@@ -400,15 +411,13 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
         }
 
         pEntity.FLUID_TANK.drain(recipe.getFluid().getAmount(), IFluidHandler.FluidAction.EXECUTE);
-
-        pEntity.OUTPUT_FLUID_TANK.fill(recipe.getResultFluid(), IFluidHandler.FluidAction.EXECUTE);
-
+        pEntity.OUTPUT_FLUID_TANK.fill(resultFluid, IFluidHandler.FluidAction.EXECUTE);
         pEntity.itemHandler.extractItem(1, recipe.ingredient1.count, false);
         pEntity.itemHandler.extractItem(2, recipe.ingredient2.count, false);
 
         if (currentOutput.isEmpty()) {
             pEntity.itemHandler.setStackInSlot(3, output.copy());
-        } else if (currentOutput.getItem() == output.getItem()) {
+        } else {
             currentOutput.grow(output.getCount());
             pEntity.itemHandler.setStackInSlot(3, currentOutput);
         }
@@ -436,8 +445,17 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
 
         FluxSynthesizerRecipe recipe = recipeOpt.get();
 
-        ItemStack output = recipe.getResultItem(null);
-        return canInsertOutput(inventory, output);
+        ItemStack outputItem = recipe.getResultItem(null);
+        boolean canInsertItem = canInsertOutput(inventory, outputItem);
+
+        FluidStack resultFluid = recipe.getResultFluid();
+        FluidStack currentFluid = entity.OUTPUT_FLUID_TANK.getFluid();
+
+        boolean canInsertFluid = currentFluid.isEmpty()
+                || (currentFluid.getFluid() == resultFluid.getFluid()
+                && currentFluid.getAmount() + resultFluid.getAmount() <= entity.OUTPUT_FLUID_TANK.getCapacity());
+
+        return canInsertItem && canInsertFluid;
     }
 
     private static boolean hasCorrectFluidAmountInTank(FluxSynthesizerBlockEntity entity, Optional<FluxSynthesizerRecipe> recipe) {

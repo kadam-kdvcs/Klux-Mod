@@ -6,7 +6,7 @@
       "item": "klux:furnace_core"
     },
     "A": {
-      "item": "klux:aromatic_powder"
+      "tag": "forge:aromapowders"
     },
     "B": {
       "item": "klux:redstone_resonator"

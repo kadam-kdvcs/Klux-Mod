@@ -37,6 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.EARTH_CRYSTAL.get());
                         output.accept(ModItems.FIRE_QUARTZ.get());
                         output.accept(ModItems.ENDERGON_CRYSTAL.get());
+                        output.accept(ModItems.CHARGED_ENDERGON_CRYSTAL.get());
 
                         output.accept(ModBlocks.EARTH_CRYSTAL_BLOCK.get());
 
@@ -69,14 +70,24 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.HAY_BALL.get());
                         output.accept(ModItems.LEATHER_PASTE.get());
+
+                        //FIBERS
                         output.accept(ModItems.SPIDER_SILK_FIBER.get());
+                        output.accept(ModItems.PROTEIN_FIBER.get());
+
                         output.accept(ModItems.SOFT_ARMOR_CLOTH.get());
                         output.accept(ModItems.CARBOHYDRATE_POWDER.get());
                         output.accept(ModItems.MINERAL_POWDER.get());
                         output.accept(ModItems.PROTEIN_CONCENTRATE.get());
                         output.accept(ModItems.VITAMIN_DUST.get());
                         output.accept(ModItems.UNIVERSAL_FEED.get());
+
+                        //AROMA FAMILY
                         output.accept(ModItems.AROMATIC_POWDER.get());
+                        output.accept(ModItems.HERBAL_ACTIVE_POWDER.get());
+                        output.accept(ModItems.WOODY_ESSENCE_POWDER.get());
+                        output.accept(ModItems.WILDFLOWER_POLLEN_POWDER.get());
+
                         output.accept(ModItems.BOTANICAL_RESIN_BEAD.get());
                         output.accept(ModItems.ADHESIVE_PASTE.get());
                         output.accept(ModItems.PRESSING_ROD_ASSEMBLY.get());
@@ -91,6 +102,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AROMATIC_DUST.get());
                         output.accept(ModItems.PECTI_BOND.get());
                         output.accept(ModItems.AROMATIC_INGOT.get());
+                        output.accept(ModItems.WROUGHT_IRON_INGOT.get());
+                        output.accept(ModItems.WROUGHT_IRON_GEAR.get());
+                        output.accept(ModItems.SLAG_LUMP.get());
 
                         //LIQUID BUCKETS
                         output.accept(ModItems.AROMATIC_BUCKET.get());
@@ -99,6 +113,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PRIMAL_ESSENCE_BUCKET.get());
                         output.accept(ModItems.ENZYME_SOLUTION_BUCKET.get());
                         output.accept(ModItems.BOTANIC_ESSENTIAL_OIL_BUCKET.get());
+                        output.accept(ModItems.MINERAL_SLURRY_BUCKET.get());
+                        output.accept(ModItems.REPAIR_BUCKET.get());
 
                         output.accept(ModItems.REDSTONE_RESONATOR.get());
                         output.accept(ModItems.AROMATIC_RESONATOR.get());
@@ -117,6 +133,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.REINFORCED_AROMATIC_CRYSTAL_GEAR.get());
 
                         output.accept(ModItems.FLUX_CORE.get());
+                        output.accept(ModItems.SCORIA_POWDER.get());
+                        output.accept(ModItems.MOLTEN_CORE.get());
+                        output.accept(ModItems.ANCIENT_COINS.get());
+                        output.accept(ModItems.REDSTONE_CRYSTAL_CORE.get());
+                        output.accept(ModItems.RAW_SILICON.get());
+                        output.accept(ModItems.SILICON_BOULE.get());
 
                         output.accept(ModItems.SEALED_TANK.get());
                         output.accept(ModItems.TRIPLE_SEALED_TANK.get());
@@ -144,6 +166,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.FLUX_SYNTHESIZER.get());
                         output.accept(ModBlocks.LIQUID_REACTOR.get());
+                        output.accept(ModBlocks.UNIVERSAL_REPAIRER.get());
                         output.accept(ModBlocks.LIQUID_FILTER.get());
                         output.accept(ModBlocks.FIRE_QUARTZ_FRAME.get());
 
@@ -220,6 +243,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.SOUND_BLOCK.get());
                         output.accept(ModItems.RUMBLE_MUSIC_DISC.get());
+                        output.accept(ModItems.BIG_MUSIC_MUSIC_DISC.get());
 
                     })
                     .build());

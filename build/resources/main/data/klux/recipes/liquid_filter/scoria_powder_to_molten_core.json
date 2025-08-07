@@ -1,0 +1,24 @@
+{
+  "type": "klux:liquid_filter",
+  "ingredient": {
+    "item": "klux:scoria_powder",
+    "count": 4
+  },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 500
+  },
+  "maxProgress": 170,
+  "outputs": [
+    {
+      "item": "klux:molten_core",
+      "count": 1,
+      "chance": 1.0
+    },
+    {
+      "item": "minecraft:gunpowder",
+      "count": 1,
+      "chance": 0.54
+    }
+  ]
+}

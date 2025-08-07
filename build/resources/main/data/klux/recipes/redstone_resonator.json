@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:redstone"
-    },
-    "A": {
       "item": "minecraft:gold_ingot"
     },
+    "A": {
+      "item": "klux:silicon_boule"
+    },
     "B": {
-      "item": "minecraft:lapis_lazuli"
+      "item": "klux:redstone_crystal_core"
     }
   },
   "pattern": [

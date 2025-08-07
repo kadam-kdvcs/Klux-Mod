@@ -30,14 +30,24 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     }
 
-    public static final TagKey<Item> FORGE_ORES = TagKey.create(Registries.ITEM, new ResourceLocation("forge","ores"));
-    public static final TagKey<Item> FORGE_SEEDS = TagKey.create(Registries.ITEM, new ResourceLocation("forge", "seeds"));
-    public static final TagKey<Item> FORGE_RAWMEATS = TagKey.create(Registries.ITEM, new ResourceLocation("forge", "rawmeats"));
-    public static final TagKey<Item> FORGE_GEMS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","gems"));
-    public static final TagKey<Item> FORGE_INGOTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","ingots"));
-    public static final TagKey<Item> FORGE_DUSTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","dusts"));
-    public static final TagKey<Item> FORGE_PUTRESCENT = TagKey.create(Registries.ITEM, new ResourceLocation("forge","putrescent"));
-    public static final TagKey<Item> FORGE_FRUITS = TagKey.create(Registries.ITEM, new ResourceLocation("forge","fruits"));
+    private static TagKey<Item> forgeTag(String name) {
+        return TagKey.create(Registries.ITEM, new ResourceLocation("forge", name));
+    }
+
+    public static final TagKey<Item> FORGE_ORES = forgeTag("ores");
+    public static final TagKey<Item> FORGE_SEEDS = forgeTag("seeds");
+    public static final TagKey<Item> FORGE_RAWMEATS = forgeTag("rawmeats");
+    public static final TagKey<Item> FORGE_GEMS = forgeTag("gems");
+    public static final TagKey<Item> FORGE_INGOTS = forgeTag("ingots");
+    public static final TagKey<Item> FORGE_DUSTS = forgeTag("dusts");
+    public static final TagKey<Item> FORGE_PUTRESCENT = forgeTag("putrescent");
+    public static final TagKey<Item> FORGE_FRUITS = forgeTag("fruits");
+    public static final TagKey<Item> FORGE_SILICON = forgeTag("silicon");
+    public static final TagKey<Item> FORGE_ORGANIC_FIBERS = forgeTag("organic_fibers");
+    public static final TagKey<Item> FORGE_AROMA_POWDERS = forgeTag("aromapowders");
+
+    //FLOWER FAMILY
+    public static final TagKey<Item> FORGE_FLOWERS = forgeTag("flowers");
 
     public static final TagKey<Item> FORGE_EXTRACTION_MESHES =
             TagKey.create(Registries.ITEM, new ResourceLocation("forge","extraction_meshes"));
@@ -97,23 +107,100 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.FIRE_QUARTZ.get())
                 .add(ModItems.ENDERGON_CRYSTAL.get());
 
+        this.tag(FORGE_ORGANIC_FIBERS)
+                .add(ModItems.SPIDER_SILK_FIBER.get())
+                .add(ModItems.PROTEIN_FIBER.get());
+
+        this.tag(FORGE_SILICON)
+                .replace(false)
+                .add(ModItems.SILICON_BOULE.get());
+
         this.tag(FORGE_PUTRESCENT)
                 .replace(false)
                 .add(Items.SPIDER_EYE)
                 .add(Items.FERMENTED_SPIDER_EYE)
                 .add(Items.ROTTEN_FLESH);
 
+        //FLOWER FAMILY
+        this.tag(FORGE_FLOWERS)
+                .replace(false)
+                .addTag(ModTags.Items.ESSENCE_FLOWERS)
+                .addTag(ModTags.Items.HERBAL_FLOWERS)
+                .addTag(ModTags.Items.WOODY_FLOWERS)
+                .addTag(ModTags.Items.WILD_FLOWERS);
+
+        this.tag(ModTags.Items.ESSENCE_FLOWERS)
+                .add(Items.BLUE_ORCHID)
+                .add(Items.ALLIUM)
+                .add(Items.CORNFLOWER)
+                .add(Items.PITCHER_PLANT)
+                .add(Items.PINK_PETALS);
+
+        this.tag(ModTags.Items.HERBAL_FLOWERS)
+                .add(Items.DANDELION)
+                .add(Items.AZURE_BLUET)
+                .add(Items.LILY_OF_THE_VALLEY)
+                .add(Items.OXEYE_DAISY)
+                .add(Items.POPPY)
+                .add(Items.FLOWERING_AZALEA_LEAVES)
+                .add(Items.FLOWERING_AZALEA);
+
+        this.tag(ModTags.Items.WOODY_FLOWERS)
+                .add(Items.LILAC)
+                .add(Items.PEONY)
+                .add(Items.ROSE_BUSH)
+                .add(Items.CHERRY_LEAVES)
+                .add(Items.MANGROVE_PROPAGULE)
+                .add(Items.SUNFLOWER);
+
+        this.tag(ModTags.Items.WILD_FLOWERS)
+                .add(Items.RED_TULIP)
+                .add(Items.WHITE_TULIP)
+                .add(Items.ORANGE_TULIP)
+                .add(Items.PINK_TULIP)
+                .add(Items.TORCHFLOWER);    //TODO: How about wither rose?
+
+        //INGOTS
         this.tag(FORGE_INGOTS)
                 .replace(false)
-                .add(ModItems.AROMATIC_INGOT.get());
+                .addTag(ModTags.Items.AROMATIC)
+                .addTag(ModTags.Items.WROUGHT_IRON);
 
+        this.tag(ModTags.Items.AROMATIC)
+                .add(ModItems.AROMATIC_INGOT.get());
+        this.tag(ModTags.Items.WROUGHT_IRON)
+                .add(ModItems.WROUGHT_IRON_INGOT.get());
+
+        //AROMA FAMILY
+        this.tag(FORGE_AROMA_POWDERS)
+                .replace(false)
+                .addTag(ModTags.Items.POWDER_AROMATIC)
+                .addTag(ModTags.Items.POWDER_HERBAL)
+                .addTag(ModTags.Items.POWDER_WOODY)
+                .addTag(ModTags.Items.POWDER_WILDFLOWER);
+
+        this.tag(ModTags.Items.POWDER_AROMATIC)
+                .add(ModItems.AROMATIC_POWDER.get());
+        this.tag(ModTags.Items.POWDER_HERBAL)
+                .add(ModItems.HERBAL_ACTIVE_POWDER.get());
+        this.tag(ModTags.Items.POWDER_WOODY)
+                .add(ModItems.WOODY_ESSENCE_POWDER.get());
+        this.tag(ModTags.Items.POWDER_WILDFLOWER)
+                .add(ModItems.WILDFLOWER_POLLEN_POWDER.get());
+
+        //DUSTS
         this.tag(FORGE_DUSTS)
                 .replace(false)
+                .addTag(ModTags.Items.DUST_AROMATIC);
+
+        this.tag(ModTags.Items.DUST_AROMATIC)
                 .add(ModItems.AROMATIC_DUST.get());
 
+        //MUSIC DISC
         this.tag(ItemTags.MUSIC_DISCS)
                 .replace(false)
-                .add(ModItems.RUMBLE_MUSIC_DISC.get());
+                .add(ModItems.RUMBLE_MUSIC_DISC.get(),
+                        ModItems.BIG_MUSIC_MUSIC_DISC.get());
 
         //VANILLA TOOLS
         this.tag(ItemTags.PICKAXES)

@@ -15,6 +15,8 @@ import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.recipe.*;
 import org.kdvcs.klux.screen.*;
+import org.kdvcs.klux.util.ModBrewingRecipe;
+import org.kdvcs.klux.util.ModBrewingRecipeRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +45,10 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipeCategories(new LiquidReactorCategory(registration.getJeiHelpers().getGuiHelper()));
 
         registration.addRecipeCategories(new LiquidFilterCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new UniversalRepairerCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new ModBrewingCategory(registration.getJeiHelpers().getGuiHelper()));
+
     }
 
     @Override
@@ -62,6 +68,9 @@ public class JEIKluxPlugin implements IModPlugin {
         List<LiquidReactorRecipe> liquidReactorRecipes = recipeManager.getAllRecipesFor(LiquidReactorRecipe.Type.INSTANCE);
         List<LiquidFilterRecipe> liquidFilterRecipes = recipeManager.getAllRecipesFor(LiquidFilterRecipe.Type.INSTANCE);
 
+        List<UniversalRepairerRecipe> universalRepairerRecipes = recipeManager.getAllRecipesFor(UniversalRepairerRecipe.Type.INSTANCE);
+        List<ModBrewingRecipe> modBrewingRecipes = ModBrewingRecipeRegistry.getAll();
+
         //  HERE'S LIST OF ADDED FUELS
         List<FuelRecipe> fuelRecipes = new ArrayList<>();
         fuelRecipes.add(new FuelRecipe(new ItemStack(Items.COAL), 400));
@@ -78,6 +87,10 @@ public class JEIKluxPlugin implements IModPlugin {
 
         registration.addRecipes(LiquidReactorCategory.LIQUID_REACTOR_TYPE, liquidReactorRecipes);
         registration.addRecipes(LiquidFilterCategory.LIQUID_FILTER_TYPE, liquidFilterRecipes);
+
+        registration.addRecipes(UniversalRepairerCategory.UNIVERSAL_REPAIRER_TYPE, universalRepairerRecipes);
+
+        registration.addRecipes(ModBrewingCategory.TYPE, modBrewingRecipes);
     }
 
     @Override
@@ -110,6 +123,8 @@ public class JEIKluxPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(LiquidFilterScreen.class, 99,38,27,17,
                 LiquidFilterCategory.LIQUID_FILTER_TYPE);
+        registration.addRecipeClickArea(UniversalRepairerScreen.class, 149,19,16,16,
+                UniversalRepairerCategory.UNIVERSAL_REPAIRER_TYPE);
     }
 
     @Override
@@ -123,6 +138,8 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.LIQUID_REACTOR.get()), LiquidReactorCategory.LIQUID_REACTOR_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.DEHYDRATOR.get()), DehydratorFuelCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.LIQUID_FILTER.get()), LiquidFilterCategory.LIQUID_FILTER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.UNIVERSAL_REPAIRER.get()), UniversalRepairerCategory.UNIVERSAL_REPAIRER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(Items.BREWING_STAND), ModBrewingCategory.TYPE);
     }
 
 }

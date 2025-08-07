@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "klux:mineral_powder",
+    "count": 12
+  },
+  "ingredient2": {
+    "item": "minecraft:clay_ball",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
+  "fluid_output": {
+    "FluidName": "klux:mineral_slurry_fluid",
+    "Amount": 500
+  },
+  "output": {
+    "item": "klux:slag_lump",
+    "count": 4
+  },
+  "maxProgress": 85
+}

@@ -6,7 +6,7 @@
       "item": "minecraft:iron_ingot"
     },
     "A": {
-      "item": "klux:spider_silk_fiber"
+      "tag": "forge:organic_fibers"
     }
   },
   "pattern": [
@@ -15,7 +15,6 @@
     "###"
   ],
   "result": {
-    "count": 2,
     "item": "klux:extraction_mesh"
   },
   "show_notification": true

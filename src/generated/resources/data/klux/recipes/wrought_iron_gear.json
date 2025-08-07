@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:wrought_iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "klux:wrought_iron_gear"
+  },
+  "show_notification": true
+}

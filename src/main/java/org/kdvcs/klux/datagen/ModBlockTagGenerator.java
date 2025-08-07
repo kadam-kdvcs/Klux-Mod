@@ -62,7 +62,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SANDSTONE_CARVED.get(),
                         ModBlocks.DRIED_BRICK_SMOOTH.get(),
                         ModBlocks.DRIED_BRICK.get(),
-                        ModBlocks.LIQUID_FILTER.get());
+                        ModBlocks.LIQUID_FILTER.get(),
+                        ModBlocks.UNIVERSAL_REPAIRER.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.IRON_SAND.get())
@@ -90,7 +91,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.FLUX_SYNTHESIZER.get(),
                         ModBlocks.FIRE_QUARTZ_FRAME.get(),
                         ModBlocks.LIQUID_REACTOR.get(),
-                        ModBlocks.LIQUID_FILTER.get());
+                        ModBlocks.LIQUID_FILTER.get(),
+                        ModBlocks.UNIVERSAL_REPAIRER.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get());

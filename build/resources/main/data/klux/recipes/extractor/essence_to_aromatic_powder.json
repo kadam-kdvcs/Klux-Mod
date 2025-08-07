@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "tag": "forge:flowers/essence",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:aromatic_powder",
+    "count": 2
+  },
+  "maxProgress": 60
+}

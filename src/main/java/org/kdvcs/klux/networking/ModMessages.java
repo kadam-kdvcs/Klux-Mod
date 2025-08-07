@@ -62,6 +62,12 @@ public class ModMessages {
                 .encoder(LiquidFilterSyncS2CPacket::toBytes)
                 .consumerMainThread(LiquidFilterSyncS2CPacket::handle)
                 .add();
+
+        net.messageBuilder(UniversalRepairerSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(UniversalRepairerSyncS2CPacket::new)
+                .encoder(UniversalRepairerSyncS2CPacket::toBytes)
+                .consumerMainThread(UniversalRepairerSyncS2CPacket::handle)
+                .add();
     }
 
     public static <MSG> void sendToServer(MSG message) {

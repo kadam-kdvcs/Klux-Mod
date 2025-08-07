@@ -171,6 +171,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIQUID_FILTER = registerBlock("liquid_filter",
             LiquidFilterBlock::new);
 
+    public static final RegistryObject<Block> UNIVERSAL_REPAIRER = registerBlock("universal_repairer",
+            UniversalRepairerBlock::new);
+
     //AROMATIC BLOCK
     public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",
             () -> new LiquidBlock(ModFluids.SOURCE_AROMATIC, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
@@ -194,6 +197,14 @@ public class ModBlocks {
     //BOTANIC ESSENTIAL OIL BLOCK
     public static final RegistryObject<LiquidBlock> BOTANIC_ESSENTIAL_OIL_BLOCK = BLOCKS.register("botanic_essential_oil_block",
             () -> new LiquidBlock(ModFluids.SOURCE_BOTANIC_ESSENTIAL_OIL, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    //MINERAL SLURRY BLOCK
+    public static final RegistryObject<LiquidBlock> MINERAL_SLURRY_BLOCK = BLOCKS.register("mineral_slurry_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_MINERAL_SLURRY, BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()));
+
+    //REPAIR BLOCK
+    public static final RegistryObject<LiquidBlock> REPAIR_BLOCK = BLOCKS.register("repair_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_REPAIR, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     //PINE LOG
     public static final RegistryObject<Block> PINE_LOG = registerBlock("pine_log",

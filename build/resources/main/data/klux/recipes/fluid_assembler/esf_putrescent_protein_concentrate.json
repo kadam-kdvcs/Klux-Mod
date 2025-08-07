@@ -1,10 +1,10 @@
 {
   "type": "klux:fluid_assembler",
   "ingredient":
-    {
-      "tag": "forge:putrescent",
-      "count": 4
-    },
+  {
+    "tag": "forge:putrescent",
+    "count": 4
+  },
   "fluid": {
     "FluidName": "klux:enzyme_solution_fluid",
     "Amount": 100

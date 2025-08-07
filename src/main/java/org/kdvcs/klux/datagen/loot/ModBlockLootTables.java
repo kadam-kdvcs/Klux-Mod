@@ -44,6 +44,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.FIRE_QUARTZ_FRAME.get());
         this.dropSelf(ModBlocks.LIQUID_REACTOR.get());
         this.dropSelf(ModBlocks.LIQUID_FILTER.get());
+        this.dropSelf(ModBlocks.UNIVERSAL_REPAIRER.get());
 
         this.dropSelf(ModBlocks.IRON_SAND.get());
 

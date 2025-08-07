@@ -41,6 +41,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<LiquidFilterMenu>> LIQUID_FILTER_MENU =
             registerMenuType("liquid_filter_menu", LiquidFilterMenu::new);
 
+    public static final RegistryObject<MenuType<UniversalRepairerMenu>> UNIVERSAL_REPAIRER_MENU =
+            registerMenuType("universal_repairer_menu", UniversalRepairerMenu::new);
+
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }

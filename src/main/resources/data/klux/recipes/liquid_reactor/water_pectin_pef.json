@@ -1,0 +1,16 @@
+{
+  "type": "klux:liquid_reactor",
+  "fluid_input1": {
+    "fluid": "minecraft:water",
+    "amount": 250
+  },
+  "fluid_input2": {
+    "fluid": "klux:pectin_slurry_fluid",
+    "amount": 150
+  },
+  "output_fluid": {
+    "fluid": "klux:primal_essence_fluid",
+    "amount": 400
+  },
+  "max_progress": 75
+}

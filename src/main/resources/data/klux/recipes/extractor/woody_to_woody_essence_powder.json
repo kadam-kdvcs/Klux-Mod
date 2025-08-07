@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "tag": "forge:flowers/woody",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:woody_essence_powder",
+    "count": 2
+  },
+  "maxProgress": 60
+}

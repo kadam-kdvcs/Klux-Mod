@@ -51,6 +51,18 @@ public class ModFluids {
     public static final RegistryObject<FlowingFluid> FLOWING_BOTANIC_ESSENTIAL_OIL = FLUIDS.register("flowing_botanic_essential_oil",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.BOTANIC_ESSENTIAL_OIL_FLUID_PROPERTIES));
 
+    //MINERAL SLURRY
+    public static final RegistryObject<FlowingFluid> SOURCE_MINERAL_SLURRY = FLUIDS.register("mineral_slurry_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.MINERAL_SLURRY_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_MINERAL_SLURRY = FLUIDS.register("flowing_mineral_slurry",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.MINERAL_SLURRY_FLUID_PROPERTIES));
+
+    //REPAIR
+    public static final RegistryObject<FlowingFluid> SOURCE_REPAIR = FLUIDS.register("repair_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.REPAIR_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_REPAIR = FLUIDS.register("flowing_repair",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.REPAIR_FLUID_PROPERTIES));
+
     //PROPERTIES
 
     //AROMATIC
@@ -88,6 +100,18 @@ public class ModFluids {
             ModFluidTypes.BOTANIC_ESSENTIAL_OIL_FLUID_TYPE, SOURCE_BOTANIC_ESSENTIAL_OIL, FLOWING_BOTANIC_ESSENTIAL_OIL)
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.BOTANIC_ESSENTIAL_OIL_BLOCK)
             .bucket(ModItems.BOTANIC_ESSENTIAL_OIL_BUCKET);
+
+    //MINERAL SLURRY
+    public static final ForgeFlowingFluid.Properties MINERAL_SLURRY_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.MINERAL_SLURRY_FLUID_TYPE, SOURCE_MINERAL_SLURRY, FLOWING_MINERAL_SLURRY)
+            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.MINERAL_SLURRY_BLOCK)
+            .bucket(ModItems.MINERAL_SLURRY_BUCKET);
+
+    //REPAIR
+    public static final ForgeFlowingFluid.Properties REPAIR_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.REPAIR_FLUID_TYPE, SOURCE_REPAIR, FLOWING_REPAIR)
+            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.REPAIR_BLOCK)
+            .bucket(ModItems.REPAIR_BUCKET);
 
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);

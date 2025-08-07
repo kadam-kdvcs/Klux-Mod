@@ -14,10 +14,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -30,7 +30,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import org.kdvcs.klux.block.custom.LiquidReactorBlock;
-import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.networking.ModMessages;
 
 import org.kdvcs.klux.networking.packet.LiquidReactorSyncS2CPacket;
@@ -40,9 +39,10 @@ import org.kdvcs.klux.screen.LiquidReactorMenu;
 import org.kdvcs.klux.sound.ModSounds;
 
 import java.util.Map;
-import java.util.Optional;
 
 public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvider {
+
+    public record MatchedRecipe(LiquidReactorRecipe recipe, boolean swapped) {}
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
@@ -282,7 +282,6 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
         }
     }
 
-
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for (int i = 0; i < itemHandler.getSlots(); i++) {
@@ -303,10 +302,9 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
                 pEntity.getInputFluidStack2()
         );
 
-        Optional<LiquidReactorRecipe> recipeOpt = level.getRecipeManager()
-                .getRecipeFor(LiquidReactorRecipe.Type.INSTANCE, fluidInventory, level);
+        MatchedRecipe matched = findMatchingRecipe(level, fluidInventory);
 
-        if (recipeOpt.isPresent() && hasRecipe(pEntity, recipeOpt.get())) {
+        if (matched != null && hasRecipe(pEntity, matched)) {
             if (level instanceof ServerLevel serverLevel) {
                 long gameTime = level.getGameTime();
                 if (pEntity.lastSoundTime == -1 || gameTime - pEntity.lastSoundTime >= 41) {
@@ -322,14 +320,13 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
                 }
             }
 
-            LiquidReactorRecipe recipe = recipeOpt.get();
-            pEntity.maxProgress = recipe.getMaxProgress();
+            pEntity.maxProgress = matched.recipe().getMaxProgress();
             pEntity.progress++;
 
             setChanged(level, pos, state);
 
             if (pEntity.progress >= pEntity.maxProgress) {
-                craftItem(pEntity, recipe);
+                craftItem(pEntity, matched);
             }
         } else {
             pEntity.resetProgress();
@@ -339,14 +336,13 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
         transferItemFluidToFluidTank(pEntity, 0, pEntity.FLUID_TANK_1);
         transferItemFluidToFluidTank(pEntity, 1, pEntity.FLUID_TANK_2);
 
-        boolean isWorkingNow = recipeOpt.isPresent() && hasRecipe(pEntity, recipeOpt.get());
+        boolean isWorkingNow = matched != null && hasRecipe(pEntity, matched);
         if (wasWorking != isWorkingNow) {
             level.setBlock(pos, state.setValue(LiquidReactorBlock.WORKING, isWorkingNow), 3);
         }
 
         transferOutputFluidToContainer(pEntity);
     }
-
 
     private static void transferItemFluidToFluidTank(LiquidReactorBlockEntity pEntity, int slot, FluidTank tank) {
         ItemStack stack = pEntity.itemHandler.getStackInSlot(slot);
@@ -392,11 +388,28 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
         this.progress = 0;
     }
 
-    private static void craftItem(LiquidReactorBlockEntity pEntity, LiquidReactorRecipe recipe) {
-        pEntity.FLUID_TANK_1.drain(recipe.getFluidInput1Amount(), IFluidHandler.FluidAction.EXECUTE);
-        pEntity.FLUID_TANK_2.drain(recipe.getFluidInput2Amount(), IFluidHandler.FluidAction.EXECUTE);
+    private static void craftItem(LiquidReactorBlockEntity pEntity, MatchedRecipe matched) {
+        LiquidReactorRecipe recipe = matched.recipe();
+        boolean swapped = matched.swapped();
 
-        pEntity.OUTPUT_FLUID_TANK.fill(recipe.getOutputFluid(), IFluidHandler.FluidAction.EXECUTE);
+        FluidTank tank1 = pEntity.FLUID_TANK_1;
+        FluidTank tank2 = pEntity.FLUID_TANK_2;
+        FluidTank outputTank = pEntity.OUTPUT_FLUID_TANK;
+
+        FluidStack recipeOutput = recipe.getOutputFluid();
+        FluidStack currentOutput = outputTank.getFluid();
+
+        if (!currentOutput.isEmpty() && !currentOutput.getFluid().isSame(recipeOutput.getFluid())) {
+            return;
+        }
+
+        int drain1 = swapped ? recipe.getFluidInput2Amount() : recipe.getFluidInput1Amount();
+        int drain2 = swapped ? recipe.getFluidInput1Amount() : recipe.getFluidInput2Amount();
+
+        tank1.drain(drain1, IFluidHandler.FluidAction.EXECUTE);
+        tank2.drain(drain2, IFluidHandler.FluidAction.EXECUTE);
+
+        outputTank.fill(recipeOutput, IFluidHandler.FluidAction.EXECUTE);
 
         ItemStack outputItem = recipe.getResultItem(pEntity.level.registryAccess());
         if (!outputItem.isEmpty()) {
@@ -406,10 +419,52 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
         pEntity.resetProgress();
     }
 
-    private static boolean hasRecipe(LiquidReactorBlockEntity entity, LiquidReactorRecipe recipe) {
-        if (entity.FLUID_TANK_1.getFluidAmount() < recipe.getFluidInput1Amount()) return false;
-        if (entity.FLUID_TANK_2.getFluidAmount() < recipe.getFluidInput2Amount()) return false;
-        if (entity.OUTPUT_FLUID_TANK.getSpace() < recipe.getOutputFluid().getAmount()) return false;
+    private static @Nullable MatchedRecipe findMatchingRecipe(Level level, LiquidReactorFluidInventory inv) {
+        for (Recipe<?> raw : level.getRecipeManager().getAllRecipesFor(LiquidReactorRecipe.Type.INSTANCE)) {
+            if (raw instanceof LiquidReactorRecipe recipe) {
+                FluidStack in1 = inv.getInput1();
+                FluidStack in2 = inv.getInput2();
+
+                if (in1.getFluid().isSame(recipe.getFluidInput1()) &&
+                        in2.getFluid().isSame(recipe.getFluidInput2()) &&
+                        in1.getAmount() >= recipe.getFluidInput1Amount() &&
+                        in2.getAmount() >= recipe.getFluidInput2Amount()) {
+                    return new MatchedRecipe(recipe, false);
+                }
+
+                if (in1.getFluid().isSame(recipe.getFluidInput2()) &&
+                        in2.getFluid().isSame(recipe.getFluidInput1()) &&
+                        in1.getAmount() >= recipe.getFluidInput2Amount() &&
+                        in2.getAmount() >= recipe.getFluidInput1Amount()) {
+                    return new MatchedRecipe(recipe, true);
+                }
+            }
+        }
+        return null;
+    }
+
+    private static boolean hasRecipe(LiquidReactorBlockEntity entity, MatchedRecipe matched) {
+        LiquidReactorRecipe recipe = matched.recipe();
+        boolean swapped = matched.swapped();
+
+        FluidTank tank1 = entity.FLUID_TANK_1;
+        FluidTank tank2 = entity.FLUID_TANK_2;
+        FluidTank outputTank = entity.OUTPUT_FLUID_TANK;
+
+        int required1 = swapped ? recipe.getFluidInput2Amount() : recipe.getFluidInput1Amount();
+        int required2 = swapped ? recipe.getFluidInput1Amount() : recipe.getFluidInput2Amount();
+
+        if (tank1.getFluidAmount() < required1) return false;
+        if (tank2.getFluidAmount() < required2) return false;
+        if (outputTank.getSpace() < recipe.getOutputFluid().getAmount()) return false;
+
+        FluidStack currentOutput = outputTank.getFluid();
+        FluidStack recipeOutput = recipe.getOutputFluid();
+
+        if (!currentOutput.isEmpty() && !currentOutput.getFluid().isSame(recipeOutput.getFluid())) {
+            return false;
+        }
+
         return true;
     }
 

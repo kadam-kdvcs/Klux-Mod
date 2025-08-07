@@ -1,0 +1,15 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "tag": "forge:organic_fibers",
+      "count": 2
+    },
+    { "item": "klux:leather_paste" }
+  ],
+  "output": {
+    "item": "klux:soft_armor_cloth",
+    "count": 1
+  },
+  "maxProgress": 160
+}

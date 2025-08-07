@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "tag": "forge:flowers/wild",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:wildflower_pollen_powder",
+    "count": 2
+  },
+  "maxProgress": 60
+}

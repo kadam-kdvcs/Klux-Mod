@@ -57,6 +57,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(LiquidFilterBlockEntity::new,
                             ModBlocks.LIQUID_FILTER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<UniversalRepairerBlockEntity>> UNIVERSAL_REPAIRER_BE =
+            BLOCK_ENTITIES.register("universal_repairer_be", () ->
+                    BlockEntityType.Builder.of(UniversalRepairerBlockEntity::new,
+                            ModBlocks.UNIVERSAL_REPAIRER.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

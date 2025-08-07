@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_redstone": {
+    "has_redstone_resonator": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:redstone"
+              "klux:redstone_resonator"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_redstone",
+      "has_redstone_resonator",
       "has_the_recipe"
     ]
   ],

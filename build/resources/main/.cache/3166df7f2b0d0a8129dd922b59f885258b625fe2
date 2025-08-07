@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-05T20:32:38.0734672	Tags for minecraft:block mod id klux
+// 1.20.1	2025-08-07T14:41:34.2792629	Tags for minecraft:block mod id klux
 b01cc1e74db759fd6f3a427005e1717e8bd5560e data/forge/tags/blocks/needs_netherite_tool.json
 5281853b938dfc648a0521755c4c37d8382f830c data/forge/tags/blocks/ores.json
 d7f28735f83dbeea93c5ce6b2527d95c1c92a7d2 data/forge/tags/blocks/ores/earth_crystal.json
@@ -7,9 +7,9 @@ b01cc1e74db759fd6f3a427005e1717e8bd5560e data/forge/tags/blocks/ores/endergon_cr
 e7f78e7624201d675ffd7bad9b21e276d25c2c60 data/minecraft/tags/blocks/fences.json
 e232ada757d3eced70484968dde5edaa09fa287a data/minecraft/tags/blocks/fence_gates.json
 1569cf56870abddc0eae07b97492aec11b527b01 data/minecraft/tags/blocks/logs_that_burn.json
-882457c8bc561124028e19558f114accfe7ffe5b data/minecraft/tags/blocks/mineable/pickaxe.json
+fc057f013bfad1310d4f90a6f852804f9113d32c data/minecraft/tags/blocks/mineable/pickaxe.json
 a63fa9be28f46b52e5255b518927e1f27c757f0c data/minecraft/tags/blocks/mineable/shovel.json
-9dd90b1ace0107097a5768f238ce55e24e9eddd3 data/minecraft/tags/blocks/needs_diamond_tool.json
+161b534b14482de741ed8f666143a8407ec0a3eb data/minecraft/tags/blocks/needs_diamond_tool.json
 b01dd60d2e01140249659b89111a324b66938b77 data/minecraft/tags/blocks/needs_iron_tool.json
 462ecfbc1d4ee0c0066658a9dd00b3ed7e483405 data/minecraft/tags/blocks/needs_stone_tool.json
 361decdb22d4734ce0420183b1a4c7c4340c63a2 data/minecraft/tags/blocks/planks.json

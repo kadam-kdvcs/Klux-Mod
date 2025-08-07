@@ -49,6 +49,14 @@
       }
     ]
   },
+  "big_music": {
+    "sounds": [
+      {
+        "name": "klux:big_music",
+        "stream": true
+      }
+    ]
+  },
   "compressor_working": {
     "subtitles": "sounds.klux.compressor_working",
     "sounds": [

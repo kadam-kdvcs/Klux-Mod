@@ -54,6 +54,42 @@ public class ModItems {
     public static final RegistryObject<Item> REINFORCED_AROMATIC_CRYSTAL_PLATE = ITEMS.register("reinforced_aromatic_crystal_plate",
             () -> new Item(new Item.Properties()));
 
+    //SLAG LUMP
+    public static final RegistryObject<Item> SLAG_LUMP = ITEMS.register("slag_lump",
+            () -> new Item(new Item.Properties()));
+
+    //WROUGHT IRON GEAR
+    public static final RegistryObject<Item> WROUGHT_IRON_GEAR = ITEMS.register("wrought_iron_gear",
+            () -> new Item(new Item.Properties()));
+
+    //REDSTONE CRYSTAL CORE
+    public static final RegistryObject<Item> REDSTONE_CRYSTAL_CORE = ITEMS.register("redstone_crystal_core",
+            () -> new Item(new Item.Properties()));
+
+    //WROUGHT IRON INGOT
+    public static final RegistryObject<Item> WROUGHT_IRON_INGOT = ITEMS.register("wrought_iron_ingot",
+            () -> new Item(new Item.Properties()));
+
+    //EXAMPLE TOOL
+    public static final RegistryObject<Item> EXAMPLE_TOOL = ITEMS.register("example_tool",
+            () -> new Item(new Item.Properties()));
+
+    //PROTEIN_FIBER
+    public static final RegistryObject<Item> PROTEIN_FIBER = ITEMS.register("protein_fiber",
+            () -> new Item(new Item.Properties()));
+
+    //RAW SILICON
+    public static final RegistryObject<Item> RAW_SILICON = ITEMS.register("raw_silicon",
+            () -> new Item(new Item.Properties()));
+
+    //SILICON BOULE
+    public static final RegistryObject<Item> SILICON_BOULE = ITEMS.register("silicon_boule",
+            () -> new Item(new Item.Properties()));
+
+    //ANCIENT COINS
+    public static final RegistryObject<Item> ANCIENT_COINS = ITEMS.register("ancient_coins",
+            () -> new Item(new Item.Properties()));
+
     //REINFORCED AROMATIC CRYSTAL GEAR
     public static final RegistryObject<Item> REINFORCED_AROMATIC_CRYSTAL_GEAR = ITEMS.register("reinforced_aromatic_crystal_gear",
             () -> new Item(new Item.Properties()));
@@ -98,6 +134,14 @@ public class ModItems {
     public static final RegistryObject<Item> CARBOHYDRATE_POWDER = ITEMS.register("carbohydrate_powder",
             () -> new Item(new Item.Properties()));
 
+    //SCORIA POWDER
+    public static final RegistryObject<Item> SCORIA_POWDER = ITEMS.register("scoria_powder",
+            () -> new Item(new Item.Properties()));
+
+    //MOLTEN CORE
+    public static final RegistryObject<Item> MOLTEN_CORE = ITEMS.register("molten_core",
+            () -> new Item(new Item.Properties()));
+
     //MINERAL POWDER
     public static final RegistryObject<Item> MINERAL_POWDER = ITEMS.register("mineral_powder",
             () -> new Item(new Item.Properties()));
@@ -115,8 +159,15 @@ public class ModItems {
             () -> new ShiftTooltipItemBase(new Item.Properties(),
                     new ShiftTooltipItemBase.TooltipLine("tooltip.klux.universal_feed.tooltip", ChatFormatting.GREEN)));
 
+    //AROMA FAMILY
     //AROMATIC POWDER
     public static final RegistryObject<Item> AROMATIC_POWDER = ITEMS.register("aromatic_powder",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HERBAL_ACTIVE_POWDER = ITEMS.register("herbal_active_powder",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WOODY_ESSENCE_POWDER = ITEMS.register("woody_essence_powder",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WILDFLOWER_POLLEN_POWDER = ITEMS.register("wildflower_pollen_powder",
             () -> new Item(new Item.Properties()));
 
     //BOTANICAL RESIN BEAD
@@ -175,11 +226,11 @@ public class ModItems {
 
     //EXTRACTION MESHES
     public static final RegistryObject<Item> EXTRACTION_MESH = ITEMS.register("extraction_mesh",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ADVANCED_EXTRACTION_MESH = ITEMS.register("advanced_extraction_mesh",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ULTIMATE_EXTRACTION_MESH = ITEMS.register("ultimate_extraction_mesh",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     //MULTIPHASE FLUID CONTAINER
     public static final RegistryObject<Item> MULTIPHASE_FLUID_CONTAINER = ITEMS.register("multiphase_fluid_container",
@@ -218,6 +269,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ENDERGON_CRYSTAL = ITEMS.register("endergon_crystal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CHARGED_ENDERGON_CRYSTAL = ITEMS.register("charged_endergon_crystal",
             () -> new Item(new Item.Properties()));
 
     //MAGIC TOOLS
@@ -263,6 +317,9 @@ public class ModItems {
     //MUSIC DISC
     public static final RegistryObject<Item> RUMBLE_MUSIC_DISC = ITEMS.register("rumble_music_disc",
             () -> new RecordItem(6, ModSounds.RUMBLE, new Item.Properties().stacksTo(1),3720));
+    //MUSIC DISC
+    public static final RegistryObject<Item> BIG_MUSIC_MUSIC_DISC = ITEMS.register("big_music_music_disc",
+            () -> new RecordItem(6, ModSounds.BIG_MUSIC, new Item.Properties().stacksTo(1),2500));
 
     //CROP (SEEDS OF PARSNIP)
     public static final RegistryObject<Item> PARSNIP_SEEDS = ITEMS.register("parsnip_seeds",
@@ -369,6 +426,16 @@ public class ModItems {
     //BOTANIC ESSENTIAL OIL BUCKET
     public static final RegistryObject<Item> BOTANIC_ESSENTIAL_OIL_BUCKET = ITEMS.register("botanic_essential_oil_bucket",
             () -> new BucketItem(ModFluids.SOURCE_BOTANIC_ESSENTIAL_OIL,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //MINERAL SLURRY BUCKET
+    public static final RegistryObject<Item> MINERAL_SLURRY_BUCKET = ITEMS.register("mineral_slurry_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_MINERAL_SLURRY,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    //REPAIR BUCKET
+    public static final RegistryObject<Item> REPAIR_BUCKET = ITEMS.register("repair_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_REPAIR,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     //HERE TO REGISTER ALL ITEMS

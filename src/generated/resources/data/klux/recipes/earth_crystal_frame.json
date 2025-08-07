@@ -6,12 +6,15 @@
       "item": "klux:earth_crystal"
     },
     "A": {
-      "item": "minecraft:iron_ingot"
+      "item": "klux:silicon_boule"
+    },
+    "C": {
+      "item": "klux:wrought_iron_gear"
     }
   },
   "pattern": [
     "#A#",
-    "A A",
+    "ACA",
     "#A#"
   ],
   "result": {

@@ -1,0 +1,16 @@
+{
+  "type": "klux:liquid_reactor",
+  "fluid_input1": {
+    "fluid": "klux:botanic_essential_oil_fluid",
+    "amount": 75
+  },
+  "fluid_input2": {
+    "fluid": "klux:enzyme_solution_fluid",
+    "amount": 100
+  },
+  "output_fluid": {
+    "fluid": "klux:aromatic_fluid",
+    "amount": 250
+  },
+  "max_progress": 45
+}

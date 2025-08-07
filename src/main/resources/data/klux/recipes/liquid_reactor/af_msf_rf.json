@@ -1,0 +1,16 @@
+{
+  "type": "klux:liquid_reactor",
+  "fluid_input1": {
+    "fluid": "klux:aromatic_fluid",
+    "amount": 150
+  },
+  "fluid_input2": {
+    "fluid": "klux:mineral_slurry_fluid",
+    "amount": 250
+  },
+  "output_fluid": {
+    "fluid": "klux:repair_fluid",
+    "amount": 400
+  },
+  "max_progress": 65
+}

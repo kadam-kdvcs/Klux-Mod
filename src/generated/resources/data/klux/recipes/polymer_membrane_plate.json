@@ -6,7 +6,7 @@
       "item": "klux:vitamin_dust"
     },
     "A": {
-      "item": "klux:spider_silk_fiber"
+      "tag": "forge:organic_fibers"
     },
     "B": {
       "item": "minecraft:glass_pane"

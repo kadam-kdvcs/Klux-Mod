@@ -1,0 +1,9 @@
+{
+  "type": "klux:universal_repairer",
+  "fluid": {
+    "FluidName": "klux:repair_fluid",
+    "Amount": 50
+  },
+  "maxProgress": 75,
+  "repairAmount": 4
+}

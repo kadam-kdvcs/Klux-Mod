@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-05T18:20:01.5680006	Loot Tables
+// 1.20.1	2025-08-07T14:41:34.2736546	Loot Tables
 e03b83849e672de4eaf9e62b33d799edca59afa1 data/klux/loot_tables/blocks/cactus_fruit.json
 51ebf61fe24d89e7ac5b5e7713b346c1ea8d65cd data/klux/loot_tables/blocks/compressor.json
 97099e3d81b8febe04545bb19d2d2e2c0cdd0497 data/klux/loot_tables/blocks/deepslate_earth_crystal_ore.json
@@ -48,4 +48,5 @@ cef78b97c725c3316cf3ffe56f0bd373fae23d7f data/klux/loot_tables/blocks/sandstone_
 eff5217c784e585df0e2670f6dbed1d3d9b4db7f data/klux/loot_tables/blocks/spring_onion_crop.json
 021946d935afa19dbde08e3eca689e6d490e4d98 data/klux/loot_tables/blocks/stripped_pine_log.json
 63a4456fd9b92de44659955aa5c275d5ea060e7c data/klux/loot_tables/blocks/stripped_pine_wood.json
+c5504a4833f7f907be744d440104ab9eb78c68eb data/klux/loot_tables/blocks/universal_repairer.json
 f11869cfbccc0bc962a61e1b9c4483b7bf1f1f53 data/klux/loot_tables/blocks/wet_brick.json

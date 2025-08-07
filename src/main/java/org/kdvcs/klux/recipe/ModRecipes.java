@@ -10,7 +10,6 @@ import org.kdvcs.klux.Klux;
 
 public class ModRecipes {
 
-    // 注册 Serializer
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Klux.MODID);
 
@@ -37,6 +36,9 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<LiquidFilterRecipe>> LIQUID_FILTER_SERIALIZER =
             SERIALIZERS.register("liquid_filter", () -> LiquidFilterRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<UniversalRepairerRecipe>> UNIVERSAL_REPAIRER_SERIALIZER =
+            SERIALIZERS.register("universal_repairer", () -> UniversalRepairerRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<ProportionalArmorRecipe>> PROPORTIONAL_ARMOR_SERIALIZER =
             SERIALIZERS.register("proportional_armor", () -> ProportionalArmorRecipe.Serializer.INSTANCE);

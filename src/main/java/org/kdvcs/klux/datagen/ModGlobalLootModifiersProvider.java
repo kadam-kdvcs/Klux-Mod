@@ -114,5 +114,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.14f).build()
         }, ModItems.WITHERED_LEAF.get()));
 
+        add("raw_silicon_from_sand", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SAND).build(),
+                LootItemRandomChanceCondition.randomChance(0.34f).build()}, ModItems.RAW_SILICON.get()));
+
     }
 }

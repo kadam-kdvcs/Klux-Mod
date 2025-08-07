@@ -15,6 +15,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.item.ModItems;
+import org.kdvcs.klux.util.ModTags;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -44,10 +45,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                             Ingredient.of(Items.FURNACE),
                             RecipeCategory.MISC,
                             ModItems.FURNACE_CORE.get(),
-                            0,
+                            0.1f,
                             600)
-                    .unlockedBy(getHasName(Blocks.BLAST_FURNACE), has(Blocks.BLAST_FURNACE))
+                    .unlockedBy(getHasName(ModItems.FURNACE_CORE.get()), has(ModItems.FURNACE_CORE.get()))
                     .save(p_251297_, new ResourceLocation(Klux.MODID, "furnacecore"));
+
+        //WROUGHT IRON INGOT
+        SimpleCookingRecipeBuilder.blasting(
+                        Ingredient.of(Items.IRON_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.WROUGHT_IRON_INGOT.get(),
+                        0.2f,
+                        240)
+                .unlockedBy(getHasName(ModItems.WROUGHT_IRON_INGOT.get()), has(ModItems.WROUGHT_IRON_INGOT.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "wroughtironingot"));
+
+        //SILICON BOULE
+        SimpleCookingRecipeBuilder.blasting(
+                        Ingredient.of(ModItems.RAW_SILICON.get()),
+                        RecipeCategory.MISC,
+                        ModItems.SILICON_BOULE.get(),
+                        0.15f,
+                        120)
+                .unlockedBy(getHasName(ModItems.SILICON_BOULE.get()), has(ModItems.SILICON_BOULE.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "siliconboule"));
 
         //IRON SAND
         SimpleCookingRecipeBuilder.smelting(
@@ -106,13 +127,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.PRESSING_ROD_ASSEMBLY.get()), has(ModItems.PRESSING_ROD_ASSEMBLY.get()))
                 .save(p_251297_);
 
+        //WROUGHT IRON GEAR
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WROUGHT_IRON_GEAR.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern(" A ")
+                .define('A', ModItems.WROUGHT_IRON_INGOT.get())
+                .define('B', Items.GOLD_NUGGET)
+                .unlockedBy(getHasName(ModItems.WROUGHT_IRON_GEAR.get()), has(ModItems.WROUGHT_IRON_GEAR.get()))
+                .save(p_251297_);
+
+        //REDSTONE CRYSTAL CORE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REDSTONE_CRYSTAL_CORE.get())
+                .pattern("#A#")
+                .pattern("AXA")
+                .pattern("#A#")
+                .define('#', Items.REDSTONE)
+                .define('A', ModItems.EARTH_CRYSTAL.get())
+                .define('X', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(ModItems.REDSTONE_CRYSTAL_CORE.get()), has(ModItems.REDSTONE_CRYSTAL_CORE.get()))
+                .save(p_251297_);
+
         //EXTRACTION MESH
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRACTION_MESH.get(),2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EXTRACTION_MESH.get())
                 .pattern("###")
                 .pattern("AAA")
                 .pattern("###")
                 .define('#', Items.IRON_INGOT)
-                .define('A', ModItems.SPIDER_SILK_FIBER.get())
+                .define('A', ModTags.Items.ORGANIC_FIBERS)
                 .unlockedBy(getHasName(ModItems.EXTRACTION_MESH.get()), has(ModItems.EXTRACTION_MESH.get()))
                 .save(p_251297_);
 
@@ -190,7 +232,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("#B#")
                 .pattern("AAA")
-                .define('A', ModItems.SPIDER_SILK_FIBER.get())
+                .define('A', ModTags.Items.ORGANIC_FIBERS)
                 .define('#', ModItems.VITAMIN_DUST.get())
                 .define('B', Items.GLASS_PANE)
                 .unlockedBy(getHasName(ModItems.POLYMER_MEMBRANE_PLATE.get()), has(ModItems.POLYMER_MEMBRANE_PLATE.get()))
@@ -201,7 +243,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" A ")
                 .pattern("#B#")
                 .pattern(" A ")
-                .define('A', ModItems.AROMATIC_POWDER.get())
+                .define('A', ModTags.Items.AROMA_FAMILY)
                 .define('#', ModItems.FURNACE_CORE.get())
                 .define('B', ModItems.REDSTONE_RESONATOR.get())
                 .unlockedBy(getHasName(ModItems.FLUX_CORE.get()), has(ModItems.FLUX_CORE.get()))
@@ -380,7 +422,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //FERMENTED AROMATIC SLURRY
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FERMENTED_AROMATIC_SLURRY.get(),2)
                 .requires(ModItems.VITAMIN_DUST.get())
-                .requires(ModItems.AROMATIC_POWDER.get())
+                .requires(ModTags.Items.AROMA_FAMILY)
                 .requires(ModItems.ROTTEN_FRUIT.get())
                 .requires(ModItems.ADHESIVE_PASTE.get())
                 .unlockedBy(getHasName(ModItems.FERMENTED_AROMATIC_SLURRY.get()), has(ModItems.FERMENTED_AROMATIC_SLURRY.get()))
@@ -413,14 +455,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROTTEN_FRUIT.get()), has(ModItems.ROTTEN_FRUIT.get()))
                 .save(p_251297_);
 
-        //FRAME
+        //EARTH CRYSTAL FRAME
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EARTH_CRYSTAL_FRAME.get())
                 .pattern("#A#")
-                .pattern("A A")
+                .pattern("ACA")
                 .pattern("#A#")
                 .define('#', ModItems.EARTH_CRYSTAL.get())
-                .define('A', Items.IRON_INGOT)
-                .unlockedBy(getHasName(ModItems.EARTH_CRYSTAL.get()), has(ModItems.EARTH_CRYSTAL.get()))
+                .define('A', ModItems.SILICON_BOULE.get())
+                .define('C', ModItems.WROUGHT_IRON_GEAR.get())
+                .unlockedBy(getHasName(ModBlocks.EARTH_CRYSTAL_FRAME.get()), has(ModBlocks.EARTH_CRYSTAL_FRAME.get()))
                 .save(p_251297_);
 
         //HUMICS
@@ -438,10 +481,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#A#")
                 .pattern("ABA")
                 .pattern("#A#")
-                .define('#', Items.REDSTONE)
-                .define('A', Items.GOLD_INGOT)
-                .define('B', Items.LAPIS_LAZULI)
-                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .define('#', Items.GOLD_INGOT)
+                .define('A', ModItems.SILICON_BOULE.get())
+                .define('B', ModItems.REDSTONE_CRYSTAL_CORE.get())
+                .unlockedBy(getHasName(ModItems.REDSTONE_RESONATOR.get()), has(ModItems.REDSTONE_RESONATOR.get()))
                 .save(p_251297_);
 
         //AIR DUCT

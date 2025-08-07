@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blast_furnace": {
+    "has_furnace_core": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:blast_furnace"
+              "klux:furnace_core"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_blast_furnace",
+      "has_furnace_core",
       "has_the_recipe"
     ]
   ],

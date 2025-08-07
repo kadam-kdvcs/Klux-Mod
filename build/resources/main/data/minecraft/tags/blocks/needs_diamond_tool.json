@@ -4,6 +4,7 @@
     "klux:flux_synthesizer",
     "klux:fire_quartz_frame",
     "klux:liquid_reactor",
-    "klux:liquid_filter"
+    "klux:liquid_filter",
+    "klux:universal_repairer"
   ]
 }

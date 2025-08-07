@@ -6,7 +6,7 @@
       "item": "klux:vitamin_dust"
     },
     {
-      "item": "klux:aromatic_powder"
+      "tag": "forge:aromapowders"
     },
     {
       "item": "klux:rotten_fruit"

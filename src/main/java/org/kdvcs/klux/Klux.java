@@ -10,10 +10,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipe;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,6 +31,7 @@ import org.kdvcs.klux.block.entity.ModBlockEntities;
 import org.kdvcs.klux.config.KluxCommonConfigs;
 import org.kdvcs.klux.fluid.ModFluidTypes;
 import org.kdvcs.klux.fluid.ModFluids;
+import org.kdvcs.klux.init.ModBrewingRecipes;
 import org.kdvcs.klux.item.ModCreativeModeTabs;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.item.renderer.MultiphaseFluidContainerRenderer;
@@ -37,6 +41,8 @@ import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.recipe.ModRecipes;
 import org.kdvcs.klux.screen.*;
 import org.kdvcs.klux.sound.ModSounds;
+import org.kdvcs.klux.util.ModBrewingRecipe;
+import org.kdvcs.klux.util.ModBrewingRecipeRegistry;
 import org.kdvcs.klux.worldgen.biome.ModOverworldRegion;
 import org.kdvcs.klux.worldgen.biome.ModTerrablender;
 import org.kdvcs.klux.worldgen.biome.surface.ModSurfaceRules;
@@ -86,6 +92,9 @@ public class Klux {
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, Klux.MODID, ModSurfaceRules.makeRules());
 
+            //BREWING RECIPES
+            ModBrewingRecipes.register();
+
         });
     }
 
@@ -112,6 +121,7 @@ public class Klux {
             MenuScreens.register(ModMenuTypes.FLUX_SYNTHESIZER_MENU.get(), FluxSynthesizerScreen::new);
             MenuScreens.register(ModMenuTypes.LIQUID_REACTOR_MENU.get(), LiquidReactorScreen::new);
             MenuScreens.register(ModMenuTypes.LIQUID_FILTER_MENU.get(), LiquidFilterScreen::new);
+            MenuScreens.register(ModMenuTypes.UNIVERSAL_REPAIRER_MENU.get(), UniversalRepairerScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_AROMATIC.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_AROMATIC.get(), RenderType.translucent());

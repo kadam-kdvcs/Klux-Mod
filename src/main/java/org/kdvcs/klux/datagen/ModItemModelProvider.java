@@ -75,6 +75,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SOLV_SHELL);
         simpleItem(ModItems.DISSOLVENT_BEARING);
         simpleItem(ModItems.FILTER_CORE);
+        simpleItem(ModItems.SCORIA_POWDER);
+        simpleItem(ModItems.MOLTEN_CORE);
 
         simpleItem(ModItems.PRECISION_SUBSTRATE);
         simpleItem(ModItems.PECTI_BOND);
@@ -97,6 +99,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TRIPLE_SEALED_TANK);
         simpleItem(ModItems.WITHERED_LEAF);
         simpleItem(ModItems.WOVEN_SUBSTRATE);
+        simpleItem(ModItems.ANCIENT_COINS);
+        simpleItem(ModItems.REDSTONE_CRYSTAL_CORE);
+        simpleItem(ModItems.RAW_SILICON);
+        simpleItem(ModItems.SILICON_BOULE);
+        simpleItem(ModItems.BIG_MUSIC_MUSIC_DISC);
+        simpleItem(ModItems.CHARGED_ENDERGON_CRYSTAL);
+        simpleItem(ModItems.PROTEIN_FIBER);
+        simpleItem(ModItems.EXAMPLE_TOOL);
+        simpleItem(ModItems.WROUGHT_IRON_INGOT);
+        simpleItem(ModItems.WROUGHT_IRON_GEAR);
+        simpleItem(ModItems.MINERAL_SLURRY_BUCKET);
+        simpleItem(ModItems.REPAIR_BUCKET);
+        simpleItem(ModItems.SLAG_LUMP);
+        simpleItem(ModItems.HERBAL_ACTIVE_POWDER);
+        simpleItem(ModItems.WOODY_ESSENCE_POWDER);
+        simpleItem(ModItems.WILDFLOWER_POLLEN_POWDER);
 
         simpleItem(ModItems.APPLE_COPPER);
         simpleItem(ModItems.APPLE_IRON);

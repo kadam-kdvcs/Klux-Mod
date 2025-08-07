@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "tag": "forge:ores",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:mineral_slurry_fluid",
+    "Amount": 144
+  },
+  "maxProgress": 84
+}

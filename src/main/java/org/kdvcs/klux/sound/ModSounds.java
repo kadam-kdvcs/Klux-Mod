@@ -26,6 +26,7 @@ public class ModSounds {
 
     //MUSIC
     public static final RegistryObject<SoundEvent> RUMBLE = registerSoundEvents("rumble");
+    public static final RegistryObject<SoundEvent> BIG_MUSIC = registerSoundEvents("big_music");
 
     //COMPRESSOR
     public static final RegistryObject<SoundEvent> COMPRESSOR_WORKING = registerSoundEvents("compressor_working");

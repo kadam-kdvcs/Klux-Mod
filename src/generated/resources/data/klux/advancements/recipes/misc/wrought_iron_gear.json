@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "klux:wrought_iron_gear"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wrought_iron_gear": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klux:wrought_iron_gear"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wrought_iron_gear",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "klux:wrought_iron_gear"
+    ]
+  },
+  "sends_telemetry_event": false
+}

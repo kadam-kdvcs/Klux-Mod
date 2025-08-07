@@ -20,6 +20,8 @@ public class ModFluidTypes {
     public static final ResourceLocation PRIMAL_ESSENCE_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_primal_essence");
     public static final ResourceLocation ENZYME_SOLUTION_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_enzyme_solution");
     public static final ResourceLocation BOTANIC_ESSENTIAL_OIL_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_botanic_essential_oil");
+    public static final ResourceLocation MINERAL_SLURRY_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_mineral_slurry");
+    public static final ResourceLocation REPAIR_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_repair");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Klux.MODID);
@@ -64,6 +66,20 @@ public class ModFluidTypes {
     public static final RegistryObject<FluidType> BOTANIC_ESSENTIAL_OIL_FLUID_TYPE = register("botanic_essential_oil_fluid",
             BOTANIC_ESSENTIAL_OIL_OVERLAY_RL,
             0xA19D8D67, new Vector3f(0.616f, 0.553f, 0.404f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
+                    SoundEvents.HONEY_DRINK));
+
+    //MINERAL_SLURRY
+    public static final RegistryObject<FluidType> MINERAL_SLURRY_FLUID_TYPE = register("mineral_slurry_fluid",
+            MINERAL_SLURRY_OVERLAY_RL,
+            0xFFBF7359, new Vector3f(0.749f, 0.451f, 0.349f),
+            FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
+                    SoundEvents.HONEY_DRINK));
+
+    //REPAIR
+    public static final RegistryObject<FluidType> REPAIR_FLUID_TYPE = register("repair_fluid",
+            REPAIR_OVERLAY_RL,
+            0xFF00FFFF, new Vector3f(0.0f, 1.0f, 1.0f),
             FluidType.Properties.create().lightLevel(2).density(75).viscosity(6000).canSwim(false).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK));
 

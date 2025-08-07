@@ -1,5 +1,6 @@
 {
   "values": [
-    "klux:aromatic_ingot"
+    "#forge:ingots/aromatic",
+    "#forge:ingots/wrought_iron"
   ]
 }

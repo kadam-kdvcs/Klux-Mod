@@ -37,6 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.EARTH_CRYSTAL_FRAME);
         blockWithItem(ModBlocks.FIRE_QUARTZ_FRAME);
         blockWithItem(ModBlocks.IRON_SAND);
+        blockWithItem(ModBlocks.BACKGROUND_BRICK);
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
 

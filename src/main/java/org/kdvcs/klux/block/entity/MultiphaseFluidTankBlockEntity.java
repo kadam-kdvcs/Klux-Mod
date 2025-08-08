@@ -25,9 +25,13 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.kdvcs.klux.block.custom.LiquidReactorBlock;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.networking.packet.MultiphaseFluidTankSyncS2CPacket;
 import org.kdvcs.klux.screen.MultiphaseFluidTankMenu;
+
+import java.util.List;
+import java.util.Map;
 
 public class MultiphaseFluidTankBlockEntity extends BlockEntity implements MenuProvider {
 
@@ -74,6 +78,39 @@ public class MultiphaseFluidTankBlockEntity extends BlockEntity implements MenuP
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.of(() -> itemHandler);
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.of(() -> fluidTank);
 
+    //FLUID WRAPPER
+    private final Map<Direction, LazyOptional<IFluidHandler>> fluidHandlerMap = Map.of(
+            Direction.EAST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(fluidTank),
+                    i -> true,                     //EXTRACT
+                    (i, s) -> true                  //IMPORT
+            )),
+
+            Direction.SOUTH, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(fluidTank),
+                    i -> true,
+                    (i, s) -> true
+            )),
+
+            Direction.UP, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(fluidTank),
+                    i -> true,
+                    (i, s) -> true
+            )),
+
+            Direction.DOWN, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(fluidTank),
+                    i -> true,
+                    (i, s) -> true
+            )),
+
+            Direction.WEST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(fluidTank),
+                    i -> true,
+                    (i, s) -> true
+            ))
+    );
+
     public MultiphaseFluidTankBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MULTIPHASE_FLUID_TANK_BE.get(), pos, state);
     }
@@ -95,9 +132,37 @@ public class MultiphaseFluidTankBlockEntity extends BlockEntity implements MenuP
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }
+
         if (cap == ForgeCapabilities.FLUID_HANDLER) {
-            return lazyFluidHandler.cast();
+
+            //MAIN LOGIC FOR FLUIDS
+            if (side == null) {
+                return LazyOptional.of(() -> new WrappedFluidHandler(
+                        List.of(fluidTank),
+                        (i) -> true,
+                        (i, s) -> true)).cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(LiquidReactorBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<IFluidHandler> fluidHandler = fluidHandlerMap.get(actualDirection);
+            if (fluidHandler != null) {
+                return fluidHandler.cast();
+            }
         }
+
         return super.getCapability(cap, side);
     }
 

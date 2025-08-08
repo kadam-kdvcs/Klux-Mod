@@ -29,11 +29,14 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.block.custom.UniversalRepairerBlock;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.networking.packet.UniversalRepairerSyncS2CPacket;
 import org.kdvcs.klux.recipe.UniversalRepairerRecipe;
 import org.kdvcs.klux.screen.UniversalRepairerMenu;
+
+import java.util.Map;
 
 public class UniversalRepairerBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2) {
@@ -68,6 +71,33 @@ public class UniversalRepairerBlockEntity extends BlockEntity implements MenuPro
     };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,                                                          //EXTRACT
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),             //IMPORT
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (i, s) -> itemHandler.isItemValid(1, s))),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 1,
+                            (index, stack) -> false)
+                    ));
+
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
 
     protected final ContainerData data;
@@ -117,9 +147,34 @@ public class UniversalRepairerBlockEntity extends BlockEntity implements MenuPro
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
+
+            //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+            if (side == null) {
+                return lazyItemHandler.cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+            if (handler != null) {
+                return handler.cast();
+            }
         }
+
         if (cap == ForgeCapabilities.FLUID_HANDLER) {
             return lazyFluidHandler.cast();
         }

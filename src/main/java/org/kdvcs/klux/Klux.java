@@ -29,6 +29,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.block.entity.ModBlockEntities;
 import org.kdvcs.klux.config.KluxCommonConfigs;
+import org.kdvcs.klux.effect.ModEffects;
 import org.kdvcs.klux.fluid.ModFluidTypes;
 import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.init.ModBrewingRecipes;
@@ -38,6 +39,7 @@ import org.kdvcs.klux.item.renderer.MultiphaseFluidContainerRenderer;
 import org.kdvcs.klux.loot.ModLootConditions;
 import org.kdvcs.klux.loot.ModLootModifiers;
 import org.kdvcs.klux.networking.ModMessages;
+import org.kdvcs.klux.potion.ModPotions;
 import org.kdvcs.klux.recipe.ModRecipes;
 import org.kdvcs.klux.screen.*;
 import org.kdvcs.klux.sound.ModSounds;
@@ -76,6 +78,9 @@ public class Klux {
 
         ModLootModifiers.register(modEventBus);
         ModLootConditions.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModTerrablender.registerBiomes();
 

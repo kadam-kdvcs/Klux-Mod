@@ -4,11 +4,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
+import org.kdvcs.klux.potion.ModPotions;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -248,6 +251,150 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> KLUX_POTIONS = CREATIVE_MODE_TABS.register("klux_potions",
+            () -> CreativeModeTab.builder().icon(() -> {
+                ItemStack stack = new ItemStack(Items.POTION);
+                PotionUtils.setPotion(stack, ModPotions.BURN_POTION.get());
+                return stack;
+            })
+                    .title(Component.translatable("itemGroup.klux_potions"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        //BASE
+                        ItemStack basePotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(basePotionStack, ModPotions.BASE_POTION.get());
+                        output.accept(basePotionStack);
+
+                        ItemStack baseSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(baseSplashPotionStack, ModPotions.BASE_POTION.get());
+                        output.accept(baseSplashPotionStack);
+
+                        ItemStack baseLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(baseLingeringPotionStack, ModPotions.BASE_POTION.get());
+                        output.accept(baseLingeringPotionStack);
+
+                        //BURN
+                        //COMMON
+                        ItemStack burnPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(burnPotionStack, ModPotions.BURN_POTION.get());
+                        output.accept(burnPotionStack);
+
+                        ItemStack longBurnPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(longBurnPotionStack, ModPotions.LONG_BURN_POTION.get());
+                        output.accept(longBurnPotionStack);
+
+                        ItemStack strongBurnPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(strongBurnPotionStack, ModPotions.STRONG_BURN_POTION.get());
+                        output.accept(strongBurnPotionStack);
+
+                        //SPLASH
+                        ItemStack burnSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(burnSplashPotionStack, ModPotions.BURN_POTION.get());
+                        output.accept(burnSplashPotionStack);
+
+                        ItemStack longBurnSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(longBurnSplashPotionStack, ModPotions.LONG_BURN_POTION.get());
+                        output.accept(longBurnSplashPotionStack);
+
+                        ItemStack strongBurnSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(strongBurnSplashPotionStack, ModPotions.STRONG_BURN_POTION.get());
+                        output.accept(strongBurnSplashPotionStack);
+
+                        //LINGERING
+                        ItemStack burnLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(burnLingeringPotionStack, ModPotions.BURN_POTION.get());
+                        output.accept(burnLingeringPotionStack);
+
+                        ItemStack longBurnLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(longBurnLingeringPotionStack, ModPotions.LONG_BURN_POTION.get());
+                        output.accept(longBurnLingeringPotionStack);
+
+                        ItemStack strongBurnLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(strongBurnLingeringPotionStack, ModPotions.STRONG_BURN_POTION.get());
+                        output.accept(strongBurnLingeringPotionStack);
+
+                        //PURIFICATION
+                        //COMMON
+                        ItemStack purificationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(purificationPotionStack, ModPotions.PURIFICATION_POTION.get());
+                        output.accept(purificationPotionStack);
+
+                        ItemStack longPurificationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(longPurificationPotionStack, ModPotions.LONG_PURIFICATION_POTION.get());
+                        output.accept(longPurificationPotionStack);
+
+                        ItemStack strongPurificationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(strongPurificationPotionStack, ModPotions.STRONG_PURIFICATION_POTION.get());
+                        output.accept(strongPurificationPotionStack);
+
+                        //SPLASH
+                        ItemStack purificationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(purificationSplashPotionStack, ModPotions.PURIFICATION_POTION.get());
+                        output.accept(purificationSplashPotionStack);
+
+                        ItemStack longPurificationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(longPurificationSplashPotionStack, ModPotions.LONG_PURIFICATION_POTION.get());
+                        output.accept(longPurificationSplashPotionStack);
+
+                        ItemStack strongPurificationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(strongPurificationSplashPotionStack, ModPotions.STRONG_PURIFICATION_POTION.get());
+                        output.accept(strongPurificationSplashPotionStack);
+
+                        //LINGERING
+                        ItemStack purificationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(purificationLingeringPotionStack, ModPotions.PURIFICATION_POTION.get());
+                        output.accept(purificationLingeringPotionStack);
+
+                        ItemStack longPurificationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(longPurificationLingeringPotionStack, ModPotions.LONG_PURIFICATION_POTION.get());
+                        output.accept(longPurificationLingeringPotionStack);
+
+                        ItemStack strongPurificationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(strongPurificationLingeringPotionStack, ModPotions.STRONG_PURIFICATION_POTION.get());
+                        output.accept(strongPurificationLingeringPotionStack);
+
+                        //SATURATION
+                        //COMMON
+                        ItemStack saturationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(saturationPotionStack, ModPotions.SATURATION_POTION.get());
+                        output.accept(saturationPotionStack);
+
+                        ItemStack longSaturationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(longSaturationPotionStack, ModPotions.LONG_SATURATION_POTION.get());
+                        output.accept(longSaturationPotionStack);
+
+                        ItemStack strongSaturationPotionStack = new ItemStack(Items.POTION);
+                        PotionUtils.setPotion(strongSaturationPotionStack, ModPotions.STRONG_SATURATION_POTION.get());
+                        output.accept(strongSaturationPotionStack);
+
+                        //LONG
+                        ItemStack saturationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(saturationSplashPotionStack, ModPotions.SATURATION_POTION.get());
+                        output.accept(saturationSplashPotionStack);
+
+                        ItemStack longSaturationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(longSaturationSplashPotionStack, ModPotions.LONG_SATURATION_POTION.get());
+                        output.accept(longSaturationSplashPotionStack);
+
+                        ItemStack strongSaturationSplashPotionStack = new ItemStack(Items.SPLASH_POTION);
+                        PotionUtils.setPotion(strongSaturationSplashPotionStack, ModPotions.STRONG_SATURATION_POTION.get());
+                        output.accept(strongSaturationSplashPotionStack);
+
+                        //LINGERING
+                        ItemStack saturationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(saturationLingeringPotionStack, ModPotions.SATURATION_POTION.get());
+                        output.accept(saturationLingeringPotionStack);
+
+                        ItemStack longSaturationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(longSaturationLingeringPotionStack, ModPotions.LONG_SATURATION_POTION.get());
+                        output.accept(longSaturationLingeringPotionStack);
+
+                        ItemStack strongSaturationLingeringPotionStack = new ItemStack(Items.LINGERING_POTION);
+                        PotionUtils.setPotion(strongSaturationLingeringPotionStack, ModPotions.STRONG_SATURATION_POTION.get());
+                        output.accept(strongSaturationLingeringPotionStack);
+
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);

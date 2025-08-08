@@ -30,6 +30,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Klux.MODID);
 
+    //YOU CAN'T GET THIS, ANYWAY.
+    public static final RegistryObject<Block> BACKGROUND_BRICK = registerBlock("background_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).strength(-1f).sound(SoundType.STONE).noCollission().noLootTable()));
+
     public static final RegistryObject<Block> HAY_BRICK = registerBlock("hay_brick",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).strength(0.3f).sound(SoundType.GRASS)));
 

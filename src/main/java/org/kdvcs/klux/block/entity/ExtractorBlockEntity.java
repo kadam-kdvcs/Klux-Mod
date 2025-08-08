@@ -30,15 +30,58 @@ import org.kdvcs.klux.recipe.ExtractorRecipe;
 import org.kdvcs.klux.screen.ExtractorMenu;
 import org.kdvcs.klux.sound.ModSounds;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class ExtractorBlockEntity extends BlockEntity implements MenuProvider {
-        private final ItemStackHandler itemHandler = new ItemStackHandler(2);
+        private final ItemStackHandler itemHandler = new ItemStackHandler(2) {
+
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch (slot) {
+                  case 0 -> true;
+                  case 1 -> false;
+                  default -> super.isItemValid(slot, stack);
+                };
+            }
+        };
 
         private static final int INPUT_SLOT = 0;
         private static final int OUTPUT_SLOT = 1;
 
-        private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    //IN THIS CASE, EAST STANDS FOR LEFT SIDE, WEST STANDS FOR RIGHT SIDE.
+    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (index, stack) -> false)),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (i, s) -> itemHandler.isItemValid(1, s))),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 1,
+                            (index, stack) -> false)
+                    ));
 
         protected final ContainerData data;
         private int progress = 0;

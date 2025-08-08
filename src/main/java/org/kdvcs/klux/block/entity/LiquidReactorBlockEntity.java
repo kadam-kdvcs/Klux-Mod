@@ -38,6 +38,7 @@ import org.kdvcs.klux.recipe.LiquidReactorRecipe;
 import org.kdvcs.klux.screen.LiquidReactorMenu;
 import org.kdvcs.klux.sound.ModSounds;
 
+import java.util.List;
 import java.util.Map;
 
 public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvider {
@@ -145,18 +146,36 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
-    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap = Map.of(
-            Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
-                    slot -> slot == 0 || slot == 1,
-                    (slot, stack) -> itemHandler.isItemValid(slot, stack))),
-            Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
-                    slot -> slot == 2,
-                    (slot, stack) -> false))
-    );
-
     private LazyOptional<IFluidHandler> lazyFluidHandler1 = LazyOptional.empty();
     private LazyOptional<IFluidHandler> lazyFluidHandler2 = LazyOptional.empty();
     private LazyOptional<IFluidHandler> lazyOutputFluidHandler = LazyOptional.empty();
+
+    //FLUID WRAPPER
+    private final Map<Direction, LazyOptional<IFluidHandler>> fluidHandlerMap = Map.of(
+            Direction.EAST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK_1),
+                    i -> false,
+                    (i, s) -> i == 0
+            )),
+
+            Direction.SOUTH, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(OUTPUT_FLUID_TANK),
+                    i -> true,
+                    (i, s) -> false
+            )),
+
+            Direction.UP, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(OUTPUT_FLUID_TANK),
+                    i -> true,
+                    (i, s) -> false
+            )),
+
+            Direction.WEST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK_2),
+                    i -> false,
+                    (i, s) -> i == 1
+            ))
+    );
 
     protected final ContainerData data;
     private int progress = 0;
@@ -209,17 +228,39 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             if (side == null) return lazyItemHandler.cast();
-            if (directionWrappedHandlerMap.containsKey(side)) {
-                return directionWrappedHandlerMap.get(side).cast();
+        }
+
+        if (cap == ForgeCapabilities.FLUID_HANDLER) {
+            if (side == null) {
+                return LazyOptional.of(() -> new WrappedFluidHandler(
+                        List.of(FLUID_TANK_1, FLUID_TANK_2, OUTPUT_FLUID_TANK),
+                        (i) -> true,
+                        (i, s) -> true)).cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(LiquidReactorBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<IFluidHandler> fluidHandler = fluidHandlerMap.get(actualDirection);
+            if (fluidHandler != null) {
+                return fluidHandler.cast();
             }
         }
-        if (cap == ForgeCapabilities.FLUID_HANDLER) {
-            if (side == Direction.UP) return lazyFluidHandler1.cast();
-            if (side == Direction.NORTH) return lazyFluidHandler2.cast();
-            if (side == Direction.DOWN) return lazyOutputFluidHandler.cast();
-        }
+
         return super.getCapability(cap, side);
     }
 

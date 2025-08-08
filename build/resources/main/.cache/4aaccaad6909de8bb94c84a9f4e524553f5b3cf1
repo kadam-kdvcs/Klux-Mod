@@ -1,4 +1,5 @@
-// 1.20.1	2025-08-04T22:47:44.0344038	Block States: klux
+// 1.20.1	2025-08-08T12:45:31.3970379	Block States: klux
+45866f769d0d9228880d777abc9a0a380a626b99 assets/klux/blockstates/background_brick.json
 130a0f83adaa89bd527afed27f915a429636fa89 assets/klux/blockstates/cactus_fruit.json
 61da4df63a990349b6270b9a473737a8b548907d assets/klux/blockstates/deepslate_earth_crystal_ore.json
 b6718ed44b663e0c6cff60f0ffd5fad9c626b1d3 assets/klux/blockstates/dried_brick.json
@@ -40,6 +41,7 @@ bb587c7476064b8489c7760305628a44cac701b6 assets/klux/blockstates/spring_onion_cr
 50f4722b9a32a824e3a78f8167184b20afbf2534 assets/klux/blockstates/stripped_pine_log.json
 02fc20d3a9a69c21a9c33bb9e593b1890e7e64c2 assets/klux/blockstates/stripped_pine_wood.json
 b95053bedf1202d9ecdc7bc5d90e48a9270bf080 assets/klux/blockstates/wet_brick.json
+cc4a4c5242f0a81926ab83e70d72d848c4ed8c46 assets/klux/models/block/background_brick.json
 e66f635a10b82b6639a85c55b308e22d24f1d6cb assets/klux/models/block/cactus_fruit.json
 edd8aaed9a5203567d5625cfb5ee70b57e04b401 assets/klux/models/block/deepslate_earth_crystal_ore.json
 229a269eaee9ee2c302df09971987a1985c3bd20 assets/klux/models/block/dried_brick.json
@@ -124,6 +126,7 @@ f22b6d0cf46662eedf3d6b1bb085e84d36d2900b assets/klux/models/block/stripped_pine_
 62041edb0e02314911db3703e0ad6500d0d18d15 assets/klux/models/block/stripped_pine_wood.json
 527fd70f15e57952e82d67d4c9d59e0408014342 assets/klux/models/block/stripped_pine_wood_horizontal.json
 905b9d2d70794cf30a5fa8c7972630935999ed57 assets/klux/models/block/wet_brick.json
+d9d5c0a45c2df309fb65b63a27543190293815f4 assets/klux/models/item/background_brick.json
 2fe6671c2ee3567de9dcfa5e8ddf81faf47d919b assets/klux/models/item/cactus_fruit.json
 825e24248c1b5ea71c636a396ab57c3f53ed7490 assets/klux/models/item/deepslate_earth_crystal_ore.json
 503fd0573882841243fb8f6831910b884f004e46 assets/klux/models/item/dried_brick.json

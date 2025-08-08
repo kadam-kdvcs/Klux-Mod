@@ -30,6 +30,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.block.custom.FluidExtractorBlock;
 import org.kdvcs.klux.networking.ModMessages;
 import org.kdvcs.klux.networking.packet.FluidExtractorSyncS2CPacket;
@@ -84,9 +85,32 @@ public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvid
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.of(() -> itemHandler);
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.of(() -> FLUID_TANK);
 
-    private final Map<Direction, LazyOptional<IItemHandler>> directionItemHandlerMap = Map.of(
-            Direction.DOWN, LazyOptional.of(() -> itemHandler)
-    );
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (i, s) -> itemHandler.isItemValid(0, s))),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))
+                    ));
 
     protected final ContainerData data;
     private int progress = 0;
@@ -135,10 +159,32 @@ public class FluidExtractorBlockEntity extends BlockEntity implements MenuProvid
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            if (side == null || side == Direction.DOWN) {
+
+            //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+            if (side == null) {
                 return lazyItemHandler.cast();
             }
+
+            Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+            if (handler != null) {
+                return handler.cast();
+            }
         }
+
         if (cap == ForgeCapabilities.FLUID_HANDLER) {
             return lazyFluidHandler.cast();
         }

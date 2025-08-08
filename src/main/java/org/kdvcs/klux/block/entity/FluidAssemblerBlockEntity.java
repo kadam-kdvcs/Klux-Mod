@@ -91,16 +91,34 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
         return this.FLUID_TANK.getFluid();
     }
 
+    //IN THIS CASE, EAST STANDS FOR LEFT SIDE, WEST STANDS FOR RIGHT SIDE.
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
-            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
-                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
-                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
-                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 2,
+                            (index, stack) -> false)),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 2,
+                            (i, s) -> false)),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
-                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
-                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 2,
+                            (index, stack) -> false)
+                    ));
 
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
 
@@ -152,19 +170,40 @@ public class FluidAssemblerBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            if(side == null) {
+
+            //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+            if (side == null) {
                 return lazyItemHandler.cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+            if (handler != null) {
+                return handler.cast();
             }
         }
 
-        if(cap == ForgeCapabilities.FLUID_HANDLER) {
+        if (cap == ForgeCapabilities.FLUID_HANDLER) {
             return lazyFluidHandler.cast();
         }
 
         return super.getCapability(cap, side);
     }
+
 
     @Override
     public void onLoad() {

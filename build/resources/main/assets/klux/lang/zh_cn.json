@@ -228,5 +228,78 @@
   "jei.klux.mod_brewing": "Klux-炼制",
   "item.klux.herbal_active_powder": "草本活性粉",
   "item.klux.woody_essence_powder": "木香萃粉",
-  "item.klux.wildflower_pollen_powder": "野性花粉"
+  "item.klux.wildflower_pollen_powder": "野性花粉",
+
+  "effect.klux.empty": "解渴",
+  "item.minecraft.potion.effect.base_potion": "强效药水基底",
+  "item.minecraft.splash_potion.effect.base_potion": "喷溅型强效药水基底",
+  "item.minecraft.lingering_potion.effect.base_potion": "滞留型强效药水基底",
+
+  "item.minecraft.tipped_arrow.effect.base_potion": "解渴之箭",
+
+  "effect.klux.burn": "灼烧",
+  "item.minecraft.potion.effect.burn_potion": "烈焰药水",
+  "item.minecraft.splash_potion.effect.burn_potion": "喷溅型烈焰药水",
+  "item.minecraft.lingering_potion.effect.burn_potion": "滞留型烈焰药水",
+
+  "item.minecraft.potion.effect.long_burn_potion": "烈焰药水",
+  "item.minecraft.splash_potion.effect.long_burn_potion": "喷溅型烈焰药水",
+  "item.minecraft.lingering_potion.effect.long_burn_potion": "滞留型烈焰药水",
+
+  "item.minecraft.potion.effect.strong_burn_potion": "烈焰药水",
+  "item.minecraft.splash_potion.effect.strong_burn_potion": "喷溅型烈焰药水",
+  "item.minecraft.lingering_potion.effect.strong_burn_potion": "滞留型烈焰药水",
+
+  "item.minecraft.tipped_arrow.effect.burn_potion": "炽焰之箭",
+  "item.minecraft.tipped_arrow.effect.long_burn_potion": "炽焰之箭",
+  "item.minecraft.tipped_arrow.effect.strong_burn_potion": "炽焰之箭",
+
+  "effect.klux.purification": "生命复苏",
+  "item.minecraft.potion.effect.purification_potion": "复苏药水",
+  "item.minecraft.splash_potion.effect.purification_potion": "喷溅型复苏药水",
+  "item.minecraft.lingering_potion.effect.purification_potion": "滞留型复苏药水",
+
+  "item.minecraft.potion.effect.long_purification_potion": "复苏药水",
+  "item.minecraft.splash_potion.effect.long_purification_potion": "喷溅型复苏药水",
+  "item.minecraft.lingering_potion.effect.long_purification_potion": "滞留型复苏药水",
+
+  "item.minecraft.potion.effect.strong_purification_potion": "复苏药水",
+  "item.minecraft.splash_potion.effect.strong_purification_potion": "喷溅型复苏药水",
+  "item.minecraft.lingering_potion.effect.strong_purification_potion": "滞留型复苏药水",
+
+  "item.minecraft.tipped_arrow.effect.purification_potion": "复苏之箭",
+  "item.minecraft.tipped_arrow.effect.long_purification_potion": "复苏之箭",
+  "item.minecraft.tipped_arrow.effect.strong_purification_potion": "复苏之箭",
+
+  "effect.klux.saturation": "饱腹",
+  "item.minecraft.potion.effect.saturation_potion": "滋养药水",
+  "item.minecraft.splash_potion.effect.saturation_potion": "喷溅型滋养药水",
+  "item.minecraft.lingering_potion.effect.saturation_potion": "滞留型滋养药水",
+
+  "item.minecraft.potion.effect.long_saturation_potion": "滋养药水",
+  "item.minecraft.splash_potion.effect.long_saturation_potion": "喷溅型滋养药水",
+  "item.minecraft.lingering_potion.effect.long_saturation_potion": "滞留型滋养药水",
+
+  "item.minecraft.potion.effect.strong_saturation_potion": "滋养药水",
+  "item.minecraft.splash_potion.effect.strong_saturation_potion": "喷溅型滋养药水",
+  "item.minecraft.lingering_potion.effect.strong_saturation_potion": "滞留型滋养药水",
+
+  "item.minecraft.tipped_arrow.effect.saturation_potion": "滋养之箭",
+  "item.minecraft.tipped_arrow.effect.long_saturation_potion": "滋养之箭",
+  "item.minecraft.tipped_arrow.effect.strong_saturation_potion": "滋养之箭",
+
+  "itemGroup.klux_potions": "Klux-药水",
+
+  "adv.klux": "Klux",
+  "adv.des.klux": "欢迎来到Klux，记住大力发展你的农业！",
+  "adv.get_earth_crystal": "发现地晶！",
+  "adv.des.get_earth_crystal": "采集到地晶，它是大地三大晶石之一，蕴藏着大地的能量。",
+  "adv.get_silicon_boule": "新材料时代！",
+  "adv.des.get_silicon_boule": "硅生万物——去看看沙子里有什么？你在沙子里或许淘不到金，但应该能淘到比金更好的！",
+  "adv.get_redstone_resonator": "大地的馈赠",
+  "adv.des.get_redstone_resonator": "制作一块红石谐振芯片，它利用古老的大地能量，为机器提供永久的能源！",
+  "adv.get_compressor": "浓缩的都是精华！",
+  "adv.des.get_compressor": "制作一台浓缩仓，它能为你做很多事情！",
+  "adv.get_dehydrator": "奇怪的炉子",
+  "adv.des.get_dehydrator": "制作一台烘干机，不过它更像是一种另类的提取机。"
 }

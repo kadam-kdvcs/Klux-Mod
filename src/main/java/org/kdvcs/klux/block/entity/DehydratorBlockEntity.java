@@ -29,21 +29,64 @@ import org.jetbrains.annotations.Nullable;
 
 
 import org.kdvcs.klux.block.custom.DehydratorBlock;
+import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.recipe.DehydratorRecipe;
 import org.kdvcs.klux.screen.DehydratorMenu;
 import org.kdvcs.klux.sound.ModSounds;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
 public class DehydratorBlockEntity extends BlockEntity implements MenuProvider {
-        private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+        private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch (slot) {
+                  case 0, 1 -> true;
+                  case 2 -> false;
+                  default -> super.isItemValid(slot, stack);
+                };
+            }
+        };
 
         private static final int INPUT_SLOT = 0;
         private static final int FUEL_SLOT = 1;
         private static final int OUTPUT_SLOT = 2;
 
         private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+        private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 2,
+                            (index, stack) -> false)),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (i, s) -> itemHandler.isItemValid(1, s))),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 2,
+                            (index, stack) -> false)
+                    ));
 
         protected final ContainerData data;
         private int progress = 0;
@@ -87,8 +130,33 @@ public class DehydratorBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+
             if(cap == ForgeCapabilities.ITEM_HANDLER) {
-                return lazyItemHandler.cast();
+
+                //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+                if (side == null) {
+                    return lazyItemHandler.cast();
+                }
+
+                Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+                Direction actualDirection;
+
+                if (side == Direction.UP || side == Direction.DOWN) {
+                    actualDirection = side;
+                } else {
+                    actualDirection = switch (localDir) {
+                        default -> side.getOpposite();
+                        case EAST -> side.getClockWise();
+                        case SOUTH -> side;
+                        case WEST -> side.getCounterClockWise();
+                    };
+                }
+
+                LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+                if (handler != null) {
+                    return handler.cast();
+                }
+
             }
 
             return super.getCapability(cap, side);

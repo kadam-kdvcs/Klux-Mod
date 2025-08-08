@@ -32,7 +32,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.kdvcs.klux.block.custom.ExtractorBlock;
 
+import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.block.custom.FluxSynthesizerBlock;
+import org.kdvcs.klux.block.custom.LiquidReactorBlock;
 import org.kdvcs.klux.fluid.ModFluids;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.networking.ModMessages;
@@ -43,6 +45,7 @@ import org.kdvcs.klux.recipe.FluxSynthesizerRecipe;
 import org.kdvcs.klux.screen.FluxSynthesizerMenu;
 import org.kdvcs.klux.sound.ModSounds;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -118,14 +121,58 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
-            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
-                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+            Map.of(
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
-                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
-                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
-                            (index, stack) -> itemHandler.isItemValid(1, stack))),
-                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
-                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 3,
+                            (index, stack) -> false)),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 3,
+                            (i, s) -> false)),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 2,
+                            (index, stack) -> itemHandler.isItemValid(2, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (index) -> index == 3,
+                            (index, stack) -> false)
+                    ));
+
+    //FLUID WRAPPER
+    private final Map<Direction, LazyOptional<IFluidHandler>> fluidHandlerMap = Map.of(
+            Direction.EAST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK),
+                    i -> false,                 //CAN'T EXTRACT FROM TANK 1
+                    (i, s) -> i == 0            //INJECT TO TANK 1
+            )),
+
+            Direction.SOUTH, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(OUTPUT_FLUID_TANK),
+                    i -> true,
+                    (i, s) -> false
+            )),
+
+            Direction.UP, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK),
+                    i -> false,
+                    (i, s) -> i == 0
+            )),
+
+            Direction.WEST, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(OUTPUT_FLUID_TANK),
+                    i -> true,
+                    (i, s) -> false
+            ))
+    );
 
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
     private LazyOptional<IFluidHandler> lazyOutputFluidHandler = LazyOptional.empty();
@@ -182,13 +229,60 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
 
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            if(side == null) {
+
+            //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+            if (side == null) {
                 return lazyItemHandler.cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+            if (handler != null) {
+                return handler.cast();
             }
         }
 
-        if(cap == ForgeCapabilities.FLUID_HANDLER) {
-            return lazyFluidHandler.cast();
+        if (cap == ForgeCapabilities.FLUID_HANDLER) {
+
+            //MAIN LOGIC FOR FLUIDS
+            if (side == null) {
+                return LazyOptional.of(() -> new WrappedFluidHandler(
+                        List.of(FLUID_TANK, OUTPUT_FLUID_TANK),
+                        (i) -> true,
+                        (i, s) -> true)).cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(LiquidReactorBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<IFluidHandler> fluidHandler = fluidHandlerMap.get(actualDirection);
+            if (fluidHandler != null) {
+                return fluidHandler.cast();
+            }
         }
 
         return super.getCapability(cap, side);

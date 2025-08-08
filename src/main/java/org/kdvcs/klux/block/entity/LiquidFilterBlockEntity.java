@@ -29,6 +29,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.kdvcs.klux.block.custom.FluidAssemblerBlock;
 import org.kdvcs.klux.block.custom.LiquidFilterBlock;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.networking.ModMessages;
@@ -98,12 +99,30 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
             Map.of(
-                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, i -> i >= 3 && i <= 6, (i, s) -> false)),
-                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, i -> i == 1, (i, s) -> itemHandler.isItemValid(1, s))),
-                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, i -> i >= 3 && i <= 6, (i, s) -> false)),
-                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, i -> i == 1, (i, s) -> itemHandler.isItemValid(1, s))),
-                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, i -> i == 0 || i == 1, (i, s) -> itemHandler.isItemValid(i, s)))
-            );
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 3 || i == 4 || i == 5 || i == 6,
+                            (index, stack) -> itemHandler.isItemValid(index, stack))),
+
+//                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+//                            (index) -> index == 1,
+//                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 3 || i == 4 || i == 5 || i == 6,
+                            (index, stack) -> itemHandler.isItemValid(index, stack))),
+
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler,
+                            (i) -> i == 3 || i == 4 || i == 5 || i == 6,
+                            (index, stack) -> itemHandler.isItemValid(index, stack))
+                    ));
 
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
 
@@ -157,8 +176,29 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
 
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            if(side == null) {
+
+            //MAIN LOGIC FOR DIRECTIONS OF THE MACHINE
+            if (side == null) {
                 return lazyItemHandler.cast();
+            }
+
+            Direction localDir = this.getBlockState().getValue(FluidAssemblerBlock.FACING);
+            Direction actualDirection;
+
+            if (side == Direction.UP || side == Direction.DOWN) {
+                actualDirection = side;
+            } else {
+                actualDirection = switch (localDir) {
+                    default -> side.getOpposite();
+                    case EAST -> side.getClockWise();
+                    case SOUTH -> side;
+                    case WEST -> side.getCounterClockWise();
+                };
+            }
+
+            LazyOptional<WrappedHandler> handler = directionWrappedHandlerMap.get(actualDirection);
+            if (handler != null) {
+                return handler.cast();
             }
         }
 

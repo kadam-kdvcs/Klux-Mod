@@ -2,7 +2,7 @@
   "type": "klux:fluid_assembler",
   "ingredient":
     {
-      "item": "klux:aromatic_powder",
+      "tag": "forge:aromapowders",
       "count": 4
     },
   "fluid": {
@@ -11,7 +11,7 @@
   },
   "output": {
     "item": "klux:pecti_bond",
-    "count": 1
+    "count": 2
   },
   "maxProgress": 180
 }

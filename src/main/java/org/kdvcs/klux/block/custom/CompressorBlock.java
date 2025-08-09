@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -45,6 +46,16 @@ public class CompressorBlock extends BaseEntityBlock {
                 .setValue(WORKING, false)
                 .setValue(FACING, Direction.EAST));
     }
+
+//    @Override
+//    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+//        if (!level.isClientSide && placer instanceof Player) {
+//            Direction facing = placer.getDirection();
+//            BlockState newState = state.setValue(FACING, facing);
+//            level.setBlock(pos, newState, 3);
+//        }
+//        super.setPlacedBy(level, pos, state, placer, stack);
+//    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

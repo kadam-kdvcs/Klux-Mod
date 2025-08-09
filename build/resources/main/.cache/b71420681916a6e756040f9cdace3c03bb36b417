@@ -1,8 +1,10 @@
-// 1.20.1	2025-08-07T21:28:47.7914364	Item Models: klux
+// 1.20.1	2025-08-09T22:42:24.2164391	Item Models: klux
+0e9a4167744574e4342cf70f150c86878e78a3a7 assets/klux/models/item/activation_powder.json
 8a6e104cdf5518e1ab0ab942f46acd99eac5f9c4 assets/klux/models/item/adhesive_paste.json
 b1afb62a82c71f413b84072fccd5b6f61c780da1 assets/klux/models/item/advanced_extraction_mesh.json
 d33228380dd94808c840cefc33bbd37582f14c6a assets/klux/models/item/air_duct.json
 6582805e2ec171f2aabee84bf6bef3396b494344 assets/klux/models/item/ancient_coins.json
+680b17dc99f6cf6dd678f44e5a2b500cb9a08969 assets/klux/models/item/apatite.json
 4aad47166dc8ef90ddb5ed38b09e29b14372b98b assets/klux/models/item/apple_amethyst.json
 a3b5485e4ad46995db77f9081873848ed7949c96 assets/klux/models/item/apple_copper.json
 f403ee930963c5b343b6eeb697215c6e03d84c8d assets/klux/models/item/apple_diamond.json
@@ -21,6 +23,7 @@ a8685c90ccba1567738880d55de986acda7ec373 assets/klux/models/item/bran.json
 a3735bf6999387f0666b85fc250568f681f51338 assets/klux/models/item/cactus_fruit.json
 4c78d62ea487b534b2dfe5d5fbfd0aacb434589e assets/klux/models/item/carbohydrate_powder.json
 0827d1536542095a8285b76f19a456c24ab3074e assets/klux/models/item/charged_endergon_crystal.json
+e7d30c2fc69448c179323ae5c1afd83f7c4351c2 assets/klux/models/item/cooked_horse_meat.json
 b96911420127442646307b74e403b4bcc145a0d3 assets/klux/models/item/dehydrated_seeds.json
 0a14e3921c4e1ccb3f4ea2580862cc52d3eaa156 assets/klux/models/item/detector.json
 67d5af02d3b68f0e9d9cef9c9c82c5343c08b083 assets/klux/models/item/dissolvent_bearing.json
@@ -89,6 +92,8 @@ c2e6a618b53954d106f7577f7aa00dc27eeec623 assets/klux/models/item/earth_crystal_s
 8f4406d18234be0ac13d9f9080e7c5aee4e6cd1f assets/klux/models/item/example_tool.json
 ab3cbcf5d2c6716259d287b3d14677bd0de4db4f assets/klux/models/item/extraction_mesh.json
 55f0059871165414729c4c86427d2a5b5b929c3d assets/klux/models/item/fermented_aromatic_slurry.json
+aba6cb33ba281d67e6c05de24453500020d9c297 assets/klux/models/item/fiery_gear.json
+e34c8118c36f4fe594cbc6d174b7f58e66274df4 assets/klux/models/item/fiery_ingot.json
 a6c9be676e09242d74a8eb8a3fe64d8c0dde3001 assets/klux/models/item/filter_core.json
 895e6c3dff78f95a1307e6bc2d4211b4427f0eff assets/klux/models/item/fire_quartz.json
 493491938cfe708018367354fa3f9d8dc098530f assets/klux/models/item/flux_core.json
@@ -105,8 +110,6 @@ e2aace8b40c8d177a530c37c44c9980f0d7fc467 assets/klux/models/item/herbal_active_p
 5876e7fd20710f5ca3e5bfdcb5a7b059ffcaa1a5 assets/klux/models/item/molten_core.json
 8aaf4e6ab2c6124c671f3ffa940d3fb66d669f1f assets/klux/models/item/multiphase_fluid_container.json
 5c5131a5c869ed2e20b0221cd242c12a36847dc3 assets/klux/models/item/nutri_block.json
-b8f337fc35e05ec32ba801374a0f565d15fce2e6 assets/klux/models/item/parsnip.json
-357511dafbb3f34e0b32fcc59b751ba66eae94a6 assets/klux/models/item/parsnip_seeds.json
 20c35dae8a1c862c286df52b48fdb366ef4bd38b assets/klux/models/item/pectin_slurry_bucket.json
 94fc6fc15a8d62d10054168dac1791e9fa99aa94 assets/klux/models/item/pecti_bond.json
 069a1da4b1e3ba5b8e45e629255974368556a47a assets/klux/models/item/pine_sapling.json
@@ -118,13 +121,18 @@ deaad74cc6bcff34f9014ad81043a7f3134349fb assets/klux/models/item/precision_subst
 f49686848a576e81d102002c415f6c884161f5a9 assets/klux/models/item/protein_fiber.json
 f173e2a26e7ed6025844e6d5230f060cb352d514 assets/klux/models/item/putrescent_solution_bucket.json
 b20e1ee436b5bb1c2c5c33a4732afb2e274999e7 assets/klux/models/item/putrid_fat.json
+33d3ac5aa0e07de28144b3e26237fe2737bc76d6 assets/klux/models/item/pyrored_silicrystal.json
+831f0d48f99f83a7f51bb5f3c1d5b50359bbf7c9 assets/klux/models/item/raw_horse_meat.json
 601bbb206420ffa7ed6c6195fc27543f7468d78b assets/klux/models/item/raw_silicon.json
 ffce53a66b59f7207e0a98801c8ab2c732a62ac8 assets/klux/models/item/redstone_crystal_core.json
 549f0ec494064e0cce89d89495ac4d89ad20b5ad assets/klux/models/item/redstone_resonator.json
+b38b22e31ce7401326e0691d59547900b2c19681 assets/klux/models/item/redstone_silicon_boule.json
 8f019990775e9836f99c26d19720294ce0e36bad assets/klux/models/item/reinforced_aromatic_crystal_gear.json
 fde2aa3af132aa5bdb7b23fc92389940d4fc3286 assets/klux/models/item/reinforced_aromatic_crystal_plate.json
 3beaeee9a2a9c776a477130acfb66368fb731ba1 assets/klux/models/item/repair_bucket.json
 f98944f0335e00fd73160693142d1875151161a1 assets/klux/models/item/return_scepter.json
+87f4e3de6b3f4c0a2c671a98ba9fd452c4eb57cb assets/klux/models/item/rice.json
+633fbcbc60aa166d54078ef4136d7c243d80ac97 assets/klux/models/item/rice_seeds.json
 7afa734fd78d121edcaa3dd5d1b11dd857dadf8f assets/klux/models/item/rotten_fruit.json
 11626779cdfb9ac57006b5508555f15bc5a0add7 assets/klux/models/item/rotten_fruit_seeds.json
 559399f03ac523d95b4097e683f02d8598bf0a48 assets/klux/models/item/rough_cake_base.json

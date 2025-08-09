@@ -1,5 +1,6 @@
-// 1.20.1	2025-08-08T12:45:31.3970379	Block States: klux
+// 1.20.1	2025-08-09T14:41:36.9148638	Block States: klux
 45866f769d0d9228880d777abc9a0a380a626b99 assets/klux/blockstates/background_brick.json
+98eaa52ea5067cae82c8f06c2a9002e7510ba701 assets/klux/blockstates/bones_ore.json
 130a0f83adaa89bd527afed27f915a429636fa89 assets/klux/blockstates/cactus_fruit.json
 61da4df63a990349b6270b9a473737a8b548907d assets/klux/blockstates/deepslate_earth_crystal_ore.json
 b6718ed44b663e0c6cff60f0ffd5fad9c626b1d3 assets/klux/blockstates/dried_brick.json
@@ -25,13 +26,13 @@ ba2c8ca97d223373a0759c4ecd1ac187f80fb8a3 assets/klux/blockstates/fire_quartz_ore
 a9684f2d29eb7bbb25859ffdf208eaf5e5a2f622 assets/klux/blockstates/hay_wall.json
 6171abcf44749815cf2b41ebfb2e636811c058a9 assets/klux/blockstates/ice_brick.json
 9dccf769074a42dd46e3ac240646e972ecd6b16a assets/klux/blockstates/iron_sand.json
-a3acda6855f4c4a2a2cc84685c4e2318d687fe88 assets/klux/blockstates/parsnip_crop.json
 52fac20b8fc9fde81e535eb0944361599a82b77e assets/klux/blockstates/pine_leaves.json
 69c848fd2e3c6943bfa96fa9a98676c4c212c272 assets/klux/blockstates/pine_log.json
 73ab8b1fede24762a92012a246f67ab4af0c58f3 assets/klux/blockstates/pine_planks.json
 e5c28d2d8856815cf99226e359afd5ba6c043365 assets/klux/blockstates/pine_sapling.json
 81474c9893656c4540a58a326a8997e13a2c37a2 assets/klux/blockstates/pine_wood.json
 99f5b293ad6da1bed6b32c1333554fbe767f10df assets/klux/blockstates/potted_cactus_fruit.json
+a3633619a30c553a51a62c8f2f984adf71f1a64a assets/klux/blockstates/rice_crop.json
 0e3aa7187fbe3bdb4c9a81d05dd3d3196d35ca4f assets/klux/blockstates/rotten_fruit_crop.json
 29fdb1177c8a65589e3e10a0c57c238141f9fe6e assets/klux/blockstates/sandstone_carved.json
 63430d926f503fc9b8bc043889fa5b56ddfe6be0 assets/klux/blockstates/sandstone_clean.json
@@ -42,6 +43,7 @@ bb587c7476064b8489c7760305628a44cac701b6 assets/klux/blockstates/spring_onion_cr
 02fc20d3a9a69c21a9c33bb9e593b1890e7e64c2 assets/klux/blockstates/stripped_pine_wood.json
 b95053bedf1202d9ecdc7bc5d90e48a9270bf080 assets/klux/blockstates/wet_brick.json
 cc4a4c5242f0a81926ab83e70d72d848c4ed8c46 assets/klux/models/block/background_brick.json
+9aef42edb19799f12f18dce2829a95d1699ff1b9 assets/klux/models/block/bones_ore.json
 e66f635a10b82b6639a85c55b308e22d24f1d6cb assets/klux/models/block/cactus_fruit.json
 edd8aaed9a5203567d5625cfb5ee70b57e04b401 assets/klux/models/block/deepslate_earth_crystal_ore.json
 229a269eaee9ee2c302df09971987a1985c3bd20 assets/klux/models/block/dried_brick.json
@@ -92,10 +94,6 @@ ca12848a1f8e095d841120e0fd306999c959d371 assets/klux/models/block/hay_stairs_out
 36ac01bf375a4ffab7548a23536c6d65e0eb42c1 assets/klux/models/block/hay_wall_side_tall.json
 d0c3b91945954d4a12ad8bac91d014710bb844cb assets/klux/models/block/ice_brick.json
 cac983420bb1d55a42ec97b897649eab3e4d8577 assets/klux/models/block/iron_sand.json
-372d3fa5e11bc27fc9348d81625231293427d647 assets/klux/models/block/parsnip_stage0.json
-7f8a5dbc92c9bf3ff9adfffdd86d709d95422fca assets/klux/models/block/parsnip_stage1.json
-ad83bc69593d97fe34650df6a49d5f29515531ef assets/klux/models/block/parsnip_stage2.json
-b18b186dd18b538b2bb9f7aa9e3fa624475939f8 assets/klux/models/block/parsnip_stage3.json
 57cb872816907437e8461b32316180c3e76cab35 assets/klux/models/block/pine_leaves.json
 b84ad89ed5f24e3168eccc5d193c9bacf9e1f792 assets/klux/models/block/pine_log.json
 4dda6be5a4d1d01a444b1d57b3f5915452bc4b8b assets/klux/models/block/pine_log_horizontal.json
@@ -104,6 +102,14 @@ b84ad89ed5f24e3168eccc5d193c9bacf9e1f792 assets/klux/models/block/pine_log.json
 c8029b058d676afc90be0f113ad43621d2f99e88 assets/klux/models/block/pine_wood.json
 a2c5fb6c93ad5dea3be72805b70c431a94ec9db4 assets/klux/models/block/pine_wood_horizontal.json
 5f1806fb5cb2ca4343e90d377ad086e8b37b0eb9 assets/klux/models/block/potted_cactus_fruit.json
+edd4d1f256f5198c1729601be50234d7f1205058 assets/klux/models/block/rice_stage_0.json
+2865729fc0902c8a74b64d52d77b8202584e9a9f assets/klux/models/block/rice_stage_1.json
+f453833260729501a447596439944c041a789571 assets/klux/models/block/rice_stage_2.json
+aa7098626529b239dff22d5bbafa4dd9039a3095 assets/klux/models/block/rice_stage_3.json
+2caf85d6a07a73da6ad403ed8ec8298cd9d1373c assets/klux/models/block/rice_stage_4.json
+9f14b575ed86b8a47f47a335bbadc84e22838274 assets/klux/models/block/rice_stage_5.json
+a83b948373f32d9312f10da32b32956a644ed926 assets/klux/models/block/rice_stage_6.json
+698e940602e94befb3d6e77c5ea0d8ed1ea446ac assets/klux/models/block/rice_stage_7.json
 bd4de1e0f0664c512a7e1f71c37a8874b3174a61 assets/klux/models/block/rotten_fruit_stage0.json
 667c261abd81fb0832938f2cf5beb9b319d70845 assets/klux/models/block/rotten_fruit_stage1.json
 7a5abefacefe996faf2863d8730381a9cde5d767 assets/klux/models/block/rotten_fruit_stage2.json
@@ -127,6 +133,7 @@ f22b6d0cf46662eedf3d6b1bb085e84d36d2900b assets/klux/models/block/stripped_pine_
 527fd70f15e57952e82d67d4c9d59e0408014342 assets/klux/models/block/stripped_pine_wood_horizontal.json
 905b9d2d70794cf30a5fa8c7972630935999ed57 assets/klux/models/block/wet_brick.json
 d9d5c0a45c2df309fb65b63a27543190293815f4 assets/klux/models/item/background_brick.json
+30d8cfa196b0f7d1a99159bb07bc297e3ae1b22d assets/klux/models/item/bones_ore.json
 2fe6671c2ee3567de9dcfa5e8ddf81faf47d919b assets/klux/models/item/cactus_fruit.json
 825e24248c1b5ea71c636a396ab57c3f53ed7490 assets/klux/models/item/deepslate_earth_crystal_ore.json
 503fd0573882841243fb8f6831910b884f004e46 assets/klux/models/item/dried_brick.json

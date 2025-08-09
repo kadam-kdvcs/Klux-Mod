@@ -36,10 +36,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         tag(ModTags.Blocks.ENDERGON_CRYSTAL_ORES)
                 .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get());
 
+        tag(ModTags.Blocks.BONES_ORES)
+                .add(ModBlocks.BONES_ORE.get());
+
         tag(Tags.Blocks.ORES)
                 .addTag(ModTags.Blocks.EARTH_CRYSTAL_ORES)
                 .addTag(ModTags.Blocks.FIRE_QUARTZ_ORES)
-                .addTag(ModTags.Blocks.ENDERGON_CRYSTAL_ORES);
+                .addTag(ModTags.Blocks.ENDERGON_CRYSTAL_ORES)
+                .addTag(ModTags.Blocks.BONES_ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.EARTH_CRYSTAL_ORE.get(),
@@ -63,17 +67,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DRIED_BRICK_SMOOTH.get(),
                         ModBlocks.DRIED_BRICK.get(),
                         ModBlocks.LIQUID_FILTER.get(),
-                        ModBlocks.UNIVERSAL_REPAIRER.get());
+                        ModBlocks.UNIVERSAL_REPAIRER.get(),
+                        ModBlocks.BONES_ORE.get(),
+                        ModBlocks.GEM_DUPLICATOR.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.IRON_SAND.get())
                 .add(ModBlocks.SNOW_BRICK.get())
                 .add(ModBlocks.WET_BRICK.get());
 
-
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.DRIED_BRICK_SMOOTH.get(),
-                        ModBlocks.DRIED_BRICK.get());
+                        ModBlocks.DRIED_BRICK.get(),
+                        ModBlocks.BONES_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.EARTH_CRYSTAL_ORE.get(),
@@ -95,7 +101,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.UNIVERSAL_REPAIRER.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-                .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get());
+                .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get())
+                .add(ModBlocks.GEM_DUPLICATOR.get());
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.EARTH_CRYSTAL_FENCE.get());

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "klux:universal_repairer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_universal_repairer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klux:universal_repairer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_universal_repairer",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "klux:universal_repairer"
+    ]
+  },
+  "sends_telemetry_event": false
+}

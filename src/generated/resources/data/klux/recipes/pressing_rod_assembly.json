@@ -10,12 +10,15 @@
     },
     "B": {
       "item": "klux:adhesive_paste"
+    },
+    "C": {
+      "item": "klux:wrought_iron_ingot"
     }
   },
   "pattern": [
-    "# #",
+    "#C#",
     "ABA",
-    "# #"
+    "#C#"
   ],
   "result": {
     "item": "klux:pressing_rod_assembly"

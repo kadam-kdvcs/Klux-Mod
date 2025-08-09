@@ -74,11 +74,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ModTags.Items.ENDERGON_CRYSTAL_ORES)
                 .add(ModBlocks.ENDERGON_CRYSTAL_ORE.get().asItem());
 
+        this.tag(ModTags.Items.BONES_ORES)
+                .add(ModBlocks.BONES_ORE.get().asItem());
+
         this.tag(FORGE_ORES)
                 .replace(false)
                 .addTag(ModTags.Items.EARTH_CRYSTAL_ORES)
                 .addTag(ModTags.Items.FIRE_QUARTZ_ORES)
-                .addTag(ModTags.Items.ENDERGON_CRYSTAL_ORES);
+                .addTag(ModTags.Items.ENDERGON_CRYSTAL_ORES)
+                .addTag(ModTags.Items.BONES_ORES);
 
         this.tag(FORGE_FRUITS)
                 .replace(false)
@@ -103,9 +107,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(FORGE_GEMS)
                 .replace(false)
-                .add(ModItems.EARTH_CRYSTAL.get())
-                .add(ModItems.FIRE_QUARTZ.get())
+                .addTag(ModTags.Items.EARTH_CRYSTALS)
+                .addTag(ModTags.Items.FIRE_QUARTZS)
+                .addTag(ModTags.Items.ENDERGON_CRYSTALS)
+                .addTag(ModTags.Items.APATITES);
+
+        this.tag(ModTags.Items.EARTH_CRYSTALS)
+                .add(ModItems.EARTH_CRYSTAL.get());
+
+        this.tag(ModTags.Items.FIRE_QUARTZS)
+                .add(ModItems.FIRE_QUARTZ.get());
+
+        this.tag(ModTags.Items.ENDERGON_CRYSTALS)
                 .add(ModItems.ENDERGON_CRYSTAL.get());
+
+        this.tag(ModTags.Items.APATITES)
+                .add(ModItems.APATITE.get());
 
         this.tag(FORGE_ORGANIC_FIBERS)
                 .add(ModItems.SPIDER_SILK_FIBER.get())
@@ -164,12 +181,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(FORGE_INGOTS)
                 .replace(false)
                 .addTag(ModTags.Items.AROMATIC)
-                .addTag(ModTags.Items.WROUGHT_IRON);
+                .addTag(ModTags.Items.WROUGHT_IRON)
+                .addTag(ModTags.Items.FIERY);
 
         this.tag(ModTags.Items.AROMATIC)
                 .add(ModItems.AROMATIC_INGOT.get());
         this.tag(ModTags.Items.WROUGHT_IRON)
                 .add(ModItems.WROUGHT_IRON_INGOT.get());
+        this.tag(ModTags.Items.FIERY)
+                .add(ModItems.FIERY_INGOT.get());
 
         //AROMA FAMILY
         this.tag(FORGE_AROMA_POWDERS)
@@ -227,7 +247,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(FORGE_SEEDS)
                 .replace(false)
                 .add(ModItems.SPRING_ONION_SEEDS.get(),
-                     ModItems.PARSNIP_SEEDS.get());
+                     ModItems.RICE_SEEDS.get());
 
         this.tag(FORGE_RAWMEATS)
                 .replace(false)
@@ -239,7 +259,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(Items.SALMON)
                 .add(Items.COD)
                 .add(Items.TROPICAL_FISH)
-                .add(Items.PUFFERFISH);
+                .add(Items.PUFFERFISH)
+                .add(ModItems.RAW_HORSE_MEAT.get());
 
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PINE_LOG.get().asItem())

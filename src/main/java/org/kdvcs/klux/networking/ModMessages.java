@@ -68,6 +68,12 @@ public class ModMessages {
                 .encoder(UniversalRepairerSyncS2CPacket::toBytes)
                 .consumerMainThread(UniversalRepairerSyncS2CPacket::handle)
                 .add();
+
+        net.messageBuilder(GemDuplicatorSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(GemDuplicatorSyncS2CPacket::new)
+                .encoder(GemDuplicatorSyncS2CPacket::toBytes)
+                .consumerMainThread(GemDuplicatorSyncS2CPacket::handle)
+                .add();
     }
 
     public static <MSG> void sendToServer(MSG message) {

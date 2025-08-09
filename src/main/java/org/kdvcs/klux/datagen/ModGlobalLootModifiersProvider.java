@@ -5,16 +5,21 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 import org.kdvcs.klux.Klux;
+import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.loot.AddItemModifier;
 import org.kdvcs.klux.loot.AddSusSandItemModifier;
 import org.kdvcs.klux.loot.condition.BlockTagLootCondition;
+
+import java.util.List;
 
 public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     public ModGlobalLootModifiersProvider(PackOutput output) {
@@ -32,6 +37,17 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 }, ModItems.SALAD.get()));
 
         */
+
+        add("raw_horse_meat_from_horse", new AddItemModifier(
+                new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(new ResourceLocation("entities/horse")).build()
+                },
+                ModItems.RAW_HORSE_MEAT.get(),
+                1.0f,
+                1,
+                2,
+                1
+        ));
 
         add("enriched_coal_from_desert_pyramid", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build()
@@ -101,13 +117,19 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build()
         }, ModItems.ENRICHED_COAL.get()));
 
-        add("parsnip_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+        //RICE SEEDS
+        add("rice_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.32f).build()}, ModItems.PARSNIP_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.15f).build()}, ModItems.RICE_SEEDS.get()));
 
-        add("spring_onion_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.25f).build()}, ModItems.SPRING_ONION_SEEDS.get()));
+        //APATITE
+        add("apatite_from_bones_ore", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.CALCITE).build(),
+                LootItemRandomChanceCondition.randomChance(0.4f).build()}, ModItems.APATITE.get()));
+
+//        add("spring_onion_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
+//                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+//                LootItemRandomChanceCondition.randomChance(0.25f).build()}, ModItems.SPRING_ONION_SEEDS.get()));
 
         add("withered_leaf_from_leaves", new AddItemModifier(new LootItemCondition[] {
                 new BlockTagLootCondition(TagKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "leaves"))),

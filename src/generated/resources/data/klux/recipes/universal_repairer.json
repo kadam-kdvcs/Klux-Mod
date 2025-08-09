@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "klux:fire_quartz_frame"
+    },
+    "B": {
+      "item": "klux:pressing_rod_assembly"
+    },
+    "E": {
+      "item": "klux:reinforced_aromatic_crystal_plate"
+    },
+    "K": {
+      "item": "klux:fiery_gear"
+    },
+    "Q": {
+      "item": "klux:sealed_tank"
+    },
+    "S": {
+      "item": "klux:aromatic_resonator"
+    }
+  },
+  "pattern": [
+    "ESE",
+    "KAK",
+    "QBQ"
+  ],
+  "result": {
+    "item": "klux:universal_repairer"
+  },
+  "show_notification": true
+}

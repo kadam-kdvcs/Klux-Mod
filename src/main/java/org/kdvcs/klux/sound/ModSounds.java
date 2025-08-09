@@ -39,6 +39,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> FLUX_SYNTHESIZER_WORKING = registerSoundEvents("flux_synthesizer_working");
     public static final RegistryObject<SoundEvent> LIQUID_FILTER_WORKING = registerSoundEvents("liquid_filter_working");
 
+    public static final RegistryObject<SoundEvent> GEM_DUPLICATOR_WORKING = registerSoundEvents("gem_duplicator_working");
+
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP, ModSounds.SOUND_BLOCK_PLACE,
             ModSounds.SOUND_BLOCK_HIT, ModSounds.SOUND_BLOCK_FALL);

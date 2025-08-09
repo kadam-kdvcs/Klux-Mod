@@ -4,8 +4,11 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -15,7 +18,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.block.ModBlocks;
-import org.kdvcs.klux.block.custom.ParsnipCropBlock;
+import org.kdvcs.klux.block.custom.RiceCropBlock;
 import org.kdvcs.klux.block.custom.RottenFruitCropBlock;
 import org.kdvcs.klux.block.custom.SpringOnionCropBlock;
 import org.kdvcs.klux.item.ModItems;
@@ -45,6 +48,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIQUID_REACTOR.get());
         this.dropSelf(ModBlocks.LIQUID_FILTER.get());
         this.dropSelf(ModBlocks.UNIVERSAL_REPAIRER.get());
+        this.dropSelf(ModBlocks.GEM_DUPLICATOR.get());
 
         this.dropSelf(ModBlocks.IRON_SAND.get());
 
@@ -81,7 +85,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createCopperLikeOreDrops(ModBlocks.FIRE_QUARTZ_ORE.get(), ModItems.FIRE_QUARTZ.get()));
         this.add(ModBlocks.ENDERGON_CRYSTAL_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.ENDERGON_CRYSTAL_ORE.get(), ModItems.ENDERGON_CRYSTAL.get()));
-
+        this.add(ModBlocks.BONES_ORE.get(),
+                block -> createUniqueOreDrops(ModBlocks.BONES_ORE.get(), Items.BONE));
 
         this.dropSelf(ModBlocks.EARTH_CRYSTAL_STAIRS.get());
         this.dropSelf(ModBlocks.EARTH_CRYSTAL_PRESSURE_PLATE.get());
@@ -95,14 +100,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.EARTH_CRYSTAL_SLAB.get()));
         this.add(ModBlocks.EARTH_CRYSTAL_DOOR.get(),
                 block -> createDoorTable(ModBlocks.EARTH_CRYSTAL_DOOR.get()));
-
-        //PARSNIP CROPBLOCK (THIS IS A COMMON CROPBLOCK)
-        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
-                .hasBlockStateProperties(ModBlocks.PARSNIP_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ParsnipCropBlock.AGE,3));
-
-        this.add(ModBlocks.PARSNIP_CROP.get(), createCropDrops(ModBlocks.PARSNIP_CROP.get(), ModItems.PARSNIP.get(),
-                ModItems.PARSNIP_SEEDS.get(), lootitemcondition$builder));
 
         //SPRING ONION CROPBLOCK (THIS CROPBLOCK IS 2 BLOCKS HIGH)
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
@@ -123,6 +120,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.ROTTEN_FRUIT_CROP.get(), createCropDrops(ModBlocks.ROTTEN_FRUIT_CROP.get(), ModItems.ROTTEN_FRUIT.get(),
                 ModItems.DEHYDRATED_SEEDS.get(), lootitemcondition$builder3));
 
+        //RICE CROPBLOCK
+        LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.RICE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE,7));
+
+        this.add(ModBlocks.RICE_CROP.get(), createFortuneCropDrops(ModBlocks.RICE_CROP.get(), ModItems.RICE.get(),
+                ModItems.RICE_SEEDS.get(), lootitemcondition$builder4));
 
         //FLOWER POT BLOCKS
         this.dropSelf(ModBlocks.CACTUS_FRUIT.get());
@@ -135,6 +139,30 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createUniqueOreDrops(Block p_251306_, Item item) {
+        return createSilkTouchDispatchTable(p_251306_,
+                this.applyExplosionDecay(p_251306_,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    //CREATE A FORTUNE DROP FOR CROPS
+    private static LootTable.Builder createFortuneCropDrops(Block crop, ItemLike product, ItemLike seeds, LootItemCondition.Builder condition) {
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .when(condition)
+                        .add(LootItem.lootTableItem(product)
+                                //default counts + random (0 ~ bonusMultiplier * level);
+                                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
+                        )
+                )
+                .withPool(LootPool.lootPool()
+                        .when(condition)
+                        .add(LootItem.lootTableItem(seeds))
+                );
     }
 
     @Override

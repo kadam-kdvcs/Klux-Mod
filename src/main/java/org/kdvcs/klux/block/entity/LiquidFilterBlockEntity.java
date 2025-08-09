@@ -162,7 +162,7 @@ public class LiquidFilterBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.klux.liquid_filter");
+        return Component.translatable("block.klux.title_liquid_filter");
     }
 
     @Nullable

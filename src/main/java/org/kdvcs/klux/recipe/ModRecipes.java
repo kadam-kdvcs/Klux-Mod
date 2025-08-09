@@ -40,6 +40,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<UniversalRepairerRecipe>> UNIVERSAL_REPAIRER_SERIALIZER =
             SERIALIZERS.register("universal_repairer", () -> UniversalRepairerRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<GemDuplicatorRecipe>> GEM_DUPLICATOR_SERIALIZER =
+            SERIALIZERS.register("gem_duplicator", () -> GemDuplicatorRecipe.Serializer.INSTANCE);
+
     public static final RegistryObject<RecipeSerializer<ProportionalArmorRecipe>> PROPORTIONAL_ARMOR_SERIALIZER =
             SERIALIZERS.register("proportional_armor", () -> ProportionalArmorRecipe.Serializer.INSTANCE);
 

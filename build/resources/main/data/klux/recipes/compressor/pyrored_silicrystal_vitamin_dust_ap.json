@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:vitamin_dust",
+      "count": 8
+    },
+    {
+      "item": "klux:pyrored_silicrystal",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "klux:activation_powder",
+    "count": 8
+  },
+  "maxProgress": 100
+}

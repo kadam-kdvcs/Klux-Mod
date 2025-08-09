@@ -135,7 +135,7 @@ public class UniversalRepairerBlockEntity extends BlockEntity implements MenuPro
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.klux.universal_repairer");
+        return Component.translatable("block.klux.title_universal_repairer");
     }
 
     @Nullable

@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:wrought_iron_ingot",
+      "count": 1
+    },
+    {
+      "item": "klux:scoria_powder",
+      "count": 2
+    }
+  ],
+  "output": {
+    "item": "klux:fiery_ingot",
+    "count": 1
+  },
+  "maxProgress": 100
+}

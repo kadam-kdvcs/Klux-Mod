@@ -1,0 +1,11 @@
+{
+  "type": "klux:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/horse"
+    }
+  ],
+  "item": "klux:raw_horse_meat",
+  "maxCount": 2
+}

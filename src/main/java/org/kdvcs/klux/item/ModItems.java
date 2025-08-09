@@ -40,6 +40,10 @@ public class ModItems {
             }
     );
 
+    //APATITE
+    public static final RegistryObject<Item> APATITE = ITEMS.register("apatite",
+            () -> new Item(new Item.Properties()));
+
     //AROMATIC RESONATOR
     public static final RegistryObject<Item> AROMATIC_RESONATOR = ITEMS.register("aromatic_resonator",
             () -> new ShiftTooltipItemBase(new Item.Properties(),
@@ -52,6 +56,26 @@ public class ModItems {
 
     //REINFORCED AROMATIC CRYSTAL PLATE
     public static final RegistryObject<Item> REINFORCED_AROMATIC_CRYSTAL_PLATE = ITEMS.register("reinforced_aromatic_crystal_plate",
+            () -> new Item(new Item.Properties()));
+
+    //REDSTONE SILICON BOULE
+    public static final RegistryObject<Item> REDSTONE_SILICON_BOULE = ITEMS.register("redstone_silicon_boule",
+            () -> new Item(new Item.Properties()));
+
+    //FIERY INGOT
+    public static final RegistryObject<Item> FIERY_INGOT = ITEMS.register("fiery_ingot",
+            () -> new Item(new Item.Properties()));
+
+    //FIERY GEAR
+    public static final RegistryObject<Item> FIERY_GEAR = ITEMS.register("fiery_gear",
+            () -> new Item(new Item.Properties()));
+
+    //PYRORED SILICRYSTAL
+    public static final RegistryObject<Item> PYRORED_SILICRYSTAL = ITEMS.register("pyrored_silicrystal",
+            () -> new Item(new Item.Properties()));
+
+    //ACTIVATION POWDER
+    public static final RegistryObject<Item> ACTIVATION_POWDER = ITEMS.register("activation_powder",
             () -> new Item(new Item.Properties()));
 
     //SLAG LUMP
@@ -321,21 +345,27 @@ public class ModItems {
     public static final RegistryObject<Item> BIG_MUSIC_MUSIC_DISC = ITEMS.register("big_music_music_disc",
             () -> new RecordItem(6, ModSounds.BIG_MUSIC, new Item.Properties().stacksTo(1),2500));
 
-    //CROP (SEEDS OF PARSNIP)
-    public static final RegistryObject<Item> PARSNIP_SEEDS = ITEMS.register("parsnip_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.PARSNIP_CROP.get(), new Item.Properties()));
-
     //CROP (SEEDS OF SPRING ONION)
     public static final RegistryObject<Item> SPRING_ONION_SEEDS = ITEMS.register("spring_onion_seeds",
             () -> new ItemNameBlockItem(ModBlocks.SPRING_ONION_CROP.get(), new Item.Properties()));
 
-    //PARSNIP
-    public static final RegistryObject<Item> PARSNIP = ITEMS.register("parsnip",
-            () -> new Item(new Item.Properties().food(ModFoods.PARSNIP)));
+    //CROP (SEEDS OF RICE)
+    public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RICE_CROP.get(), new Item.Properties()));
 
     //SPRING_ONION
     public static final RegistryObject<Item> SPRING_ONION = ITEMS.register("spring_onion",
             () -> new Item(new Item.Properties().food(ModFoods.SPRING_ONION)));
+
+    //RICE
+    public static final RegistryObject<Item> RICE = ITEMS.register("rice",
+            () -> new Item(new Item.Properties().food(ModFoods.RICE)));
+
+    //HORSE MEAT
+    public static final RegistryObject<Item> RAW_HORSE_MEAT = ITEMS.register("raw_horse_meat",
+            () -> new Item(new Item.Properties().food(ModFoods.RAW_HORSE_MEAT)));
+    public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat",
+            () -> new Item(new Item.Properties().food(ModFoods.COOKED_HORSE_MEAT)));
 
     public static final RegistryObject<Item> ROTTEN_FRUIT_SEEDS = ITEMS.register("rotten_fruit_seeds",
             () -> new ItemNameBlockItem(ModBlocks.ROTTEN_FRUIT_CROP.get(), new Item.Properties()));

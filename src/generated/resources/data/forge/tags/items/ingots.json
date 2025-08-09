@@ -1,6 +1,7 @@
 {
   "values": [
     "#forge:ingots/aromatic",
-    "#forge:ingots/wrought_iron"
+    "#forge:ingots/wrought_iron",
+    "#forge:ingots/fiery"
   ]
 }

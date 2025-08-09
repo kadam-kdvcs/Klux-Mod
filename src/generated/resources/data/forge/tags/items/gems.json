@@ -1,7 +1,8 @@
 {
   "values": [
-    "klux:earth_crystal",
-    "klux:fire_quartz",
-    "klux:endergon_crystal"
+    "#forge:gems/earth_crystal",
+    "#forge:gems/fire_quartz",
+    "#forge:gems/endergon_crystal",
+    "#forge:gems/apatite"
   ]
 }

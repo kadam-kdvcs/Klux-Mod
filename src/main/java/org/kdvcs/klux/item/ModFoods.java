@@ -13,8 +13,6 @@ public class ModFoods {
             .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED,160, 1), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,100, 1), 1.0f).build();
 
-    public static final FoodProperties PARSNIP = new FoodProperties.Builder().nutrition(3).saturationMod(0.3f).build();
-
     public static final FoodProperties SPRING_ONION = new FoodProperties.Builder().nutrition(2).saturationMod(0.25f).fast().build();
 
     public static final FoodProperties NUTRI_BLOCK = new FoodProperties.Builder().nutrition(7).saturationMod(0.7f).build();
@@ -22,6 +20,13 @@ public class ModFoods {
     public static final FoodProperties ROUGH_CAKE_BASE = new FoodProperties.Builder().nutrition(1).saturationMod(0.15f).build();
 
     public static final FoodProperties VITAMIN_CAKE = new FoodProperties.Builder().nutrition(3).saturationMod(0.65f).build();
+
+    //HORSE MEAT
+    public static final FoodProperties RAW_HORSE_MEAT = new FoodProperties.Builder().nutrition(1).saturationMod(0.25f).meat().build();
+    public static final FoodProperties COOKED_HORSE_MEAT = new FoodProperties.Builder().nutrition(5).saturationMod(0.7f).meat().build();
+
+    //RICE
+    public static final FoodProperties RICE = new FoodProperties.Builder().nutrition(3).saturationMod(0.6f).build();
 
     public static final FoodProperties APPLE_COPPER = new FoodProperties.Builder().nutrition(3)
             .saturationMod(1.5f)

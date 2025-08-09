@@ -25,6 +25,7 @@ public class ModTags {
         public static final TagKey<Block> EARTH_CRYSTAL_ORES = forgeTag("ores/earth_crystal");
         public static final TagKey<Block> FIRE_QUARTZ_ORES = forgeTag("ores/fire_quartz");
         public static final TagKey<Block> ENDERGON_CRYSTAL_ORES = forgeTag("ores/endergon_crystal");
+        public static final TagKey<Block> BONES_ORES = forgeTag("ores/bones");
 
         public static final TagKey<Block> DETECTOR_VALUABLES = tag("detector_valuables");
         public static final TagKey<Block> NEEDS_EARTH_CRYSTAL_TOOL = tag("needs_earth_crystal_tool");
@@ -44,6 +45,7 @@ public class ModTags {
         public static final TagKey<Item> EARTH_CRYSTAL_ORES = forgeTag("ores/earth_crystal");
         public static final TagKey<Item> FIRE_QUARTZ_ORES = forgeTag("ores/fire_quartz");
         public static final TagKey<Item> ENDERGON_CRYSTAL_ORES = forgeTag("ores/endergon_crystal");
+        public static final TagKey<Item> BONES_ORES = forgeTag("ores/bones");
 
         public static final TagKey<Item> EXTRACTION_MESHES = forgeTag("extraction_meshes");
         public static final TagKey<Item> EXTRACTION_MESH_BASIC = forgeTag("extraction_mesh_basic");
@@ -54,6 +56,7 @@ public class ModTags {
         public static final TagKey<Item> AROMATIC = forgeTag("ingots/aromatic");
         public static final TagKey<Item> WROUGHT_IRON = forgeTag("ingots/wrought_iron");
         public static final TagKey<Item> DUST_AROMATIC = forgeTag("dusts/aromatic");
+        public static final TagKey<Item> FIERY = forgeTag("ingots/fiery");
 
         public static final TagKey<Item> AROMA_FAMILY = forgeTag("aromapowders");
         public static final TagKey<Item> POWDER_AROMATIC = forgeTag("aromapowders/aromatic");
@@ -66,6 +69,12 @@ public class ModTags {
         public static final TagKey<Item> HERBAL_FLOWERS = forgeTag("flowers/herbal");
         public static final TagKey<Item> WOODY_FLOWERS = forgeTag("flowers/woody");
         public static final TagKey<Item> WILD_FLOWERS = forgeTag("flowers/wild");
+
+        //GEMS
+        public static final TagKey<Item> EARTH_CRYSTALS = forgeTag("gems/earth_crystal");
+        public static final TagKey<Item> FIRE_QUARTZS = forgeTag("gems/fire_quartz");
+        public static final TagKey<Item> ENDERGON_CRYSTALS = forgeTag("gems/endergon_crystal");
+        public static final TagKey<Item> APATITES = forgeTag("gems/apatite");
 
     }
 }

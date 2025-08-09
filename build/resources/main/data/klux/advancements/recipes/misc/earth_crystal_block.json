@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_earth_crystal": {
+    "has_earth_crystal_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "klux:earth_crystal"
+              "klux:earth_crystal_block"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_earth_crystal",
+      "has_earth_crystal_block",
       "has_the_recipe"
     ]
   ],

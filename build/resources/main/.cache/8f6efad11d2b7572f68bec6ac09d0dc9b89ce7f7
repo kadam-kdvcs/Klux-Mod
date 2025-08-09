@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-07T22:39:48.6181315	Tags for minecraft:item mod id klux
+// 1.20.1	2025-08-09T22:42:24.2164391	Tags for minecraft:item mod id klux
 742474ce3c36e796a640b5d49bbfffff8a24b1c4 data/forge/tags/items/aromapowders.json
 642a36fa5557d47f4bc5f133a95ee16e7bca9b70 data/forge/tags/items/aromapowders/aromatic.json
 563dd8a03efcaffd42ca3f52fad6782a1e2e9e1c data/forge/tags/items/aromapowders/herbal.json
@@ -15,18 +15,24 @@ e557d9f46e7e8ba143299991af2782ca9e6dceeb data/forge/tags/items/flowers/essence.j
 03810017ba217c156faeccb01264bef3d8505742 data/forge/tags/items/flowers/wild.json
 66442e4ef6f03973e078f10aa01905b3bab801ed data/forge/tags/items/flowers/woody.json
 b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/forge/tags/items/fruits.json
-9d6a24dcf699e85e9e70c97b1404b8ee5714b3fd data/forge/tags/items/gems.json
-3196c490e1de78d43c3057bd92144e60984827d8 data/forge/tags/items/ingots.json
+1ed69f788d16eced99e9294fe6a97c86de6d62bb data/forge/tags/items/gems.json
+22b3a408559fc1b6379b982e83a08827beaefa48 data/forge/tags/items/gems/apatite.json
+a0ec2307fd6d558789f67d7deb702157f916328e data/forge/tags/items/gems/earth_crystal.json
+00129ab095a0453eb35f3773a76cc33cfb26031d data/forge/tags/items/gems/endergon_crystal.json
+18ccbe676c43743d042c6ea83313f49357036a1f data/forge/tags/items/gems/fire_quartz.json
+0dc15c0ae30024cbb65140f000d352b6d0107f40 data/forge/tags/items/ingots.json
 a6b34f75633239db69f3b37fa830a140a42bd2ca data/forge/tags/items/ingots/aromatic.json
+d9afd5927e4cbcc2a5be3646f998f4ec04d5222e data/forge/tags/items/ingots/fiery.json
 eb55dba59b5d99ff02c05a63fc54bd15065c0be8 data/forge/tags/items/ingots/wrought_iron.json
-5281853b938dfc648a0521755c4c37d8382f830c data/forge/tags/items/ores.json
+e3f0e73a0f8b68ceacae1f0cc3a9463e02ea036a data/forge/tags/items/ores.json
+f6fd85ab57be33594288f4129b0ac0133c62a0ae data/forge/tags/items/ores/bones.json
 d7f28735f83dbeea93c5ce6b2527d95c1c92a7d2 data/forge/tags/items/ores/earth_crystal.json
 b01cc1e74db759fd6f3a427005e1717e8bd5560e data/forge/tags/items/ores/endergon_crystal.json
 754313fc7d3764b3a0c619b95851ecc12e21bf15 data/forge/tags/items/ores/fire_quartz.json
 50447e753f5f600ffe93d05540f89dcfd0546fad data/forge/tags/items/organic_fibers.json
 16abeceba62097ff1c3d75670cefea18ae754b52 data/forge/tags/items/putrescent.json
-6c19077afad236738d297261cd80e60c3737f86a data/forge/tags/items/rawmeats.json
-ccd2d9c6caa654dc7b7d844b80f39c55284499be data/forge/tags/items/seeds.json
+ff8b307caf04370d406a1bc27cde7e6175664ab0 data/forge/tags/items/rawmeats.json
+695c9a30b0c728e32c2a5b56a1223f28e5cdf2d5 data/forge/tags/items/seeds.json
 fe10f4c75ab5a2ab7275d7e3407e3e083d626fdb data/forge/tags/items/silicon.json
 7f501feeb8a25f2dcbd831d4183b6121ca190a10 data/minecraft/tags/items/axes.json
 bb31636dad5a977c089f69bb0eaf79a2e514ecc6 data/minecraft/tags/items/hoes.json

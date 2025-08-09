@@ -25,6 +25,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> EARTH_CRYSTAL_ORE_PLACED_KEY = registerKey("earth_crystal_ore_placed");
     public static final ResourceKey<PlacedFeature> FIRE_QUARTZ_ORE_PLACED_KEY = registerKey("fire_quartz_ore_placed");
     public static final ResourceKey<PlacedFeature> ENDERGON_CRYSTAL_ORE_PLACED_KEY = registerKey("endergon_crystal_ore_placed");
+    public static final ResourceKey<PlacedFeature> BONES_ORE_PLACED_KEY = registerKey("bones_ore_placed");
 
     public static final ResourceKey<PlacedFeature> PINE_PLACED_KEY = registerKey("pine_placed");
 
@@ -42,6 +43,10 @@ public class ModPlacedFeatures {
         register(context, ENDERGON_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENDERGON_CRYSTAL_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+        register(context, BONES_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BONES_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(10,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
 
         register(context, PINE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),

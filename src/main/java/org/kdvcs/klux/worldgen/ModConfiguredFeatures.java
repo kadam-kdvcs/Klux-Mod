@@ -29,6 +29,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> EARTH_CRYSTAL_ORE_KEY = registerKey("earth_crystal_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIRE_QUARTZ_ORE_KEY = registerKey("fire_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ENDERGON_CRYSTAL_ORE_KEY = registerKey("endergon_crystal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONES_ORE_KEY = registerKey("bones_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINE_KEY = registerKey("pine");
 
@@ -39,11 +40,12 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endReplaceables  = new BlockMatchTest(Blocks.END_STONE);
 
-        RuleTest sandReplaceables = new BlockMatchTest(Blocks.SAND);
-
         List<OreConfiguration.TargetBlockState> overworldEarthCrystalOres = List.of(OreConfiguration.target(stoneReplaceable,
                 ModBlocks.EARTH_CRYSTAL_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepSlateReplaceables, ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get().defaultBlockState()));
+
+        register(context, BONES_ORE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceable,
+                ModBlocks.BONES_ORE.get().defaultBlockState(),8));
 
         register(context, EARTH_CRYSTAL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldEarthCrystalOres,9));
         register(context, FIRE_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,

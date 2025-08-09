@@ -62,6 +62,12 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(UniversalRepairerBlockEntity::new,
                             ModBlocks.UNIVERSAL_REPAIRER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<GemDuplicatorBlockEntity>> GEM_DUPLICATOR_BE =
+            BLOCK_ENTITIES.register("gem_duplicator_be", () ->
+                    BlockEntityType.Builder.of(GemDuplicatorBlockEntity::new,
+                            ModBlocks.GEM_DUPLICATOR.get()).build(null));
+
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

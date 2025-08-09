@@ -212,7 +212,7 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.klux.liquid_reactor");
+        return Component.translatable("block.klux.title_liquid_reactor");
     }
 
     @Nullable

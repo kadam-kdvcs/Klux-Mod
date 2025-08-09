@@ -213,7 +213,7 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.klux.flux_synthesizer");
+        return Component.translatable("block.klux.title_flux_synthesizer");
     }
 
     @Nullable

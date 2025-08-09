@@ -103,15 +103,14 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(),
                     BlockSetType.IRON));
 
-    //CROP
-    public static final RegistryObject<Block> PARSNIP_CROP = BLOCKS.register("parsnip_crop",
-            () -> new ParsnipCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
-
     public static final RegistryObject<Block> SPRING_ONION_CROP = BLOCKS.register("spring_onion_crop",
             () -> new SpringOnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> ROTTEN_FRUIT_CROP = BLOCKS.register("rotten_fruit_crop",
             () -> new RottenFruitCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> RICE_CROP = BLOCKS.register("rice_crop",
+            () -> new RiceCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     //FLOWER
     public static final RegistryObject<Block> CACTUS_FRUIT = registerBlock("cactus_fruit",
@@ -142,6 +141,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(3f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
+    //BONES
+    public static final RegistryObject<Block> BONES_ORE = registerBlock("bones_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(1.2f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
 
     //SOUND BLOCK
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
@@ -177,6 +180,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> UNIVERSAL_REPAIRER = registerBlock("universal_repairer",
             UniversalRepairerBlock::new);
+
+
+    public static final RegistryObject<Block> GEM_DUPLICATOR = registerBlock("gem_duplicator",
+            GemDuplicatorBlock::new);
 
     //AROMATIC BLOCK
     public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",

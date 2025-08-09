@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_EARTH_CRYSTAL_ORE.get());
                         output.accept(ModBlocks.FIRE_QUARTZ_ORE.get());
                         output.accept(ModBlocks.ENDERGON_CRYSTAL_ORE.get());
+                        output.accept(ModBlocks.BONES_ORE.get());
 
                         output.accept(ModItems.EARTH_CRYSTAL.get());
                         output.accept(ModItems.FIRE_QUARTZ.get());
@@ -44,24 +45,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.EARTH_CRYSTAL_BLOCK.get());
 
-                        output.accept(ModBlocks.HAY_BRICK.get());
-                        output.accept(ModBlocks.HAY_STAIRS.get());
-                        output.accept(ModBlocks.HAY_SLAB.get());
-                        output.accept(ModBlocks.HAY_WALL.get());
-                        output.accept(ModBlocks.IRON_SAND.get());
+                        //output.accept(ModItems.SPRING_ONION_SEEDS.get());
 
-                        output.accept(ModBlocks.ICE_BRICK.get());
-                        output.accept(ModBlocks.SANDSTONE_CLEAN.get());
-                        output.accept(ModBlocks.SANDSTONE_CARVED.get());
+                        output.accept(ModItems.RICE_SEEDS.get());
 
-                        output.accept(ModBlocks.DRIED_BRICK.get());
-                        output.accept(ModBlocks.DRIED_BRICK_SMOOTH.get());
-                        output.accept(ModBlocks.SNOW_BRICK.get());
-                        output.accept(ModBlocks.WET_BRICK.get());
-
-                        output.accept(ModItems.PARSNIP_SEEDS.get());
-
-                        output.accept(ModItems.SPRING_ONION_SEEDS.get());
                         output.accept(ModBlocks.CACTUS_FRUIT.get());
 
                         output.accept(ModItems.ENRICHED_COAL.get());
@@ -108,6 +95,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WROUGHT_IRON_INGOT.get());
                         output.accept(ModItems.WROUGHT_IRON_GEAR.get());
                         output.accept(ModItems.SLAG_LUMP.get());
+                        output.accept(ModItems.APATITE.get());
 
                         //LIQUID BUCKETS
                         output.accept(ModItems.AROMATIC_BUCKET.get());
@@ -135,6 +123,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.REINFORCED_AROMATIC_CRYSTAL_GEAR.get());
 
+                        output.accept(ModItems.FIERY_INGOT.get());
+                        output.accept(ModItems.FIERY_GEAR.get());
+
                         output.accept(ModItems.FLUX_CORE.get());
                         output.accept(ModItems.SCORIA_POWDER.get());
                         output.accept(ModItems.MOLTEN_CORE.get());
@@ -142,6 +133,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.REDSTONE_CRYSTAL_CORE.get());
                         output.accept(ModItems.RAW_SILICON.get());
                         output.accept(ModItems.SILICON_BOULE.get());
+                        output.accept(ModItems.REDSTONE_SILICON_BOULE.get());
+                        output.accept(ModItems.PYRORED_SILICRYSTAL.get());
+                        output.accept(ModItems.ACTIVATION_POWDER.get());
 
                         output.accept(ModItems.SEALED_TANK.get());
                         output.accept(ModItems.TRIPLE_SEALED_TANK.get());
@@ -173,6 +167,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIQUID_FILTER.get());
                         output.accept(ModBlocks.FIRE_QUARTZ_FRAME.get());
 
+                        output.accept(ModBlocks.GEM_DUPLICATOR.get());
+
                             })
                     .build());
 
@@ -181,12 +177,14 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.klux_foods"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.PARSNIP.get());
-                        output.accept(ModItems.SPRING_ONION.get());
-                        output.accept(ModItems.SALAD.get());
+//                        output.accept(ModItems.SPRING_ONION.get());
+//                        output.accept(ModItems.SALAD.get());
+                        output.accept(ModItems.RICE.get());
                         output.accept(ModItems.NUTRI_BLOCK.get());
                         output.accept(ModItems.ROUGH_CAKE_BASE.get());
                         output.accept(ModItems.VITAMIN_CAKE.get());
+                        output.accept(ModItems.RAW_HORSE_MEAT.get());
+                        output.accept(ModItems.COOKED_HORSE_MEAT.get());
 
                         //APPLES
                         output.accept(ModItems.APPLE_COPPER.get());
@@ -247,6 +245,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOUND_BLOCK.get());
                         output.accept(ModItems.RUMBLE_MUSIC_DISC.get());
                         output.accept(ModItems.BIG_MUSIC_MUSIC_DISC.get());
+
+                        output.accept(ModBlocks.HAY_BRICK.get());
+                        output.accept(ModBlocks.HAY_STAIRS.get());
+                        output.accept(ModBlocks.HAY_SLAB.get());
+                        output.accept(ModBlocks.HAY_WALL.get());
+                        output.accept(ModBlocks.IRON_SAND.get());
+
+                        output.accept(ModBlocks.ICE_BRICK.get());
+                        output.accept(ModBlocks.SANDSTONE_CLEAN.get());
+                        output.accept(ModBlocks.SANDSTONE_CARVED.get());
+
+                        output.accept(ModBlocks.DRIED_BRICK.get());
+                        output.accept(ModBlocks.DRIED_BRICK_SMOOTH.get());
+                        output.accept(ModBlocks.SNOW_BRICK.get());
+                        output.accept(ModBlocks.WET_BRICK.get());
 
                     })
                     .build());

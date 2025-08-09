@@ -12,11 +12,18 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
-import org.kdvcs.klux.block.custom.ParsnipCropBlock;
+import org.kdvcs.klux.block.custom.RiceCropBlock;
 import org.kdvcs.klux.block.custom.RottenFruitCropBlock;
 import org.kdvcs.klux.block.custom.SpringOnionCropBlock;
 
 import java.util.function.Function;
+
+/*
+ *
+ * credit to @Kaupenjoe
+ *
+ *
+ */
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -40,6 +47,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BACKGROUND_BRICK);
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
+        blockWithItem(ModBlocks.BONES_ORE);
 
         //STAIRS
         stairsBlock(((StairBlock) ModBlocks.EARTH_CRYSTAL_STAIRS.get()), blockTexture(ModBlocks.EARTH_CRYSTAL_BLOCK.get()));
@@ -73,9 +81,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.EARTH_CRYSTAL_TRAPDOOR.get()), modLoc("block/earth_crystal_trapdoor"),
                 true, "cutout");
 
-        makeParsnipCrop((CropBlock) ModBlocks.PARSNIP_CROP.get(), "parsnip_stage", "parsnip_stage");
         makeSpringOnionCrop((CropBlock) ModBlocks.SPRING_ONION_CROP.get(),"spring_onion_stage_","spring_onion_stage_");
         makeRottenFruitCrop((CropBlock) ModBlocks.ROTTEN_FRUIT_CROP.get(), "rotten_fruit_stage", "rotten_fruit_stage");
+        makeRiceCrop((CropBlock) ModBlocks.RICE_CROP.get(), "rice_stage_", "rice_stage_");
 
         simpleBlockWithItem(ModBlocks.CACTUS_FRUIT.get(), models().cross(blockTexture(ModBlocks.CACTUS_FRUIT.get()).getPath(),
                 blockTexture(ModBlocks.CACTUS_FRUIT.get())).renderType("cutout"));
@@ -127,12 +135,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
-    public void makeParsnipCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> parsnipStates(state, block, modelName, textureName);
-
-        getVariantBuilder(block).forAllStates(function);
-    }
-
     public void makeRottenFruitCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> rottenFruitStates(state, block, modelName, textureName);
 
@@ -144,6 +146,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStates(function);
     }
 
+    public void makeRiceCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> riceStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
     private ConfiguredModel[] springOnionStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SpringOnionCropBlock) block).getAgeProperty()),
@@ -152,18 +160,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return models;
     }
 
-    private ConfiguredModel[] parsnipStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()),
-                new ResourceLocation(Klux.MODID, "block/" + textureName + state.getValue(((ParsnipCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
-        return models;
-    }
-
     private ConfiguredModel[] rottenFruitStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RottenFruitCropBlock) block).getAgeProperty()),
                 new ResourceLocation(Klux.MODID, "block/" + textureName + state.getValue(((RottenFruitCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    private ConfiguredModel[] riceStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RiceCropBlock) block).getAgeProperty()),
+                new ResourceLocation(Klux.MODID, "block/" + textureName + state.getValue(((RiceCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

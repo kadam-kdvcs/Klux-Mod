@@ -24,6 +24,13 @@ import org.kdvcs.klux.item.ModItems;
 
 import java.util.LinkedHashMap;
 
+/*
+ *
+ * credit to @Kaupenjoe
+ *
+ *
+ */
+
 public class ModItemModelProvider extends ItemModelProvider {
 
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -77,6 +84,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FILTER_CORE);
         simpleItem(ModItems.SCORIA_POWDER);
         simpleItem(ModItems.MOLTEN_CORE);
+        simpleItem(ModItems.REDSTONE_SILICON_BOULE);
+        simpleItem(ModItems.PYRORED_SILICRYSTAL);
+        simpleItem(ModItems.ACTIVATION_POWDER);
 
         simpleItem(ModItems.PRECISION_SUBSTRATE);
         simpleItem(ModItems.PECTI_BOND);
@@ -127,10 +137,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SALAD);
         simpleItem(ModItems.DETECTOR);
         simpleItem(ModItems.ENRICHED_COAL);
-        simpleItem(ModItems.PARSNIP);
-        simpleItem(ModItems.PARSNIP_SEEDS);
+
+        //CROP WITH FOOD
         simpleItem(ModItems.SPRING_ONION);
         simpleItem(ModItems.SPRING_ONION_SEEDS);
+        simpleItem(ModItems.RICE);
+        simpleItem(ModItems.RICE_SEEDS);
+
         simpleItem(ModItems.RUMBLE_MUSIC_DISC);
         simpleItem(ModItems.HUMICS);
         simpleItem(ModItems.REDSTONE_RESONATOR);
@@ -146,6 +159,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ROUGH_CAKE_BASE);
         simpleItem(ModItems.VITAMIN_CAKE);
+
+        simpleItem(ModItems.RAW_HORSE_MEAT);
+        simpleItem(ModItems.COOKED_HORSE_MEAT);
+        simpleItem(ModItems.APATITE);
+
+        simpleItem(ModItems.FIERY_INGOT);
+        simpleItem(ModItems.FIERY_GEAR);
 
         simpleBlockItem(ModBlocks.EARTH_CRYSTAL_DOOR);
 

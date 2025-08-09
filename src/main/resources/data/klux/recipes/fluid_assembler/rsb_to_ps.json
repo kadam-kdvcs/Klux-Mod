@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:redstone_silicon_boule",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 500
+  },
+  "output": {
+    "item": "klux:pyrored_silicrystal",
+    "count": 1
+  },
+  "maxProgress": 110
+}

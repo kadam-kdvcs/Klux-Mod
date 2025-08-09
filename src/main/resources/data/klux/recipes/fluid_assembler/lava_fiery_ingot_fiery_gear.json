@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:fiery_ingot",
+      "count": 4
+    },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 144
+  },
+  "output": {
+    "item": "klux:fiery_gear",
+    "count": 1
+  },
+  "maxProgress": 170
+}

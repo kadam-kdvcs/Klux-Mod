@@ -104,5 +104,11 @@
     "sounds": [
       "klux:liquid_filter_working"
     ]
+  },
+  "gem_duplicator_working": {
+    "subtitles": "sounds.klux.gem_duplicator_working",
+    "sounds": [
+      "klux:gem_duplicator_working"
+    ]
   }
 }

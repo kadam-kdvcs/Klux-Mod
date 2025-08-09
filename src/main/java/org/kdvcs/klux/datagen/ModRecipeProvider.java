@@ -20,6 +20,12 @@ import org.kdvcs.klux.util.ModTags;
 import java.util.List;
 import java.util.function.Consumer;
 
+/*
+ *
+ * credit to @Kaupenjoe for oreSmelting & oreBlasting & oreCooking methods
+ *
+ */
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
     private static final List<ItemLike> EARTH_CRYSTAL_SMELTABLES = List.of(ModBlocks.EARTH_CRYSTAL_ORE.get(),
@@ -80,6 +86,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.IRON_SAND.get()), has(ModBlocks.IRON_SAND.get()))
                 .save(p_251297_, new ResourceLocation(Klux.MODID, "ironsand"));
 
+        //HORSE MEAT
+        SimpleCookingRecipeBuilder.smoking(
+                        Ingredient.of(ModItems.RAW_HORSE_MEAT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.COOKED_HORSE_MEAT.get(),
+                        0.35f,
+                        100)
+                .unlockedBy(getHasName(ModItems.COOKED_HORSE_MEAT.get()), has(ModItems.COOKED_HORSE_MEAT.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "horsemeat"));
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModItems.RAW_HORSE_MEAT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.COOKED_HORSE_MEAT.get(),
+                        0.35f,
+                        200)
+                .unlockedBy(getHasName(ModItems.COOKED_HORSE_MEAT.get()), has(ModItems.COOKED_HORSE_MEAT.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "shorsemeat"));
+        SimpleCookingRecipeBuilder.campfireCooking(
+                        Ingredient.of(ModItems.RAW_HORSE_MEAT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.COOKED_HORSE_MEAT.get(),
+                        0,
+                        600)
+                .unlockedBy(getHasName(ModItems.COOKED_HORSE_MEAT.get()), has(ModItems.COOKED_HORSE_MEAT.get()))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "chorsemeat"));
+
         //AROMATIC INGOT
         SimpleCookingRecipeBuilder.blasting(
                         Ingredient.of(ModItems.AROMATIC_DUST.get()),
@@ -106,7 +138,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###")
                 .define('#', ModItems.EARTH_CRYSTAL.get())
-                .unlockedBy(getHasName(ModItems.EARTH_CRYSTAL.get()), has(ModItems.EARTH_CRYSTAL.get()))
+                .unlockedBy(getHasName(ModBlocks.EARTH_CRYSTAL_BLOCK.get()), has(ModBlocks.EARTH_CRYSTAL_BLOCK.get()))
                 .save(p_251297_);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ICE_BRICK.get(),4)
@@ -118,12 +150,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //PRESSING ROD ASSEMBLY
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PRESSING_ROD_ASSEMBLY.get())
-                .pattern("# #")
+                .pattern("#C#")
                 .pattern("ABA")
-                .pattern("# #")
+                .pattern("#C#")
                 .define('#', Items.STICK)
                 .define('A', Blocks.STONE)
                 .define('B', ModItems.ADHESIVE_PASTE.get())
+                .define('C', ModItems.WROUGHT_IRON_INGOT.get())
                 .unlockedBy(getHasName(ModItems.PRESSING_ROD_ASSEMBLY.get()), has(ModItems.PRESSING_ROD_ASSEMBLY.get()))
                 .save(p_251297_);
 
@@ -169,6 +202,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModBlocks.EARTH_CRYSTAL_FRAME.get())
                 .define('B', ModItems.EXTRACTION_MESH.get())
                 .unlockedBy(getHasName(ModBlocks.EXTRACTOR.get()), has(ModBlocks.EXTRACTOR.get()))
+                .save(p_251297_);
+
+        //UNIVERSAL REPAIRER
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.UNIVERSAL_REPAIRER.get())
+                .pattern("ESE")
+                .pattern("KAK")
+                .pattern("QBQ")
+                .define('E', ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get())
+                .define('S', ModItems.AROMATIC_RESONATOR.get())
+                .define('K', ModItems.FIERY_GEAR.get())
+                .define('A', ModBlocks.FIRE_QUARTZ_FRAME.get())
+                .define('B', ModItems.PRESSING_ROD_ASSEMBLY.get())
+                .define('Q', ModItems.SEALED_TANK.get())
+                .unlockedBy(getHasName(ModBlocks.UNIVERSAL_REPAIRER.get()), has(ModBlocks.UNIVERSAL_REPAIRER.get()))
                 .save(p_251297_);
 
         //HAY BRICK

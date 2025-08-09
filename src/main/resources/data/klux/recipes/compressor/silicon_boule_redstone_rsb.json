@@ -1,0 +1,18 @@
+{
+  "type": "klux:compressor",
+  "ingredients": [
+    {
+      "item": "klux:silicon_boule",
+      "count": 1
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 4
+    }
+  ],
+  "output": {
+    "item": "klux:redstone_silicon_boule",
+    "count": 1
+  },
+  "maxProgress": 85
+}

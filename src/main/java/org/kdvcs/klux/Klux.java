@@ -1,22 +1,13 @@
 package org.kdvcs.klux;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.cauldron.CauldronInteraction;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipe;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,10 +23,9 @@ import org.kdvcs.klux.config.KluxCommonConfigs;
 import org.kdvcs.klux.effect.ModEffects;
 import org.kdvcs.klux.fluid.ModFluidTypes;
 import org.kdvcs.klux.fluid.ModFluids;
-import org.kdvcs.klux.init.ModBrewingRecipes;
+import org.kdvcs.klux.recipe.ModBrewingRecipes;
 import org.kdvcs.klux.item.ModCreativeModeTabs;
 import org.kdvcs.klux.item.ModItems;
-import org.kdvcs.klux.item.renderer.MultiphaseFluidContainerRenderer;
 import org.kdvcs.klux.loot.ModLootConditions;
 import org.kdvcs.klux.loot.ModLootModifiers;
 import org.kdvcs.klux.networking.ModMessages;
@@ -43,15 +33,10 @@ import org.kdvcs.klux.potion.ModPotions;
 import org.kdvcs.klux.recipe.ModRecipes;
 import org.kdvcs.klux.screen.*;
 import org.kdvcs.klux.sound.ModSounds;
-import org.kdvcs.klux.util.ModBrewingRecipe;
-import org.kdvcs.klux.util.ModBrewingRecipeRegistry;
-import org.kdvcs.klux.worldgen.biome.ModOverworldRegion;
 import org.kdvcs.klux.worldgen.biome.ModTerrablender;
 import org.kdvcs.klux.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
-import terrablender.core.TerraBlender;
-import terrablender.core.TerraBlenderForge;
 
 @Mod(Klux.MODID)
 public class Klux {
@@ -117,16 +102,16 @@ public class Klux {
             MenuScreens.register(ModMenuTypes.COMPRESSOR_MENU.get(), CompressorScreen::new);
             MenuScreens.register(ModMenuTypes.DEHYDRATOR_MENU.get(), DehydratorScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRACTOR_MENU.get(), ExtractorScreen::new);
-
             MenuScreens.register(ModMenuTypes.FLUID_ASSEMBLER_MENU.get(), FluidAssemblerScreen::new);
             MenuScreens.register(ModMenuTypes.FLUID_EXTRACTOR_MENU.get(), FluidExtractorScreen::new);
-
             MenuScreens.register(ModMenuTypes.MULTIPHASE_FLUID_TANK_MENU.get(), MultiphaseFluidTankScreen::new);
 
             MenuScreens.register(ModMenuTypes.FLUX_SYNTHESIZER_MENU.get(), FluxSynthesizerScreen::new);
             MenuScreens.register(ModMenuTypes.LIQUID_REACTOR_MENU.get(), LiquidReactorScreen::new);
             MenuScreens.register(ModMenuTypes.LIQUID_FILTER_MENU.get(), LiquidFilterScreen::new);
             MenuScreens.register(ModMenuTypes.UNIVERSAL_REPAIRER_MENU.get(), UniversalRepairerScreen::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_DUPLICATOR_MENU.get(), GemDuplicatorScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_AROMATIC.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_AROMATIC.get(), RenderType.translucent());

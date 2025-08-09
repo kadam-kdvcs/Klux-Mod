@@ -44,6 +44,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<UniversalRepairerMenu>> UNIVERSAL_REPAIRER_MENU =
             registerMenuType("universal_repairer_menu", UniversalRepairerMenu::new);
 
+    public static final RegistryObject<MenuType<GemDuplicatorMenu>> GEM_DUPLICATOR_MENU =
+            registerMenuType("gem_duplicator_menu", GemDuplicatorMenu::new);
+
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }

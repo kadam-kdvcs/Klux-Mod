@@ -159,7 +159,13 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
             )),
 
             Direction.SOUTH, LazyOptional.of(() -> new WrappedFluidHandler(
-                    List.of(OUTPUT_FLUID_TANK),
+                    List.of(FLUID_TANK_1),
+                    i -> true,
+                    (i, s) -> false
+            )),
+
+            Direction.DOWN, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK_2),
                     i -> true,
                     (i, s) -> false
             )),
@@ -173,7 +179,7 @@ public class LiquidReactorBlockEntity extends BlockEntity implements MenuProvide
             Direction.WEST, LazyOptional.of(() -> new WrappedFluidHandler(
                     List.of(FLUID_TANK_2),
                     i -> false,
-                    (i, s) -> i == 1
+                    (i, s) -> i == 0
             ))
     );
 

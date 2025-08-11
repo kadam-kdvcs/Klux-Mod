@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "minecraft:sugar_cane",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 45
+  },
+  "maxProgress": 10
+}

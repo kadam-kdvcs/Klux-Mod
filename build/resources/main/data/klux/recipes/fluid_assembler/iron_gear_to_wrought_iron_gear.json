@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "tag": "forge:gears/iron",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "minecraft:lava",
+    "Amount": 400
+  },
+  "output": {
+    "item": "klux:wrought_iron_gear",
+    "count": 1
+  },
+  "maxProgress": 120
+}

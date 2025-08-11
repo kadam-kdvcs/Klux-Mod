@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+// maybe I should take GregTech for a more accurate method to make this...
+
 @Deprecated
 public class OutputSlotSimulator {
 

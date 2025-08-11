@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "klux:rotten_fruit",
+    "count": 4
+  },
+  "ingredient2": {
+    "tag": "forge:gems/apatite",
+    "count": 1
+  },
+  "fluid_input": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
+  "fluid_output": {
+    "FluidName": "klux:enzyme_solution_fluid",
+    "Amount": 500
+  },
+  "output": {
+    "item": "klux:botanical_resin_bead",
+    "count": 8
+  },
+  "maxProgress": 110
+}

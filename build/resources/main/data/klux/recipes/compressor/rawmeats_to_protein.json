@@ -6,13 +6,13 @@
       "count": 1
     },
     {
-      "item": "minecraft:egg",
+      "item": "minecraft:wheat",
       "count": 1
     }
   ],
   "output": {
     "item": "klux:protein_concentrate",
-    "count": 6
+    "count": 3
   },
   "maxProgress": 120
 }

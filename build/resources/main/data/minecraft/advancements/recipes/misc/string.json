@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobweb": {
+    "has_string": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cobweb"
+              "minecraft:string"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_cobweb",
+      "has_string",
       "has_the_recipe"
     ]
   ],

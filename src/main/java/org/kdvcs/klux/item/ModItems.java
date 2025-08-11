@@ -353,6 +353,10 @@ public class ModItems {
     public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_seeds",
             () -> new ItemNameBlockItem(ModBlocks.RICE_CROP.get(), new Item.Properties()));
 
+    //CROP (SEEDS OF COTTON)
+    public static final RegistryObject<Item> COTTON_SEEDS = ITEMS.register("cotton_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(), new Item.Properties()));
+
     //SPRING_ONION
     public static final RegistryObject<Item> SPRING_ONION = ITEMS.register("spring_onion",
             () -> new Item(new Item.Properties().food(ModFoods.SPRING_ONION)));
@@ -360,6 +364,14 @@ public class ModItems {
     //RICE
     public static final RegistryObject<Item> RICE = ITEMS.register("rice",
             () -> new Item(new Item.Properties().food(ModFoods.RICE)));
+
+    //COTTON
+    public static final RegistryObject<Item> COTTON = ITEMS.register("cotton",
+            () -> new Item(new Item.Properties()));
+
+    //COTTON BLOB
+    public static final RegistryObject<Item> COTTON_BLOB = ITEMS.register("cotton_blob",
+            () -> new Item(new Item.Properties()));
 
     //HORSE MEAT
     public static final RegistryObject<Item> RAW_HORSE_MEAT = ITEMS.register("raw_horse_meat",
@@ -427,6 +439,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.SOFT_CLOTH, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> SOFT_BOOTS = ITEMS.register("soft_boots",
             () -> new ArmorItem(ModArmorMaterials.SOFT_CLOTH, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    //QUARTZ SLURRY BUCKET
+    public static final RegistryObject<Item> QUARTZ_SLURRY_BUCKET = ITEMS.register("quartz_slurry_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_QUARTZ_SLURRY,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     //AROMATIC BUCKET
     public static final RegistryObject<Item> AROMATIC_BUCKET = ITEMS.register("aromatic_bucket",

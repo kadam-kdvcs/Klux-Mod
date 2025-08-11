@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -27,12 +29,16 @@ public class FluidExtractorCategory implements IRecipeCategory<FluidExtractorRec
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "fluid_extractor");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_fluid_extractor.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_2.png");
 
     public static final RecipeType<FluidExtractorRecipe> FLUID_EXTRACTOR_TYPE =
             new RecipeType<>(UID, FluidExtractorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableStatic meter;
 
     //  DRAW PROCESSING TIME
     private FluidExtractorRecipe currentRecipe;
@@ -40,6 +46,16 @@ public class FluidExtractorCategory implements IRecipeCategory<FluidExtractorRec
     public FluidExtractorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 93);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.FLUID_EXTRACTOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 22, 15)
+                .setTextureSize(22, 15)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        this.meter = helper.drawableBuilder(TEXTURE, 176, 0, 16, 61)
+                .setTextureSize(256, 256)
+                .build();
     }
 
     @Override
@@ -79,6 +95,14 @@ public class FluidExtractorCategory implements IRecipeCategory<FluidExtractorRec
     //  HERE DRAWS A PROCESSING TIME
     @Override
     public void draw(FluidExtractorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 81, 36);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meter.draw(guiGraphics, 118, 15);
+        guiGraphics.pose().popPose();
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

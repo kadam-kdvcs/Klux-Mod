@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "tag": "forge:gems/quartz",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:quartz_slurry_fluid",
+    "Amount": 144
+  },
+  "maxProgress": 20
+}

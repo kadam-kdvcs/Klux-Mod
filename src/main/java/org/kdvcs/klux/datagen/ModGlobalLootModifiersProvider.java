@@ -1,25 +1,24 @@
 package org.kdvcs.klux.datagen;
 
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 import org.kdvcs.klux.Klux;
-import org.kdvcs.klux.block.ModBlocks;
 import org.kdvcs.klux.item.ModItems;
 import org.kdvcs.klux.loot.AddItemModifier;
 import org.kdvcs.klux.loot.AddSusSandItemModifier;
+import org.kdvcs.klux.loot.ReplaceDropModifier;
 import org.kdvcs.klux.loot.condition.BlockTagLootCondition;
-
-import java.util.List;
 
 public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     public ModGlobalLootModifiersProvider(PackOutput output) {
@@ -28,6 +27,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
+
         /*add("salad_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.4f).build()}, ModItems.EARTH_CRYSTAL.get()));
@@ -118,14 +118,44 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         }, ModItems.ENRICHED_COAL.get()));
 
         //RICE SEEDS
-        add("rice_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.15f).build()}, ModItems.RICE_SEEDS.get()));
+        add("rice_seeds_from_grass", new AddItemModifier(
+                new LootItemCondition[]{
+                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                        LootItemRandomChanceCondition.randomChance(0.27f).build(),
+                        InvertedLootItemCondition.invert(
+                                MatchTool.toolMatches(
+                                        ItemPredicate.Builder.item()
+                                                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))
+                                )
+                        ).build(),
+                        InvertedLootItemCondition.invert(
+                                MatchTool.toolMatches(
+                                        ItemPredicate.Builder.item().of(Items.SHEARS)
+                                )
+                        ).build()
+                },
+                ModItems.RICE_SEEDS.get()
+        ));
 
-        //APATITE
-        add("apatite_from_bones_ore", new AddItemModifier(new LootItemCondition[] {
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.CALCITE).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, ModItems.APATITE.get()));
+        //COTTON SEEDS
+        add("cotton_seeds_from_grass", new AddItemModifier(
+                new LootItemCondition[]{
+                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                        LootItemRandomChanceCondition.randomChance(0.3f).build(),
+                        InvertedLootItemCondition.invert(
+                                MatchTool.toolMatches(
+                                        ItemPredicate.Builder.item()
+                                                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))
+                                )
+                        ).build(),
+                        InvertedLootItemCondition.invert(
+                                MatchTool.toolMatches(
+                                        ItemPredicate.Builder.item().of(Items.SHEARS)
+                                )
+                        ).build()
+                },
+                ModItems.COTTON_SEEDS.get()
+        ));
 
 //        add("spring_onion_seeds_from_grass", new AddItemModifier(new LootItemCondition[] {
 //                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
@@ -133,12 +163,28 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("withered_leaf_from_leaves", new AddItemModifier(new LootItemCondition[] {
                 new BlockTagLootCondition(TagKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "leaves"))),
-                LootItemRandomChanceCondition.randomChance(0.14f).build()
+                LootItemRandomChanceCondition.randomChance(0.51f).build()
         }, ModItems.WITHERED_LEAF.get()));
 
-        add("raw_silicon_from_sand", new AddItemModifier(new LootItemCondition[] {
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SAND).build(),
-                LootItemRandomChanceCondition.randomChance(0.34f).build()}, ModItems.RAW_SILICON.get()));
+        add("raw_silicon_from_sand", new ReplaceDropModifier(
+                new LootItemCondition[] {
+                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SAND).build(),
+                        LootItemRandomChanceCondition.randomChance(0.34f).build()
+                },
+                Blocks.SAND,
+                ModItems.RAW_SILICON.get(),
+                0.34f
+        ));
+
+        add("raw_silicon_from_calcite", new ReplaceDropModifier(
+                new LootItemCondition[] {
+                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.CALCITE).build(),
+                        LootItemRandomChanceCondition.randomChance(0.4f).build()
+                },
+                Blocks.CALCITE,
+                ModItems.APATITE.get(),
+                0.34f
+        ));
 
     }
 }

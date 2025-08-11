@@ -1,0 +1,11 @@
+{
+  "type": "klux:gem_duplicator",
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 1000
+  },
+  "ingredient": {
+    "tag": "forge:gems"
+  },
+  "max_progress": 78
+}

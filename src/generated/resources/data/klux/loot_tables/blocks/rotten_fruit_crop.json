@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "klux:dehydrated_seeds"
+              "name": "klux:rotten_fruit_seeds"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "klux:dehydrated_seeds"
+          "name": "klux:rotten_fruit_seeds"
         }
       ],
       "rolls": 1.0

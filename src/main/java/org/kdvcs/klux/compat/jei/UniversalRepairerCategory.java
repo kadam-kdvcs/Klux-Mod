@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -28,18 +30,33 @@ public class UniversalRepairerCategory implements IRecipeCategory<UniversalRepai
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "universal_repairer");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_universal_repairer.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_4.png");
 
     public static final RecipeType<UniversalRepairerRecipe> UNIVERSAL_REPAIRER_TYPE =
             new RecipeType<>(UID, UniversalRepairerRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableStatic meter;
 
     private UniversalRepairerRecipe currentRecipe;
 
     public UniversalRepairerCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 143, 95);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.UNIVERSAL_REPAIRER.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 15, 15)
+                .setTextureSize(15, 15)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        this.meter = helper.drawableBuilder(TEXTURE, 143, 0, 54, 61)
+                .setTextureSize(256, 256)
+                .build();
+
     }
 
     @Override
@@ -72,12 +89,20 @@ public class UniversalRepairerCategory implements IRecipeCategory<UniversalRepai
 
         builder.addSlot(RecipeIngredientRole.INPUT, 20, 17)
                 .addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getRequiredFluid()))
-                .setFluidRenderer(2000, false, 54, 61);
+                .setFluidRenderer(200, false, 54, 61);
 
     }
 
     @Override
     public void draw(UniversalRepairerRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 108, 19);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meter.draw(guiGraphics, 20, 17);
+        guiGraphics.pose().popPose();
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

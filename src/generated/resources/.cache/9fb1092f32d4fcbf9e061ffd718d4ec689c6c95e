@@ -1,5 +1,5 @@
-// 1.20.1	2025-08-09T22:42:24.2164391	Recipes
-1a05b07294c7dcfd506539633f79ba63974a1950 data/klux/advancements/recipes/misc/air_duct.json
+// 1.20.1	2025-08-11T12:26:47.8138673	Recipes
+e5bb5e4574d8416671cc345be7315245771251ff data/klux/advancements/recipes/misc/air_duct.json
 fa8cbcefaa7a5fc189f55a6ee829687c14828abd data/klux/advancements/recipes/misc/apple_copper.json
 c25045ebee1beb266254e8d5cf71aa670226e617 data/klux/advancements/recipes/misc/apple_diamond.json
 21821e92af8d9d00f6de45b94de84baa237ce960 data/klux/advancements/recipes/misc/apple_iron.json
@@ -7,10 +7,11 @@ cc7a311dbe57dad1581ed848818828360220725e data/klux/advancements/recipes/misc/app
 d78d2cd0577b75cd1cad60ca3a2138fcf702ab66 data/klux/advancements/recipes/misc/aromaticingot.json
 430ffeb66b20fa06a95ddc110b8e35ddfd79378c data/klux/advancements/recipes/misc/aromatic_dust.json
 df662441d100c154f208295cbffc962f917ccddd data/klux/advancements/recipes/misc/chorsemeat.json
-d8eca2e71137008a1f5d0eb1e7360ac451a530ea data/klux/advancements/recipes/misc/compressor.json
-cc96610e1759498703c6ed3dcfee002a2cb57dbd data/klux/advancements/recipes/misc/dehydrator.json
+d9afb46bd53043ca3827eebec3ba9f8c4500dadf data/klux/advancements/recipes/misc/compressor.json
+3106f4d6bb01abd1be021043723306efb7fcb384 data/klux/advancements/recipes/misc/cotton_blob.json
+bbc21511524ac5e29b913ab9b8c633466da0659c data/klux/advancements/recipes/misc/dehydrator.json
 a6b52178b571e448b9331693f166f99f3d33290f data/klux/advancements/recipes/misc/dissolvent_bearing.json
-fb8e439614cd79128333fe22b000528176816356 data/klux/advancements/recipes/misc/earth_crystal.json
+1aa34b7d845c4023e35c10d3f787d125cce82c96 data/klux/advancements/recipes/misc/earth_crystal.json
 2a0d78d16ded4b614d24aea946a85bad7310fbcc data/klux/advancements/recipes/misc/earth_crystal_block.json
 02ebd6e65c8cb36004643093ebfb104df72b7401 data/klux/advancements/recipes/misc/earth_crystal_frame.json
 a00fa7bcdf4bf29a7cedf06566ac3c4357c60465 data/klux/advancements/recipes/misc/earth_crystal_from_blasting_deepslate_earth_crystal_ore.json
@@ -26,13 +27,13 @@ c6e700c7fd1e0f52d35355072923de197e2d212e data/klux/advancements/recipes/misc/flu
 e6627f4d048ee52c6f72f431fa9b072357bf0c03 data/klux/advancements/recipes/misc/flux_core.json
 afe2f689b745dd0b2975581382fc3d697d160621 data/klux/advancements/recipes/misc/flux_synthesizer.json
 485bc2bd5e4ee7faa08e54ca810c1366eb3fd6e2 data/klux/advancements/recipes/misc/furnacecore.json
-0b14bd598bfa3a6e932e651bc2b48b29499ab3ce data/klux/advancements/recipes/misc/hay_ball.json
-a8814c12ff48ca9f04a55e3e221dcc3f38791cb0 data/klux/advancements/recipes/misc/hay_brick.json
+c9b0dfc730636c8eff41a7e649ecbe06c02c34ce data/klux/advancements/recipes/misc/hay_ball.json
+d905fca2373c59cff415222ba84dd52350621b5f data/klux/advancements/recipes/misc/hay_brick.json
 4563e8883ad7ca6ff6e32fac5c2c8a601959f63a data/klux/advancements/recipes/misc/hay_slab.json
 4e16a4b10dea1c1d68045a2ee4eb8b098322ac1a data/klux/advancements/recipes/misc/hay_stairs.json
 6988664a0ff8a577ac60e93cca1b02219f4d19d5 data/klux/advancements/recipes/misc/hay_wall.json
 229412064ecbc059a87b2fce904c5fd0db1302ca data/klux/advancements/recipes/misc/horsemeat.json
-6a8199323df57f6abfb0d064db1efc0c0ad18548 data/klux/advancements/recipes/misc/humics.json
+e392cc99fc82b641d80ba3cbbc1393979c661b1a data/klux/advancements/recipes/misc/humics.json
 dda100a52f6addfc48cc6b172b563c4c92475bc1 data/klux/advancements/recipes/misc/ice_brick.json
 7d3d8c626657952ddba5637b040fc28f0ea4999c data/klux/advancements/recipes/misc/ironsand.json
 49efa758976c0963a290788c1e8ed61eb6fe7a48 data/klux/advancements/recipes/misc/leatherpaste.json
@@ -48,6 +49,7 @@ b027c0feb0c1edc73bb63e22e26b016b2f1122df data/klux/advancements/recipes/misc/red
 264d6419000cdeff110a04ec779f4e993c6c6b09 data/klux/advancements/recipes/misc/sealed_tank.json
 924eec7818f81c77b91cb38bc24fd73b7abf6d1c data/klux/advancements/recipes/misc/shorsemeat.json
 c8757570c4b733908932138284b1c6e9e097e69c data/klux/advancements/recipes/misc/siliconboule.json
+13c66af6cd4d42a5f81378d24c52dc80b376fd26 data/klux/advancements/recipes/misc/string_from_cotton.json
 19cc771246d702f75daca7619b6c3ccc8fb294fd data/klux/advancements/recipes/misc/triple_sealed_tank.json
 a02c9cb2692418a0e2793fea554c9e9294a5e685 data/klux/advancements/recipes/misc/universal_feed.json
 4b94009daafea5f617d29a9ea8243c2762995e2b data/klux/advancements/recipes/misc/universal_repairer.json
@@ -62,6 +64,7 @@ e87447160d0d0d25120eaf4055feae2d37f6a04f data/klux/recipes/apple_lapis.json
 e79754eb2fecb1f256a4685122617277c69a4a28 data/klux/recipes/aromatic_dust.json
 6bf0b321fb273da8343cc36603cc54852930f042 data/klux/recipes/chorsemeat.json
 5791da6e14170ace86864fc20e736c651a6643d6 data/klux/recipes/compressor.json
+c92f76fd22905255ae9f8f7184a08c417556a6c7 data/klux/recipes/cotton_blob.json
 0f321fa8dc6d0adf78feefd153cfb4bc4693e60c data/klux/recipes/dehydrator.json
 f10c2e6ea8f4a1a6a4cbeea26dedafcf9e700268 data/klux/recipes/dissolvent_bearing.json
 4123d97dfcf0884faeb500af7fabe28abb5946ca data/klux/recipes/earth_crystal.json
@@ -71,9 +74,9 @@ ebf0d5a63e5b2a471b5177eb653254e5a626a953 data/klux/recipes/earth_crystal_from_bl
 9ca065ab5dbcfa2a50d2e236567c4a1920d72116 data/klux/recipes/earth_crystal_from_blasting_earth_crystal_ore.json
 e3ced5cf787e999c71ac51824e4e0203cfb241a6 data/klux/recipes/earth_crystal_from_smelting_deepslate_earth_crystal_ore.json
 92484d2ee1456418002d46bc0992a34e9e7d8cc4 data/klux/recipes/earth_crystal_from_smelting_earth_crystal_ore.json
-b68243be744c772a5a15c9ef5f334d4b27e1e862 data/klux/recipes/extraction_mesh.json
+33ebabecf48726a48243bd80daffbf0d5ea58742 data/klux/recipes/extraction_mesh.json
 c9a690cb5fec72305e3a3f8c557eaa7b97a97ea6 data/klux/recipes/extractor.json
-e9da05ee62035f2f5216827ac3ef97fb9e1879eb data/klux/recipes/fermented_aromatic_slurry.json
+93302d53f7af701f694056a3432e20aa90d04f1f data/klux/recipes/fermented_aromatic_slurry.json
 bc4ee0fe65214342b3cd3f4658a9ac6f90fd5f72 data/klux/recipes/fire_quartz_frame.json
 2e7668f33ad71ecf2b9a5c7fb502cc51721e767b data/klux/recipes/fluid_assembler.json
 ec5dbc037f430b8781e8898558e5964245a5cb64 data/klux/recipes/fluid_extractor.json
@@ -91,7 +94,7 @@ adda8a61f8d95b70d8da6b2c711128597e081541 data/klux/recipes/ice_brick.json
 9082ed11656c88ef3549d9e0d73c484ef30fef4c data/klux/recipes/ironsand.json
 0e8dff2ca1c2b064db21bf60322f5ddb04d7b08a data/klux/recipes/leatherpaste.json
 5c1eac015965e2bd6afc64ce5e918ecec1162e8d data/klux/recipes/liquid_filter.json
-09ac982ba3db2ccd6810a4414f0ddece5f1113fc data/klux/recipes/liquid_reactor.json
+e05ce8dcdac3e6880a6251f2c732739b471a1d41 data/klux/recipes/liquid_reactor.json
 a13bb3d06e5bd6389ad95a7df8f68897c9554745 data/klux/recipes/multiphase_fluid_container.json
 bd1a7f04f0713899e67c07293c0e28a7a9df53b5 data/klux/recipes/multiphase_fluid_tank.json
 827e8f7f609b44d7706095562a8b77ca6a17b7c3 data/klux/recipes/pine_planks.json
@@ -102,14 +105,15 @@ d2649242b0683658f673db594f04f5972ed06fcb data/klux/recipes/pressing_rod_assembly
 3967050dcfde95d10a8cea8e696d62ddf5003a0e data/klux/recipes/sealed_tank.json
 47f9bc0f40d5cd2b9b0dc1e7697ed1264e03f7ea data/klux/recipes/shorsemeat.json
 b7013886cfd7971501efbe7670f59cf91b8fbb80 data/klux/recipes/siliconboule.json
+aad019a85ac651e449ffd0fa4cc7ee9f6a812a4d data/klux/recipes/string_from_cotton.json
 1a08299d201c0a98fd4bcbd67b1392e7a9662a77 data/klux/recipes/triple_sealed_tank.json
 b96f195b28730ea5f02f16f9bcfc337b4d0b210a data/klux/recipes/universal_feed.json
 0aa594a7194e9b5c426da96941450d0b8c6231f7 data/klux/recipes/universal_repairer.json
 85f842564b00054c3dae408e490461c817578ff4 data/klux/recipes/wroughtironingot.json
 1cc5db0de7b5e3eded5d7fdd5881d54d06c49b81 data/klux/recipes/wrought_iron_gear.json
-49680ab5cffde37ff9bdc21c3835325a41d41622 data/minecraft/advancements/recipes/misc/cobweb.json
-136939b8ee00adccdfc1679ee8153fcc77de1a23 data/minecraft/advancements/recipes/misc/slime_ball.json
-7ba70420a4e374af8993b049fdad86274dbcb21d data/minecraft/advancements/recipes/misc/string.json
+65f40f973a8f74eb9809fd1d981aaff373fc69ab data/minecraft/advancements/recipes/misc/cobweb.json
+bdbfa4f5a18607cb2bd076a8f3db2ed9d4cce11b data/minecraft/advancements/recipes/misc/slime_ball.json
+13532cc47816ecb326c101d3211b2699fcbfa5ef data/minecraft/advancements/recipes/misc/string.json
 f881e9c33f9554a9b32a20c5d843e648a2c0d82e data/minecraft/recipes/cobweb.json
 5f5028e91795b4d3403aa80f1e4bb6b1cc7af6b3 data/minecraft/recipes/slime_ball.json
 9798ab338cf83872d30baca8be92f6371946cc82 data/minecraft/recipes/string.json

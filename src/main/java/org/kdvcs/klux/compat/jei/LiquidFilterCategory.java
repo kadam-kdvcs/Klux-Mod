@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -28,18 +30,33 @@ public class LiquidFilterCategory implements IRecipeCategory<LiquidFilterRecipe>
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "liquid_filter");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_liquid_filter.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_5.png");
 
     public static final RecipeType<LiquidFilterRecipe> LIQUID_FILTER_TYPE =
             new RecipeType<>(UID, LiquidFilterRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableStatic meter;
 
     private LiquidFilterRecipe currentRecipe;
 
     public LiquidFilterCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 95);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.LIQUID_FILTER.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 27, 15)
+                .setTextureSize(27, 15)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        this.meter = helper.drawableBuilder(TEXTURE, 176, 0, 43, 61)
+                .setTextureSize(256, 256)
+                .build();
+
     }
 
     @Override
@@ -93,6 +110,14 @@ public class LiquidFilterCategory implements IRecipeCategory<LiquidFilterRecipe>
 
     @Override
     public void draw(LiquidFilterRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 99, 39);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meter.draw(guiGraphics, 52, 17);
+        guiGraphics.pose().popPose();
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

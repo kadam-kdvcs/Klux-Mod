@@ -16,8 +16,8 @@
   "outputs": [
     {
       "item": "klux:vitamin_dust",
-      "count": 2,
-      "chance": 0.75
+      "count": 4,
+      "chance": 0.68
     },
     {
       "item": "klux:mineral_powder",

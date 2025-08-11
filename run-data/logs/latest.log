@@ -1,41 +1,41 @@
-[098月2025 22:42:15.680] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\34115\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.3, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, klux, --all, --output, D:\Mod Development\klux\src\generated\resources, --existing, D:\Mod Development\klux\src\main\resources]
-[098月2025 22:42:15.683] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.12 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
-[098月2025 22:42:15.793] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[098月2025 22:42:15.840] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/34115/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[098月2025 22:42:16.117] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.3\4080695cecae86c354232f04a2627dd7e4f1149e\javafmllanguage-1.20.1-47.4.3.jar is missing mods.toml file
-[098月2025 22:42:16.119] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.3\29a0368be8b1a5ebc5c52ff7b50cddb265c31c36\lowcodelanguage-1.20.1-47.4.3.jar is missing mods.toml file
-[098月2025 22:42:16.121] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.3\aa997425f691156656d4ba3aa78a50b43d677d91\mclanguage-1.20.1-47.4.3.jar is missing mods.toml file
-[098月2025 22:42:16.123] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.3\4f943542f1f182a4e269b4f920030b50738f6b81\fmlcore-1.20.1-47.4.3.jar is missing mods.toml file
-[098月2025 22:42:16.234] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[098月2025 22:42:17.709] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[098月2025 22:42:17.715] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\34115\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, klux, --all, --output, D:\Mod Development\klux\src\generated\resources, --existing, D:\Mod Development\klux\src\main\resources]
-[098月2025 22:42:17.983] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using D:\Mod Development\klux\build\createSrgToMcp\output.srg
-[098月2025 22:42:17.983] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using D:\Mod Development\klux\build\createSrgToMcp\output.srg
-[098月2025 22:42:18.287] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [klux]
-[098月2025 22:42:21.956] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.3, for MC 1.20.1 with MCP 20230612.114412
-[098月2025 22:42:21.963] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.3 Initialized
-[098月2025 22:42:22.158] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[098月2025 22:42:22.158] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[098月2025 22:42:22.158] [modloading-worker-0/INFO] [terrablender/]: Registered region klux:celeste to index 1 for type OVERWORLD
-[098月2025 22:42:22.232] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[098月2025 22:42:22.232] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.305 ms
-[098月2025 22:42:23.738] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/34115/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.3_mapped_official_1.20.1/forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[098月2025 22:42:23.754] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/34115/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.3_mapped_official_1.20.1/forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[098月2025 22:42:23.917] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[098月2025 22:42:23.980] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 60 ms
-[098月2025 22:42:23.980] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[098月2025 22:42:24.043] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 66 ms
-[098月2025 22:42:24.043] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: klux
-[098月2025 22:42:24.137] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: klux finished after 93 ms
-[098月2025 22:42:24.137] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: klux
-[098月2025 22:42:24.171] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: klux finished after 32 ms
-[098月2025 22:42:24.171] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id klux
-[098月2025 22:42:24.185] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id klux finished after 17 ms
-[098月2025 22:42:24.185] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id klux
-[098月2025 22:42:24.194] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id klux finished after 3 ms
-[098月2025 22:42:24.194] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : klux
-[098月2025 22:42:24.200] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : klux finished after 13 ms
-[098月2025 22:42:24.200] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[098月2025 22:42:24.216] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 15 ms
-[098月2025 22:42:24.216] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 305 ms
-[098月2025 22:42:24.231] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 629, old count: 625, new count: 630, removed stale: 0, written: 7
+[118月2025 14:03:08.631] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\34115\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.3, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, klux, --all, --output, D:\Mod Development\klux\src\generated\resources, --existing, D:\Mod Development\klux\src\main\resources]
+[118月2025 14:03:08.647] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.12 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[118月2025 14:03:08.758] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[118月2025 14:03:08.805] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/34115/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[118月2025 14:03:09.072] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.3\4080695cecae86c354232f04a2627dd7e4f1149e\javafmllanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[118月2025 14:03:09.088] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.3\29a0368be8b1a5ebc5c52ff7b50cddb265c31c36\lowcodelanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[118月2025 14:03:09.092] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.3\aa997425f691156656d4ba3aa78a50b43d677d91\mclanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[118月2025 14:03:09.092] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\34115\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.3\4f943542f1f182a4e269b4f920030b50738f6b81\fmlcore-1.20.1-47.4.3.jar is missing mods.toml file
+[118月2025 14:03:09.198] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[118月2025 14:03:10.582] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[118月2025 14:03:10.582] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\34115\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, klux, --all, --output, D:\Mod Development\klux\src\generated\resources, --existing, D:\Mod Development\klux\src\main\resources]
+[118月2025 14:03:10.885] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using D:\Mod Development\klux\build\createSrgToMcp\output.srg
+[118月2025 14:03:10.885] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using D:\Mod Development\klux\build\createSrgToMcp\output.srg
+[118月2025 14:03:11.258] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [klux]
+[118月2025 14:03:15.934] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.3, for MC 1.20.1 with MCP 20230612.114412
+[118月2025 14:03:15.934] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.3 Initialized
+[118月2025 14:03:16.357] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[118月2025 14:03:16.357] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[118月2025 14:03:16.357] [modloading-worker-0/INFO] [terrablender/]: Registered region klux:celeste to index 1 for type OVERWORLD
+[118月2025 14:03:16.520] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[118月2025 14:03:16.524] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 5.912 ms
+[118月2025 14:03:20.836] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/34115/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.3_mapped_official_1.20.1/forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[118月2025 14:03:20.836] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/34115/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.3_mapped_official_1.20.1/forge-1.20.1-47.4.3_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[118月2025 14:03:21.081] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[118月2025 14:03:21.139] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 51 ms
+[118月2025 14:03:21.139] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[118月2025 14:03:21.192] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 62 ms
+[118月2025 14:03:21.192] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: klux
+[118月2025 14:03:21.255] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: klux finished after 60 ms
+[118月2025 14:03:21.255] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: klux
+[118月2025 14:03:21.296] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: klux finished after 28 ms
+[118月2025 14:03:21.296] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id klux
+[118月2025 14:03:21.311] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id klux finished after 21 ms
+[118月2025 14:03:21.311] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id klux
+[118月2025 14:03:21.311] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id klux finished after 2 ms
+[118月2025 14:03:21.311] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : klux
+[118月2025 14:03:21.327] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : klux finished after 12 ms
+[118月2025 14:03:21.327] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[118月2025 14:03:21.343] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 14 ms
+[118月2025 14:03:21.343] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 257 ms
+[118月2025 14:03:21.359] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 646, old count: 647, new count: 647, removed stale: 0, written: 2

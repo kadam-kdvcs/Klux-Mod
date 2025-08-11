@@ -1,0 +1,24 @@
+{
+  "type": "klux:flux_synthesizer",
+  "ingredient1": {
+    "item": "minecraft:slime_ball",
+    "count": 2
+  },
+  "ingredient2": {
+    "item": "klux:humics",
+    "count": 2
+  },
+  "fluid_input": {
+    "FluidName": "klux:putrescent_solution_fluid",
+    "Amount": 150
+  },
+  "fluid_output": {
+    "FluidName": "klux:primal_essence_fluid",
+    "Amount": 150
+  },
+  "output": {
+    "item": "klux:botanical_resin_bead",
+    "count": 1
+  },
+  "maxProgress": 95
+}

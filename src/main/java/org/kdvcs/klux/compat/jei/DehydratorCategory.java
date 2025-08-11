@@ -3,6 +3,8 @@ package org.kdvcs.klux.compat.jei;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -28,12 +30,18 @@ public class DehydratorCategory implements IRecipeCategory<DehydratorRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "dehydrator");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_dehydrator.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_1.png");
+    public static final ResourceLocation FIRE = new ResourceLocation(Klux.MODID,
+            "textures/jei/fire.png");
 
     public static final RecipeType<DehydratorRecipe> DEHYDRATOR_TYPE =
             new RecipeType<>(UID, DehydratorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableAnimated fire;
 
     //  DRAW PROCESSING TIME
     private DehydratorRecipe currentRecipe;
@@ -41,6 +49,18 @@ public class DehydratorCategory implements IRecipeCategory<DehydratorRecipe> {
     public DehydratorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 86);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.DEHYDRATOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 21, 13)
+                .setTextureSize(21, 13)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        //DRAW FIRE
+        IDrawableStatic staticFire = helper.drawableBuilder(FIRE, 0, 0, 14, 15)
+                .setTextureSize(14, 15)
+                .build();
+        this.fire = helper.createAnimatedDrawable(staticFire, 200, IDrawableAnimated.StartDirection.TOP, true);
     }
 
     @Override
@@ -93,6 +113,10 @@ public class DehydratorCategory implements IRecipeCategory<DehydratorRecipe> {
     //  HERE DRAWS A PROCESSING TIME
     @Override
     public void draw(DehydratorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 80, 37);
+        fire.draw(guiGraphics, 57, 17);
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

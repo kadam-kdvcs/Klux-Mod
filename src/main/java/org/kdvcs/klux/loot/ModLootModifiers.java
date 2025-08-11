@@ -18,6 +18,14 @@ public class ModLootModifiers {
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_SUS_SAND_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("add_sus_sand_item", AddSusSandItemModifier.CODEC);
 
+    @SuppressWarnings("unchecked")
+    private static <T extends IGlobalLootModifier> Codec<T> castCodec(Codec<?> codec) {
+        return (Codec<T>) codec;
+    }
+
+    public static final RegistryObject<Codec<? extends IGlobalLootModifier>> REPLACE_DROP =
+            LOOT_MODIFIER_SERIALIZERS.register("replace_drop", () -> castCodec(ReplaceDropModifier.CODEC));
+
     public static void register(IEventBus eventBus) {
         LOOT_MODIFIER_SERIALIZERS.register(eventBus);
     }

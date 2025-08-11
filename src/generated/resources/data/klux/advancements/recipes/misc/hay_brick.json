@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hay_ball": {
+    "has_hay_brick": {
       "conditions": {
         "items": [
           {
             "items": [
-              "klux:hay_ball"
+              "klux:hay_brick"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_hay_ball",
+      "has_hay_brick",
       "has_the_recipe"
     ]
   ],

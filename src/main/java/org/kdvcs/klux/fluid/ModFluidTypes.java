@@ -23,6 +23,10 @@ public class ModFluidTypes {
     public static final ResourceLocation MINERAL_SLURRY_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_mineral_slurry");
     public static final ResourceLocation REPAIR_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_repair");
 
+    public static final ResourceLocation QUARTZ_STILL_RL = new ResourceLocation(Klux.MODID, "block/quartz_slurry_still");
+    public static final ResourceLocation QUARTZ_FLOWING_RL = new ResourceLocation(Klux.MODID, "block/quartz_slurry_flow");
+    public static final ResourceLocation QUARTZ_OVERLAY_RL = new ResourceLocation(Klux.MODID, "fluid/in_quartz_slurry");
+
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Klux.MODID);
 
@@ -31,6 +35,30 @@ public class ModFluidTypes {
                 WATER_STILL_RL, WATER_FLOWING_RL, overlayTexture,
                 colorARGB, fogColor, properties));
     }
+
+    private static RegistryObject<FluidType> register(String name,
+                                                      ResourceLocation stillTexture,
+                                                      ResourceLocation flowingTexture,
+                                                      ResourceLocation overlayTexture,
+                                                      int colorARGB,
+                                                      Vector3f fogColor,
+                                                      FluidType.Properties properties) {
+        return FLUID_TYPES.register(name, () -> new BaseFluidType(
+                stillTexture, flowingTexture, overlayTexture,
+                colorARGB, fogColor, properties));
+    }
+
+    //QUARTZ SLURRY
+    public static final RegistryObject<FluidType> QUARTZ_SLURRY_TYPE = register(
+            "quartz_slurry_fluid",
+            QUARTZ_STILL_RL,
+            QUARTZ_FLOWING_RL,
+            QUARTZ_OVERLAY_RL,
+            0xFFFFFFFF,
+            new Vector3f(1.0f, 1.0f, 1.0f),
+            FluidType.Properties.create().lightLevel(2).density(100).viscosity(20).canSwim(false).canPushEntity(false)
+                    .sound(SoundAction.get("drink"), SoundEvents.HONEY_DRINK)
+    );
 
     //AROMATIC
     public static final RegistryObject<FluidType> AROMATIC_FLUID_TYPE = register("aromatic_fluid", AROMATIC_OVERLAY_RL,

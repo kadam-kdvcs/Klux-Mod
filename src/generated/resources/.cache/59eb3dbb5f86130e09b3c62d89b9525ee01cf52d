@@ -1,7 +1,8 @@
-// 1.20.1	2025-08-09T19:55:47.8171331	Loot Tables
+// 1.20.1	2025-08-11T14:03:21.3433542	Loot Tables
 b99b7d187d13fcaf87dd6632f37d659a04d0662d data/klux/loot_tables/blocks/bones_ore.json
 e03b83849e672de4eaf9e62b33d799edca59afa1 data/klux/loot_tables/blocks/cactus_fruit.json
 51ebf61fe24d89e7ac5b5e7713b346c1ea8d65cd data/klux/loot_tables/blocks/compressor.json
+5a1c8ecc426ea11cf8f469b029770209f102b919 data/klux/loot_tables/blocks/cotton_crop.json
 97099e3d81b8febe04545bb19d2d2e2c0cdd0497 data/klux/loot_tables/blocks/deepslate_earth_crystal_ore.json
 32ddbe2af061bad06c68a1e586ffbd730c89645c data/klux/loot_tables/blocks/dehydrator.json
 07a5be7d7ffa81967359d02f3abdefce48d463e1 data/klux/loot_tables/blocks/dried_brick.json
@@ -41,8 +42,8 @@ da41cb387c504c05cfa1199ce95517f2768d05e5 data/klux/loot_tables/blocks/pine_leave
 7027bc6d076334c51029b27493b8e738f78d48ec data/klux/loot_tables/blocks/pine_sapling.json
 d5678e4d859ab73501c05b3c06910585d8d1a87d data/klux/loot_tables/blocks/pine_wood.json
 d53c8b78d0da5cee183c39bf6ba8d03b32b910a3 data/klux/loot_tables/blocks/potted_cactus_fruit.json
-98ad507f67d042d96fbb71487214b6591cc75dde data/klux/loot_tables/blocks/rice_crop.json
-1cce8b44189fc4dab5c09321dffee7880ee06916 data/klux/loot_tables/blocks/rotten_fruit_crop.json
+a045bfc9a271e77d27491a7544a555f02ca13da4 data/klux/loot_tables/blocks/rice_crop.json
+4e850ada26e3bfb49464a20411d53ee83b2ca16a data/klux/loot_tables/blocks/rotten_fruit_crop.json
 4a820e72d2c40c0a650bec0e55e1de7ac1c7d832 data/klux/loot_tables/blocks/sandstone_carved.json
 cef78b97c725c3316cf3ffe56f0bd373fae23d7f data/klux/loot_tables/blocks/sandstone_clean.json
 590274932f549f7ec1fd36a1e894db533e69aa33 data/klux/loot_tables/blocks/snow_brick.json

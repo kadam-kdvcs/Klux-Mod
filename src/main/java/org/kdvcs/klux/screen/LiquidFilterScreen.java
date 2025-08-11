@@ -87,6 +87,12 @@ public class LiquidFilterScreen extends AbstractContainerScreen<LiquidFilterMenu
         renderProgressArrow(guiGraphics, x, y);
         renderer.render(guiGraphics.pose(), x + 52, y + 17, menu.getFluidStack());
 
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, x + 52, y + 17, 203, 0, 43, 61);
+        guiGraphics.pose().pushPose();
+
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {

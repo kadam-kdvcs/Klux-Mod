@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-09T22:42:24.2164391	Tags for minecraft:item mod id klux
+// 1.20.1	2025-08-10T13:59:34.9427746	Tags for minecraft:item mod id klux
 742474ce3c36e796a640b5d49bbfffff8a24b1c4 data/forge/tags/items/aromapowders.json
 642a36fa5557d47f4bc5f133a95ee16e7bca9b70 data/forge/tags/items/aromapowders/aromatic.json
 563dd8a03efcaffd42ca3f52fad6782a1e2e9e1c data/forge/tags/items/aromapowders/herbal.json
@@ -32,7 +32,7 @@ b01cc1e74db759fd6f3a427005e1717e8bd5560e data/forge/tags/items/ores/endergon_cry
 50447e753f5f600ffe93d05540f89dcfd0546fad data/forge/tags/items/organic_fibers.json
 16abeceba62097ff1c3d75670cefea18ae754b52 data/forge/tags/items/putrescent.json
 ff8b307caf04370d406a1bc27cde7e6175664ab0 data/forge/tags/items/rawmeats.json
-695c9a30b0c728e32c2a5b56a1223f28e5cdf2d5 data/forge/tags/items/seeds.json
+31cf2471d1fd055d7c811a54aec592d76ba837f9 data/forge/tags/items/seeds.json
 fe10f4c75ab5a2ab7275d7e3407e3e083d626fdb data/forge/tags/items/silicon.json
 7f501feeb8a25f2dcbd831d4183b6121ca190a10 data/minecraft/tags/items/axes.json
 bb31636dad5a977c089f69bb0eaf79a2e514ecc6 data/minecraft/tags/items/hoes.json

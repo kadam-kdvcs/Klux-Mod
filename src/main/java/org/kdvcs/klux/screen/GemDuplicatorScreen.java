@@ -81,6 +81,12 @@ public class GemDuplicatorScreen extends AbstractContainerScreen<GemDuplicatorMe
 
         renderProgressArrow(guiGraphics, x, y);
         renderer.render(guiGraphics.pose(), x + 12, y + 17, menu.getFluidStack());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, x + 12, y + 17, 176, 8, 54, 61);
+        guiGraphics.pose().pushPose();
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {

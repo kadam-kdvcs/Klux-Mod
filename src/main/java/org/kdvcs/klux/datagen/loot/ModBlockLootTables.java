@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.block.ModBlocks;
@@ -118,15 +119,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RottenFruitCropBlock.AGE,3));
 
         this.add(ModBlocks.ROTTEN_FRUIT_CROP.get(), createCropDrops(ModBlocks.ROTTEN_FRUIT_CROP.get(), ModItems.ROTTEN_FRUIT.get(),
-                ModItems.DEHYDRATED_SEEDS.get(), lootitemcondition$builder3));
+                ModItems.ROTTEN_FRUIT_SEEDS.get(), lootitemcondition$builder3));
 
         //RICE CROPBLOCK
         LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.RICE_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE,7));
 
-        this.add(ModBlocks.RICE_CROP.get(), createFortuneCropDrops(ModBlocks.RICE_CROP.get(), ModItems.RICE.get(),
-                ModItems.RICE_SEEDS.get(), lootitemcondition$builder4));
+        this.add(ModBlocks.RICE_CROP.get(), createFortuneCropWithSeedReturnDrops(
+                ModBlocks.RICE_CROP.get(), ModItems.RICE.get(), ModItems.RICE_SEEDS.get(), 7));
+
+        //COTTON CROPBLOCK
+        LootItemCondition.Builder lootitemcondition$builder5 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.COTTON_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE,5));
+
+        this.add(ModBlocks.COTTON_CROP.get(), createFortuneCropWithSeedReturnDrops(
+                ModBlocks.COTTON_CROP.get(), ModItems.COTTON.get(), ModItems.COTTON_SEEDS.get(), 5));
 
         //FLOWER POT BLOCKS
         this.dropSelf(ModBlocks.CACTUS_FRUIT.get());
@@ -149,19 +158,54 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
-    //CREATE A FORTUNE DROP FOR CROPS
-    private static LootTable.Builder createFortuneCropDrops(Block crop, ItemLike product, ItemLike seeds, LootItemCondition.Builder condition) {
+    //FOR THOSE CROPS LIKE WHEAT
+    private static LootItemCondition.Builder createImmatureCondition(Block crop, int maxAge) {
+        StatePropertiesPredicate.Builder properties = StatePropertiesPredicate.Builder.properties();
+        LootItemCondition.Builder condition = null;
+
+        for (int age = 0; age < maxAge; age++) {
+            LootItemCondition.Builder ageCondition = LootItemBlockStatePropertyCondition
+                    .hasBlockStateProperties(crop)
+                    .setProperties(properties.hasProperty(RiceCropBlock.AGE, age));
+
+            if (condition == null) {
+                condition = ageCondition;
+            } else {
+                condition = condition.or(ageCondition);
+            }
+        }
+
+        return condition;
+    }
+
+    private static LootTable.Builder createFortuneCropWithSeedReturnDrops(
+            Block crop, ItemLike product, ItemLike seeds, int maxAge) {
+
+        LootItemCondition.Builder matureCondition = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(crop)
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, maxAge));
+
+        LootItemCondition.Builder immatureCondition = createImmatureCondition(crop, maxAge);
+
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool()
-                        .when(condition)
+                        .when(matureCondition)
                         .add(LootItem.lootTableItem(product)
-                                //default counts + random (0 ~ bonusMultiplier * level);
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 2))
                         )
                 )
                 .withPool(LootPool.lootPool()
-                        .when(condition)
-                        .add(LootItem.lootTableItem(seeds))
+                        .when(matureCondition)
+                        .add(LootItem.lootTableItem(seeds)
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 1))
+                        )
+                )
+                .withPool(LootPool.lootPool()
+                        .when(immatureCondition)
+                        .add(LootItem.lootTableItem(seeds)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                        )
                 );
     }
 

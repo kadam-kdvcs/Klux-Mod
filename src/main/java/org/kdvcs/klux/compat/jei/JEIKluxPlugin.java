@@ -111,10 +111,10 @@ public class JEIKluxPlugin implements IModPlugin {
         registration.addRecipeClickArea(ExtractorScreen.class, 73,39,22,12,
                 ExtractorCategory.EXTRACTOR_TYPE);
 
-        registration.addRecipeClickArea(FluidAssemblerScreen.class, 115,37,22,20,
+        registration.addRecipeClickArea(FluidAssemblerScreen.class, 119,37,22,20,
                 FluidAssemblerCategory.FLUID_ASSEMBLER_TYPE);
 
-        registration.addRecipeClickArea(FluidExtractorScreen.class, 52,35,22,20,
+        registration.addRecipeClickArea(FluidExtractorScreen.class, 46,38,22,20,
                 FluidExtractorCategory.FLUID_EXTRACTOR_TYPE);
 
         registration.addRecipeClickArea(FluxSynthesizerScreen.class, 58,38,34,14,
@@ -132,6 +132,7 @@ public class JEIKluxPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(GemDuplicatorScreen.class, 95,42,48,10,
                 GemDuplicatorCategory.GEM_DUPLICATOR_TYPE);
+
     }
 
     @Override

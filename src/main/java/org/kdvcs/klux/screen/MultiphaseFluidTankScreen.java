@@ -74,6 +74,12 @@ public class MultiphaseFluidTankScreen extends AbstractContainerScreen<Multiphas
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         fluidRenderer.render(guiGraphics.pose(), x + 52, y + 17, menu.blockEntity.getFluidStack());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, x + 52, y + 17, 176, 0, 72, 61);
+        guiGraphics.pose().pushPose();
     }
 
     @Override

@@ -52,6 +52,12 @@ public class UniversalRepairerScreen extends AbstractContainerScreen<UniversalRe
 
         renderProgressBar(guiGraphics, guiLeft, guiTop);
         fluidRenderer.render(guiGraphics.pose(), guiLeft + 61, guiTop + 17, menu.getFluidStack());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, guiLeft + 61, guiTop + 17, 191, 0, 54, 61);
+        guiGraphics.pose().pushPose();
     }
 
     private void renderProgressBar(GuiGraphics guiGraphics, int guiLeft, int guiTop) {

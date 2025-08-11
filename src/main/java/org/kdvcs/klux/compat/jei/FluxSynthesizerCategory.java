@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -27,12 +29,16 @@ public class FluxSynthesizerCategory implements IRecipeCategory<FluxSynthesizerR
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "flux_synthesizer");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_flux_synthesizer.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_0.png");
 
     public static final RecipeType<FluxSynthesizerRecipe> FLUX_SYNTHESIZER_TYPE =
             new RecipeType<>(UID, FluxSynthesizerRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableStatic meter;
 
     //  DRAW PROCESSING TIME
     private FluxSynthesizerRecipe currentRecipe;
@@ -40,6 +46,16 @@ public class FluxSynthesizerCategory implements IRecipeCategory<FluxSynthesizerR
     public FluxSynthesizerCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 90);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.FLUX_SYNTHESIZER.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 34, 14)
+                .setTextureSize(34, 14)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        this.meter = helper.drawableBuilder(TEXTURE, 176, 0, 16, 62)
+                .setTextureSize(256, 256)
+                .build();
     }
 
     @Override
@@ -66,10 +82,10 @@ public class FluxSynthesizerCategory implements IRecipeCategory<FluxSynthesizerR
     public void setRecipe(IRecipeLayoutBuilder builder, FluxSynthesizerRecipe recipe, IFocusGroup focuses) {
         this.currentRecipe = recipe;
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 59, 19)
+        builder.addSlot(RecipeIngredientRole.INPUT, 53, 19)
                 .addItemStacks(KadamJeiUtil.expandWithCount(recipe.getIngredients().get(0), recipe.ingredient1.count));
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 59, 55)
+        builder.addSlot(RecipeIngredientRole.INPUT, 53, 55)
                 .addItemStacks(KadamJeiUtil.expandWithCount(recipe.getIngredients().get(1), recipe.ingredient2.count));
 
         //FLUID TANK
@@ -77,7 +93,7 @@ public class FluxSynthesizerCategory implements IRecipeCategory<FluxSynthesizerR
                 .addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getFluid()))
                 .setFluidRenderer(2000, false, 16, 62);
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 109, 37)
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 103, 37)
                 .addItemStack(recipe.getResultItem(null));
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 144, 14)
@@ -88,6 +104,15 @@ public class FluxSynthesizerCategory implements IRecipeCategory<FluxSynthesizerR
     //  HERE DRAWS A PROCESSING TIME
     @Override
     public void draw(FluxSynthesizerRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 58, 38);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meter.draw(guiGraphics, 16, 14);
+        meter.draw(guiGraphics, 144, 14);
+        guiGraphics.pose().popPose();
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

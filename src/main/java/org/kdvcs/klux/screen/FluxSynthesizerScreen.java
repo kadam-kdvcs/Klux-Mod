@@ -88,6 +88,13 @@ public class FluxSynthesizerScreen extends AbstractContainerScreen<FluxSynthesiz
         renderProgressArrow(guiGraphics, x, y);
         renderer.render(guiGraphics.pose(), x + 12, y + 43, menu.getFluidStack());
         rendererOutput.render(guiGraphics.pose(), x + 140, y + 43, menu.getOutputFluidStack());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, x + 12, y + 43, 232, 0, 24, 33);
+        guiGraphics.blit(TEXTURE, x + 140, y + 43, 232, 0, 24, 33);
+        guiGraphics.pose().pushPose();
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {

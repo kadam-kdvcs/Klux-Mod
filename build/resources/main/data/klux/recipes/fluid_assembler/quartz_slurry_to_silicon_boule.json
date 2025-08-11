@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "minecraft:sand",
+      "count": 1
+    },
+  "fluid": {
+    "FluidName": "klux:quartz_slurry_fluid",
+    "Amount": 288
+  },
+  "output": {
+    "item": "klux:silicon_boule",
+    "count": 2
+  },
+  "maxProgress": 55
+}

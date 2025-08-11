@@ -3,11 +3,15 @@ package org.kdvcs.klux.compat.jei;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -23,15 +27,31 @@ public class ModBrewingCategory implements IRecipeCategory<ModBrewingRecipe> {
     public static final RecipeType<ModBrewingRecipe> TYPE = new RecipeType<>(UID, ModBrewingRecipe.class);
 
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID, "textures/jei/brewing_stand_background.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID, "textures/jei/brewing_stand_arrow.png");
+    public static final ResourceLocation BUBBLES = new ResourceLocation(Klux.MODID, "textures/jei/brewing_stand_bubbles.png");
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableAnimated bubbles;
 
     public ModBrewingCategory(IGuiHelper helper) {
 
         this.background = helper.createDrawable(TEXTURE, 0, 0, 114, 61);
 
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Items.BREWING_STAND));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 7, 27)
+                .setTextureSize(7, 27)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 320, IDrawableAnimated.StartDirection.TOP, false);
+
+        //DRAW PROCESSING BUBBLES
+        IDrawableStatic staticBubbles = helper.drawableBuilder(BUBBLES, 0, 0, 11, 28)
+                .setTextureSize(11, 28)
+                .build();
+        this.bubbles = helper.createAnimatedDrawable(staticBubbles, 20, IDrawableAnimated.StartDirection.BOTTOM, false);
     }
 
     @Override
@@ -71,4 +91,11 @@ public class ModBrewingCategory implements IRecipeCategory<ModBrewingRecipe> {
                 .addItemStack(PotionUtils.setPotion(new ItemStack(Items.POTION), recipe.output));
     }
 
+    @Override
+    public void draw(ModBrewingRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 43, 3);
+        bubbles.draw(guiGraphics, 9, 1);
+
+    }
 }

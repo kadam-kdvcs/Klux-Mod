@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -28,12 +30,20 @@ public class LiquidReactorCategory implements IRecipeCategory<LiquidReactorRecip
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "liquid_reactor");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_liquid_reactor.png");
+    public static final ResourceLocation ARROWA = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_3a.png");
+    public static final ResourceLocation ARROWB = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_3b.png");
 
     public static final RecipeType<LiquidReactorRecipe> LIQUID_REACTOR_TYPE =
             new RecipeType<>(UID, LiquidReactorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrowA;
+    private final IDrawableAnimated arrowB;
+    private final IDrawableStatic meterA;
+    private final IDrawableStatic meterB;
 
     //  DRAW PROCESSING TIME
     private LiquidReactorRecipe currentRecipe;
@@ -41,6 +51,24 @@ public class LiquidReactorCategory implements IRecipeCategory<LiquidReactorRecip
     public LiquidReactorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 94);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.LIQUID_REACTOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrowA = helper.drawableBuilder(ARROWA, 0, 0, 9, 15)
+                .setTextureSize(9, 15)
+                .build();
+        this.arrowA = helper.createAnimatedDrawable(staticArrowA, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        IDrawableStatic staticArrowB = helper.drawableBuilder(ARROWB, 0, 0, 9, 15)
+                .setTextureSize(9, 15)
+                .build();
+        this.arrowB = helper.createAnimatedDrawable(staticArrowB, 20, IDrawableAnimated.StartDirection.RIGHT, false);
+
+        this.meterA = helper.drawableBuilder(TEXTURE, 176, 0, 24, 62)
+                .setTextureSize(256, 256)
+                .build();
+        this.meterB = helper.drawableBuilder(TEXTURE, 0, 94, 70, 62)
+                .setTextureSize(256, 256)
+                .build();
     }
 
     @Override
@@ -87,6 +115,17 @@ public class LiquidReactorCategory implements IRecipeCategory<LiquidReactorRecip
     //  HERE DRAWS A PROCESSING TIME
     @Override
     public void draw(LiquidReactorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrowA.draw(guiGraphics, 41, 38);
+        arrowB.draw(guiGraphics, 126, 38);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meterA.draw(guiGraphics, 12, 16);
+        meterA.draw(guiGraphics, 140, 16);
+        meterB.draw(guiGraphics, 53, 16);
+        guiGraphics.pose().popPose();
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

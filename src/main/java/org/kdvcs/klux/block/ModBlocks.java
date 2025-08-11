@@ -112,6 +112,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> RICE_CROP = BLOCKS.register("rice_crop",
             () -> new RiceCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> COTTON_CROP = BLOCKS.register("cotton_crop",
+            () -> new CottonCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
     //FLOWER
     public static final RegistryObject<Block> CACTUS_FRUIT = registerBlock("cactus_fruit",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
@@ -184,6 +187,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEM_DUPLICATOR = registerBlock("gem_duplicator",
             GemDuplicatorBlock::new);
+
+    //QUARTZ SLURRY BLOCK
+    public static final RegistryObject<LiquidBlock> QUARTZ_SLURRY_BLOCK = BLOCKS.register("quartz_slurry_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_QUARTZ_SLURRY, BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()));
 
     //AROMATIC BLOCK
     public static final RegistryObject<LiquidBlock> AROMATIC_BLOCK = BLOCKS.register("aromatic_block",

@@ -4,7 +4,7 @@
     {
     "item": "minecraft:rotten_flesh"
   },
-  "ingredientCount": 32,
+  "ingredientCount": 8,
   "output": {
     "item": "klux:putrid_fat",
     "count": 2

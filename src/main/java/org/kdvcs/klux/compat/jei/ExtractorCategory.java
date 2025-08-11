@@ -3,6 +3,8 @@ package org.kdvcs.klux.compat.jei;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -28,12 +30,19 @@ public class ExtractorCategory implements IRecipeCategory<ExtractorRecipe> {
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
 
     private ExtractorRecipe currentRecipe;
 
     public ExtractorCategory(IGuiHelper helper) {
+
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 88);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.EXTRACTOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.createDrawable(TEXTURE, 176, 0, 22, 6);
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
     }
 
     @Override
@@ -70,6 +79,9 @@ public class ExtractorCategory implements IRecipeCategory<ExtractorRecipe> {
 
     @Override
     public void draw(ExtractorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 73, 41);
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 
@@ -79,7 +91,7 @@ public class ExtractorCategory implements IRecipeCategory<ExtractorRecipe> {
         Component timeText = Component.translatable("jei.klux.extractor.time", String.format("%.2f", seconds));
 
         float x = 148;
-        float y = 72;
+        float y = 74;
 
         guiGraphics.pose().pushPose();
         font.drawInBatch(

@@ -1,0 +1,16 @@
+{
+  "type": "klux:replace_drop",
+  "chance": 0.34,
+  "conditions": [
+    {
+      "block": "minecraft:calcite",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "chance": 0.4,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "replacement_item": "klux:apatite",
+  "target_block": "minecraft:calcite"
+}

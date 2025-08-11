@@ -1,7 +1,8 @@
-// 1.20.1	2025-08-09T14:41:36.9148638	Block States: klux
+// 1.20.1	2025-08-10T13:59:34.9586733	Block States: klux
 45866f769d0d9228880d777abc9a0a380a626b99 assets/klux/blockstates/background_brick.json
 98eaa52ea5067cae82c8f06c2a9002e7510ba701 assets/klux/blockstates/bones_ore.json
 130a0f83adaa89bd527afed27f915a429636fa89 assets/klux/blockstates/cactus_fruit.json
+b7e19d0197433ecce3dcf41135dfb62e609f5a8f assets/klux/blockstates/cotton_crop.json
 61da4df63a990349b6270b9a473737a8b548907d assets/klux/blockstates/deepslate_earth_crystal_ore.json
 b6718ed44b663e0c6cff60f0ffd5fad9c626b1d3 assets/klux/blockstates/dried_brick.json
 dbecef28d62eadeda1300f89ec451d56bc182f1a assets/klux/blockstates/dried_brick_smooth.json
@@ -45,6 +46,12 @@ b95053bedf1202d9ecdc7bc5d90e48a9270bf080 assets/klux/blockstates/wet_brick.json
 cc4a4c5242f0a81926ab83e70d72d848c4ed8c46 assets/klux/models/block/background_brick.json
 9aef42edb19799f12f18dce2829a95d1699ff1b9 assets/klux/models/block/bones_ore.json
 e66f635a10b82b6639a85c55b308e22d24f1d6cb assets/klux/models/block/cactus_fruit.json
+451a1a55b20376d92d1719ad8616d046e5c94a36 assets/klux/models/block/cotton_stage_0.json
+906282289ab38beb9fb0dd419bd9fd1afaeb4216 assets/klux/models/block/cotton_stage_1.json
+30f824c5b0af485e2f701edd6b53b4cdd34bb5a3 assets/klux/models/block/cotton_stage_2.json
+14a90b31eb12c3209c536145977882b6664f4c10 assets/klux/models/block/cotton_stage_3.json
+01da1ec35a868885972ab8caa2f088dcebee668a assets/klux/models/block/cotton_stage_4.json
+1abf5bff03e77b59e64bf38660b9f2ad81c6f32b assets/klux/models/block/cotton_stage_5.json
 edd8aaed9a5203567d5625cfb5ee70b57e04b401 assets/klux/models/block/deepslate_earth_crystal_ore.json
 229a269eaee9ee2c302df09971987a1985c3bd20 assets/klux/models/block/dried_brick.json
 3c4302f89b418cf884d9f2e095e925ff40aa1705 assets/klux/models/block/dried_brick_smooth.json

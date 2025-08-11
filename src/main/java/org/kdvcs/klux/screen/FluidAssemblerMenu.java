@@ -35,8 +35,8 @@ public class FluidAssemblerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 12, 17));
-            this.addSlot(new SlotItemHandler(handler, 1, 86, 38));
+            this.addSlot(new SlotItemHandler(handler, 0, 12, 38));
+            this.addSlot(new SlotItemHandler(handler, 1, 94, 38));
             this.addSlot(new SlotItemHandler(handler, 2, 148, 38));
         });
 

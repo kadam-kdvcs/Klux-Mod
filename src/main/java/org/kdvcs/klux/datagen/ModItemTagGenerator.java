@@ -247,7 +247,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(FORGE_SEEDS)
                 .replace(false)
                 .add(ModItems.SPRING_ONION_SEEDS.get(),
-                     ModItems.RICE_SEEDS.get());
+                     ModItems.RICE_SEEDS.get(),
+                        ModItems.COTTON_SEEDS.get());
 
         this.tag(FORGE_RAWMEATS)
                 .replace(false)

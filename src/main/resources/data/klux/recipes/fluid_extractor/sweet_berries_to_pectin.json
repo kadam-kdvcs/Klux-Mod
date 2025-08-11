@@ -1,0 +1,12 @@
+{
+  "type": "klux:fluid_extractor",
+  "ingredient": {
+    "item": "minecraft:sweet_berries",
+    "count": 1
+  },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 30
+  },
+  "maxProgress": 5
+}

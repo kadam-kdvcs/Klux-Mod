@@ -97,6 +97,22 @@ public class LiquidReactorScreen extends AbstractContainerScreen<LiquidReactorMe
         rendererInput1.render(guiGraphics.pose(), x + 12, y + 45, menu.getInputFluid1());
         rendererInput2.render(guiGraphics.pose(), x + 140, y + 45, menu.getInputFluid2());
         rendererOutput.render(guiGraphics.pose(), x + 53, y + 45, menu.getOutputFluid());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+
+        //INPUT TANK 1
+        guiGraphics.blit(TEXTURE, x + 12, y + 45, 185, 0, 24, 33);
+
+        //INPUT TANK 2
+        guiGraphics.blit(TEXTURE, x + 140, y + 45, 185, 0, 24, 33);
+
+        //OUTPUT TANK
+        guiGraphics.blit(TEXTURE, x + 53, y + 45, 176, 33, 70, 33);
+
+        guiGraphics.pose().pushPose();
+
     }
 
     private void renderProgressArrows(GuiGraphics guiGraphics, int x, int y) {

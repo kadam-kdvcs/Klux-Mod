@@ -106,6 +106,7 @@
   "block.klux.stripped_pine_log": "去皮松树原木",
   "block.klux.stripped_pine_wood": "去皮松树木",
   "block.klux.wet_brick": "湿砖",
+  "fluid_type.klux.quartz_slurry_fluid": "石英浆",
   "fluid_type.klux.aromatic_fluid": "芳香液",
   "fluid_type.klux.botanic_essential_oil_fluid": "植物精油",
   "fluid_type.klux.enzyme_solution_fluid": "酶解液",
@@ -123,7 +124,7 @@
   "item.klux.apple_iron": "铁苹果",
   "item.klux.apple_lapis": "青金石苹果",
   "item.klux.aromatic_bucket": "芳香液桶",
-  "item.klux.aromatic_coagulate": "芳香凝聚球",
+  "item.klux.aromatic_coagulate": "芳香精质",
   "item.klux.aromatic_dust": "芳香粉",
   "item.klux.aromatic_ingot": "芳香锭",
   "item.klux.aromatic_powder": "精萃粉",
@@ -136,7 +137,7 @@
   "item.klux.dissolvent_bearing": "溶析轴承",
   "item.klux.enzyme_solution_bucket": "酶解液桶",
   "item.klux.extraction_mesh": "基础筛网",
-  "item.klux.fermented_aromatic_slurry": "发酵香糊",
+  "item.klux.fermented_aromatic_slurry": "芳香基质粉",
   "item.klux.filter_core": "滤芯",
   "item.klux.flux_core": "流聚核",
   "item.klux.hay_ball": "干草团",
@@ -324,6 +325,11 @@
 
   "item.klux.fiery_ingot": "熔火锭",
   "item.klux.fiery_gear": "熔火齿轮",
+
+  "item.klux.cotton_seeds": "棉花种子",
+  "item.klux.cotton": "棉花",
+  "item.klux.cotton_blob": "棉花团",
+  "item.klux.quartz_slurry_bucket": "石英浆桶",
 
   "adv.klux": "Klux",
   "adv.des.klux": "欢迎来到Klux，记住大力发展你的农业！",

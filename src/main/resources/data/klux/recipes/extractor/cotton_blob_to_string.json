@@ -1,0 +1,14 @@
+{
+  "type": "klux:extractor",
+  "ingredients": [
+    {
+      "item": "klux:cotton_blob",
+      "count": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:string",
+    "count": 6
+  },
+  "maxProgress": 20
+}

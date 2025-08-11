@@ -167,6 +167,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIERY_INGOT);
         simpleItem(ModItems.FIERY_GEAR);
 
+        simpleItem(ModItems.COTTON);
+        simpleItem(ModItems.COTTON_SEEDS);
+        simpleItem(ModItems.COTTON_BLOB);
+
+        simpleItem(ModItems.QUARTZ_SLURRY_BUCKET);
+
         simpleBlockItem(ModBlocks.EARTH_CRYSTAL_DOOR);
 
         fenceItem(ModBlocks.EARTH_CRYSTAL_FENCE, ModBlocks.EARTH_CRYSTAL_BLOCK);

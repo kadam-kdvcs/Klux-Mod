@@ -1,0 +1,17 @@
+{
+  "type": "klux:fluid_assembler",
+  "ingredient":
+    {
+      "item": "klux:protein_concentrate",
+      "count": 2
+    },
+  "fluid": {
+    "FluidName": "klux:pectin_slurry_fluid",
+    "Amount": 150
+  },
+  "output": {
+    "item": "klux:protein_fiber",
+    "count": 4
+  },
+  "maxProgress": 90
+}

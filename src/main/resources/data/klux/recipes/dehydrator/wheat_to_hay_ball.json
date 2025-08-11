@@ -4,10 +4,10 @@
     {
     "item": "minecraft:wheat"
   },
-  "ingredientCount": 16,
+  "ingredientCount": 4,
   "output": {
     "item": "klux:hay_ball",
-    "count": 4
+    "count": 1
   },
   "maxProgress": 100
 }

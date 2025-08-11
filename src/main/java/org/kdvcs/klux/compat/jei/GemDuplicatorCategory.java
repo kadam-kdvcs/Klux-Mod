@@ -4,6 +4,8 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -32,12 +34,16 @@ public class GemDuplicatorCategory implements IRecipeCategory<GemDuplicatorRecip
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "gem_duplicator");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_gem_duplicator.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_6.png");
 
     public static final RecipeType<GemDuplicatorRecipe> GEM_DUPLICATOR_TYPE =
             new RecipeType<>(UID, GemDuplicatorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
+    private final IDrawableStatic meter;
 
     //  DRAW PROCESSING TIME
     private GemDuplicatorRecipe currentRecipe;
@@ -45,6 +51,17 @@ public class GemDuplicatorCategory implements IRecipeCategory<GemDuplicatorRecip
     public GemDuplicatorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 95);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.GEM_DUPLICATOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 48, 8)
+                .setTextureSize(48, 8)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
+
+        this.meter = helper.drawableBuilder(TEXTURE, 176, 0, 36, 61)
+                .setTextureSize(256, 256)
+                .build();
+
     }
 
     @Override
@@ -84,34 +101,16 @@ public class GemDuplicatorCategory implements IRecipeCategory<GemDuplicatorRecip
                 .addItemStack(recipe.getResultItem(null));
     }
 
-    //  HERE DRAWS A PROCESSING TIME
-//    @Override
-//    public void draw(GemDuplicatorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-//        Minecraft mc = Minecraft.getInstance();
-//        Font font = mc.font;
-//
-//        int ticks = recipe.getMaxProgress();
-//        float seconds = ticks / 20f;
-//
-//        Component timeText = Component.translatable("jei.klux.gem_duplicator.time", String.format("%.2f", seconds));
-//
-//        //  POSITION OF THE TEXT
-//        float x = 148f;
-//        float y = 79f;
-//
-//        guiGraphics.pose().pushPose();
-//        font.drawInBatch(
-//                timeText,
-//                x,
-//                y,
-//                0x404040,
-//                false,
-//                guiGraphics.pose().last().pose(),
-//                mc.renderBuffers().bufferSource(),
-//                Font.DisplayMode.NORMAL,
-//                0,
-//                15728880
-//        );
-//        guiGraphics.pose().popPose();
-//    }
+    @Override
+    public void draw(GemDuplicatorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 95, 42);
+
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 300);
+        meter.draw(guiGraphics, 12, 17);
+        guiGraphics.pose().popPose();
+
+    }
+
 }

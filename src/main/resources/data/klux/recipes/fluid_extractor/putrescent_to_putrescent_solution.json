@@ -6,7 +6,7 @@
   },
   "fluid": {
     "FluidName": "klux:putrescent_solution_fluid",
-    "Amount": 250
+    "Amount": 125
   },
   "maxProgress": 75
 }

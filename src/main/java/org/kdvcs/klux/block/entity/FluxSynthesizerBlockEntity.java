@@ -161,6 +161,12 @@ public class FluxSynthesizerBlockEntity extends BlockEntity implements MenuProvi
                     (i, s) -> false
             )),
 
+            Direction.DOWN, LazyOptional.of(() -> new WrappedFluidHandler(
+                    List.of(FLUID_TANK),
+                    i -> true,
+                    (i, s) -> false
+            )),
+
             Direction.UP, LazyOptional.of(() -> new WrappedFluidHandler(
                     List.of(FLUID_TANK),
                     i -> false,

@@ -1,5 +1,6 @@
 {
-  "type": "klux:add_item",
+  "type": "klux:replace_drop",
+  "chance": 0.34,
   "conditions": [
     {
       "block": "minecraft:sand",
@@ -10,5 +11,6 @@
       "condition": "minecraft:random_chance"
     }
   ],
-  "item": "klux:raw_silicon"
+  "replacement_item": "klux:raw_silicon",
+  "target_block": "minecraft:sand"
 }

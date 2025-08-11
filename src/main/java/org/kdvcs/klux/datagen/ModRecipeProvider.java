@@ -186,7 +186,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("AAA")
                 .pattern("###")
-                .define('#', Items.IRON_INGOT)
+                .define('#', ModItems.WROUGHT_IRON_INGOT.get())
                 .define('A', ModTags.Items.ORGANIC_FIBERS)
                 .unlockedBy(getHasName(ModItems.EXTRACTION_MESH.get()), has(ModItems.EXTRACTION_MESH.get()))
                 .save(p_251297_);
@@ -223,7 +223,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("##")
                 .pattern("##")
                 .define('#', ModItems.HAY_BALL.get())
-                .unlockedBy(getHasName(ModItems.HAY_BALL.get()), has(ModItems.HAY_BALL.get()))
+                .unlockedBy(getHasName(ModBlocks.HAY_BRICK.get()), has(ModBlocks.HAY_BRICK.get()))
                 .save(p_251297_);
 
         //HAY STAIRS
@@ -400,7 +400,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('K', ModItems.REINFORCED_AROMATIC_CRYSTAL_PLATE.get())
                 .define('A', ModItems.AROMATIC_RESONATOR.get())
                 .define('Q', ModItems.TRIPLE_SEALED_TANK.get())
-                .define('C', ModItems.FLUX_CORE.get())
+                .define('C', ModItems.FIERY_GEAR.get())
                 .define('B', ModBlocks.FIRE_QUARTZ_FRAME.get())
                 .unlockedBy(getHasName(ModBlocks.LIQUID_REACTOR.get()), has(ModBlocks.LIQUID_REACTOR.get()))
                 .save(p_251297_);
@@ -445,19 +445,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###")
                 .define('#', Items.STRING)
-                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .unlockedBy(getHasName(Blocks.COBWEB), has(Blocks.COBWEB))
                 .save(p_251297_);
 
         //STRING
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING,9)
                 .requires(Blocks.COBWEB)
-                .unlockedBy(getHasName(Blocks.COBWEB), has(Blocks.COBWEB))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
                 .save(p_251297_);
 
         //HAY BALL
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HAY_BALL.get(),4)
                 .requires(ModBlocks.HAY_BRICK.get())
-                .unlockedBy(getHasName(ModBlocks.HAY_BRICK.get()), has(ModBlocks.HAY_BRICK.get()))
+                .unlockedBy(getHasName(ModItems.HAY_BALL.get()), has(ModItems.HAY_BALL.get()))
                 .save(p_251297_);
 
         //PINE PLANKS
@@ -467,7 +467,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(p_251297_);
 
         //FERMENTED AROMATIC SLURRY
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FERMENTED_AROMATIC_SLURRY.get(),2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FERMENTED_AROMATIC_SLURRY.get(),3)
                 .requires(ModItems.VITAMIN_DUST.get())
                 .requires(ModTags.Items.AROMA_FAMILY)
                 .requires(ModItems.ROTTEN_FRUIT.get())
@@ -499,7 +499,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("L")
                 .define('L', Items.SUGAR)
                 .define('#', ModItems.ROTTEN_FRUIT.get())
-                .unlockedBy(getHasName(ModItems.ROTTEN_FRUIT.get()), has(ModItems.ROTTEN_FRUIT.get()))
+                .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
                 .save(p_251297_);
 
         //EARTH CRYSTAL FRAME
@@ -520,7 +520,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.WHEAT)
                 .define('A', Items.SUGAR_CANE)
                 .define('D', Blocks.DIRT)
-                .unlockedBy(getHasName(Items.SUGAR_CANE), has(Items.SUGAR_CANE))
+                .unlockedBy(getHasName(ModItems.HUMICS.get()), has(ModItems.HUMICS.get()))
                 .save(p_251297_);
 
         //REDSTONE RESONATOR
@@ -541,7 +541,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#A#")
                 .define('#', Items.COPPER_INGOT)
                 .define('A', Items.IRON_INGOT)
-                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .unlockedBy(getHasName(ModItems.AIR_DUCT.get()), has(ModItems.AIR_DUCT.get()))
+                .save(p_251297_);
+
+        //STRING FROM COTTON
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STRING, 4)
+                .pattern("###")
+                .define('#', ModItems.COTTON.get())
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(p_251297_, new ResourceLocation(Klux.MODID, "string_from_cotton"));
+
+        //COTTON BLOB
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COTTON_BLOB.get())
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.COTTON.get())
+                .unlockedBy(getHasName(ModItems.COTTON_BLOB.get()), has(ModItems.COTTON_BLOB.get()))
                 .save(p_251297_);
 
         //DEHYDRATOR
@@ -554,7 +569,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.AIR_DUCT.get())
                 .define('D', ModBlocks.EARTH_CRYSTAL_FRAME.get())
                 .define('B', Blocks.FURNACE)
-                .unlockedBy(getHasName(ModBlocks.EARTH_CRYSTAL_FRAME.get()), has(ModBlocks.EARTH_CRYSTAL_FRAME.get()))
+                .unlockedBy(getHasName(ModBlocks.DEHYDRATOR.get()), has(ModBlocks.DEHYDRATOR.get()))
                 .save(p_251297_);
 
         //COMPRESSOR
@@ -566,13 +581,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.REDSTONE_RESONATOR.get())
                 .define('B',ModBlocks.EARTH_CRYSTAL_FRAME.get())
                 .define('T', Items.COPPER_INGOT)
-                .unlockedBy(getHasName(ModBlocks.EARTH_CRYSTAL_FRAME.get()), has(ModBlocks.EARTH_CRYSTAL_FRAME.get()))
+                .unlockedBy(getHasName(ModBlocks.COMPRESSOR.get()), has(ModBlocks.COMPRESSOR.get()))
                 .save(p_251297_);
 
         //GENERATE A SHAPELESS RECIPE, requires(Ingredient)
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EARTH_CRYSTAL.get(),9)
                 .requires(ModBlocks.EARTH_CRYSTAL_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.EARTH_CRYSTAL_BLOCK.get()), has(ModBlocks.EARTH_CRYSTAL_BLOCK.get()))
+                .unlockedBy(getHasName(ModItems.EARTH_CRYSTAL.get()), has(ModItems.EARTH_CRYSTAL.get()))
                 .save(p_251297_);
 
     }

@@ -58,7 +58,7 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
     }
 
     private void renderFluidAreaTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
-        if (isMouseAboveArea(mouseX, mouseY, x, y, 55, 17)) {
+        if (isMouseAboveArea(mouseX, mouseY, x, y, 53, 17)) {
             FluidStack fluidStack = menu.getFluidStack();
 
             if (!fluidStack.isEmpty()) {
@@ -81,12 +81,19 @@ public class FluidAssemblerScreen extends AbstractContainerScreen<FluidAssembler
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(guiGraphics, x, y);
-        renderer.render(guiGraphics.pose(), x + 55, y + 17, menu.getFluidStack());
+        renderer.render(guiGraphics.pose(), x + 53, y + 17, menu.getFluidStack());
+
+        //METER
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().translate(0, 0, 200);
+        guiGraphics.blit(TEXTURE, x + 53, y + 17, 240, 0, 16, 61);
+        guiGraphics.pose().pushPose();
+
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 114, y + 38, 176, 0, menu.getScaledProgress(), 17);
+            guiGraphics.blit(TEXTURE, x + 118, y + 38, 176, 0, menu.getScaledProgress(), 17);
         }
     }
 

@@ -15,6 +15,12 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS, Klux.MODID);
 
+    //QUARTZ SLURRY
+    public static final RegistryObject<FlowingFluid> SOURCE_QUARTZ_SLURRY = FLUIDS.register("quartz_slurry_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.QUARTZ_SLURRY_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_QUARTZ_SLURRY = FLUIDS.register("flowing_quartz_slurry",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.QUARTZ_SLURRY_FLUID_PROPERTIES));
+
     //AROMATIC
     public static final RegistryObject<FlowingFluid> SOURCE_AROMATIC = FLUIDS.register("aromatic_fluid",
             () -> new ForgeFlowingFluid.Source(ModFluids.AROMATIC_FLUID_PROPERTIES));
@@ -64,6 +70,11 @@ public class ModFluids {
             () -> new ForgeFlowingFluid.Flowing(ModFluids.REPAIR_FLUID_PROPERTIES));
 
     //PROPERTIES
+    //QUARTZ SLURRY
+    public static final ForgeFlowingFluid.Properties QUARTZ_SLURRY_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.QUARTZ_SLURRY_TYPE, SOURCE_QUARTZ_SLURRY, FLOWING_QUARTZ_SLURRY)
+            .slopeFindDistance(8).levelDecreasePerBlock(2).block(ModBlocks.QUARTZ_SLURRY_BLOCK)
+            .bucket(ModItems.QUARTZ_SLURRY_BUCKET);
 
     //AROMATIC
     public static final ForgeFlowingFluid.Properties AROMATIC_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(

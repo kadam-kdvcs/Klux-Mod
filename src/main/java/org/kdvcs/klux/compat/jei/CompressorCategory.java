@@ -3,6 +3,8 @@ package org.kdvcs.klux.compat.jei;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -24,12 +26,15 @@ public class CompressorCategory implements IRecipeCategory<CompressorRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(Klux.MODID, "compressor");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Klux.MODID,
             "textures/jei/gui_compressor.png");
+    public static final ResourceLocation ARROW = new ResourceLocation(Klux.MODID,
+            "textures/jei/arrow_0.png");
 
     public static final RecipeType<CompressorRecipe> COMPRESSOR_TYPE =
             new RecipeType<>(UID, CompressorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawableAnimated arrow;
 
     //  DRAW PROCESSING TIME
     private CompressorRecipe currentRecipe;
@@ -37,6 +42,12 @@ public class CompressorCategory implements IRecipeCategory<CompressorRecipe> {
     public CompressorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 86);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.COMPRESSOR.get()));
+
+        //DRAW PROCESSING ARROW
+        IDrawableStatic staticArrow = helper.drawableBuilder(ARROW, 0, 0, 34, 14)
+                .setTextureSize(34, 14)
+                .build();
+        this.arrow = helper.createAnimatedDrawable(staticArrow, 20, IDrawableAnimated.StartDirection.LEFT, false);
     }
 
     @Override
@@ -76,6 +87,9 @@ public class CompressorCategory implements IRecipeCategory<CompressorRecipe> {
     //  HERE DRAWS A PROCESSING TIME
     @Override
     public void draw(CompressorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+
+        arrow.draw(guiGraphics, 67, 36);
+
         Minecraft mc = Minecraft.getInstance();
         Font font = mc.font;
 

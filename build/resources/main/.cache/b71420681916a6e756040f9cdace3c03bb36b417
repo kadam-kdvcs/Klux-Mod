@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-09T22:42:24.2164391	Item Models: klux
+// 1.20.1	2025-08-10T17:51:21.6288331	Item Models: klux
 0e9a4167744574e4342cf70f150c86878e78a3a7 assets/klux/models/item/activation_powder.json
 8a6e104cdf5518e1ab0ab942f46acd99eac5f9c4 assets/klux/models/item/adhesive_paste.json
 b1afb62a82c71f413b84072fccd5b6f61c780da1 assets/klux/models/item/advanced_extraction_mesh.json
@@ -24,6 +24,9 @@ a3735bf6999387f0666b85fc250568f681f51338 assets/klux/models/item/cactus_fruit.js
 4c78d62ea487b534b2dfe5d5fbfd0aacb434589e assets/klux/models/item/carbohydrate_powder.json
 0827d1536542095a8285b76f19a456c24ab3074e assets/klux/models/item/charged_endergon_crystal.json
 e7d30c2fc69448c179323ae5c1afd83f7c4351c2 assets/klux/models/item/cooked_horse_meat.json
+8cd13085165d55e046a9b8a3bd393f3e3d3f67e2 assets/klux/models/item/cotton.json
+f16dd0fe74b03681aa8159a4eade8fd2b0808aa5 assets/klux/models/item/cotton_blob.json
+b3157ad590d2bba9362704eceafadde6fa17fee7 assets/klux/models/item/cotton_seeds.json
 b96911420127442646307b74e403b4bcc145a0d3 assets/klux/models/item/dehydrated_seeds.json
 0a14e3921c4e1ccb3f4ea2580862cc52d3eaa156 assets/klux/models/item/detector.json
 67d5af02d3b68f0e9d9cef9c9c82c5343c08b083 assets/klux/models/item/dissolvent_bearing.json
@@ -122,6 +125,7 @@ f49686848a576e81d102002c415f6c884161f5a9 assets/klux/models/item/protein_fiber.j
 f173e2a26e7ed6025844e6d5230f060cb352d514 assets/klux/models/item/putrescent_solution_bucket.json
 b20e1ee436b5bb1c2c5c33a4732afb2e274999e7 assets/klux/models/item/putrid_fat.json
 33d3ac5aa0e07de28144b3e26237fe2737bc76d6 assets/klux/models/item/pyrored_silicrystal.json
+6b92c3426ab193ccfbb960715a9f9d75539707a0 assets/klux/models/item/quartz_slurry_bucket.json
 831f0d48f99f83a7f51bb5f3c1d5b50359bbf7c9 assets/klux/models/item/raw_horse_meat.json
 601bbb206420ffa7ed6c6195fc27543f7468d78b assets/klux/models/item/raw_silicon.json
 ffce53a66b59f7207e0a98801c8ab2c732a62ac8 assets/klux/models/item/redstone_crystal_core.json

@@ -44,6 +44,98 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "bonusMultiplier": 1
+              }
+            }
+          ],
+          "name": "klux:rice_seeds"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "0"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "1"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "2"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "3"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "4"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "5"
+              }
+            },
+            {
+              "block": "klux:rice_crop",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "klux:rice_seeds"
         }
       ],

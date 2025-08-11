@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rotten_fruit": {
+    "has_slime_ball": {
       "conditions": {
         "items": [
           {
             "items": [
-              "klux:rotten_fruit"
+              "minecraft:slime_ball"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_rotten_fruit",
+      "has_slime_ball",
       "has_the_recipe"
     ]
   ],

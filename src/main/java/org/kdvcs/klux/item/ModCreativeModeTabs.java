@@ -48,15 +48,20 @@ public class ModCreativeModeTabs {
                         //output.accept(ModItems.SPRING_ONION_SEEDS.get());
 
                         output.accept(ModItems.RICE_SEEDS.get());
+                        //     output.accept(ModBlocks.CACTUS_FRUIT.get());
 
-                        output.accept(ModBlocks.CACTUS_FRUIT.get());
+                  //      output.accept(ModItems.ENRICHED_COAL.get());
 
-                        output.accept(ModItems.ENRICHED_COAL.get());
                         output.accept(ModItems.HUMICS.get());
                         output.accept(ModItems.DEHYDRATED_SEEDS.get());
                         output.accept(ModItems.PUTRID_FAT.get());
+
                         output.accept(ModItems.ROTTEN_FRUIT.get());
                         output.accept(ModItems.ROTTEN_FRUIT_SEEDS.get());
+
+                        output.accept(ModItems.COTTON.get());
+                        output.accept(ModItems.COTTON_SEEDS.get());
+                        output.accept(ModItems.COTTON_BLOB.get());
 
                         output.accept(ModItems.HAY_BALL.get());
                         output.accept(ModItems.LEATHER_PASTE.get());
@@ -98,6 +103,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.APATITE.get());
 
                         //LIQUID BUCKETS
+                        output.accept(ModItems.QUARTZ_SLURRY_BUCKET.get());
                         output.accept(ModItems.AROMATIC_BUCKET.get());
                         output.accept(ModItems.PUTRESCENT_SOLUTION_BUCKET.get());
                         output.accept(ModItems.PECTIN_SLURRY_BUCKET.get());

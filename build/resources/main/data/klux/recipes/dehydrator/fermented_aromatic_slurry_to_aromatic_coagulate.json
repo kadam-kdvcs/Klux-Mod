@@ -4,7 +4,7 @@
     {
     "item": "klux:fermented_aromatic_slurry"
   },
-  "ingredientCount": 2,
+  "ingredientCount": 1,
   "output": {
     "item": "klux:aromatic_coagulate",
     "count": 1

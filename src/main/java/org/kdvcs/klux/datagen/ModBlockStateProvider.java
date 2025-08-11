@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kdvcs.klux.Klux;
 import org.kdvcs.klux.block.ModBlocks;
+import org.kdvcs.klux.block.custom.CottonCropBlock;
 import org.kdvcs.klux.block.custom.RiceCropBlock;
 import org.kdvcs.klux.block.custom.RottenFruitCropBlock;
 import org.kdvcs.klux.block.custom.SpringOnionCropBlock;
@@ -84,6 +85,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeSpringOnionCrop((CropBlock) ModBlocks.SPRING_ONION_CROP.get(),"spring_onion_stage_","spring_onion_stage_");
         makeRottenFruitCrop((CropBlock) ModBlocks.ROTTEN_FRUIT_CROP.get(), "rotten_fruit_stage", "rotten_fruit_stage");
         makeRiceCrop((CropBlock) ModBlocks.RICE_CROP.get(), "rice_stage_", "rice_stage_");
+        makeCottonCrop((CropBlock) ModBlocks.COTTON_CROP.get(), "cotton_stage_", "cotton_stage_");
 
         simpleBlockWithItem(ModBlocks.CACTUS_FRUIT.get(), models().cross(blockTexture(ModBlocks.CACTUS_FRUIT.get()).getPath(),
                 blockTexture(ModBlocks.CACTUS_FRUIT.get())).renderType("cutout"));
@@ -152,6 +154,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStates(function);
     }
 
+    public void makeCottonCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cottonStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
     private ConfiguredModel[] springOnionStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SpringOnionCropBlock) block).getAgeProperty()),
@@ -172,6 +180,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RiceCropBlock) block).getAgeProperty()),
                 new ResourceLocation(Klux.MODID, "block/" + textureName + state.getValue(((RiceCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    private ConfiguredModel[] cottonStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CottonCropBlock) block).getAgeProperty()),
+                new ResourceLocation(Klux.MODID, "block/" + textureName + state.getValue(((CottonCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }
